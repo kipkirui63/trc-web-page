@@ -29,7 +29,35 @@
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236a0dad' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
 
-        .dropdown:hover .dropdown-menu {
+        /* Improved dropdown behavior */
+        .desktop-dropdown {
+            position: relative;
+        }
+        
+        .desktop-dropdown-menu {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            min-width: 200px;
+            background-color: white;
+            border-radius: 0.375rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            z-index: 20;
+            padding: 0.5rem 0;
+        }
+        
+        .desktop-dropdown.active .desktop-dropdown-menu {
+            display: block;
+        }
+        
+        /* Mobile dropdown */
+        .mobile-dropdown-content {
+            display: none;
+            padding-left: 1rem;
+        }
+        
+        .mobile-dropdown.active .mobile-dropdown-content {
             display: block;
         }
     </style>
@@ -49,7 +77,7 @@
             <div class="flex justify-between items-center">
                 <!-- Logo -->
                 <div class="flex items-center space-x-2">
-                    <img src="./images/TRClogo.png" alt="TRC Logo" class="h-10 w-auto">
+                    <img src="./images/trc-logo.jpeg" alt="TRC Logo" class="h-10 w-auto">
                     <div class="text-church-purple text-3xl font-bold">
                         <a href="/">TRC AGC</a>
                     </div>
@@ -60,14 +88,14 @@
                     <a href="/" class="text-gray-800 hover:text-church-purple font-medium transition">Home</a>
 
                     <!-- About Dropdown -->
-                    <div class="dropdown relative">
-                        <button class="text-gray-800 hover:text-church-purple font-medium transition flex items-center">
+                    <div class="desktop-dropdown">
+                        <button class="desktop-dropdown-button text-gray-800 hover:text-church-purple font-medium transition flex items-center">
                             About
                             <svg class="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div class="dropdown-menu hidden absolute left-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-10">
+                        <div class="desktop-dropdown-menu">
                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Our History</a>
                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Mission & Vision</a>
                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Leadership</a>
@@ -75,34 +103,34 @@
                     </div>
 
                     <!-- Ministries Dropdown -->
-                    <div class="dropdown relative">
-                        <button class="text-gray-800 hover:text-church-purple font-medium transition flex items-center">
+                    <div class="desktop-dropdown">
+                        <button class="desktop-dropdown-button text-gray-800 hover:text-church-purple font-medium transition flex items-center">
                             Ministries
                             <svg class="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div class="dropdown-menu hidden absolute left-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-10">
+                        <div class="desktop-dropdown-menu">
                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Children</a>
                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Youth</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Community Outreach</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Education</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Men</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Women</a>
                         </div>
                     </div>
 
                     <a href="#" class="text-gray-800 hover:text-church-purple font-medium transition">Events</a>
                     <a href="#" class="text-gray-800 hover:text-church-purple font-medium transition">Blog</a>
-                    <a href="#" class="text-gray-800 hover:text-church-purple font-medium transition">Contact</a>
+                    <a href="contact" class="text-gray-800 hover:text-church-purple font-medium transition">Contact</a>
                 </nav>
 
                 <!-- CTA Button -->
                 <div class="hidden md:block">
-                    <a href="#" class="bg-church-red hover:bg-red-600 text-white font-medium py-2 px-4 rounded-md transition">Donate Now</a>
+                    <a href="donate" class="bg-church-red hover:bg-red-600 text-white font-medium py-2 px-4 rounded-md transition">Donate Now</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button id="menu-toggle" class="text-gray-600 hover:text-church-purple focus:outline-none">
+                    <button id="mobile-menu-toggle" class="text-gray-600 hover:text-church-purple focus:outline-none">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
@@ -113,11 +141,41 @@
             <!-- Mobile Navigation -->
             <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
                 <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Home</a>
-                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">About</a>
-                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Ministries</a>
+                
+                <!-- Mobile About Dropdown -->
+                <div class="mobile-dropdown">
+                    <div class="flex items-center justify-between py-2 px-4 text-gray-800 hover:bg-gray-100 cursor-pointer">
+                        <span>About</span>
+                        <svg class="mobile-dropdown-arrow h-4 w-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div class="mobile-dropdown-content">
+                        <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">Our History</a>
+                        <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">Mission & Vision</a>
+                        <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">Leadership</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile Ministries Dropdown -->
+                <div class="mobile-dropdown">
+                    <div class="flex items-center justify-between py-2 px-4 text-gray-800 hover:bg-gray-100 cursor-pointer">
+                        <span>Ministries</span>
+                        <svg class="mobile-dropdown-arrow h-4 w-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div class="mobile-dropdown-content">
+                        <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">Children</a>
+                        <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">Youth</a>
+                        <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">Community Outreach</a>
+                        <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">Education</a>
+                    </div>
+                </div>
+                
                 <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Events</a>
                 <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Blog</a>
-                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Contact</a>
+                <a href="contact" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Contact</a>
                 <a href="#" class="mt-3 block text-center bg-church-red hover:bg-red-600 text-white font-medium py-2 px-4 rounded-md transition">Donate Now</a>
             </div>
         </div>
@@ -160,8 +218,7 @@
                         <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition">Ministries</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition">Events</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Sermons</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                        <li><a href="contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
                     </ul>
                 </div>
 
@@ -169,10 +226,10 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Service Times</h3>
                     <ul class="space-y-2 text-gray-400">
-                        <li>Sunday Worship: 9:00 AM & 11:00 AM</li>
-                        <li>Sunday School: 10:15 AM</li>
-                        <li>Wednesday Bible Study: 7:00 PM</li>
-                        <li>Youth Group: Friday, 6:30 PM</li>
+                        <li>Sunday Worship: 10:00 AM - 12:00 AM</li>
+                        <li>Sunday School: 11:15 AM</li>
+                        <li>Wednesday Bible Study: 8:30 PM - 9:30 PM</li>
+                        <li>Youth Group: Friday, 8:30 PM</li>
                     </ul>
                 </div>
 
@@ -182,15 +239,16 @@
                     <ul class="space-y-2 text-gray-400">
                         <li class="flex items-start">
                             <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
-                            <span>123 Church Street, City, Country</span>
+                            <span>Kasarani Group of Schools<br>
+                            icipe Road, Nairobi, Kenya</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-phone mr-2"></i>
-                            <span>+123 456 7890</span>
+                            <span>+254 791 049004</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope mr-2"></i>
-                            <span>info@trcagc.org</span>
+                            <span>thikaroadagc@gmail.com</span>
                         </li>
                     </ul>
                 </div>
@@ -209,12 +267,68 @@
 
     <!-- Scripts -->
     <script>
-        // Mobile Menu Toggle
-        document.getElementById('menu-toggle').addEventListener('click', function() {
+        // Desktop dropdown functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all desktop dropdown buttons
+            const dropdownButtons = document.querySelectorAll('.desktop-dropdown-button');
+            
+            // Add click event to each dropdown button
+            dropdownButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation(); // Prevent click from bubbling up
+                    
+                    // Get the parent dropdown element
+                    const dropdown = this.parentElement;
+                    
+                    // Close all other dropdowns first
+                    document.querySelectorAll('.desktop-dropdown').forEach(item => {
+                        if (item !== dropdown) {
+                            item.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle the active class on the current dropdown
+                    dropdown.classList.toggle('active');
+                });
+            });
+            
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.desktop-dropdown')) {
+                    document.querySelectorAll('.desktop-dropdown').forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }
+            });
+            
+            // Mobile menu toggle
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
             const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
+            
+            mobileMenuToggle.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Mobile dropdowns
+            const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
+            
+            mobileDropdowns.forEach(dropdown => {
+                const dropdownHeader = dropdown.querySelector('div:first-child');
+                const arrow = dropdown.querySelector('.mobile-dropdown-arrow');
+                
+                dropdownHeader.addEventListener('click', function() {
+                    dropdown.classList.toggle('active');
+                    
+                    // Rotate arrow when expanded
+                    if (dropdown.classList.contains('active')) {
+                        arrow.classList.add('rotate-180');
+                    } else {
+                        arrow.classList.remove('rotate-180');
+                    }
+                });
+            });
         });
-
+        
         // Scroll to Top Button
         const scrollToTopBtn = document.getElementById('scrollToTopBtn');
         

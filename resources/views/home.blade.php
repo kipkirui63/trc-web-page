@@ -6,44 +6,43 @@
 
 @section('content')
 <!-- Hero Section -->
-<section class="relative">
-    <div class="bg-gradient-to-r from-church-purple to-church-purple-light text-white py-20 md:py-32">
-        <div class="container mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-8 md:mb-0">
-                <h1 class="text-3xl md:text-5xl font-bold mb-4">Welcome to TRC AGC Church</h1>
-                <p class="text-lg md:text-xl mb-6">The Whole Church taking the Whole Gospel to the Whole World</p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="/visit" class="bg-white text-church-purple hover:bg-gray-100 font-medium py-3 px-6 rounded-md transition text-center">Plan Your Visit</a>
-                    <a href="#" class="bg-church-red hover:bg-red-600 text-white font-medium py-3 px-6 rounded-md transition text-center">Watch Live</a>
+<section class="relative h-screen">
+    <!-- Full-width background image -->
+    <div class="absolute inset-0 z-0">
+        <img src="https://i.pinimg.com/736x/b2/13/0f/b2130ff39bf55401962c266f7fd9e5c8.jpg" alt="Person praying in church" class="w-full h-full object-cover" />
+        
+    </div>
+    
+    <!-- Content positioned over the image -->
+    <div class="relative z-10 flex flex-col justify-center h-full px-6 md:px-16 max-w-5xl mx-auto text-white">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">Find Peace and Purpose</h2>
+        <p class="text-xl md:text-2xl mb-8 max-w-2xl">Join us on a spiritual journey where love, faith, and community converge to uplift hearts and spread God's message.</p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 mb-12">
+            <a href="/visit" class="bg-purple-800 hover:bg-purple-900 text-white font-medium py-3 px-8 rounded-md transition text-center inline-block max-w-xs">Visit Us</a>
+            <a href="/watch" class="bg-transparent border-2 border-white hover:bg-white hover:text-purple-800 text-white font-medium py-3 px-8 rounded-md transition text-center inline-block max-w-xs">Watch Live</a>
+        </div>
+        
+        <!-- Service Times -->
+        <div class="p-6 rounded-lg border border-gray-500 max-w-lg">
+            <h3 class="text-xl font-bold text-white mb-4">This Week's Service Times</h3>
+            <div class="space-y-3 text-gray-100">
+                <div class="flex justify-between">
+                    <span class="font-medium">Sunday Worship:</span>
+                    <span>10:00 AM - 12:00 PM</span>
                 </div>
-            </div>
-            <div class="md:w-1/2">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h2 class="text-xl font-bold text-church-purple mb-4">This Week's Service Times</h2>
-                    <div class="space-y-3 text-gray-800">
-                        <div class="flex justify-between">
-                            <span class="font-medium">Sunday Worship:</span>
-                            <span>9:00 AM & 11:00 AM</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="font-medium">Sunday School:</span>
-                            <span>10:15 AM</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="font-medium">Wednesday Bible Study:</span>
-                            <span>7:00 PM</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="font-medium">Youth Group:</span>
-                            <span>Friday, 6:30 PM</span>
-                        </div>
-                    </div>
+                <div class="flex justify-between">
+                    <span class="font-medium">Sunday School:</span>
+                    <span>11:15 AM</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="font-medium">Wednesday Bible Study:</span>
+                    <span>8:30 PM - 9:30 PM</span>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 <!-- Mission & Vision -->
 <section class="py-16 bg-white">
     <div class="container mx-auto px-4">
@@ -152,43 +151,7 @@
 </section>
 
 <!-- What We Care For -->
-<section class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-church-purple mb-2">What We Care For</h2>
-            <div class="w-20 h-1 bg-church-red mx-auto"></div>
-        </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Care Item 1 -->
-            <div class="text-center">
-                <div class="mb-4 mx-auto w-24 h-24 rounded-full bg-church-purple flex items-center justify-center text-white text-3xl">
-                    <i class="fas fa-home"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">New life for children, in a new land</h3>
-                <p class="text-gray-600">We have built shelter homes in different regions so children can move out of undeveloped areas to live, study and work in bigger and better cities.</p>
-            </div>
-
-            <!-- Care Item 2 -->
-            <div class="text-center">
-                <div class="mb-4 mx-auto w-24 h-24 rounded-full bg-church-purple flex items-center justify-center text-white text-3xl">
-                    <i class="fas fa-heart"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">A new future for exploited children</h3>
-                <p class="text-gray-600">Children and youngsters who are exploited in their early days need a helping hand and support for their mental health. We take them out of this zone to give them a better life.</p>
-            </div>
-
-            <!-- Care Item 3 -->
-            <div class="text-center">
-                <div class="mb-4 mx-auto w-24 h-24 rounded-full bg-church-purple flex items-center justify-center text-white text-3xl">
-                    <i class="fas fa-star"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">Bringing dreams within reach for children</h3>
-                <p class="text-gray-600">The underprivileged children do not have access to required financial help and resources needed to live the life of their dreams. We help them with everything they'll need to live their dreams.</p>
-            </div>
-        </div>
-    </div>
-</section>
 <!-- Upcoming Events -->
 <section class="py-16 bg-white">
     <div class="container mx-auto px-4">
@@ -264,15 +227,5 @@
     </div>
 </section>
 
-<!-- Call to Action -->
-<section class="py-16 bg-church-purple text-white">
-    <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-6">Partner With Us</h2>
-        <p class="text-lg mb-8 max-w-3xl mx-auto">Partner with us to support a missionary giving their lives to the service of community!</p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="#" class="bg-white text-church-purple hover:bg-gray-100 font-medium py-3 px-6 rounded-md transition">Become a Volunteer</a>
-            <a href="#" class="bg-church-red hover:bg-red-600 text-white font-medium py-3 px-6 rounded-md transition">Donate Now</a>
-        </div>
-    </div>
-</section>
+
 @endsection
