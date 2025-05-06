@@ -39,8 +39,8 @@ Follow these steps to set up the project locally for development:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-organization/trc-agc-church-website.git
-cd trc-agc-church-website
+git clone git@github.com:fay-simotwo/trc-agc-web.git
+cd trc-agc-church-web
 ```
 
 ### 2. Install PHP Dependencies
@@ -91,7 +91,7 @@ php artisan make:admin
 ### 8. Run the Application
 
 ```bash
-php artisan serve
+composer run dev
 ```
 
 The application will be available at `http://localhost:8000`
@@ -137,21 +137,6 @@ The database includes the following main tables:
 - `feature/*` - New features
 - `bugfix/*` - Bug fixes
 
-### Pull Request Process
-
-1. Create a branch from `develop`
-2. Make your changes
-3. Run tests
-4. Submit a PR to `develop`
-5. After code review, merge to `develop`
-
-### Code Style
-
-This project follows PSR-12 coding standards. Run the following to check your code:
-
-```bash
-composer run lint
-```
 
 ## Frontend Development
 
@@ -169,12 +154,6 @@ For production:
 npm run build
 ```
 
-### Tailwind Configuration
-
-The Tailwind configuration is in `tailwind.config.js`. The project uses custom colors:
-- Purple (`#6B46C1`) - Primary color
-- Red (`#E53E3E`) - Secondary color
-- White - Accent color
 
 ## Deployment
 
@@ -200,34 +179,3 @@ php artisan route:cache
 php artisan view:cache
 ```
 
-## Maintenance and Updates
-
-### Backups
-
-Daily database backups are automatically scheduled via a cron job.
-
-### Performance Optimization
-
-- Images are compressed and served via CDN
-- Application caching is enabled in production
-- Database queries are optimized
-
-### Monitoring
-
-The application uses Laravel Telescope for monitoring in development and New Relic in production.
-
-## Additional Resources
-
-- [Laravel Documentation](https://laravel.com/docs)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Project Wiki](https://github.com/your-organization/trc-agc-church-website/wiki)
-
-## License
-
-This project is proprietary and confidential.
-
-## Contact
-
-For questions or support, please contact:
-- Project Manager: [name@example.com](mailto:name@example.com)
-- Lead Developer: [dev@example.com](mailto:dev@example.com)
