@@ -49,7 +49,7 @@
             <div class="flex justify-between items-center">
                 <!-- Logo -->
                 <div class="flex items-center space-x-2">
-                    <img src="../images/TRC.png" alt="TRC Logo" class="h-10 w-auto">
+                    <img src="./images/TRClogo.png" alt="TRC Logo" class="h-10 w-auto">
                     <div class="text-church-purple text-3xl font-bold">
                         <a href="/">TRC AGC</a>
                     </div>

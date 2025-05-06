@@ -1,74 +1,233 @@
-# TRC AGC Church Website Project Structure
+# TRC AGC Church Website
 
-## Core Features
-- Home page with welcome message, upcoming events, and service times
+A professional church website built using Laravel, Tailwind CSS, and Blade templates for the Africa Gospel Church.
+
+## Project Overview
+
+This project is a complete website for TRC Africa Gospel Church featuring a custom design with purple, white, and red color scheme. The website includes the following core features:
+
+- Responsive home page with welcome message, upcoming events, and service times
 - About page (history, mission, vision, leadership)
-- Vision: The Whole Church taking the Whole Gospel to the Whole world
-- 
-Our Mission
-The purpose of the Africa Gospel Church is to fulfill the Great Commandment and Great commission of the Lord Jesus Christ according to the Great Plan
-(Mark 12: 30,31 Mathew 28:19,20 Acts 1:8).
-- What we do
-We support children and youth to reach their full potential!
-We run shelter homes, schools and a reasonable mess that helps such needy young people. We also have our helpline offices that can be approached at any time.
-We Find & Fund
-We are in search of opportunities to help as many youths as possible. We approach and fund all those who are in need.
-We Educate
-Today’s youth need a helpful hand and right guidance at every stage. Here’s where we take care of them like our own.
-We Provide Care
-We build schools for the underprivileged children so they are encouraged to attend school with their friends.
-We Consult
-We run small-scale schools for the underprivileged children and youth of daily wage workers for a better future.
-We Build Schools
-We run organizations where we employ youngsters so they can live their dreams for themselves and their families.
-We Strengthen
-We believe that education, and employment gives people an inner strength to lead a better life.
-What we care for
-
-New life for children, in a new land
-We have built shelter homes in different regions so children can move out of undeveloped areas to live, study and work in bigger and better cities.
-A new future for exploited children
-Children and youngsters who are exploited in their early days need a helping hand and support for their mental health. We take them out of this zone to give them a better life.
-
-
-Bringing dreams within reach for children
-The underprivileged children do not have access to required financial help and resources needed to live the life of their dreams. We help them with everything they’ll need to live their dreams.
-GIVE US A HAND
-Partner with us to support a missionary giving their lives to the service of community!
-
-- Events calendar
-- Ministries/Departments
-- Donations
-- Contact information
+- Events calendar and management system
+- Ministries/Departments section
+- Donations system
+- Contact information and form
 - Blog/Announcements
+- Admin dashboard with authentication and CRUD operations
 
-## Technical Structure
+## Technical Requirements
 
-### Laravel Backend
-- Authentication system for admins
-- CRUD operations for events, sermons, blog posts
-- Media management system
-- Email notification system
+### Prerequisites
 
+- PHP >= 8.1
+- Composer
+- Node.js and NPM
+- MySQL or equivalent database
+- Git
 
-### Database Schema
-- Events
-- Ministries
-- Blog posts
-- Media files
+### Server Requirements
 
-### Frontend (Tailwind + Laravel Blade)
-- Responsive design for all devices
-- Custom Tailwind theme using purple, white, and red
-- Modern UI components
-- Accessible design
-- Fast loading pages
-- SEO optimization
+- Web server (Apache/Nginx)
+- PHP >= 8.1
+- MySQL >= 5.7 or MariaDB >= 10.3
+- SSL certificate (recommended for production)
 
-### Deployment & Scalability
-- Server requirements
-- Database optimization
-- Caching strategies
-- CDN for media files
-- Backup system
-- Analytics integration
+## Getting Started
+
+Follow these steps to set up the project locally for development:
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-organization/trc-agc-church-website.git
+cd trc-agc-church-website
+```
+
+### 2. Install PHP Dependencies
+
+```bash
+composer install
+```
+
+### 3. Install Frontend Dependencies
+
+```bash
+npm install
+npm run dev
+```
+
+### 4. Environment Configuration
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+Edit the `.env` file to configure your:
+- Database connection
+- Mail settings
+- Application URL
+- Other environment-specific settings
+
+### 5. Database Setup
+
+```bash
+php artisan migrate
+php artisan db:seed
+```
+
+### 6. Storage Setup
+
+```bash
+php artisan storage:link
+```
+
+### 7. Create Admin User
+
+```bash
+php artisan make:admin
+```
+
+### 8. Run the Application
+
+```bash
+php artisan serve
+```
+
+The application will be available at `http://localhost:8000`
+
+## Project Structure
+
+```
+├── app/                  # PHP application code
+│   ├── Console/          # Custom Artisan commands
+│   ├── Http/             # Controllers, Middleware, Requests
+│   ├── Models/           # Eloquent models
+│   └── Services/         # Application services
+├── config/               # Configuration files
+├── database/             # Database migrations and seeders
+├── public/               # Public assets
+├── resources/            # Views, language files, and uncompiled assets
+│   ├── js/               # JavaScript files
+│   ├── sass/             # SCSS files
+│   └── views/            # Blade templates
+├── routes/               # Route definitions
+├── storage/              # Application storage
+└── tests/                # Automated tests
+```
+
+## Database Schema
+
+The database includes the following main tables:
+
+- `users` - Admin users who can manage the website
+- `events` - Church events with dates, times, and details
+- `ministries` - Church ministries and departments
+- `posts` - Blog posts and announcements
+- `media` - Images and other media files
+- `donations` - Donation records
+- `prayer_requests` - Prayer requests submitted by visitors
+
+## Development Workflow
+
+### Branching Strategy
+
+- `main` - Production code
+- `develop` - Development branch
+- `feature/*` - New features
+- `bugfix/*` - Bug fixes
+
+### Pull Request Process
+
+1. Create a branch from `develop`
+2. Make your changes
+3. Run tests
+4. Submit a PR to `develop`
+5. After code review, merge to `develop`
+
+### Code Style
+
+This project follows PSR-12 coding standards. Run the following to check your code:
+
+```bash
+composer run lint
+```
+
+## Frontend Development
+
+The frontend uses Tailwind CSS with Laravel Blade templates.
+
+### Building Assets
+
+During development:
+```bash
+npm run dev
+```
+
+For production:
+```bash
+npm run build
+```
+
+### Tailwind Configuration
+
+The Tailwind configuration is in `tailwind.config.js`. The project uses custom colors:
+- Purple (`#6B46C1`) - Primary color
+- Red (`#E53E3E`) - Secondary color
+- White - Accent color
+
+## Deployment
+
+### Production Environment Setup
+
+1. Set up a production server with required dependencies
+2. Configure web server (Apache/Nginx)  
+3. Set up SSL certificate
+4. Configure database
+5. Deploy code
+
+### Deployment Process
+
+```bash
+# On production server
+git pull origin main
+composer install --no-dev --optimize-autoloader
+npm install
+npm run build
+php artisan migrate --force
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+```
+
+## Maintenance and Updates
+
+### Backups
+
+Daily database backups are automatically scheduled via a cron job.
+
+### Performance Optimization
+
+- Images are compressed and served via CDN
+- Application caching is enabled in production
+- Database queries are optimized
+
+### Monitoring
+
+The application uses Laravel Telescope for monitoring in development and New Relic in production.
+
+## Additional Resources
+
+- [Laravel Documentation](https://laravel.com/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Project Wiki](https://github.com/your-organization/trc-agc-church-website/wiki)
+
+## License
+
+This project is proprietary and confidential.
+
+## Contact
+
+For questions or support, please contact:
+- Project Manager: [name@example.com](mailto:name@example.com)
+- Lead Developer: [dev@example.com](mailto:dev@example.com)
