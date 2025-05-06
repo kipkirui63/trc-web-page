@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@source "../views";
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap');
+
+
+@theme {
+  --color-church-purple: #6a0dad;
+  --color-church-purple-light: #9b59b6;
+  --color-church-red: #e74c3c;
+  
+  --font-family-sans: 'Instrument Sans', sans-serif;
+}
