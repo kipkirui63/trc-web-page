@@ -10,19 +10,19 @@
     <!-- Full-width background image -->
     <div class="absolute inset-0 z-0">
         <img src="https://i.pinimg.com/736x/b2/13/0f/b2130ff39bf55401962c266f7fd9e5c8.jpg" alt="Person praying in church" class="w-full h-full object-cover" />
-        
+
     </div>
-    
+
     <!-- Content positioned over the image -->
-    <div class="relative z-10 flex flex-col justify-center h-full px-6 md:px-16 max-w-5xl mx-auto text-white">
+    <div class="relative z-10 flex flex-col justify-start pt-10 h-full px-6 md:px-16 max-w-5xl mx-auto text-white">
         <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">Find Peace and Purpose</h2>
         <p class="text-xl md:text-2xl mb-8 max-w-2xl">Join us on a spiritual journey where love, faith, and community converge to uplift hearts and spread God's message.</p>
-        
+
         <div class="flex flex-col sm:flex-row gap-4 mb-12">
-            <a href="/visit" class="bg-purple-800 hover:bg-purple-900 text-white font-medium py-3 px-8 rounded-md transition text-center inline-block max-w-xs">Visit Us</a>
+            <a href="/visit" class="bg-purple-800 hover:bg-purple-900 text-white font-medium py-3 px-8   rounded-md transition text-center inline-block max-w-xs">Visit Us</a>
             <a href="/watch" class="bg-transparent border-2 border-white hover:bg-white hover:text-purple-800 text-white font-medium py-3 px-8 rounded-md transition text-center inline-block max-w-xs">Watch Live</a>
         </div>
-        
+
         <!-- Service Times -->
         <div class="p-6 rounded-lg border border-gray-500 max-w-lg">
             <h3 class="text-xl font-bold text-white mb-4">This Week's Service Times</h3>

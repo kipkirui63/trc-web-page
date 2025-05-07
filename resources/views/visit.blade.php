@@ -30,8 +30,8 @@
                             </div>
                             <div>
                                 <h3 class="font-bold text-lg mb-1">Service Times</h3>
-                                <p>Sunday Worship: 9:00 AM & 11:00 AM<br>
-                                Sunday School: 10:15 AM</p>
+                                <p>Sunday Worship: 10:00 AM - 12:00 PM<br>
+                                Sunday School: 11:15 AM</p>
                             </div>
                         </div>
                         
@@ -41,9 +41,8 @@
                             </div>
                             <div>
                                 <h3 class="font-bold text-lg mb-1">Location</h3>
-                                <p>123 Church Street<br>
-                                City, Country</p>
-                                <a href="#" class="text-church-purple hover:text-church-purple-light mt-1 inline-block">Get Directions</a>
+                                <span>Kasarani Group of Schools<br>
+                                icipe Road, Nairobi, Kenya</span>
                             </div>
                         </div>
                         
@@ -96,14 +95,6 @@
                                 <input type="date" id="date" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-church-purple">
                             </div>
                             
-                            <div class="mb-4">
-                                <label for="service" class="block text-gray-700 font-medium mb-2">Service Time</label>
-                                <select id="service" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-church-purple">
-                                    <option>9:00 AM Sunday Service</option>
-                                    <option>11:00 AM Sunday Service</option>
-                                </select>
-                            </div>
-                            
                             <div class="mb-6">
                                 <label class="block text-gray-700 font-medium mb-2">Will you bring children?</label>
                                 <div class="flex items-center">
@@ -133,63 +124,47 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="py-12 bg-gray-50">
+ <!-- FAQ Section -->
+ <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-10">
+            <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-church-purple mb-2">Frequently Asked Questions</h2>
                 <div class="w-20 h-1 bg-church-red mx-auto"></div>
             </div>
-            
-            <div class="max-w-3xl mx-auto">
-                <div class="mb-6">
-                    <h3 class="text-xl font-bold mb-2">Where should I park?</h3>
-                    <p class="text-gray-600">We have ample parking available in our main lot, with designated visitor parking near the front entrance. Our parking team will be happy to direct you.</p>
-                </div>
-                
-                <div class="mb-6">
-                    <h3 class="text-xl font-bold mb-2">How long are the services?</h3>
-                    <p class="text-gray-600">Our services typically last about 75-90 minutes, which includes worship, announcements, and the sermon.</p>
-                </div>
-                
-                <div class="mb-6">
-                    <h3 class="text-xl font-bold mb-2">What's available for my children?</h3>
-                    <p class="text-gray-600">We offer age-appropriate children's programs during all services. Our check-in process is secure and our volunteers are trained and background-checked for your child's safety.</p>
-                </div>
-                
-                <div class="mb-6">
-                    <h3 class="text-xl font-bold mb-2">Do I need to be a member to attend?</h3>
-                    <p class="text-gray-600">Absolutely not! We welcome everyone to attend our services regardless of religious background or church experience.</p>
-                </div>
-                
-                <div>
-                    <h3 class="text-xl font-bold mb-2">What if I have more questions?</h3>
-                    <p class="text-gray-600">Feel free to contact us at <a href="mailto:info@trcagc.org" class="text-church-purple hover:text-church-purple-light">info@trcagc.org</a> or call us at <a href="tel:+1234567890" class="text-church-purple hover:text-church-purple-light">+123 456 7890</a>.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Virtual Tour -->
-    <section class="py-12 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold text-church-purple mb-6">Take a Virtual Tour</h2>
-            <p class="text-lg mb-8 max-w-3xl mx-auto">Can't wait until Sunday? Take a virtual tour of our facilities to get familiar with our campus before your visit.</p>
-            
-            <div class="bg-gray-200 rounded-lg aspect-video max-w-4xl mx-auto flex items-center justify-center">
-                <!-- This would be replaced with an actual video or 360° tour -->
-                <div class="text-center text-gray-600">
-                    <i class="fas fa-video text-5xl mb-4"></i>
-                    <p class="text-xl">Virtual Tour Video</p>
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-6">
+                    <!-- FAQ Item 1 -->
+                    <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+                        <h3 class="text-xl font-bold text-church-purple mb-3">What time are your Sunday services?</h3>
+                        <p class="text-gray-700">Our Sunday Worhip Service starts from 10:00am to 12:00pm, with Sunday School at 11:15 AM.</p>
+                    </div>
+
+                      <!-- FAQ Item 2 -->
+                      <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+                        <h3 class="text-xl font-bold text-church-purple mb-3">How long are the services?</h3>
+                        <p class="text-gray-700">Our services typically last about 75-90 minutes, which includes worship, announcements, and the sermon.</p>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+                        <h3 class="text-xl font-bold text-church-purple mb-3">Is there parking available?</h3>
+                        <p class="text-gray-700">Yes, we have free parking available at our church campus for all attendees.</p>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+                        <h3 class="text-xl font-bold text-church-purple mb-3">What's available for my children?</h3>
+                        <p class="text-gray-700">We offer age-appropriate children's programs during all services. Our check-in process is secure and our volunteers are trained and background-checked for your child's safety.</p>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+                        <h3 class="text-xl font-bold text-church-purple mb-3">Do I need to be a member to attend?</h3>
+                        <p class="text-gray-700">Absolutely not! We welcome everyone to attend our services regardless of religious background or church experience.</p>
+                    </div>
                 </div>
             </div>
-            
-            <a href="#" class="mt-6 inline-flex items-center bg-church-purple hover:bg-church-purple-light text-white font-medium py-3 px-6 rounded-md transition">
-                View Full Virtual Tour
-                <svg class="h-4 w-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-            </a>
         </div>
     </section>
 

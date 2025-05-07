@@ -81,7 +81,7 @@
                             <i class="fab fa-facebook-f"></i>
                         </a>
                         <a href="#" class="w-10 h-10 rounded-full bg-church-purple flex items-center justify-center text-white hover:bg-church-purple-light transition">
-                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-tiktok"></i>
                         </a>
                         <a href="#" class="w-10 h-10 rounded-full bg-church-purple flex items-center justify-center text-white hover:bg-church-purple-light transition">
                             <i class="fab fa-instagram"></i>
@@ -214,22 +214,28 @@
                         <p class="text-gray-700">Our Sunday Worhip Service starts from 10:00am to 12:00pm, with Sunday School at 11:15 AM.</p>
                     </div>
 
-                    <!-- FAQ Item 2 -->
+                      <!-- FAQ Item 2 -->
+                      <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+                        <h3 class="text-xl font-bold text-church-purple mb-3">How long are the services?</h3>
+                        <p class="text-gray-700">Our services typically last about 75-90 minutes, which includes worship, announcements, and the sermon.</p>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
                     <div class="bg-gray-50 rounded-lg p-6 shadow-md">
                         <h3 class="text-xl font-bold text-church-purple mb-3">Is there parking available?</h3>
                         <p class="text-gray-700">Yes, we have free parking available at our church campus for all attendees.</p>
                     </div>
 
-                    <!-- FAQ Item 3 -->
-                    <div class="bg-gray-50 rounded-lg p-6 shadow-md">
-                        <h3 class="text-xl font-bold text-church-purple mb-3">Do you have programs for children?</h3>
-                        <p class="text-gray-700">Yes, we have age-appropriate children's ministries available during all our Sunday services. Our children's program runs concurrently with the adult service.</p>
-                    </div>
-
                     <!-- FAQ Item 4 -->
                     <div class="bg-gray-50 rounded-lg p-6 shadow-md">
-                        <h3 class="text-xl font-bold text-church-purple mb-3">How can I become a member of the church?</h3>
-                        <p class="text-gray-700">We offer membership classes regularly. Please contact our church office for information about the next available class or speak to one of our pastors after the service.</p>
+                        <h3 class="text-xl font-bold text-church-purple mb-3">What's available for my children?</h3>
+                        <p class="text-gray-700">We offer age-appropriate children's programs during all services. Our check-in process is secure and our volunteers are trained and background-checked for your child's safety.</p>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+                        <h3 class="text-xl font-bold text-church-purple mb-3">Do I need to be a member to attend?</h3>
+                        <p class="text-gray-700">Absolutely not! We welcome everyone to attend our services regardless of religious background or church experience.</p>
                     </div>
                 </div>
             </div>

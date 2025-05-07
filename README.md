@@ -76,18 +76,6 @@ php artisan migrate
 php artisan db:seed
 ```
 
-### 6. Storage Setup
-
-```bash
-php artisan storage:link
-```
-
-### 7. Create Admin User
-
-```bash
-php artisan make:admin
-```
-
 ### 8. Run the Application
 
 ```bash

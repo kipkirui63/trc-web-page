@@ -33,7 +33,7 @@
         .desktop-dropdown {
             position: relative;
         }
-        
+
         .desktop-dropdown-menu {
             display: none;
             position: absolute;
@@ -46,41 +46,40 @@
             z-index: 20;
             padding: 0.5rem 0;
         }
-        
+
         .desktop-dropdown.active .desktop-dropdown-menu {
             display: block;
         }
-        
+
         /* Mobile dropdown */
         .mobile-dropdown-content {
             display: none;
             padding-left: 1rem;
         }
-        
+
         .mobile-dropdown.active .mobile-dropdown-content {
             display: block;
         }
     </style>
-    
+
     @yield('styles')
 </head>
 
 <body class="bg-gray-50 text-gray-800">
     <!-- Announcement Bar -->
-    <div class="bg-church-purple text-white text-center py-2 px-4">
+    <div class="bg-gradient-to-r from-church-purple to-church-purple-light text-white text-center py-2 px-4">
         <p class="text-sm md:text-base">Join us this Sunday 10:00 AM for our worship service | <a href="#" class="underline hover:text-church-red transition">Live Stream</a></p>
     </div>
 
     <!-- Header/Navigation -->
     <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3">
-            <div class="flex justify-between items-center">
+        <div class="container mx-auto px-4">
+            <div class="h-16 flex justify-between items-center">
                 <!-- Logo -->
                 <div class="flex items-center space-x-2">
-                    <img src="./images/trc-logo.jpeg" alt="TRC Logo" class="h-10 w-auto">
-                    <div class="text-church-purple text-3xl font-bold">
-                        <a href="/">TRC AGC</a>
-                    </div>
+                    <a href="/">
+                        <img src="{{ asset('images/trc.png') }}" alt="TRC Logo" class="h-20 w-auto object-contain max-h-full">
+                    </a>
                 </div>
 
                 <!-- Desktop Navigation -->
@@ -119,7 +118,6 @@
                     </div>
 
                     <a href="#" class="text-gray-800 hover:text-church-purple font-medium transition">Events</a>
-                    <a href="#" class="text-gray-800 hover:text-church-purple font-medium transition">Blog</a>
                     <a href="contact" class="text-gray-800 hover:text-church-purple font-medium transition">Contact</a>
                 </nav>
 
@@ -141,7 +139,7 @@
             <!-- Mobile Navigation -->
             <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
                 <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Home</a>
-                
+
                 <!-- Mobile About Dropdown -->
                 <div class="mobile-dropdown">
                     <div class="flex items-center justify-between py-2 px-4 text-gray-800 hover:bg-gray-100 cursor-pointer">
@@ -156,7 +154,7 @@
                         <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">Leadership</a>
                     </div>
                 </div>
-                
+
                 <!-- Mobile Ministries Dropdown -->
                 <div class="mobile-dropdown">
                     <div class="flex items-center justify-between py-2 px-4 text-gray-800 hover:bg-gray-100 cursor-pointer">
@@ -172,9 +170,8 @@
                         <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">Education</a>
                     </div>
                 </div>
-                
+
                 <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Events</a>
-                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Blog</a>
                 <a href="contact" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Contact</a>
                 <a href="#" class="mt-3 block text-center bg-church-red hover:bg-red-600 text-white font-medium py-2 px-4 rounded-md transition">Donate Now</a>
             </div>
@@ -199,7 +196,7 @@
                             <i class="fab fa-facebook-f"></i>
                         </a>
                         <a href="#" class="text-white hover:text-church-red transition">
-                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-tiktok"></i>
                         </a>
                         <a href="#" class="text-white hover:text-church-red transition">
                             <i class="fab fa-instagram"></i>
@@ -240,7 +237,7 @@
                         <li class="flex items-start">
                             <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
                             <span>Kasarani Group of Schools<br>
-                            icipe Road, Nairobi, Kenya</span>
+                                icipe Road, Nairobi, Kenya</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-phone mr-2"></i>
@@ -255,7 +252,7 @@
             </div>
 
             <div class="border-t border-gray-800 pt-6 text-center text-gray-400">
-                <p>&copy; {{ date('Y') }} TRC AGC Church. All Rights Reserved.</p>
+                <p>&copy; {{ date('Y') }} Thika Road Connect AGC. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -271,27 +268,27 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Get all desktop dropdown buttons
             const dropdownButtons = document.querySelectorAll('.desktop-dropdown-button');
-            
+
             // Add click event to each dropdown button
             dropdownButtons.forEach(button => {
                 button.addEventListener('click', function(e) {
                     e.stopPropagation(); // Prevent click from bubbling up
-                    
+
                     // Get the parent dropdown element
                     const dropdown = this.parentElement;
-                    
+
                     // Close all other dropdowns first
                     document.querySelectorAll('.desktop-dropdown').forEach(item => {
                         if (item !== dropdown) {
                             item.classList.remove('active');
                         }
                     });
-                    
+
                     // Toggle the active class on the current dropdown
                     dropdown.classList.toggle('active');
                 });
             });
-            
+
             // Close dropdowns when clicking outside
             document.addEventListener('click', function(e) {
                 if (!e.target.closest('.desktop-dropdown')) {
@@ -300,25 +297,25 @@
                     });
                 }
             });
-            
+
             // Mobile menu toggle
             const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
             const mobileMenu = document.getElementById('mobile-menu');
-            
+
             mobileMenuToggle.addEventListener('click', function() {
                 mobileMenu.classList.toggle('hidden');
             });
-            
+
             // Mobile dropdowns
             const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
-            
+
             mobileDropdowns.forEach(dropdown => {
                 const dropdownHeader = dropdown.querySelector('div:first-child');
                 const arrow = dropdown.querySelector('.mobile-dropdown-arrow');
-                
+
                 dropdownHeader.addEventListener('click', function() {
                     dropdown.classList.toggle('active');
-                    
+
                     // Rotate arrow when expanded
                     if (dropdown.classList.contains('active')) {
                         arrow.classList.add('rotate-180');
@@ -328,10 +325,10 @@
                 });
             });
         });
-        
+
         // Scroll to Top Button
         const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-        
+
         scrollToTopBtn.addEventListener('click', function() {
             window.scrollTo({
                 top: 0,
@@ -347,7 +344,7 @@
             }
         });
     </script>
-    
+
     @yield('scripts')
 </body>
 
