@@ -18,6 +18,7 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
 
     <style>
         body {
@@ -60,6 +61,157 @@
         .mobile-dropdown.active .mobile-dropdown-content {
             display: block;
         }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes bounce-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-3deg); }
+            50% { transform: rotate(3deg); }
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(147, 51, 234, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(147, 51, 234, 0.6); }
+        }
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1) rotate(180deg); }
+        }
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .float-animation { animation: float 6s ease-in-out infinite; }
+        .bounce-slow { animation: bounce-slow 4s ease-in-out infinite; }
+        .wiggle { animation: wiggle 2s ease-in-out infinite; }
+        .pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+        .sparkle { animation: sparkle 2s ease-in-out infinite; }
+        .rainbow-text {
+            background: linear-gradient(-45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #fcea2b, #ff9ff3, #54a0ff);
+            background-size: 400% 400%;
+            animation: rainbow 3s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .church-purple { color: #7c3aed; }
+        .church-red { color: #dc2626; }
+        .text-church-purple { color: #7c3aed; }
+        .text-church-red { color: #dc2626; }
+        .bg-church-purple { background-color: #7c3aed; }
+        .bg-church-red { background-color: #dc2626; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .pulse-soft {
+            animation: pulseSoft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        @keyframes pulseSoft {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.8) 0%, rgba(139, 69, 193, 0.6) 100%);
+        }
+        
+        .section-divider {
+            background: linear-gradient(90deg, transparent, #E5E7EB, transparent);
+            height: 1px;
+        }
+        .elegant-gradient {
+            background: linear-gradient(135deg, #6B46C1 0%, #8B5CF6 50%, #A855F7 100%);
+        }
+        
+        .glass-effect {
+            backdrop-filter: blur(16px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .elegant-border {
+            position: relative;
+        }
+        
+        .elegant-border::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #DC2626, #6B46C1, #8B5CF6);
+            border-radius: 2px;
+        }
+        
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #6B46C1, #DC2626);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .number-highlight {
+            background: linear-gradient(135deg, #DC2626, #6B46C1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+        }
     </style>
 
     @yield('styles')
@@ -71,35 +223,21 @@
         <p class="text-sm md:text-base">Join us this Sunday 10:00 AM for our worship service | <a href="#" class="underline hover:text-church-red transition">Live Stream</a></p>
     </div>
 
-    <!-- Header/Navigation -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
+ <!-- Header/Navigation -->
+ <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4">
             <div class="h-16 flex justify-between items-center">
                 <!-- Logo -->
                 <div class="flex items-center space-x-2">
                     <a href="/">
-                        <img src="{{ asset('images/trc.png') }}" alt="TRC Logo" class="h-20 w-auto object-contain max-h-full">
+                        <img src="{{ asset('images/trcc-.png') }}" alt="TRC Logo" class="h-20 w-auto object-contain max-h-full">
                     </a>
                 </div>
 
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-6">
                     <a href="/" class="text-gray-800 hover:text-church-purple font-medium transition">Home</a>
-
-                    <!-- About Dropdown -->
-                    <div class="desktop-dropdown">
-                        <button class="desktop-dropdown-button text-gray-800 hover:text-church-purple font-medium transition flex items-center">
-                            About
-                            <svg class="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <div class="desktop-dropdown-menu">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Our History</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Mission & Vision</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Leadership</a>
-                        </div>
-                    </div>
+                    <a href="about" class="text-gray-800 hover:text-church-purple font-medium transition">About Us</a>
 
                     <!-- Ministries Dropdown -->
                     <div class="desktop-dropdown">
@@ -110,8 +248,8 @@
                             </svg>
                         </button>
                         <div class="desktop-dropdown-menu">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Children</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Youth</a>
+                            <a href="children" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Children</a>
+                            <a href="youth" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Youth</a>
                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Men</a>
                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Women</a>
                         </div>
@@ -139,21 +277,7 @@
             <!-- Mobile Navigation -->
             <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
                 <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Home</a>
-
-                <!-- Mobile About Dropdown -->
-                <div class="mobile-dropdown">
-                    <div class="flex items-center justify-between py-2 px-4 text-gray-800 hover:bg-gray-100 cursor-pointer">
-                        <span>About</span>
-                        <svg class="mobile-dropdown-arrow h-4 w-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </div>
-                    <div class="mobile-dropdown-content">
-                        <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">Our History</a>
-                        <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">Mission & Vision</a>
-                        <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">Leadership</a>
-                    </div>
-                </div>
+                <a href="about" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">About Us</a>
 
                 <!-- Mobile Ministries Dropdown -->
                 <div class="mobile-dropdown">
@@ -211,8 +335,8 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="/" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="mission" class="text-gray-400 hover:text-white transition">About Us</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition">Ministries</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition">Events</a></li>
                         <li><a href="contact" class="text-gray-400 hover:text-white transition">Contact</a></li>

@@ -6,228 +6,568 @@
 
 @section('content')
 <!-- Hero Section -->
-<section class="relative">
-    <div class="bg-gradient-to-r from-church-purple to-church-purple-light text-white py-20 md:py-32">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="text-center">
-                <h1 class="text-3xl md:text-5xl font-bold mb-4">Give to Support Our Mission</h1>
-                <p class="text-lg md:text-xl mb-6">Your generosity helps us take the Whole Gospel to the Whole World</p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="#giving-options" class="bg-white text-church-purple hover:bg-gray-100 font-medium py-3 px-6 rounded-md transition text-center">Ways to Give</a>
-                    <a href="#mpesa-section" class="bg-church-red hover:bg-red-600 text-white font-medium py-3 px-6 rounded-md transition text-center">Give via M-Pesa</a>
-                </div>
+<section class="relative overflow-hidden">
+        <div class="elegant-gradient text-white py-24 md:py-32 relative">
+            <!-- Decorative Elements -->
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute top-20 left-10 w-32 h-32 rounded-full bg-white floating-animation"></div>
+                <div class="absolute top-40 right-20 w-20 h-20 rounded-full bg-white floating-animation" style="animation-delay: -2s;"></div>
+                <div class="absolute bottom-20 left-1/4 w-24 h-24 rounded-full bg-white floating-animation" style="animation-delay: -4s;"></div>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- Mission Support Section -->
-<section id="mission-support" class="py-16 bg-gray-50">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-church-purple mb-2">Supporting Global Missions</h2>
-            <p class="text-lg text-gray-600">Taking the Whole Gospel to the Whole World</p>
-            <div class="w-20 h-1 bg-church-red mx-auto mt-2"></div>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-            <!-- Mission Impact -->
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <h3 class="text-xl font-bold text-church-purple mb-4">Your Mission Giving Makes a Difference</h3>
-                <p class="text-gray-700 mb-4">At TRC AGC Church, we are committed to fulfilling the Great Commission by supporting mission work locally and globally. Your generous donations to missions enable us to:</p>
-                <ul class="list-disc pl-5 space-y-2 text-gray-700 mb-6">
-                    <li>Send and sustain missionaries in unreached regions</li>
-                    <li>Fund Bible translation projects in indigenous languages</li>
-                    <li>Support church planting initiatives in strategic locations</li>
-                    <li>Provide humanitarian aid alongside Gospel ministry</li>
-                    <li>Train and equip local leaders for evangelism and discipleship</li>
-                    <li>Maintain mission bases and ministry centers in key regions</li>
-                </ul>
-                <p class="italic text-gray-600">"And this gospel of the kingdom will be proclaimed throughout the whole world as a testimony to all nations, and then the end will come." - Matthew 24:14</p>
-            </div>
-
-            <!-- How to Support -->
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <h3 class="text-xl font-bold text-church-purple mb-4">Ways to Support Our Mission Work</h3>
-                
-                <div class="mb-6">
-                    <h4 class="font-bold text-gray-800 mb-2">Regular Mission Giving</h4>
-                    <p class="text-gray-700 mb-3">We encourage regular, faithful giving to missions as part of your stewardship. You can designate your mission offering through:</p>
-                    <ul class="list-disc pl-5 text-gray-700 mb-3">
-                        <li><span class="font-bold">M-Pesa:</span> Use Account Number <span class="font-bold">3</span> for Missions</li>
-                        <li><span class="font-bold">Monthly Pledges:</span> Commit to regular mission support</li>
-                        <li><span class="font-bold">Sunday Offering:</span> Mark your envelope "Missions"</li>
-                    </ul>
-                    <p class="text-sm text-gray-600 italic">100% of mission designated funds go directly to field operations and missionary support.</p>
-                </div>
-                
-                <div class="mb-6">
-                    <h4 class="font-bold text-gray-800 mb-2">Special Mission Projects</h4>
-                    <p class="text-gray-700 mb-3">Throughout the year, we highlight specific mission projects that need funding:</p>
-                    <ul class="list-disc pl-5 text-gray-700">
-                        <li>Mission field equipment and resources</li>
-                        <li>Church building projects in developing nations</li>
-                        <li>Crisis response and humanitarian aid</li>
-                        <li>Mission training scholarships</li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="font-bold text-gray-800 mb-2">Mission Accountability</h4>
-                    <p class="text-gray-700">We provide quarterly mission reports to our congregation detailing how mission funds are being used. We believe in transparency and faithful stewardship of every shilling given for God's work.</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Scripture and Call to Action -->
-        <div class="mt-12 max-w-3xl mx-auto">
-            <div class="bg-church-purple-light rounded-lg p-8 text-white text-center">
-                <p class="text-lg italic mb-4">"How beautiful are the feet of those who preach the good news!" - Romans 10:15</p>
-                <p class="mb-6">Your giving enables feet to carry the Good News to the ends of the earth.</p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="#mpesa-section" class="bg-white text-church-purple hover:bg-gray-100 font-medium py-3 px-6 rounded-md transition">Give to Missions Now</a>
-                    <a href="mailto:missions@trcchurch.org" class="bg-church-red hover:bg-red-600 text-white font-medium py-3 px-6 rounded-md transition">Contact Mission Office</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- Giving Options -->
-<section id="giving-options" class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-church-purple mb-2">Ways to Give</h2>
-            <p class="text-lg text-gray-600">Support our ministry through these convenient giving options</p>
-            <div class="w-20 h-1 bg-church-red mx-auto mt-2"></div>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            <!-- Option 1 -->
-            <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden transition transform hover:-translate-y-1 hover:shadow-lg">
-                <div class="p-6">
-                    <div class="w-16 h-16 rounded-full bg-church-purple flex items-center justify-center text-white text-2xl mb-4">
-                        <i class="fas fa-mobile-alt"></i>
+            
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center max-w-4xl mx-auto">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                        Give to Support Our 
+                        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-white">
+                            Sacred Mission
+                        </span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 text-gray-100 leading-relaxed">
+                        Your generosity helps us take the Whole Gospel to the Whole World
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-6 mt-12">
+                        <a href="#giving-options" class="glass-effect hover:bg-white hover:text-church-purple font-semibold py-4 px-8 rounded-full transition-all duration-300 text-center border border-white/30">
+                            <i class="fas fa-heart mr-2"></i>Ways to Give
+                        </a>
+                        <a href="#mpesa-section" class="bg-church-red hover:bg-red-700 text-white font-semibold py-4 px-8 rounded-full transition-all duration-300 text-center shadow-xl hover:shadow-2xl">
+                            <i class="fas fa-mobile-alt mr-2"></i>Give via M-Pesa
+                        </a>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Mobile Money (M-Pesa)</h3>
-                    <p class="text-gray-600 mb-4">Give easily using our M-Pesa Paybill number from anywhere, anytime.</p>
-                
-                </div>
-            </div>
-
-            <!-- Option 2 -->
-            <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden transition transform hover:-translate-y-1 hover:shadow-lg">
-                <div class="p-6">
-                    <div class="w-16 h-16 rounded-full bg-church-purple flex items-center justify-center text-white text-2xl mb-4">
-                        <i class="fas fa-church"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Sunday Service</h3>
-                    <p class="text-gray-600 mb-4">Give during our regular Sunday service when the offering basket is passed.</p>
-                   
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- M-Pesa Section -->
-<section id="mpesa-section" class="py-16 bg-gray-50">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-church-purple mb-2">Give via M-Pesa</h2>
-            <div class="w-20 h-1 bg-church-red mx-auto"></div>
-        </div>
+    <!-- Mission Support Section -->
+    <section id="mission-support" class="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="inline-block">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gradient mb-4">Supporting Global Missions</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-church-red to-church-purple mx-auto rounded-full"></div>
+                </div>
+                <p class="text-xl text-gray-600 mt-6 max-w-2xl mx-auto">
+                    Taking the Whole Gospel to the Whole World through your faithful partnership
+                </p>
+            </div>
 
-        <div class="max-w-4xl mx-auto">
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div class="md:flex">
-                    <div class="md:w-1/2 p-6 md:p-8">
-                        <h3 class="text-xl font-bold mb-4">How to Give via M-Pesa</h3>
-                        <ol class="list-decimal pl-5 mb-6 space-y-2 text-gray-700">
-                            <li>Go to M-Pesa on your phone</li>
-                            <li>Select "Lipa na M-Pesa"</li>
-                            <li>Select "Pay Bill"</li>
-                            <li>Enter Business Number: <span class="font-bold">404953</span></li>
-                            <li>Enter Account Number according to what you are giving:
-                                <ul class="list-disc pl-5 mt-2 ml-3 text-gray-600">
-                                    <li><span class="font-medium">1</span> - Tithe</li>
-                                    <li><span class="font-medium">2</span> - Offering</li>
-                                    <li><span class="font-medium">3</span> - Missions</li>
-                                    <li><span class="font-medium">4</span> - Other (indicate reason)</li>
-                                </ul>
-                            </li>
-                            <li>Enter Amount</li>
-                            <li>Enter your M-Pesa PIN</li>
-                            <li>Confirm and Send</li>
-                        </ol>
-                        <p class="text-gray-700 mb-2">If you need a receipt or have any questions about your donation, please contact our finance office at <a href="mailto:finance@trcchurch.org" class="text-church-purple hover:underline">finance@trcchurch.org</a> or call <a href="tel:+254123456789" class="text-church-purple hover:underline">+254 123 456 789</a>.</p>
+            <div class="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+                <!-- Mission Impact -->
+                <div class="bg-white rounded-3xl shadow-xl p-8 md:p-10 elegant-border card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-church-purple to-church-purple-light rounded-2xl flex items-center justify-center text-white text-2xl mr-4">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Your Mission Giving Makes a Difference</h3>
                     </div>
-                    <div class="md:w-1/2 bg-gray-50 p-6 md:p-8 flex flex-col justify-center">
-                        <div class="mb-6 bg-green-500 rounded-lg p-4 text-center text-white">
-                            <p class="text-lg font-bold mb-2">M-Pesa Paybill Number</p>
-                            <div class="bg-white rounded p-3">
-                                <p class="text-gray-800 text-2xl font-bold tracking-widest">404953</p>
+                    
+                    <p class="text-gray-700 mb-6 text-lg leading-relaxed">
+                        At TRC AGC Church, we are committed to fulfilling the Great Commission by supporting mission work locally and globally. Your generous donations enable us to:
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-church-red rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                            <p class="text-gray-700">Send and sustain missionaries in unreached regions</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-church-red rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                            <p class="text-gray-700">Fund Bible translation projects in indigenous languages</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-church-red rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                            <p class="text-gray-700">Support church planting initiatives in strategic locations</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-church-red rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                            <p class="text-gray-700">Provide humanitarian aid alongside Gospel ministry</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-church-red rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                            <p class="text-gray-700">Train and equip local leaders for evangelism and discipleship</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-church-purple/10 to-church-purple-light/10 rounded-2xl p-6 border-l-4 border-church-purple">
+                        <p class="italic text-gray-700 text-lg leading-relaxed">
+                            "And this gospel of the kingdom will be proclaimed throughout the whole world as a testimony to all nations, and then the end will come."
+                        </p>
+                        <p class="font-semibold text-church-purple mt-2">— Matthew 24:14</p>
+                    </div>
+                </div>
+
+                <!-- How to Support -->
+                <div class="bg-white rounded-3xl shadow-xl p-8 md:p-10 elegant-border card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-church-red to-red-500 rounded-2xl flex items-center justify-center text-white text-2xl mr-4">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Ways to Support Our Mission Work</h3>
+                    </div>
+                    
+                    <div class="space-y-8">
+                        <!-- Regular Mission Giving -->
+                        <div class="bg-gray-50 rounded-2xl p-6">
+                            <h4 class="font-bold text-xl text-gray-800 mb-3 flex items-center">
+                                <span class="w-8 h-8 bg-church-purple text-white rounded-full flex items-center justify-center text-sm mr-3">1</span>
+                                Regular Mission Giving
+                            </h4>
+                            <p class="text-gray-700 mb-4">We encourage regular, faithful giving to missions as part of your stewardship:</p>
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div class="bg-white rounded-xl p-4 shadow-sm">
+                                    <div class="font-bold text-church-purple mb-1">M-Pesa</div>
+                                    <div class="text-gray-600">Account Number <span class="number-highlight text-2xl">3</span> for Missions</div>
+                                </div>
+                                <div class="bg-white rounded-xl p-4 shadow-sm">
+                                    <div class="font-bold text-church-purple mb-1">Monthly Pledges</div>
+                                    <div class="text-gray-600">Commit to regular support</div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-church-purple font-medium mt-4 bg-church-purple/10 rounded-lg p-3">
+                                💯 100% of mission designated funds go directly to field operations and missionary support.
+                            </p>
+                        </div>
+                        
+                        <!-- Special Projects -->
+                        <div class="bg-gradient-to-br from-church-purple/5 to-church-red/5 rounded-2xl p-6 border border-church-purple/20">
+                            <h4 class="font-bold text-xl text-gray-800 mb-3 flex items-center">
+                                <span class="w-8 h-8 bg-church-red text-white rounded-full flex items-center justify-center text-sm mr-3">2</span>
+                                Special Mission Projects
+                            </h4>
+                            <p class="text-gray-700 mb-4">Throughout the year, we highlight specific projects needing funding</p>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="text-sm text-gray-600">• Mission field equipment</div>
+                                <div class="text-sm text-gray-600">• Church building projects</div>
+                                <div class="text-sm text-gray-600">• Crisis response aid</div>
+                                <div class="text-sm text-gray-600">• Training scholarships</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scripture Call to Action -->
+            <div class="mt-16 max-w-4xl mx-auto">
+                <div class="elegant-gradient rounded-3xl p-10 text-white text-center shadow-2xl">
+                    <div class="max-w-2xl mx-auto">
+                        <p class="text-2xl italic mb-6 leading-relaxed">"How beautiful are the feet of those who preach the good news!"</p>
+                        <p class="text-lg font-medium mb-2">— Romans 10:15</p>
+                        <p class="text-xl mb-8 text-gray-100">Your giving enables feet to carry the Good News to the ends of the earth.</p>
+                        <div class="flex flex-col sm:flex-row justify-center gap-6">
+                            <a href="#mpesa-section" class="glass-effect hover:bg-white hover:text-church-purple font-semibold py-4 px-8 rounded-full transition-all duration-300">
+                                <i class="fas fa-donate mr-2"></i>Give to Missions Now
+                            </a>
+                            <a href="mailto:thikaroadagc@gmail.com" class="bg-church-red hover:bg-red-700 text-white font-semibold py-4 px-8 rounded-full transition-all duration-300 shadow-xl">
+                                <i class="fas fa-envelope mr-2"></i>Contact Mission Office
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Giving Options -->
+    <section id="giving-options" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gradient mb-4">Ways to Give</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-church-red to-church-purple mx-auto rounded-full mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Support our ministry through these convenient and secure giving options</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                <!-- M-Pesa Option -->
+                <div class="bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-xl overflow-hidden card-hover elegant-border">
+                    <div class="p-8">
+                        <div class="w-20 h-20 rounded-3xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-white text-3xl mb-6 floating-animation">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-800">Mobile Money (M-Pesa)</h3>
+                        <p class="text-gray-600 mb-6 text-lg leading-relaxed">Give easily and securely using our M-Pesa Paybill number from anywhere, anytime. Fast, convenient, and trusted.</p>
+                        <div class="bg-gradient-to-r from-green-500/10 to-green-600/10 rounded-2xl p-4 border-l-4 border-green-500">
+                            <div class="flex items-center">
+                                <i class="fas fa-shield-alt text-green-600 mr-2"></i>
+                                <span class="text-green-800 font-medium">Secure & Instant</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sunday Service Option -->
+                <div class="bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-xl overflow-hidden card-hover elegant-border">
+                    <div class="p-8">
+                        <div class="w-20 h-20 rounded-3xl bg-gradient-to-br from-church-purple to-church-purple-light flex items-center justify-center text-white text-3xl mb-6 floating-animation" style="animation-delay: -2s;">
+                            <i class="fas fa-church"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-800">Sunday Service</h3>
+                        <p class="text-gray-600 mb-6 text-lg leading-relaxed">Join us in worship and give during our regular Sunday service when the offering is collected as part of our worship experience.</p>
+                        <div class="bg-gradient-to-r from-church-purple/10 to-church-purple-light/10 rounded-2xl p-4 border-l-4 border-church-purple">
+                            <div class="flex items-center">
+                                <i class="fas fa-heart text-church-purple mr-2"></i>
+                                <span class="text-church-purple font-medium">Worship Together</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- M-Pesa Section -->
+    <section id="mpesa-section" class="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gradient mb-4">Give via M-Pesa</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-church-red to-church-purple mx-auto rounded-full"></div>
+            </div>
+
+            <div class="max-w-6xl mx-auto">
+                <div class="bg-white rounded-3xl shadow-2xl overflow-hidden elegant-border">
+                    <div class="lg:flex">
+                        <div class="lg:w-3/5 p-8 lg:p-12">
+                            <div class="flex items-center mb-8">
+                                <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center text-white text-2xl mr-4">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold text-gray-800">How to Give via M-Pesa</h3>
+                            </div>
+                            
+                            <div class="space-y-4 mb-8">
+                                <div class="flex items-start">
+                                    <span class="w-8 h-8 bg-church-purple text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0 mt-1">1</span>
+                                    <div>
+                                        <p class="font-medium text-gray-800">Go to M-Pesa on your phone</p>
+                                        <p class="text-gray-600 text-sm">Access your M-Pesa menu</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="w-8 h-8 bg-church-purple text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0 mt-1">2</span>
+                                    <div>
+                                        <p class="font-medium text-gray-800">Select "Lipa na M-Pesa"</p>
+                                        <p class="text-gray-600 text-sm">Choose payment option</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="w-8 h-8 bg-church-purple text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0 mt-1">3</span>
+                                    <div>
+                                        <p class="font-medium text-gray-800">Select "Pay Bill"</p>
+                                        <p class="text-gray-600 text-sm">For business payments</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="w-8 h-8 bg-church-red text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0 mt-1">4</span>
+                                    <div>
+                                        <p class="font-medium text-gray-800">Enter Business Number: <span class="number-highlight text-3xl">404953</span></p>
+                                        <p class="text-gray-600 text-sm">Our official paybill number</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="w-8 h-8 bg-church-red text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0 mt-1">5</span>
+                                    <div>
+                                        <p class="font-medium text-gray-800 mb-2">Enter Account Number:</p>
+                                        <div class="grid grid-cols-2 gap-3">
+                                            <div class="bg-gradient-to-r from-church-purple/10 to-church-purple-light/10 rounded-xl p-3 border border-church-purple/20">
+                                                <div class="number-highlight text-2xl">1</div>
+                                                <div class="text-sm text-gray-600">Tithe</div>
+                                            </div>
+                                            <div class="bg-gradient-to-r from-church-purple/10 to-church-purple-light/10 rounded-xl p-3 border border-church-purple/20">
+                                                <div class="number-highlight text-2xl">2</div>
+                                                <div class="text-sm text-gray-600">Offering</div>
+                                            </div>
+                                            <div class="bg-gradient-to-r from-church-red/10 to-red-500/10 rounded-xl p-3 border border-church-red/20">
+                                                <div class="number-highlight text-2xl">3</div>
+                                                <div class="text-sm text-gray-600">Missions</div>
+                                            </div>
+                                            <div class="bg-gradient-to-r from-gray-400/10 to-gray-500/10 rounded-xl p-3 border border-gray-400/20">
+                                                <div class="number-highlight text-2xl">4</div>
+                                                <div class="text-sm text-gray-600">Other</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0 mt-1">6</span>
+                                    <div>
+                                        <p class="font-medium text-gray-800">Enter Amount & Complete</p>
+                                        <p class="text-gray-600 text-sm">Enter PIN and confirm transaction</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 border-l-4 border-blue-500">
+                                <p class="text-gray-700 mb-2">
+                                    <i class="fas fa-info-circle text-blue-500 mr-2"></i>
+                                    Need a receipt or have questions about your donation?
+                                </p>
+                                <div class="flex flex-col sm:flex-row gap-4">
+                                    <a href="mailto:finance@trcchurch.org" class="text-church-purple hover:text-church-purple-light font-medium transition-colors">
+                                        <i class="fas fa-envelope mr-1"></i>finance@trcchurch.org
+                                    </a>
+                                    <a href="tel:+254123456789" class="text-church-purple hover:text-church-purple-light font-medium transition-colors">
+                                        <i class="fas fa-phone mr-1"></i>+254 123 456 789
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         
-                        <div class="bg-gray-800 rounded-lg p-4 text-white">
-                            <p class="font-bold mb-2">TRC PAYBILL SERVICE</p>
-                            <p class="mb-1">Enter <span class="text-yellow-300 font-medium">ACCOUNT NUMBER</span> according to what you are giving for:</p>
-                            <ol class="list-decimal pl-5 mb-2 text-sm">
-                                <li>Tithe</li>
-                                <li>Offering</li>
-                                <li>Missions</li>
-                                <li>Other: indicate reason for giving</li>
-                            </ol>
-                            <p class="text-xs italic text-yellow-100">Example: For Instruments, chairs, etc.</p>
+                        <div class="lg:w-2/5 bg-gradient-to-br from-gray-50 to-gray-100 p-8 lg:p-12 flex flex-col justify-center">
+                            <div class="mb-8 bg-gradient-to-br from-green-500 to-green-600 rounded-3xl p-6 text-center text-white shadow-xl">
+                                <p class="text-lg font-bold mb-4">M-Pesa Paybill Number</p>
+                                <div class="bg-white rounded-2xl p-6 shadow-inner">
+                                    <p class="text-gray-800 text-4xl font-bold tracking-widest">404953</p>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-6 text-white shadow-xl">
+                                <p class="font-bold mb-4 text-xl flex items-center">
+                                    <i class="fas fa-mobile-alt mr-2 text-green-400"></i>
+                                    TRC PAYBILL SERVICE
+                                </p>
+                                <p class="mb-4 text-gray-300">Enter <span class="text-yellow-300 font-bold">ACCOUNT NUMBER</span> according to your giving purpose:</p>
+                                <div class="space-y-2 mb-4">
+                                    <div class="flex justify-between items-center py-2 px-3 bg-white/10 rounded-lg">
+                                        <span class="number-highlight text-xl">1</span>
+                                        <span>Tithe</span>
+                                    </div>
+                                    <div class="flex justify-between items-center py-2 px-3 bg-white/10 rounded-lg">
+                                        <span class="number-highlight text-xl">2</span>
+                                        <span>Offering</span>
+                                    </div>
+                                    <div class="flex justify-between items-center py-2 px-3 bg-white/10 rounded-lg">
+                                        <span class="number-highlight text-xl">3</span>
+                                        <span>Missions</span>
+                                    </div>
+                                    <div class="flex justify-between items-center py-2 px-3 bg-white/10 rounded-lg">
+                                        <span class="number-highlight text-xl">4</span>
+                                        <span>Other</span>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-yellow-100 bg-yellow-600/20 rounded-lg p-3">
+                                    <i class="fas fa-lightbulb mr-1"></i>
+                                    Example for "Other": Instruments, chairs, building fund, etc.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Why We Give -->
-<section class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-church-purple mb-2">Why We Give</h2>
-            <div class="w-20 h-1 bg-church-red mx-auto"></div>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8">
-            <div>
-                <h3 class="text-xl font-bold mb-4">Our Biblical Foundation</h3>
-                <p class="text-gray-700 mb-4">At TRC AGC Church, we believe that giving is an act of worship and obedience to God. The Bible teaches us to give cheerfully and generously (2 Corinthians 9:7), to tithe from our income (Malachi 3:10), and to support the work of ministry (1 Corinthians 9:14).</p>
-                <p class="text-gray-700">Through your faithful giving, you participate in God's work of taking the Whole Gospel to the Whole World, as we fulfill our mission together.</p>
+    <!-- Why We Give -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gradient mb-4">Why We Give</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-church-red to-church-purple mx-auto rounded-full"></div>
             </div>
-            
-            <div>
-                <h3 class="text-xl font-bold mb-4">Your Impact</h3>
-                <p class="text-gray-700 mb-4">Your generous support enables us to:</p>
-                <ul class="list-disc pl-5 space-y-2 text-gray-700">
-                    <li>Support our church ministries and operations</li>
-                    <li>Fund community outreach programs</li>
-                    <li>Build and maintain schools for underprivileged children</li>
-                    <li>Support missionaries locally and globally</li>
-                    <li>Provide care for those in need in our community</li>
-                    <li>Develop educational programs for youth and adults</li>
-                </ul>
+
+            <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <div class="bg-gradient-to-br from-church-purple/5 to-church-purple-light/5 rounded-3xl p-8 lg:p-10 border border-church-purple/10 card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-church-purple to-church-purple-light rounded-2xl flex items-center justify-center text-white text-2xl mr-4">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Our Biblical Foundation</h3>
+                    </div>
+                    <p class="text-gray-700 mb-6 text-lg leading-relaxed">
+                        At TRC AGC Church, we believe that giving is an act of worship and obedience to God. The Bible teaches us to give cheerfully and generously (2 Corinthians 9:7), to tithe from our income (Malachi 3:10), and to support the work of ministry (1 Corinthians 9:14).
+                    </p>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        Through your faithful giving, you participate in God's work of taking the Whole Gospel to the Whole World, as we fulfill our mission together.
+                    </p>
+                    <div class="mt-6 bg-white rounded-2xl p-6 shadow-sm border-l-4 border-church-purple">
+                        <p class="italic text-gray-700 text-lg">
+                            "Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver."
+                        </p>
+                        <p class="font-semibold text-church-purple mt-2">— 2 Corinthians 9:7</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-church-red/5 to-red-500/5 rounded-3xl p-8 lg:p-10 border border-church-red/10 card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-church-red to-red-500 rounded-2xl flex items-center justify-center text-white text-2xl mr-4">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Your Impact</h3>
+                    </div>
+                    <p class="text-gray-700 mb-6 text-lg leading-relaxed">Your generous support enables us to:</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-church-red rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                            <p class="text-gray-700">Support our church ministries and operations</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-church-red rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                            <p class="text-gray-700">Fund community outreach programs</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-church-red rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                            <p class="text-gray-700">Build and maintain schools for underprivileged children</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-church-red rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                            <p class="text-gray-700">Support missionaries locally and globally</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-church-red rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                            <p class="text-gray-700">Provide care for those in need in our community</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-church-red rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                            <p class="text-gray-700">Develop educational programs for youth and adults</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 bg-white rounded-2xl p-6 shadow-sm">
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-gradient-to-br from-church-red to-red-500 rounded-full flex items-center justify-center text-white text-xl mx-auto mb-4">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p class="text-gray-700 font-medium">Every gift, no matter the size, makes a difference in advancing God's kingdom.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Scripture Quote -->
-<section class="py-12 bg-gray-50">
-    <div class="container mx-auto px-4">
-        <div class="max-w-3xl mx-auto text-center">
-            <p class="italic text-lg text-gray-700">"Bring all the tithes...so that the servants (who have no allotment or inheritance of their own), and the foreigners, the fatherless and the widows who live in your towns may come and eat and be satisfied, and so that the LORD your God may bless you in all the work of your hands."</p>
-            <p class="mt-2 font-medium text-church-purple">Deuteronomy 14:28-29</p>
+    <!-- Scripture Quote -->
+    <section class="py-16 bg-gradient-to-br from-gray-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <div class="elegant-gradient rounded-3xl p-12 text-white text-center shadow-2xl">
+                    <div class="max-w-4xl mx-auto">
+                        <div class="mb-8">
+                            <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-4xl mx-auto mb-6">
+                                <i class="fas fa-quote-left text-white/80"></i>
+                            </div>
+                            <p class="italic text-xl md:text-2xl text-gray-100 leading-relaxed mb-6">
+                                "Bring all the tithes...so that the servants (who have no allotment or inheritance of their own), and the foreigners, the fatherless and the widows who live in your towns may come and eat and be satisfied, and so that the LORD your God may bless you in all the work of your hands."
+                            </p>
+                            <p class="text-lg font-semibold text-yellow-200">— Deuteronomy 14:28-29</p>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-3 gap-6 mt-12">
+                            <div class="glass-effect rounded-2xl p-6 text-center">
+                                <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                                    <i class="fas fa-praying-hands"></i>
+                                </div>
+                                <h4 class="font-bold mb-2">Faithful Stewardship</h4>
+                                <p class="text-sm text-gray-200">Managing God's resources with integrity</p>
+                            </div>
+                            <div class="glass-effect rounded-2xl p-6 text-center">
+                                <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                                    <i class="fas fa-globe-americas"></i>
+                                </div>
+                                <h4 class="font-bold mb-2">Global Impact</h4>
+                                <p class="text-sm text-gray-200">Reaching nations with the Gospel</p>
+                            </div>
+                            <div class="glass-effect rounded-2xl p-6 text-center">
+                                <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <h4 class="font-bold mb-2">Generous Hearts</h4>
+                                <p class="text-sm text-gray-200">Reflecting God's love through giving</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col sm:flex-row justify-center gap-6 mt-10">
+                            <a href="#mpesa-section" class="glass-effect hover:bg-white hover:text-church-purple font-semibold py-4 px-8 rounded-full transition-all duration-300 text-center">
+                                <i class="fas fa-donate mr-2"></i>Start Giving Today
+                            </a>
+                            <a href="#giving-options" class="bg-white text-church-purple hover:bg-gray-100 font-semibold py-4 px-8 rounded-full transition-all duration-300 text-center shadow-xl">
+                                <i class="fas fa-info-circle mr-2"></i>Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- Footer Call to Action -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gradient mb-6">Ready to Partner With Us?</h2>
+                <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                    Join us in taking the Whole Gospel to the Whole World through your faithful giving and support.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-12">
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 border border-green-200">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Quick M-Pesa Giving</h3>
+                        <p class="text-gray-600 mb-4">Give instantly using paybill <span class="font-bold text-2xl text-green-600">404953</span></p>
+                        <a href="#mpesa-section" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 inline-block">
+                            Give Now
+                        </a>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-church-purple/10 to-church-purple-light/10 rounded-2xl p-6 border border-church-purple/20">
+                        <div class="w-16 h-16 bg-gradient-to-br from-church-purple to-church-purple-light rounded-2xl flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Have Questions?</h3>
+                        <p class="text-gray-600 mb-4">Our finance team is here to help with any giving inquiries</p>
+                        <a href="mailto:thikaroadagc@gmail.com" class="bg-church-purple hover:bg-church-purple-light text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 inline-block">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-r from-gray-50 to-white rounded-2xl p-8 border border-gray-200">
+                    <p class="text-lg text-gray-700 italic leading-relaxed">
+                        "Remember this: Whoever sows sparingly will also reap sparingly, and whoever sows generously will also reap generously. Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver."
+                    </p>
+                    <p class="font-semibold text-church-purple mt-4">— 2 Corinthians 9:6-7</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll animation to elements
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements with animation
+        document.querySelectorAll('.card-hover').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
 
 @endsection
