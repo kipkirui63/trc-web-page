@@ -4,9 +4,14 @@
 
 
 @theme {
-  --color-church-purple: #6a0dad;
+  --color-church-purple: #582C83;
   --color-church-purple-light: #9b59b6;
-  --color-church-red: #e74c3c;
+  --color-church-red: #ED1C24;
+  --color-nature-green: #10B981;
+  --color-nature-brown: #92400E;
+  --color-safari-gold: #F59E0B;
+  --color-kenya-red: #DC2626;
   
   --font-family-sans: 'Instrument Sans', sans-serif;
 }
+
