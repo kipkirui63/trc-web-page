@@ -10,7 +10,7 @@
     <!-- Background with parallax effect -->
     <div class="absolute inset-0 z-0">
         <img src="/api/placeholder/1920/1080" alt="Church community gathering" class="w-full h-full object-cover scale-110" />
-        <div class="absolute inset-0 bg-gradient-to-br from-church-purple/80 via-church-purple/60 to-black/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-church-purple via-church-purple-light to-purple-900"></div>
     </div>
 
     <!-- Floating elements -->
@@ -518,4 +518,87 @@
         background-clip: text;
     }
 </style>
+<script>
+        // Enhanced form interactions
+        function toggleChildrenAges(hasChildren) {
+            const agesDiv = document.getElementById('children-ages');
+            const yesDot = document.getElementById('yes-dot');
+            const noDot = document.getElementById('no-dot');
+            
+            if (hasChildren) {
+                agesDiv.classList.remove('hidden');
+                yesDot.style.opacity = '1';
+                noDot.style.opacity = '0';
+            } else {
+                agesDiv.classList.add('hidden');
+                yesDot.style.opacity = '0';
+                noDot.style.opacity = '1';
+            }
+        }
+        
+        // Smooth scrolling functions
+        function scrollToForm() {
+            document.getElementById('form-section').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+        
+        function scrollToInfo() {
+            document.getElementById('info-section').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+        
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe cards for animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card-hover, .faq-item');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+                observer.observe(card);
+            });
+        });
+        
+        // Form submission with animation
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const button = e.target.querySelector('button[type="submit"]');
+            const originalText = button.innerHTML;
+            
+            button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Submitting...';
+            button.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                button.innerHTML = '<i class="fas fa-check mr-2"></i>Visit Confirmed!';
+                button.classList.add('bg-green-500', 'hover:bg-green-600');
+                button.classList.remove('bg-gradient-to-r', 'from-church-purple', 'to-church-purple-light');
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.disabled = false;
+                    button.classList.remove('bg-green-500', 'hover:bg-green-600');
+                    button.classList.add('bg-gradient-to-r', 'from-church-purple', 'to-church-purple-light');
+                }, 3000);
+            }, 2000);
+        });
+    </script>
 @endsection

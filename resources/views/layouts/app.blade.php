@@ -7,6 +7,16 @@
     <title>@yield('title') | TRC AGC Church</title>
     <meta name="description" content="@yield('description', 'TRC AGC Church - Fulfilling the Great Commandment and Great Commission of the Lord Jesus Christ')">
 
+    <!-- Favicon - Church Logo -->
+    <link rel="icon" type="image/png" sizes="48x48" href="{{ asset('images/trcc-.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/trcc-.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/trcc-.png') }}">
+    <link rel="shortcut icon" href="{{ asset('images/trcc-.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/trcc-.png') }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('images/trcc-.png') }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('images/trcc-.png') }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('images/trcc-.png') }}">
+    <link rel="manifest" href="{{ asset('site.webmanifest') }}">
     <!-- Styles -->
     @vite('resources/css/app.css')
 
@@ -18,7 +28,7 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
 
     <style>
         body {
@@ -30,67 +40,102 @@
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236a0dad' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
 
-        /* Improved dropdown behavior */
-        .desktop-dropdown {
-            position: relative;
-        }
-
-        .desktop-dropdown-menu {
-            display: none;
-            position: absolute;
-            left: 0;
-            top: 100%;
-            min-width: 200px;
-            background-color: white;
-            border-radius: 0.375rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            z-index: 20;
-            padding: 0.5rem 0;
-        }
-
-        .desktop-dropdown.active .desktop-dropdown-menu {
-            display: block;
-        }
-
-        /* Mobile dropdown */
-        .mobile-dropdown-content {
-            display: none;
-            padding-left: 1rem;
-        }
-
-        .mobile-dropdown.active .mobile-dropdown-content {
-            display: block;
-        }
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
         }
+
         @keyframes bounce-slow {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
+
         @keyframes wiggle {
-            0%, 100% { transform: rotate(-3deg); }
-            50% { transform: rotate(3deg); }
+
+            0%,
+            100% {
+                transform: rotate(-3deg);
+            }
+
+            50% {
+                transform: rotate(3deg);
+            }
         }
+
         @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(147, 51, 234, 0.3); }
-            50% { box-shadow: 0 0 40px rgba(147, 51, 234, 0.6); }
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(147, 51, 234, 0.6);
+            }
         }
+
         @keyframes sparkle {
-            0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
-            50% { opacity: 1; transform: scale(1) rotate(180deg); }
+
+            0%,
+            100% {
+                opacity: 0;
+                transform: scale(0) rotate(0deg);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1) rotate(180deg);
+            }
         }
+
         @keyframes rainbow {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
-        .float-animation { animation: float 6s ease-in-out infinite; }
-        .bounce-slow { animation: bounce-slow 4s ease-in-out infinite; }
-        .wiggle { animation: wiggle 2s ease-in-out infinite; }
-        .pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
-        .sparkle { animation: sparkle 2s ease-in-out infinite; }
+
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .bounce-slow {
+            animation: bounce-slow 4s ease-in-out infinite;
+        }
+
+        .wiggle {
+            animation: wiggle 2s ease-in-out infinite;
+        }
+
+        .pulse-glow {
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+
+        .sparkle {
+            animation: sparkle 2s ease-in-out infinite;
+        }
+
         .rainbow-text {
             background: linear-gradient(-45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #fcea2b, #ff9ff3, #54a0ff);
             background-size: 400% 400%;
@@ -99,85 +144,126 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        .church-purple { color: #7c3aed; }
-        .church-red { color: #dc2626; }
-        .text-church-purple { color: #7c3aed; }
-        .text-church-red { color: #dc2626; }
-        .bg-church-purple { background-color: #7c3aed; }
-        .bg-church-red { background-color: #dc2626; }
+
+        .church-purple {
+            color: #7c3aed;
+        }
+
+        .church-red {
+            color: #dc2626;
+        }
+
+        .text-church-purple {
+            color: #7c3aed;
+        }
+
+        .text-church-red {
+            color: #dc2626;
+        }
+
+        .bg-church-purple {
+            background-color: #7c3aed;
+        }
+
+        .bg-church-red {
+            background-color: #dc2626;
+        }
+
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
+
         .gradient-bg {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
-        
+
         .floating {
             animation: float 6s ease-in-out infinite;
         }
-        
+
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
         }
-        
+
         .fade-in {
             animation: fadeIn 1s ease-in;
         }
-        
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        
+
         .card-hover {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+
         .card-hover:hover {
             transform: translateY(-8px) scale(1.02);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-        
+
         .pulse-soft {
             animation: pulseSoft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
-        
+
         @keyframes pulseSoft {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
         }
-        
+
         .hero-overlay {
             background: linear-gradient(135deg, rgba(124, 58, 237, 0.8) 0%, rgba(139, 69, 193, 0.6) 100%);
         }
-        
+
         .section-divider {
             background: linear-gradient(90deg, transparent, #E5E7EB, transparent);
             height: 1px;
         }
+
         .elegant-gradient {
             background: linear-gradient(135deg, #6B46C1 0%, #8B5CF6 50%, #A855F7 100%);
         }
-        
+
         .glass-effect {
             backdrop-filter: blur(16px);
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
-        
+
         .card-hover {
             transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
-        
+
         .card-hover:hover {
             transform: translateY(-12px);
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
         }
-        
+
         .elegant-border {
             position: relative;
         }
-        
+
         .elegant-border::before {
             content: '';
             position: absolute;
@@ -188,23 +274,30 @@
             background: linear-gradient(90deg, #DC2626, #6B46C1, #8B5CF6);
             border-radius: 2px;
         }
-        
+
         .floating-animation {
             animation: float 6s ease-in-out infinite;
         }
-        
+
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
         }
-        
+
         .text-gradient {
             background: linear-gradient(135deg, #6B46C1, #DC2626);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .number-highlight {
             background: linear-gradient(135deg, #DC2626, #6B46C1);
             -webkit-background-clip: text;
@@ -223,8 +316,8 @@
         <p class="text-sm md:text-base">Join us this Sunday 10:00 AM for our worship service | <a href="#" class="underline hover:text-church-red transition">Live Stream</a></p>
     </div>
 
- <!-- Header/Navigation -->
- <header class="bg-white shadow-md sticky top-0 z-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4">
             <div class="h-16 flex justify-between items-center">
                 <!-- Logo -->
@@ -238,30 +331,14 @@
                 <nav class="hidden md:flex items-center space-x-6">
                     <a href="/" class="text-gray-800 hover:text-church-purple font-medium transition">Home</a>
                     <a href="about" class="text-gray-800 hover:text-church-purple font-medium transition">About Us</a>
-
-                    <!-- Ministries Dropdown -->
-                    <div class="desktop-dropdown">
-                        <button class="desktop-dropdown-button text-gray-800 hover:text-church-purple font-medium transition flex items-center">
-                            Ministries
-                            <svg class="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <div class="desktop-dropdown-menu">
-                            <a href="children" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Children</a>
-                            <a href="youth" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Youth</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Men</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Women</a>
-                        </div>
-                    </div>
-
+                    <a href="ministries" class="text-gray-800 hover:text-church-purple font-medium transition">Ministries</a>
                     <a href="#" class="text-gray-800 hover:text-church-purple font-medium transition">Events</a>
                     <a href="contact" class="text-gray-800 hover:text-church-purple font-medium transition">Contact</a>
                 </nav>
 
                 <!-- CTA Button -->
                 <div class="hidden md:block">
-                    <a href="donate" class="bg-church-red hover:bg-red-600 text-white font-medium py-2 px-4 rounded-md transition">Donate Now</a>
+                    <a href="donate" class="bg-church-red hover:bg-red-600 text-white font-medium py-2 px-4 rounded-md transition">Partner With Us</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -276,28 +353,12 @@
 
             <!-- Mobile Navigation -->
             <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
-                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Home</a>
+                <a href="/" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Home</a>
                 <a href="about" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">About Us</a>
-
-                <!-- Mobile Ministries Dropdown -->
-                <div class="mobile-dropdown">
-                    <div class="flex items-center justify-between py-2 px-4 text-gray-800 hover:bg-gray-100 cursor-pointer">
-                        <span>Ministries</span>
-                        <svg class="mobile-dropdown-arrow h-4 w-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </div>
-                    <div class="mobile-dropdown-content">
-                        <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">Children</a>
-                        <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">Youth</a>
-                        <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">Community Outreach</a>
-                        <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">Education</a>
-                    </div>
-                </div>
-
+                <a href="ministries" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Ministries</a>
                 <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Events</a>
                 <a href="contact" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Contact</a>
-                <a href="#" class="mt-3 block text-center bg-church-red hover:bg-red-600 text-white font-medium py-2 px-4 rounded-md transition">Donate Now</a>
+                <a href="donate" class="mt-3 block text-center bg-church-red hover:bg-red-600 text-white font-medium py-2 px-4 rounded-md transition">Partner With Us</a>
             </div>
         </div>
     </header>
@@ -336,8 +397,8 @@
                     <h3 class="text-xl font-bold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
                         <li><a href="/" class="text-gray-400 hover:text-white transition">Home</a></li>
-                        <li><a href="mission" class="text-gray-400 hover:text-white transition">About Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Ministries</a></li>
+                        <li><a href="about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="ministries" class="text-gray-400 hover:text-white transition">Ministries</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition">Events</a></li>
                         <li><a href="contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
                     </ul>
@@ -388,65 +449,13 @@
 
     <!-- Scripts -->
     <script>
-        // Desktop dropdown functionality
+        // Mobile menu toggle
         document.addEventListener('DOMContentLoaded', function() {
-            // Get all desktop dropdown buttons
-            const dropdownButtons = document.querySelectorAll('.desktop-dropdown-button');
-
-            // Add click event to each dropdown button
-            dropdownButtons.forEach(button => {
-                button.addEventListener('click', function(e) {
-                    e.stopPropagation(); // Prevent click from bubbling up
-
-                    // Get the parent dropdown element
-                    const dropdown = this.parentElement;
-
-                    // Close all other dropdowns first
-                    document.querySelectorAll('.desktop-dropdown').forEach(item => {
-                        if (item !== dropdown) {
-                            item.classList.remove('active');
-                        }
-                    });
-
-                    // Toggle the active class on the current dropdown
-                    dropdown.classList.toggle('active');
-                });
-            });
-
-            // Close dropdowns when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.desktop-dropdown')) {
-                    document.querySelectorAll('.desktop-dropdown').forEach(dropdown => {
-                        dropdown.classList.remove('active');
-                    });
-                }
-            });
-
-            // Mobile menu toggle
             const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
             const mobileMenu = document.getElementById('mobile-menu');
 
             mobileMenuToggle.addEventListener('click', function() {
                 mobileMenu.classList.toggle('hidden');
-            });
-
-            // Mobile dropdowns
-            const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
-
-            mobileDropdowns.forEach(dropdown => {
-                const dropdownHeader = dropdown.querySelector('div:first-child');
-                const arrow = dropdown.querySelector('.mobile-dropdown-arrow');
-
-                dropdownHeader.addEventListener('click', function() {
-                    dropdown.classList.toggle('active');
-
-                    // Rotate arrow when expanded
-                    if (dropdown.classList.contains('active')) {
-                        arrow.classList.add('rotate-180');
-                    } else {
-                        arrow.classList.remove('rotate-180');
-                    }
-                });
             });
         });
 

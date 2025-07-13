@@ -530,28 +530,45 @@
             </div>
         </div>
     </section>
-
     <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+        // Enhanced form interactions
+        function toggleChildrenAges(hasChildren) {
+            const agesDiv = document.getElementById('children-ages');
+            const yesDot = document.getElementById('yes-dot');
+            const noDot = document.getElementById('no-dot');
+            
+            if (hasChildren) {
+                agesDiv.classList.remove('hidden');
+                yesDot.style.opacity = '1';
+                noDot.style.opacity = '0';
+            } else {
+                agesDiv.classList.add('hidden');
+                yesDot.style.opacity = '0';
+                noDot.style.opacity = '1';
+            }
+        }
+        
+        // Smooth scrolling functions
+        function scrollToForm() {
+            document.getElementById('form-section').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
             });
-        });
-
-        // Add scroll animation to elements
+        }
+        
+        function scrollToInfo() {
+            document.getElementById('info-section').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+        
+        // Add scroll animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
-
+        
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -560,14 +577,40 @@
                 }
             });
         }, observerOptions);
-
-        // Observe elements with animation
-        document.querySelectorAll('.card-hover').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
+        
+        // Observe cards for animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card-hover, .faq-item');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+                observer.observe(card);
+            });
+        });
+        
+        // Form submission with animation
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const button = e.target.querySelector('button[type="submit"]');
+            const originalText = button.innerHTML;
+            
+            button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Submitting...';
+            button.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                button.innerHTML = '<i class="fas fa-check mr-2"></i>Visit Confirmed!';
+                button.classList.add('bg-green-500', 'hover:bg-green-600');
+                button.classList.remove('bg-gradient-to-r', 'from-church-purple', 'to-church-purple-light');
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.disabled = false;
+                    button.classList.remove('bg-green-500', 'hover:bg-green-600');
+                    button.classList.add('bg-gradient-to-r', 'from-church-purple', 'to-church-purple-light');
+                }, 3000);
+            }, 2000);
         });
     </script>
-
 @endsection

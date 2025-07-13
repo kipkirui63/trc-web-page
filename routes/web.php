@@ -30,3 +30,6 @@ Route::get('/women', function () {
 Route::get('/men', function () {
     return view('men');
 });
+Route::get('/ministries', function () {
+    return view('ministries');
+});

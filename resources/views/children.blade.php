@@ -80,10 +80,10 @@
                             <div class="absolute inset-0 bg-gradient-to-r from-yellow-400 to-pink-400 opacity-0 group-hover:opacity-100 transition duration-500"></div>
                         </a>
 
-                        <a href="#register" class="group relative overflow-hidden bg-gradient-to-r from-green-500 via-teal-500 to-blue-500 hover:from-blue-500 hover:via-teal-500 hover:to-green-500 text-white font-bold py-3 px-6 rounded-full shadow-2xl transform hover:scale-105 transition duration-500 text-base">
+                        <a href="#dedication" class="group relative overflow-hidden bg-gradient-to-r from-green-500 via-teal-500 to-blue-500 hover:from-blue-500 hover:via-teal-500 hover:to-green-500 text-white font-bold py-3 px-6 rounded-full shadow-2xl transform hover:scale-105 transition duration-500 text-base">
                             <span class="relative z-10 flex items-center gap-2">
                                 <span class="text-lg group-hover:animate-pulse">🎪</span>
-                                Join the Fun
+                               Children's Dedication
                                 <span class="text-lg group-hover:animate-bounce">🎈</span>
                             </span>
                             <div class="absolute inset-0 bg-gradient-to-r from-orange-400 to-red-400 opacity-0 group-hover:opacity-100 transition duration-500"></div>
@@ -405,148 +405,242 @@
         </div>
     </section>
 
-    <!-- Registration Section -->
-    <section id="register" class="py-20 bg-gradient-to-br from-church-purple to-purple-600">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
+
+    <!-- Child Dedication Section -->
+    <section id="dedication" class="py-20 bg-gradient-to-br from-yellow-50 via-orange-50 to-pink-50 relative overflow-hidden">
+        <!-- Floating Animation Elements -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-20 left-10 text-4xl sparkle" style="animation-delay: 0.5s;">🕊️</div>
+            <div class="absolute top-40 right-20 text-3xl float-animation" style="animation-delay: 1.2s;">💝</div>
+            <div class="absolute bottom-32 left-1/4 text-4xl bounce-slow" style="animation-delay: 2.1s;">🌟</div>
+            <div class="absolute top-60 right-1/3 text-3xl wiggle" style="animation-delay: 0.8s;">🙏</div>
+            <div class="absolute bottom-20 right-16 text-4xl sparkle" style="animation-delay: 1.8s;">👶</div>
+
+            <!-- Floating shapes -->
+            <div class="absolute top-24 left-20 w-12 h-12 bg-gradient-to-br from-yellow-300 to-orange-400 rounded-full opacity-80 float-animation shadow-lg" style="animation-delay: 0.5s;"></div>
+            <div class="absolute bottom-40 right-32 w-16 h-16 bg-gradient-to-br from-pink-400 to-purple-500 opacity-70 wiggle shadow-lg" style="animation-delay: 1.5s; clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"></div>
+            <div class="absolute top-72 left-1/3 w-14 h-14 bg-gradient-to-br from-blue-400 to-teal-500 rounded-full opacity-75 bounce-slow shadow-lg" style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <div class="inline-block bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 text-white px-8 py-3 rounded-full text-lg font-bold mb-8 shadow-2xl pulse-glow transform hover:scale-105 transition duration-300">
+                    <span class="flex items-center gap-2">
+                        <span class="text-2xl wiggle">🕊️</span>
+                        A Sacred Moment
+                        <span class="text-2xl wiggle">💝</span>
+                    </span>
+                </div>
+
+                <h2 class="text-5xl lg:text-6xl font-extrabold mb-8 leading-tight">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 block mb-2">Child</span>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 block">Dedication</span>
+                </h2>
+
+                <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed bg-white/60 p-6 rounded-3xl shadow-lg border-4 border-dashed border-orange-300">
+                    <span class="text-3xl mr-2">🙏</span>
+                    A beautiful ceremony where parents publicly commit to raising their child in the knowledge and love of God,
+                    surrounded by our church family's prayers and support.
+                    <span class="text-3xl ml-2">✨</span>
+                </p>
+            </div>
+
+            <div class="max-w-6xl mx-auto">
                 <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
                     <div class="lg:flex">
                         <!-- Left Side - Form -->
                         <div class="lg:w-3/5 p-8 lg:p-12">
                             <div class="text-center lg:text-left mb-8">
-                                <h2 class="text-3xl lg:text-4xl font-bold text-church-purple mb-4">Join Our Family!</h2>
-                                <p class="text-gray-600 text-lg">Register your child for our amazing programs and watch them grow in faith and joy.</p>
+                                <h3 class="text-3xl lg:text-4xl font-bold text-orange-600 mb-4">Register for Dedication</h3>
+                                <p class="text-gray-600 text-lg">Take this meaningful step in your child's spiritual journey with our church community.</p>
                             </div>
 
                             <form class="space-y-6" action="#" method="POST">
-                                @csrf
-                                <div class="grid md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label class="block text-gray-700 font-semibold mb-2" for="childName">Child's Full Name *</label>
-                                        <input type="text" id="childName" name="child_name" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-church-purple focus:outline-none transition duration-300" required>
+                                <!-- Child Information -->
+                                <div class="bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-2xl border-2 border-yellow-200">
+                                    <h4 class="text-xl font-bold text-orange-600 mb-4 flex items-center gap-2">
+                                        <span class="text-2xl">👶</span>
+                                        Child's Information
+                                    </h4>
+
+                                    <div class="grid md:grid-cols-2 gap-6">
+                                        <div>
+                                            <label class="block text-gray-700 font-semibold mb-2" for="dedicationChildName">Child's Full Name *</label>
+                                            <input type="text" id="dedicationChildName" name="child_name" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:outline-none transition duration-300" required>
+                                        </div>
+                                        <div>
+                                            <label class="block text-gray-700 font-semibold mb-2" for="childBirthdate">Date of Birth *</label>
+                                            <input type="date" id="childBirthdate" name="child_birthdate" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:outline-none transition duration-300" required>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <label class="block text-gray-700 font-semibold mb-2" for="childAge">Child's Age *</label>
-                                        <select id="childAge" name="child_age" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-church-purple focus:outline-none transition duration-300" required>
-                                            <option value="">Select Age</option>
-                                            <option value="3">3 years</option>
-                                            <option value="4">4 years</option>
-                                            <option value="5">5 years</option>
-                                            <option value="6">6 years</option>
-                                            <option value="7">7 years</option>
-                                            <option value="8">8 years</option>
-                                            <option value="9">9 years</option>
-                                            <option value="10">10 years</option>
-                                            <option value="11">11 years</option>
-                                            <option value="12">12 years</option>
+
+                                    <div class="mt-4">
+                                        <label class="block text-gray-700 font-semibold mb-2" for="childGender">Gender</label>
+                                        <select id="childGender" name="child_gender" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:outline-none transition duration-300">
+                                            <option value="">Select Gender</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
                                         </select>
                                     </div>
                                 </div>
 
-                                <div class="grid md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label class="block text-gray-700 font-semibold mb-2" for="parentName">Parent/Guardian Name *</label>
-                                        <input type="text" id="parentName" name="parent_name" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-church-purple focus:outline-none transition duration-300" required>
+                                <!-- Parents Information -->
+                                <div class="bg-gradient-to-r from-pink-50 to-purple-50 p-6 rounded-2xl border-2 border-pink-200">
+                                    <h4 class="text-xl font-bold text-purple-600 mb-4 flex items-center gap-2">
+                                        <span class="text-2xl">👨‍👩‍👧‍👦</span>
+                                        Parents' Information
+                                    </h4>
+
+                                    <div class="grid md:grid-cols-2 gap-6">
+                                        <div>
+                                            <label class="block text-gray-700 font-semibold mb-2" for="fatherName">Father's Full Name *</label>
+                                            <input type="text" id="fatherName" name="father_name" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition duration-300" required>
+                                        </div>
+                                        <div>
+                                            <label class="block text-gray-700 font-semibold mb-2" for="motherName">Mother's Full Name *</label>
+                                            <input type="text" id="motherName" name="mother_name" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition duration-300" required>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <label class="block text-gray-700 font-semibold mb-2" for="parentPhone">Phone Number *</label>
-                                        <input type="tel" id="parentPhone" name="parent_phone" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-church-purple focus:outline-none transition duration-300" required>
+
+                                    <div class="grid md:grid-cols-2 gap-6 mt-4">
+                                        <div>
+                                            <label class="block text-gray-700 font-semibold mb-2" for="parentPhone">Phone Number *</label>
+                                            <input type="tel" id="parentPhone" name="parent_phone" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition duration-300" required>
+                                        </div>
+                                        <div>
+                                            <label class="block text-gray-700 font-semibold mb-2" for="parentEmail">Email Address *</label>
+                                            <input type="email" id="parentEmail" name="parent_email" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition duration-300" required>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div>
-                                    <label class="block text-gray-700 font-semibold mb-2" for="parentEmail">Email Address *</label>
-                                    <input type="email" id="parentEmail" name="parent_email" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-church-purple focus:outline-none transition duration-300" required>
+                                <!-- Ceremony Preferences -->
+                                <div class="bg-gradient-to-r from-blue-50 to-teal-50 p-6 rounded-2xl border-2 border-blue-200">
+                                    <h4 class="text-xl font-bold text-blue-600 mb-4 flex items-center gap-2">
+                                        <span class="text-2xl">📅</span>
+                                        Ceremony Preferences
+                                    </h4>
+
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2" for="preferredDate">Preferred Sunday Date</label>
+                                        <input type="date" id="preferredDate" name="preferred_date" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none transition duration-300">
+                                    </div>
+
+                                    <div class="mt-4">
+                                        <label class="block text-gray-700 font-semibold mb-2" for="specialRequests">Special Requests or Notes</label>
+                                        <textarea id="specialRequests" name="special_requests" rows="3" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none transition duration-300" placeholder="Any special requests, family members to mention, or additional information..."></textarea>
+                                    </div>
                                 </div>
 
-                                <!-- <div>
-                                    <label class="block text-gray-700 font-semibold mb-2" for="allergies">Allergies or Special Needs</label>
-                                    <textarea id="allergies" name="allergies" rows="3" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-church-purple focus:outline-none transition duration-300" placeholder="Please list any allergies, medical conditions, or special accommodations..."></textarea>
+                                <!-- Commitment Statement -->
+                                <div class="bg-gradient-to-r from-green-50 to-teal-50 p-6 rounded-2xl border-2 border-green-200">
+                                    <h4 class="text-xl font-bold text-green-600 mb-4 flex items-center gap-2">
+                                        <span class="text-2xl">💖</span>
+                                        Commitment Statement
+                                    </h4>
+
+                                    <div class="space-y-4">
+                                        <div class="flex items-start space-x-3">
+                                            <input type="checkbox" id="commitment1" name="commitment1" class="w-5 h-5 text-green-600 border-2 border-gray-300 rounded focus:ring-green-500 mt-1" required>
+                                            <label for="commitment1" class="text-gray-700">
+                                                We commit to raising our child in the knowledge and love of Jesus Christ. *
+                                            </label>
+                                        </div>
+
+                                        <div class="flex items-start space-x-3">
+                                            <input type="checkbox" id="commitment2" name="commitment2" class="w-5 h-5 text-green-600 border-2 border-gray-300 rounded focus:ring-green-500 mt-1" required>
+                                            <label for="commitment2" class="text-gray-700">
+                                                We will actively participate in church life and model Christian values at home. *
+                                            </label>
+                                        </div>
+
+                                        <div class="flex items-start space-x-3">
+                                            <input type="checkbox" id="commitment3" name="commitment3" class="w-5 h-5 text-green-600 border-2 border-gray-300 rounded focus:ring-green-500 mt-1" required>
+                                            <label for="commitment3" class="text-gray-700">
+                                                We welcome the prayers and support of our church family in this journey. *
+                                            </label>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div>
-                                    <label class="block text-gray-700 font-semibold mb-2" for="emergency_contact">Emergency Contact Name</label>
-                                    <input type="text" id="emergency_contact" name="emergency_contact" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-church-purple focus:outline-none transition duration-300">
-                                </div>
-
-                                <div>
-                                    <label class="block text-gray-700 font-semibold mb-2" for="emergency_phone">Emergency Contact Phone</label>
-                                    <input type="tel" id="emergency_phone" name="emergency_phone" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-church-purple focus:outline-none transition duration-300">
-                                </div> -->
-
-                                <div class="flex items-start space-x-3">
-                                    <input type="checkbox" id="consent" name="consent" class="w-5 h-5 text-church-purple border-2 border-gray-300 rounded focus:ring-church-purple mt-1" required>
-                                    <label for="consent" class="text-gray-700 text-sm">
-                                        I give permission for my child to participate in all Children's Ministry activities and understand that photos/videos may be taken for church promotional purposes. I also acknowledge that I have provided accurate emergency contact information. *
-                                    </label>
-                                </div>
-
-                                <button type="submit" class="w-full bg-gradient-to-r from-church-purple to-purple-600 hover:from-purple-600 hover:to-church-purple text-white font-bold py-4 px-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
-                                    🎉 Register My Child
+                                <button type="submit" class="w-full bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500 hover:from-purple-500 hover:via-pink-500 hover:to-orange-500 text-white font-bold py-4 px-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300 text-lg">
+                                    <span class="flex items-center justify-center gap-2">
+                                        <span class="text-2xl">🕊️</span>
+                                        Register for Child Dedication
+                                        <span class="text-2xl">💝</span>
+                                    </span>
                                 </button>
                             </form>
                         </div>
 
                         <!-- Right Side - Info -->
-                        <div class="lg:w-2/5 bg-gradient-to-br from-church-purple to-purple-600 p-8 lg:p-12 text-white">
-                            <div class="h-full flex flex-col justify-center">
+                        <div class="lg:w-2/5 bg-gradient-to-br from-orange-500 via-pink-500 to-purple-600 p-8 lg:p-12 text-white relative overflow-hidden">
+                            <!-- Decorative elements -->
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-white opacity-10 rounded-full -mr-16 -mt-16"></div>
+                            <div class="absolute bottom-0 left-0 w-24 h-24 bg-white opacity-10 rounded-full -ml-12 -mb-12"></div>
+                            <div class="absolute top-1/2 left-1/2 w-40 h-40 bg-white opacity-5 rounded-full -ml-20 -mt-20"></div>
+
+                            <div class="relative z-10 h-full flex flex-col justify-center">
                                 <div class="text-center mb-8">
-                                    <div class="text-6xl mb-6">🌟</div>
-                                    <h3 class="text-2xl font-bold mb-4">Ready to Start?</h3>
-                                    <p class="text-purple-100 mb-8">Join over 150 families who trust us with their children's spiritual journey!</p>
+                                    <div class="text-6xl mb-6">🙏</div>
+                                    <h3 class="text-2xl font-bold mb-4">A Sacred Promise</h3>
+                                    <p class="text-orange-100 mb-8">Join families who have made this beautiful commitment to raise their children in faith!</p>
                                 </div>
 
                                 <div class="space-y-6">
-                                    <div class="flex items-center space-x-4">
-                                        <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0">
-                                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                                            </svg>
+                                    <div class="bg-white/20 p-4 rounded-2xl backdrop-blur-sm">
+                                        <h4 class="font-bold text-lg mb-2">What is Child Dedication?</h4>
+                                        <p class="text-orange-100 text-sm">A public ceremony where parents commit to raising their child according to Christian values, with the support of the church community.</p>
+                                    </div>
+
+                                    <div class="space-y-4">
+                                        <div class="flex items-center space-x-4">
+                                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0">
+                                                <span class="text-2xl">👨‍👩‍👧‍👦</span>
+                                            </div>
+                                            <div>
+                                                <div class="font-semibold">Family Commitment</div>
+                                                <div class="text-orange-200 text-sm">Parents dedicate themselves to Christian parenting</div>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <div class="font-semibold">Free Registration</div>
-                                            <div class="text-purple-200 text-sm">No fees required</div>
+
+                                        <div class="flex items-center space-x-4">
+                                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0">
+                                                <span class="text-2xl">⛪</span>
+                                            </div>
+                                            <div>
+                                                <div class="font-semibold">Church Support</div>
+                                                <div class="text-orange-200 text-sm">Community commits to pray and support</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex items-center space-x-4">
+                                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0">
+                                                <span class="text-2xl">📖</span>
+                                            </div>
+                                            <div>
+                                                <div class="font-semibold">Biblical Foundation</div>
+                                                <div class="text-orange-200 text-sm">Based on Scripture and tradition</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex items-center space-x-4">
+                                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0">
+                                                <span class="text-2xl">💝</span>
+                                            </div>
+                                            <div>
+                                                <div class="font-semibold">Special Blessing</div>
+                                                <div class="text-orange-200 text-sm">Pastor's blessing and prayer</div>
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <div class="flex items-center space-x-4">
-                                        <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0">
-                                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <div class="font-semibold">Safe & Secure</div>
-                                            <div class="text-purple-200 text-sm">Trained volunteers</div>
-                                        </div>
-                                    </div>
-
-                                    <div class="flex items-center space-x-4">
-                                        <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0">
-                                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                                <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <div class="font-semibold">Loving Environment</div>
-                                            <div class="text-purple-200 text-sm">Christ-centered care</div>
-                                        </div>
-                                    </div>
-
-                                    <div class="flex items-center space-x-4">
-                                        <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0">
-                                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                                <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z" />
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <div class="font-semibold">Fun Activities</div>
-                                            <div class="text-purple-200 text-sm">Music, crafts & games</div>
-                                        </div>
+                                    <div class="bg-white/20 p-4 rounded-2xl backdrop-blur-sm mt-8">
+                                        <h4 class="font-bold mb-2">📞 Questions?</h4>
+                                        <p class="text-orange-100 text-sm">Contact Pastor Johnson at<br><strong>pastor@trcagc.org</strong><br>or call <strong>(555) 123-4567</strong></p>
                                     </div>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
@@ -554,6 +648,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- Gallery Section -->
     <section class="py-20 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50">
@@ -637,4 +732,87 @@
 
 
 </div>
+<script>
+    // Enhanced form interactions
+    function toggleChildrenAges(hasChildren) {
+        const agesDiv = document.getElementById('children-ages');
+        const yesDot = document.getElementById('yes-dot');
+        const noDot = document.getElementById('no-dot');
+
+        if (hasChildren) {
+            agesDiv.classList.remove('hidden');
+            yesDot.style.opacity = '1';
+            noDot.style.opacity = '0';
+        } else {
+            agesDiv.classList.add('hidden');
+            yesDot.style.opacity = '0';
+            noDot.style.opacity = '1';
+        }
+    }
+
+    // Smooth scrolling functions
+    function scrollToForm() {
+        document.getElementById('form-section').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+
+    function scrollToInfo() {
+        document.getElementById('info-section').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+
+    // Add scroll animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observe cards for animation
+    document.addEventListener('DOMContentLoaded', function() {
+        const cards = document.querySelectorAll('.card-hover, .faq-item');
+        cards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+            observer.observe(card);
+        });
+    });
+
+    // Form submission with animation
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const button = e.target.querySelector('button[type="submit"]');
+        const originalText = button.innerHTML;
+
+        button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Submitting...';
+        button.disabled = true;
+
+        // Simulate form submission
+        setTimeout(() => {
+            button.innerHTML = '<i class="fas fa-check mr-2"></i>Visit Confirmed!';
+            button.classList.add('bg-green-500', 'hover:bg-green-600');
+            button.classList.remove('bg-gradient-to-r', 'from-church-purple', 'to-church-purple-light');
+
+            setTimeout(() => {
+                button.innerHTML = originalText;
+                button.disabled = false;
+                button.classList.remove('bg-green-500', 'hover:bg-green-600');
+                button.classList.add('bg-gradient-to-r', 'from-church-purple', 'to-church-purple-light');
+            }, 3000);
+        }, 2000);
+    });
+</script>
 @endsection
