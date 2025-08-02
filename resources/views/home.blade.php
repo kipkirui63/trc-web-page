@@ -106,38 +106,15 @@
         background-clip: text;
     }
 
-    .hero-gradient {
-        background: linear-gradient(135deg, rgba(88, 44, 131, 0.9), rgba(237, 28, 36, 0.8));
-    }
-
-    .card-hover {
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .card-hover:hover {
-        transform: translateY(-10px) scale(1.02);
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    }
-
-    .morphism {
-        background: rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(16px);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-    }
-
-    .pattern-overlay {
-        background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.1) 1px, transparent 0);
-        background-size: 20px 20px;
-    }
+    
 </style>
 @endpush
 
 @section('content')
-<!-- Hero Section -->
-<section class="relative min-h-screen flex items-center overflow-hidden">
+<!-- Unified Hero & Foundation Section -->
+<section class="relative min-h-screen bg-gradient-to-br from-church-purple via-purple-800 to-church-red overflow-hidden">
     <!-- Animated Background -->
     <div class="absolute inset-0">
-        <div class="absolute inset-0 bg-gradient-to-br from-church-purple via-purple-800 to-church-red"></div>
         <div class="absolute inset-0 pattern-overlay"></div>
         <img src="https://i.pinimg.com/736x/d9/a3/cb/d9a3cb64544754fc8790c1c76c3ff686.jpg"
             alt="Church worship"
@@ -158,9 +135,13 @@
         <div class="w-5 h-5 bg-white rounded-full opacity-20"></div>
     </div>
 
-    <!-- Main Content -->
-    <div class="relative z-10 container mx-auto px-6 lg:px-16">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
+    <!-- Decorative Background Elements -->
+    <div class="absolute top-0 left-0 w-96 h-96 bg-church-purple/20 rounded-full blur-3xl -translate-x-48 -translate-y-48 animate-pulse"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-church-red/20 rounded-full blur-3xl translate-x-48 translate-y-48 animate-pulse"></div>
+
+    <div class="relative z-10 container mx-auto px-6 lg:px-16 py-20">
+        <!-- Hero Content -->
+        <div class="grid lg:grid-cols-2 gap-12 items-center mb-32">
             <!-- Left Content -->
             <div class="slide-left">
                 <!-- Welcome Badge -->
@@ -183,13 +164,6 @@
 
                 <!-- CTA Buttons -->
                 <div class="flex flex-col sm:flex-row gap-4 mb-12">
-                    <a href="/visit" class="group relative overflow-hidden bg-gradient-to-r from-purple-500 via-pink-500 to-purple-600 hover:from-pink-500 hover:via-purple-500 hover:to-pink text-white font-semibold py-4 px-8 rounded-2xl transition-all duration-300 hover:shadow-2xl hover:scale-105 inline-block">
-                        <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity"></div>
-                        <span class="relative flex items-center justify-center">
-                            <i class="fas fa-map-marker-alt mr-2"></i>
-                            Visit Us Today
-                        </span>
-                    </a>
                     <button class="group relative overflow-hidden bg-gradient-to-r from-purple-500 via-pink-500 to-purple-600 hover:from-pink-500 hover:via-purple-500 hover:to-pink text-white font-semibold py-4 px-8 rounded-2xl transition-all duration-300 hover:shadow-2xl hover:scale-105">
                         <span class="flex items-center justify-center">
                             <i class="fas fa-play mr-2"></i>
@@ -197,8 +171,6 @@
                         </span>
                     </button>
                 </div>
-
-
             </div>
 
             <!-- Right Content - Service Times Card -->
@@ -282,99 +254,69 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
 
-<!-- Mission & Vision Section -->
-<section class="py-24 bg-gradient-to-br from-gray-50 via-white to-purple-50 relative overflow-hidden">
-    <!-- Decorative Elements -->
-    <div class="absolute top-0 left-0 w-96 h-96 bg-church-purple/5 rounded-full -translate-x-48 -translate-y-48"></div>
-    <div class="absolute bottom-0 right-0 w-96 h-96 bg-church-red/5 rounded-full translate-x-48 translate-y-48"></div>
-
-    <div class="container mx-auto px-6 relative z-10">
-        <!-- Section Header -->
-        <div class="text-center mb-20">
-            <div class="inline-flex items-center bg-church-purple/10 rounded-full px-6 py-3 mb-6">
-                <i class="fas fa-star text-church-purple mr-2"></i>
-                <span class="text-church-purple font-semibold">Our Foundation</span>
-            </div>
-            <h2 class="text-5xl md:text-6xl font-bold mb-6">
-                <span class="gradient-text">Mission</span> & <span class="gradient-text">Vision</span>
-            </h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Guided by God's love, we strive to impact lives and transform communities through faith, hope, and action.
-            </p>
-        </div>
-
-        <div class="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
-            <!-- Vision Card -->
-            <div class="card-hover group">
-                <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-church-purple via-purple-600 to-purple-700 p-8 h-full">
-                    <!-- Background Pattern -->
-                    <div class="absolute inset-0 opacity-10">
-                        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 30px 30px;"></div>
-                    </div>
-
-                    <div class="relative z-10">
-                        <div class="flex items-center mb-8">
-                            <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                                <i class="fas fa-eye text-3xl text-white"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-3xl font-bold text-white">Our Vision</h3>
-                                <p class="text-purple-100">Where we're heading</p>
-                            </div>
-                        </div>
-
-                        <blockquote class="text-2xl font-bold text-white mb-8 leading-relaxed">
-                            "The Whole Church taking the Whole Gospel to the Whole World"
-                        </blockquote>
-
-                        <div class="space-y-4">
-                            <div class="flex items-center text-purple-100">
-                                <i class="fas fa-globe-americas mr-3 text-white/80"></i>
-                                <span>Global Impact & Outreach</span>
-                            </div>
-                            <div class="flex items-center text-purple-100">
-                                <i class="fas fa-hands-praying mr-3 text-white/80"></i>
-                                <span>Spiritual Transformation</span>
-                            </div>
-                            <div class="flex items-center text-purple-100">
-                                <i class="fas fa-heart mr-3 text-white/80"></i>
-                                <span>Community Unity</span>
-                            </div>
-                        </div>
+        <!-- Compact Foundation Banner -->
+        <div class="relative z-10 mt-20">
+            <div class="glass-card-dark rounded-3xl p-8 mx-auto max-w-5xl backdrop-blur-xl border border-white/10">
+                <!-- Floating Icons -->
+                <div class="absolute -top-6 left-8 floating">
+                    <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-2xl">
+                        <i class="fas fa-eye text-white text-lg"></i>
                     </div>
                 </div>
-            </div>
+                <div class="absolute -top-6 right-8 floating" style="animation-delay: -2s;">
+                    <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl flex items-center justify-center shadow-2xl">
+                        <i class="fas fa-compass text-white text-lg"></i>
+                    </div>
+                </div>
 
-            <!-- Mission Card -->
-            <div class="card-hover group">
-                <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-church-red via-red-500 to-red-600 p-8 h-full">
-                    <!-- Background Pattern -->
-                    <div class="absolute inset-0 opacity-10">
-                        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 30px 30px;"></div>
+                <div class="text-center pt-4">
+                    <!-- Foundation Header -->
+                    <div class="inline-flex items-center bg-white/10 backdrop-blur-md rounded-full px-6 py-2 mb-6 border border-white/20">
+                        <i class="fas fa-star text-white mr-2 text-sm"></i>
+                        <span class="text-white font-semibold text-sm">Our Foundation</span>
                     </div>
 
-                    <div class="relative z-10">
-                        <div class="flex items-center mb-8">
-                            <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                                <i class="fas fa-compass text-3xl text-white"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-3xl font-bold text-white">Our Mission</h3>
-                                <p class="text-red-100">How we serve</p>
-                            </div>
+                    <!-- Compact Mission & Vision -->
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <!-- Vision -->
+                        <div class="group text-center">
+                            <h3 class="text-2xl font-bold mb-3">
+                                <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Our Vision</span>
+                            </h3>
+                            <blockquote class="text-lg font-semibold text-white/95 italic relative">
+                                "The Whole Church taking the Whole Gospel to the Whole World"
+                            </blockquote>
                         </div>
 
-                        <p class="text-lg text-white/95 mb-8 leading-relaxed">
-                            To fulfill the Great Commandment and Great Commission of Jesus Christ, spreading love, hope, and salvation to all people through God's grace.
-                        </p>
+                        <!-- Mission -->
+                        <div class="group text-center">
+                            <h3 class="text-2xl font-bold mb-3">
+                                <span class="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">Our Mission</span>
+                            </h3>
+                            <p class="text-lg text-white/90">
+                                Fulfilling the Great Commandment and Great Commission through love, hope, and salvation.
+                            </p>
+                        </div>
+                    </div>
 
-                        <div class="flex flex-wrap gap-3 mb-6">
-                            <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm text-white font-medium">Mark 12:30-31</span>
-                            <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm text-white font-medium">Matthew 28:19-20</span>
-                            <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm text-white font-medium">Acts 1:8</span>
+                    <!-- Core Values Pills -->
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <div class="group flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10 hover:bg-white/20 transition-all cursor-pointer">
+                            <i class="fas fa-globe-americas text-purple-400 mr-2 text-sm group-hover:scale-110 transition-transform"></i>
+                            <span class="text-white text-sm font-medium">Global Impact</span>
+                        </div>
+                        <div class="group flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10 hover:bg-white/20 transition-all cursor-pointer">
+                            <i class="fas fa-hands-praying text-pink-400 mr-2 text-sm group-hover:scale-110 transition-transform"></i>
+                            <span class="text-white text-sm font-medium">Spiritual Growth</span>
+                        </div>
+                        <div class="group flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10 hover:bg-white/20 transition-all cursor-pointer">
+                            <i class="fas fa-heart text-red-400 mr-2 text-sm group-hover:scale-110 transition-transform"></i>
+                            <span class="text-white text-sm font-medium">Community Love</span>
+                        </div>
+                        <div class="group flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10 hover:bg-white/20 transition-all cursor-pointer">
+                            <i class="fas fa-book-open text-yellow-400 mr-2 text-sm group-hover:scale-110 transition-transform"></i>
+                            <span class="text-white text-sm font-medium">Biblical Truth</span>
                         </div>
                     </div>
                 </div>
@@ -382,165 +324,359 @@
         </div>
     </div>
 </section>
+
+<style>
+    :root {
+        --church-purple: #6B46C1;
+        --church-red: #DC2626;
+    }
+
+    .church-purple { color: var(--church-purple); }
+    .bg-church-purple { background-color: var(--church-purple); }
+    .church-red { color: var(--church-red); }
+    .bg-church-red { background-color: var(--church-red); }
+
+    .pattern-overlay {
+        background-image: 
+            radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 2px, transparent 2px),
+            radial-gradient(circle at 75% 75%, rgba(255,255,255,0.05) 1px, transparent 1px);
+        background-size: 50px 50px, 30px 30px;
+    }
+
+    .glass-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .glass-card-dark {
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .floating {
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .glow {
+        filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        33% { transform: translateY(-20px) rotate(1deg); }
+        66% { transform: translateY(-10px) rotate(-1deg); }
+    }
+
+    .slide-left {
+        animation: slideInLeft 1s ease-out;
+    }
+
+    .slide-right {
+        animation: slideInRight 1s ease-out;
+    }
+
+    @keyframes slideInLeft {
+        from { opacity: 0; transform: translateX(-100px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideInRight {
+        from { opacity: 0; transform: translateX(100px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+</style>
+
+<style>
+    :root {
+        --church-purple: #6B46C1;
+        --church-red: #DC2626;
+    }
+
+    .church-purple { color: var(--church-purple); }
+    .bg-church-purple { background-color: var(--church-purple); }
+    .church-red { color: var(--church-red); }
+    .bg-church-red { background-color: var(--church-red); }
+
+    .pattern-overlay {
+        background-image: 
+            radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 2px, transparent 2px),
+            radial-gradient(circle at 75% 75%, rgba(255,255,255,0.05) 1px, transparent 1px);
+        background-size: 50px 50px, 30px 30px;
+    }
+
+    .glass-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .glass-card-dark {
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .floating {
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .glow {
+        filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        33% { transform: translateY(-20px) rotate(1deg); }
+        66% { transform: translateY(-10px) rotate(-1deg); }
+    }
+
+    .slide-left {
+        animation: slideInLeft 1s ease-out;
+    }
+
+    .slide-right {
+        animation: slideInRight 1s ease-out;
+    }
+
+    @keyframes slideInLeft {
+        from { opacity: 0; transform: translateX(-100px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideInRight {
+        from { opacity: 0; transform: translateX(100px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+</style>
+
 
 <!-- The 5 Es of AGC Section -->
 <section class="py-24 bg-gradient-to-br from-white via-purple-50/30 to-red-50/30 relative overflow-hidden">
-    <!-- Decorative Background Elements -->
-    <div class="absolute top-0 left-0 w-72 h-72 bg-church-purple/5 rounded-full blur-3xl -translate-x-36 -translate-y-36"></div>
-    <div class="absolute bottom-0 right-0 w-96 h-96 bg-church-red/5 rounded-full blur-3xl translate-x-48 translate-y-48"></div>
-    <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl -translate-x-32 -translate-y-32"></div>
+    <!-- Enhanced Decorative Background Elements -->
+    <div class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl -translate-x-48 -translate-y-48 floating"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-full blur-3xl translate-x-48 translate-y-48 floating" style="animation-delay: -2s;"></div>
+    <div class="absolute top-1/2 left-1/2 w-72 h-72 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl -translate-x-36 -translate-y-36 floating" style="animation-delay: -4s;"></div>
+
+    <!-- Floating geometric shapes -->
+    <div class="absolute top-20 right-20 w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg rotate-45 floating"></div>
+    <div class="absolute bottom-32 left-16 w-12 h-12 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full floating" style="animation-delay: -3s;"></div>
 
     <div class="container mx-auto px-6 relative z-10">
-        <div class="text-center mb-20">
-            <div class="inline-flex items-center bg-gradient-to-r from-church-purple/10 to-church-red/10 rounded-full px-8 py-4 mb-8 border border-purple-200/50">
-                <div class="w-3 h-3 bg-gradient-to-r from-church-purple to-church-red rounded-full mr-3 animate-pulse"></div>
-                <span class="text-church-purple font-bold text-lg">Our Foundation</span>
+        <!-- Enhanced Header -->
+        <div class="text-center mb-24">
+            <div class="inline-flex items-center bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-red-500/10 rounded-full px-10 py-5 mb-8 border border-purple-200/50 shadow-lg backdrop-blur-sm">
+                <div class="w-4 h-4 bg-gradient-to-r from-purple-500 to-red-500 rounded-full mr-4 animate-pulse"></div>
+                <span class="text-purple-700 font-bold text-xl">Our Foundation</span>
+                <div class="w-4 h-4 bg-gradient-to-r from-red-500 to-purple-500 rounded-full ml-4 animate-pulse" style="animation-delay: -1s;"></div>
             </div>
-            <h2 class="text-5xl md:text-7xl font-bold mb-8">
+            <h2 class="text-6xl md:text-8xl font-bold mb-10 leading-tight">
                 <span class="gradient-text">The 5 Es</span> of AGC
             </h2>
-            <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                Our ministry is built on five essential pillars that guide everything we do, from sharing the Gospel to serving our community with compassion and purpose.
+            <p class="text-2xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
+                Our ministry is built on five essential pillars that guide everything we do, from sharing the Gospel to serving our community with <span class="text-purple-600 font-semibold">compassion</span> and <span class="text-red-600 font-semibold">purpose</span>.
             </p>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <!-- Enhanced Cards Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-8xl mx-auto mb-20">
             <!-- 1. Evangelizing the Lost -->
-            <div class="card-hover group relative overflow-hidden bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:border-orange-200">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange-500/10 to-red-500/10 rounded-full -translate-y-16 translate-x-16"></div>
+            <div class="card-hover group relative overflow-hidden bg-white/80 backdrop-blur-sm rounded-3xl p-10 shadow-2xl border border-white/50 hover:border-orange-200/50">
+                <div class="absolute inset-0 bg-gradient-to-br from-orange-50/50 to-red-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-orange-500/10 to-red-500/10 rounded-full -translate-y-20 translate-x-20"></div>
+
                 <div class="relative z-10">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center text-white text-2xl mr-4 group-hover:scale-110 transition-all duration-300 shadow-lg">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="w-20 h-20 rounded-3xl bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center text-white text-3xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-2xl">
                             <i class="fas fa-bullhorn"></i>
                         </div>
-                        <div class="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                        <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold text-lg number-circle">
                             1
                         </div>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Evangelizing the Lost</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">
+
+                    <h3 class="text-3xl font-bold mb-6 text-gray-800 group-hover:text-orange-600 transition-colors">
+                        Evangelizing the Lost
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed mb-8 text-lg">
                         Focused on outreach and sharing the Gospel with those outside the faith through evangelism and missions, reaching every heart with God's love.
                     </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-medium">Outreach</span>
-                        <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-medium">Missions</span>
-                        <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-medium">Gospel</span>
+
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span class="bg-gradient-to-r from-orange-100 to-orange-200 text-orange-800 px-4 py-2 rounded-full text-sm font-semibold shadow-sm hover-lift">Outreach</span>
+                        <span class="bg-gradient-to-r from-red-100 to-red-200 text-red-800 px-4 py-2 rounded-full text-sm font-semibold shadow-sm hover-lift">Missions</span>
+                        <span class="bg-gradient-to-r from-yellow-100 to-yellow-200 text-yellow-800 px-4 py-2 rounded-full text-sm font-semibold shadow-sm hover-lift">Gospel</span>
                     </div>
+
+
                 </div>
             </div>
 
             <!-- 2. Establishing Churches -->
-            <div class="card-hover group relative overflow-hidden bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:border-blue-200">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 rounded-full -translate-y-16 translate-x-16"></div>
+            <div class="card-hover group relative overflow-hidden bg-white/80 backdrop-blur-sm rounded-3xl p-10 shadow-2xl border border-white/50 hover:border-blue-200/50">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-indigo-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 rounded-full -translate-y-20 translate-x-20"></div>
+
                 <div class="relative z-10">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-r from-blue-500 to-indigo-500 flex items-center justify-center text-white text-2xl mr-4 group-hover:scale-110 transition-all duration-300 shadow-lg">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="w-20 h-20 rounded-3xl bg-gradient-to-r from-blue-500 to-indigo-500 flex items-center justify-center text-white text-3xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-2xl">
                             <i class="fas fa-church"></i>
                         </div>
-                        <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                        <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-lg number-circle">
                             2
                         </div>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Establishing Churches</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">
+
+                    <h3 class="text-3xl font-bold mb-6 text-gray-800 group-hover:text-blue-600 transition-colors">
+                        Establishing Churches
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed mb-8 text-lg">
                         Planting and forming local congregations with solid structures, worship practices, and physical sanctuaries that serve as beacons of hope.
                     </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">Church Planting</span>
-                        <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium">Worship</span>
-                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">Community</span>
+
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span class="bg-gradient-to-r from-blue-100 to-blue-200 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold shadow-sm hover-lift">Church Planting</span>
+                        <span class="bg-gradient-to-r from-indigo-100 to-indigo-200 text-indigo-800 px-4 py-2 rounded-full text-sm font-semibold shadow-sm hover-lift">Worship</span>
+                        <span class="bg-gradient-to-r from-purple-100 to-purple-200 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold shadow-sm hover-lift">Community</span>
                     </div>
+
+
                 </div>
             </div>
 
             <!-- 3. Edifying Believers -->
-            <div class="card-hover group relative overflow-hidden bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:border-green-200">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-full -translate-y-16 translate-x-16"></div>
+            <div class="card-hover group relative overflow-hidden bg-white/80 backdrop-blur-sm rounded-3xl p-10 shadow-2xl border border-white/50 hover:border-green-200/50">
+                <div class="absolute inset-0 bg-gradient-to-br from-green-50/50 to-emerald-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-full -translate-y-20 translate-x-20"></div>
+
                 <div class="relative z-10">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center text-white text-2xl mr-4 group-hover:scale-110 transition-all duration-300 shadow-lg">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="w-20 h-20 rounded-3xl bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center text-white text-3xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-2xl">
                             <i class="fas fa-seedling"></i>
                         </div>
-                        <div class="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                        <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-lg number-circle">
                             3
                         </div>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Edifying Believers</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">
+
+                    <h3 class="text-3xl font-bold mb-6 text-gray-800 group-hover:text-green-600 transition-colors">
+                        Edifying Believers
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed mb-8 text-lg">
                         Strengthening spiritual growth and maturity through discipleship, and ministry to children, youth, men, and women, building strong foundations.
                     </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">Discipleship</span>
-                        <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm font-medium">Growth</span>
-                        <span class="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-sm font-medium">Ministry</span>
+
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span class="bg-gradient-to-r from-green-100 to-green-200 text-green-800 px-4 py-2 rounded-full text-sm font-semibold shadow-sm hover-lift">Discipleship</span>
+                        <span class="bg-gradient-to-r from-emerald-100 to-emerald-200 text-emerald-800 px-4 py-2 rounded-full text-sm font-semibold shadow-sm hover-lift">Growth</span>
+                        <span class="bg-gradient-to-r from-teal-100 to-teal-200 text-teal-800 px-4 py-2 rounded-full text-sm font-semibold shadow-sm hover-lift">Ministry</span>
                     </div>
+
+
                 </div>
             </div>
 
             <!-- 4. Equipping Leaders -->
-            <div class="card-hover group relative overflow-hidden bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:border-purple-200">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-500/10 to-violet-500/10 rounded-full -translate-y-16 translate-x-16"></div>
+            <div class="card-hover group relative overflow-hidden bg-white/80 backdrop-blur-sm rounded-3xl p-10 shadow-2xl border border-white/50 hover:border-purple-200/50">
+                <div class="absolute inset-0 bg-gradient-to-br from-purple-50/50 to-violet-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-purple-500/10 to-violet-500/10 rounded-full -translate-y-20 translate-x-20"></div>
+
                 <div class="relative z-10">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-r from-purple-500 to-violet-500 flex items-center justify-center text-white text-2xl mr-4 group-hover:scale-110 transition-all duration-300 shadow-lg">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="w-20 h-20 rounded-3xl bg-gradient-to-r from-purple-500 to-violet-500 flex items-center justify-center text-white text-3xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-2xl">
                             <i class="fas fa-users"></i>
                         </div>
-                        <div class="w-8 h-8 bg-gradient-to-r from-purple-500 to-violet-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                        <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-500 rounded-full flex items-center justify-center text-white font-bold text-lg number-circle">
                             4
                         </div>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Equipping Leaders</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">
+
+                    <h3 class="text-3xl font-bold mb-6 text-gray-800 group-hover:text-purple-600 transition-colors">
+                        Equipping Leaders
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed mb-8 text-lg">
                         Training and preparing church leaders at all levels—through leadership development and schools—to guide the church effectively into the future.
                     </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">Leadership</span>
-                        <span class="bg-violet-100 text-violet-700 px-3 py-1 rounded-full text-sm font-medium">Training</span>
-                        <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium">Development</span>
+
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span class="bg-gradient-to-r from-purple-100 to-purple-200 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold shadow-sm hover-lift">Leadership</span>
+                        <span class="bg-gradient-to-r from-violet-100 to-violet-200 text-violet-800 px-4 py-2 rounded-full text-sm font-semibold shadow-sm hover-lift">Training</span>
+                        <span class="bg-gradient-to-r from-indigo-100 to-indigo-200 text-indigo-800 px-4 py-2 rounded-full text-sm font-semibold shadow-sm hover-lift">Development</span>
                     </div>
+
+
                 </div>
             </div>
 
             <!-- 5. Exercising Compassion -->
-            <div class="card-hover group relative overflow-hidden bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:border-pink-200 md:col-start-2 lg:col-start-2">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-pink-500/10 to-rose-500/10 rounded-full -translate-y-16 translate-x-16"></div>
+            <div class="card-hover group relative overflow-hidden bg-white/80 backdrop-blur-sm rounded-3xl p-10 shadow-2xl border border-white/50 hover:border-pink-200/50 md:col-start-2 lg:col-start-2">
+                <div class="absolute inset-0 bg-gradient-to-br from-pink-50/50 to-rose-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-pink-500/10 to-rose-500/10 rounded-full -translate-y-20 translate-x-20"></div>
+
                 <div class="relative z-10">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-r from-pink-500 to-rose-500 flex items-center justify-center text-white text-2xl mr-4 group-hover:scale-110 transition-all duration-300 shadow-lg">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="w-20 h-20 rounded-3xl bg-gradient-to-r from-pink-500 to-rose-500 flex items-center justify-center text-white text-3xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-2xl">
                             <i class="fas fa-heart"></i>
                         </div>
-                        <div class="w-8 h-8 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                        <div class="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full flex items-center justify-center text-white font-bold text-lg number-circle">
                             5
                         </div>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Exercising Compassion</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">
+
+                    <h3 class="text-3xl font-bold mb-6 text-gray-800 group-hover:text-pink-600 transition-colors">
+                        Exercising Compassion
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed mb-8 text-lg">
                         Responding to community needs holistically, offering physical care through relief, development, health, advocacy, and rehabilitation programs.
                     </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm font-medium">Relief</span>
-                        <span class="bg-rose-100 text-rose-700 px-3 py-1 rounded-full text-sm font-medium">Healthcare</span>
-                        <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-medium">Advocacy</span>
+
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span class="bg-gradient-to-r from-pink-100 to-pink-200 text-pink-800 px-4 py-2 rounded-full text-sm font-semibold shadow-sm hover-lift">Relief</span>
+                        <span class="bg-gradient-to-r from-rose-100 to-rose-200 text-rose-800 px-4 py-2 rounded-full text-sm font-semibold shadow-sm hover-lift">Healthcare</span>
+                        <span class="bg-gradient-to-r from-red-100 to-red-200 text-red-800 px-4 py-2 rounded-full text-sm font-semibold shadow-sm hover-lift">Advocacy</span>
                     </div>
+
+
                 </div>
             </div>
-            <a href="/ministries" class="bg-gradient-to-r from-church-purple via-purple-600 to-church-red hover:from-purple-600 hover:via-red-500 hover:to-red-600 text-white font-bold py-6 px-12 rounded-2xl transition-all duration-300 hover:scale-105 shadow-xl">
-                <span class="flex items-center justify-center text-lg">
-                    <i class="fas fa-arrow-right mr-3"></i>
-                    Be Part of Our Mission
-                </span>
-            </a>
-        </div>
 
-        <!-- Call to Action -->
-        <div class="text-center mt-20">
-            <div class="inline-flex items-center bg-gradient-to-r from-church-purple/5 to-church-red/5 rounded-full px-8 py-4 mb-8">
-                <i class="fas fa-hands-praying text-church-purple mr-3"></i>
-                <span class="text-gray-700 font-semibold">Join us in living out these values</span>
+            <!-- Enhanced CTA Button -->
+            <div class="lg:col-start-3 flex items-center justify-center">
+                <div class="group relative">
+                    <!-- Glowing background effect -->
+                    <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+                    <a href="/ministries" class="inline-block group">
+                        <button class="relative bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white font-bold py-8 px-12 rounded-3xl transition-all duration-500 hover:scale-105 shadow-2xl group-hover:shadow-purple-500/25 overflow-hidden">
+                            <!-- Shimmer effect -->
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+
+                            <div class="relative flex items-center justify-center text-xl">
+                                <div class="mr-4 group-hover:animate-bounce">
+                                    <i class="fas fa-hands-praying text-2xl"></i>
+                                </div>
+                                <div class="text-center">
+                                    <div class="font-black text-2xl mb-1">Be Part of Our Mission</div>
+                                    <div class="text-sm opacity-90 font-medium">Join the Movement</div>
+                                </div>
+                                <div class="ml-4 group-hover:translate-x-2 transition-transform duration-300">
+                                    <i class="fas fa-arrow-right text-xl"></i>
+                                </div>
+                            </div>
+
+                            <!-- Floating particles effect -->
+                            <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
+                                <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-white/30 rounded-full animate-ping" style="animation-delay: 0s;"></div>
+                                <div class="absolute top-3/4 right-1/4 w-1 h-1 bg-yellow-300/50 rounded-full animate-ping" style="animation-delay: 1s;"></div>
+                                <div class="absolute bottom-1/4 left-3/4 w-1.5 h-1.5 bg-white/20 rounded-full animate-ping" style="animation-delay: 2s;"></div>
+                            </div>
+                        </button>
+                    </a>
+                </div>
             </div>
-
         </div>
     </div>
+
 </section>
 
 
@@ -574,10 +710,10 @@
 
             <!-- Action Buttons -->
             <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-                <a href="/visit" class="group relative overflow-hidden bg-white text-church-purple hover:bg-gray-100 font-bold py-6 px-12 rounded-2xl transition-all duration-300 hover:scale-105 shadow-2xl">
+                <a href="/ministries" class="group relative overflow-hidden bg-white text-church-purple hover:bg-gray-100 font-bold py-6 px-12 rounded-2xl transition-all duration-300 hover:scale-105 shadow-2xl">
                     <span class="relative flex items-center justify-center text-lg">
-                        <i class="fas fa-map-marker-alt mr-3"></i>
-                        Plan Your Visit
+                        <i class="fas fa-hands-helping mr-3"></i>
+                        Join A Ministry
                     </span>
                 </a>
                 <a href="/contact" class="group glass-card hover:bg-white/20 text-white font-bold py-6 px-12 rounded-2xl transition-all duration-300 hover:scale-105 shadow-2xl">
@@ -674,6 +810,56 @@
                 button.classList.add('bg-gradient-to-r', 'from-church-purple', 'to-church-purple-light');
             }, 3000);
         }, 2000);
+    });
+    // Enhanced interaction effects
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add hover effects to cards
+        const cards = document.querySelectorAll('.card-hover');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Add click animation to main CTA button
+        const ctaButton = document.querySelector('button[class*="from-purple-600"]');
+        if (ctaButton) {
+            ctaButton.addEventListener('click', function() {
+                // Add ripple effect
+                const ripple = document.createElement('span');
+                ripple.className = 'absolute inset-0 bg-white/20 rounded-3xl animate-ping';
+                this.appendChild(ripple);
+
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        }
+
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        // Observe all cards for staggered animation
+        cards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+            observer.observe(card);
+        });
     });
 </script>
 

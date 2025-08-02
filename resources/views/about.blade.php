@@ -5,35 +5,467 @@
 @section('description', 'Learn about TRC AGC Church - our story, mission, vision, core values, and leadership team')
 
 @section('content')
+
+<style>
+    .hero-section {
+        background: linear-gradient(135deg, #7c3aed 0%, #dc2626 50%, #ea580c 100%);
+        background-size: 400% 400%;
+        animation: gradientShift 15s ease infinite;
+        position: relative;
+        overflow: hidden;
+    }
+
+    @keyframes gradientShift {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        animation: patternMove 20s linear infinite;
+    }
+
+    @keyframes patternMove {
+        0% {
+            transform: translateX(0) translateY(0);
+        }
+
+        25% {
+            transform: translateX(-10px) translateY(-10px);
+        }
+
+        50% {
+            transform: translateX(-20px) translateY(0);
+        }
+
+        75% {
+            transform: translateX(-10px) translateY(10px);
+        }
+
+        100% {
+            transform: translateX(0) translateY(0);
+        }
+    }
+
+    .floating-element {
+        animation: float 8s ease-in-out infinite;
+        will-change: transform;
+    }
+
+    .floating-element:nth-child(2) {
+        animation: floatReverse 10s ease-in-out infinite;
+        animation-delay: -2s;
+    }
+
+    .floating-element:nth-child(3) {
+        animation: floatSpin 12s ease-in-out infinite;
+        animation-delay: -4s;
+    }
+
+    .floating-element:nth-child(4) {
+        animation: floatPulse 9s ease-in-out infinite;
+        animation-delay: -6s;
+    }
+
+    .floating-element:nth-child(5) {
+        animation: iconFloat 15s ease-in-out infinite;
+        animation-delay: -1s;
+    }
+
+    .floating-element:nth-child(6) {
+        animation: iconGlow 8s ease-in-out infinite;
+        animation-delay: -3s;
+    }
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0px) rotate(0deg) scale(1);
+        }
+
+        33% {
+            transform: translateY(-25px) rotate(2deg) scale(1.05);
+        }
+
+        66% {
+            transform: translateY(-15px) rotate(-1deg) scale(0.95);
+        }
+    }
+
+    @keyframes floatReverse {
+
+        0%,
+        100% {
+            transform: translateY(0px) rotate(0deg) scale(1);
+        }
+
+        50% {
+            transform: translateY(35px) rotate(-5deg) scale(1.1);
+        }
+    }
+
+    @keyframes floatSpin {
+
+        0%,
+        100% {
+            transform: translateY(0px) rotate(0deg) scale(1);
+        }
+
+        25% {
+            transform: translateY(-20px) rotate(90deg) scale(1.05);
+        }
+
+        50% {
+            transform: translateY(-30px) rotate(180deg) scale(0.9);
+        }
+
+        75% {
+            transform: translateY(-10px) rotate(270deg) scale(1.1);
+        }
+    }
+
+    @keyframes floatPulse {
+
+        0%,
+        100% {
+            transform: translateY(0px) scale(1);
+            opacity: 0.7;
+        }
+
+        50% {
+            transform: translateY(-40px) scale(1.3);
+            opacity: 1;
+        }
+    }
+
+    @keyframes iconFloat {
+
+        0%,
+        100% {
+            transform: translateY(0px) translateX(0px) rotate(0deg);
+            opacity: 0.2;
+        }
+
+        25% {
+            transform: translateY(-15px) translateX(10px) rotate(5deg);
+            opacity: 0.4;
+        }
+
+        50% {
+            transform: translateY(-25px) translateX(-5px) rotate(-3deg);
+            opacity: 0.3;
+        }
+
+        75% {
+            transform: translateY(-10px) translateX(-10px) rotate(2deg);
+            opacity: 0.5;
+        }
+    }
+
+    @keyframes iconGlow {
+
+        0%,
+        100% {
+            transform: translateY(0px) scale(1);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            opacity: 0.2;
+        }
+
+        50% {
+            transform: translateY(-30px) scale(1.2);
+            text-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+            opacity: 0.4;
+        }
+    }
+
+    .pulse-glow {
+        animation: pulse-glow 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse-glow {
+
+        0%,
+        100% {
+            box-shadow:
+                0 0 30px rgba(255, 255, 255, 0.2),
+                inset 0 0 20px rgba(255, 255, 255, 0.1);
+            transform: scale(1);
+        }
+
+        50% {
+            box-shadow:
+                0 0 60px rgba(255, 255, 255, 0.4),
+                0 0 100px rgba(124, 58, 237, 0.2),
+                inset 0 0 30px rgba(255, 255, 255, 0.2);
+            transform: scale(1.02);
+        }
+    }
+
+    .text-shadow {
+        text-shadow:
+            0 4px 8px rgba(0, 0, 0, 0.3),
+            0 0 30px rgba(255, 255, 255, 0.1);
+        animation: textGlow 4s ease-in-out infinite;
+    }
+
+    @keyframes textGlow {
+
+        0%,
+        100% {
+            text-shadow:
+                0 4px 8px rgba(0, 0, 0, 0.3),
+                0 0 30px rgba(255, 255, 255, 0.1);
+        }
+
+        50% {
+            text-shadow:
+                0 4px 8px rgba(0, 0, 0, 0.3),
+                0 0 50px rgba(255, 255, 255, 0.2),
+                0 0 80px rgba(255, 193, 7, 0.1);
+        }
+    }
+
+    .backdrop-blur {
+        backdrop-filter: blur(10px);
+    }
+
+    .hero-card {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        animation: cardFloat 6s ease-in-out infinite;
+        will-change: transform;
+    }
+
+    .hero-card:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    .hero-card:nth-child(2) {
+        animation-delay: -2s;
+    }
+
+    .hero-card:nth-child(3) {
+        animation-delay: -4s;
+    }
+
+    @keyframes cardFloat {
+
+        0%,
+        100% {
+            transform: translateY(0px) rotate(0deg);
+        }
+
+        50% {
+            transform: translateY(-8px) rotate(0.5deg);
+        }
+    }
+
+    .hero-card:hover {
+        background: rgba(255, 255, 255, 0.18);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        transform: translateY(-10px) scale(1.05) rotate(-1deg);
+        box-shadow:
+            0 20px 40px rgba(0, 0, 0, 0.1),
+            0 0 50px rgba(255, 255, 255, 0.2);
+        animation-play-state: paused;
+    }
+
+    .scroll-indicator {
+        animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+
+        40% {
+            transform: translateY(-15px) scale(1.1);
+            opacity: 0.8;
+        }
+
+        60% {
+            transform: translateY(-8px) scale(1.05);
+            opacity: 0.9;
+        }
+    }
+
+    .bg-clip-text {
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: shimmer 3s ease-in-out infinite;
+    }
+
+    @keyframes shimmer {
+
+        0%,
+        100% {
+            background-position: -200% center;
+        }
+
+        50% {
+            background-position: 200% center;
+        }
+    }
+
+    /* Button Animations */
+    .hero-section a {
+        position: relative;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .hero-section a::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+        transition: all 0.6s ease;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+    }
+
+    .hero-section a:hover::before {
+        width: 200%;
+        height: 200%;
+    }
+
+    .hero-section a:hover {
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Add particle effect */
+    .hero-section::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image:
+            radial-gradient(2px 2px at 20% 30%, rgba(255, 255, 255, 0.3), transparent),
+            radial-gradient(2px 2px at 40% 70%, rgba(255, 255, 255, 0.2), transparent),
+            radial-gradient(1px 1px at 90% 40%, rgba(255, 255, 255, 0.3), transparent),
+            radial-gradient(1px 1px at 50% 60%, rgba(255, 255, 255, 0.2), transparent);
+        background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+        animation: particles 25s linear infinite;
+        pointer-events: none;
+    }
+
+    @keyframes particles {
+        0% {
+            transform: translateY(0) rotate(0deg);
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0.5;
+        }
+
+        100% {
+            transform: translateY(-100px) rotate(360deg);
+            opacity: 1;
+        }
+    }
+</style>
+
 <!-- Hero Section -->
-<section class="relative h-screen flex items-center justify-center overflow-hidden">
-    <!-- Background with parallax effect -->
-    <div class="absolute inset-0 z-0">
-        <img src="/api/placeholder/1920/1080" alt="Church community gathering" class="w-full h-full object-cover scale-110" />
-        <div class="absolute inset-0 bg-gradient-to-br from-church-purple via-church-purple-light to-purple-900"></div>
+<section class="hero-section flex items-center justify-center relative min-h-screen">
+    <!-- Floating Elements -->
+    <div class="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full floating-element"></div>
+    <div class="absolute top-40 right-20 w-16 h-16 bg-white/10 rounded-full floating-element"></div>
+    <div class="absolute bottom-40 left-20 w-24 h-24 bg-white/10 rounded-full floating-element"></div>
+    <div class="absolute bottom-20 right-10 w-18 h-18 bg-white/10 rounded-full floating-element"></div>
+
+    <!-- Cross Elements -->
+    <div class="absolute top-32 right-1/4 text-white/20 text-4xl floating-element">
+        <i class="fas fa-cross"></i>
+    </div>
+    <div class="absolute bottom-32 left-1/4 text-white/20 text-3xl floating-element">
+        <i class="fas fa-dove"></i>
     </div>
 
-    <!-- Floating elements -->
-    <div class="absolute top-20 left-10 w-20 h-20 rounded-full bg-white/10 backdrop-blur-sm animate-float"></div>
-    <div class="absolute bottom-32 right-16 w-16 h-16 rounded-full bg-church-red/20 backdrop-blur-sm animate-float-delayed"></div>
-    <div class="absolute top-1/3 right-1/4 w-12 h-12 rounded-full bg-white/5 backdrop-blur-sm animate-float-slow"></div>
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-6xl mx-auto text-center text-white">
+            <!-- Main Content -->
+            <div class="mb-12">
+                <!-- Subtitle -->
+                <div class="mb-8">
+                    <span class="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur rounded-full text-white/90 font-semibold text-lg border border-white/30 pulse-glow">
+                        <i class="fas fa-church mr-3 text-xl"></i>
+                        Welcome to TRC AGC Church
+                    </span>
+                </div>
 
-    <!-- Content -->
-    <div class="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
-        <div class="mb-8">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
-                About Us
-            </h1>
-            <div class="w-24 h-1 bg-gradient-to-r from-church-red to-orange-400 mx-auto mb-6"></div>
-            <p class="text-xl md:text-2xl mb-8 font-light leading-relaxed">
-                Discover our story, our heart, and our commitment to serving God and community
-            </p>
-        </div>
-        
-        <div class="flex justify-center space-x-2 animate-bounce">
-            <div class="w-2 h-2 bg-white rounded-full"></div>
-            <div class="w-2 h-2 bg-white/70 rounded-full"></div>
-            <div class="w-2 h-2 bg-white/40 rounded-full"></div>
+                <!-- Main Title -->
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 text-shadow leading-tight">
+                    <span class="block mb-2">About</span>
+                    <span class="block bg-gradient-to-r from-white via-yellow-200 to-white bg-clip-text text-transparent">Our Story</span>
+                </h1>
+
+                <!-- Description -->
+                <p class="text-xl md:text-2xl mb-12 leading-relaxed text-white/90 max-w-4xl mx-auto">
+                    Discover the heart and soul of TRC AGC Church - where faith meets purpose,
+                    community thrives, and lives are transformed by God's love
+                </p>
+
+                <!-- Stats Cards -->
+                <div class="grid md:grid-cols-3 gap-6 mb-12">
+                    <div class="hero-card backdrop-blur rounded-2xl p-6">
+                        <div class="text-4xl font-bold mb-2">10+</div>
+                        <div class="text-white/80">Years of Ministry</div>
+                    </div>
+                    <div class="hero-card backdrop-blur rounded-2xl p-6">
+                        <div class="text-4xl font-bold mb-2">500+</div>
+                        <div class="text-white/80">Church Family</div>
+                    </div>
+                    <div class="hero-card backdrop-blur rounded-2xl p-6">
+                        <div class="text-4xl font-bold mb-2">15+</div>
+                        <div class="text-white/80">Active Ministries</div>
+                    </div>
+                </div>
+
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 scroll-indicator">
+                <div class="w-8 h-12 border-2 border-white/50 rounded-full flex justify-center">
+                    <div class="w-1 h-3 bg-white/70 rounded-full mt-2"></div>
+                </div>
+                <p class="text-white/60 text-sm mt-2">Scroll to explore</p>
+            </div>
         </div>
     </div>
 </section>
@@ -220,7 +652,7 @@
                     We envision a vibrant, growing community of believers who are transformed by God's love and are actively sharing that love with others. Our vision encompasses spiritual growth, community impact, and global outreach.
                 </p>
             </div>
-            
+
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center group">
                     <div class="w-20 h-20 rounded-full bg-gradient-to-br from-church-purple to-purple-600 flex items-center justify-center text-white text-3xl mx-auto mb-6 shadow-xl group-hover:scale-110 transition-transform duration-300">
@@ -229,7 +661,7 @@
                     <h3 class="text-xl font-bold mb-3 text-church-purple">The Whole Church</h3>
                     <p class="text-gray-600 leading-relaxed">Every believer equipped and mobilized for ministry, using their unique gifts to serve God's kingdom</p>
                 </div>
-                
+
                 <div class="text-center group">
                     <div class="w-20 h-20 rounded-full bg-gradient-to-br from-church-red to-red-600 flex items-center justify-center text-white text-3xl mx-auto mb-6 shadow-xl group-hover:scale-110 transition-transform duration-300">
                         <i class="fas fa-book-open"></i>
@@ -237,7 +669,7 @@
                     <h3 class="text-xl font-bold mb-3 text-church-purple">The Whole Gospel</h3>
                     <p class="text-gray-600 leading-relaxed">The complete message of Christ that transforms every area of life - spiritual, emotional, and physical</p>
                 </div>
-                
+
                 <div class="text-center group">
                     <div class="w-20 h-20 rounded-full bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center text-white text-3xl mx-auto mb-6 shadow-xl group-hover:scale-110 transition-transform duration-300">
                         <i class="fas fa-globe"></i>
@@ -263,14 +695,14 @@
                 <p class="text-lg text-gray-700 mb-8 leading-relaxed text-center">
                     The purpose of the Africa Gospel Church is to fulfill the Great Commandment and Great Commission of the Lord Jesus Christ according to the Great Plan (Mark 12:30-31, Matthew 28:19-20, Acts 1:8).
                 </p>
-                
+
                 <div class="grid lg:grid-cols-2 gap-8">
                     <div class="bg-gradient-to-br from-church-purple/5 to-purple-50 p-6 rounded-2xl border-l-4 border-church-purple">
                         <h3 class="text-xl font-bold mb-3 text-church-purple">The Great Commandment</h3>
                         <p class="text-gray-600 italic mb-2">"Love the Lord your God with all your heart and with all your soul and with all your mind and with all your strength... Love your neighbor as yourself."</p>
                         <p class="text-sm text-gray-500">- Mark 12:30-31</p>
                     </div>
-                    
+
                     <div class="bg-gradient-to-br from-church-red/5 to-red-50 p-6 rounded-2xl border-l-4 border-church-red">
                         <h3 class="text-xl font-bold mb-3 text-church-purple">The Great Commission</h3>
                         <p class="text-gray-600 italic mb-2">"Go and make disciples of all nations, baptizing them... and teaching them to obey everything I have commanded you."</p>
@@ -278,7 +710,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Mission Focus Cards -->
                 <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
@@ -290,7 +722,7 @@
                         <p class="text-gray-600 leading-relaxed">To celebrate God's presence through dynamic, authentic worship that honors Him</p>
                     </div>
                 </div>
-                
+
                 <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
                     <div class="p-6">
                         <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-church-red to-red-600 flex items-center justify-center text-white text-xl mb-4">
@@ -300,7 +732,7 @@
                         <p class="text-gray-600 leading-relaxed">To create a loving community where people are connected and grow together</p>
                     </div>
                 </div>
-                
+
                 <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
                     <div class="p-6">
                         <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center text-white text-xl mb-4">
@@ -310,7 +742,7 @@
                         <p class="text-gray-600 leading-relaxed">To equip believers to mature in faith and live Christ-centered lives</p>
                     </div>
                 </div>
-                
+
                 <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
                     <div class="p-6">
                         <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-white text-xl mb-4">
@@ -320,7 +752,7 @@
                         <p class="text-gray-600 leading-relaxed">To empower believers to discover and use their gifts to serve others</p>
                     </div>
                 </div>
-                
+
                 <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
                     <div class="p-6">
                         <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white text-xl mb-4">
@@ -330,7 +762,7 @@
                         <p class="text-gray-600 leading-relaxed">To share the good news of Jesus Christ with our community and beyond</p>
                     </div>
                 </div>
-                
+
                 <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
                     <div class="p-6">
                         <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-500 to-pink-600 flex items-center justify-center text-white text-xl mb-4">
@@ -425,7 +857,7 @@
             <p class="text-xl md:text-2xl mb-12 leading-relaxed opacity-90">
                 We invite you to be part of fulfilling God's purpose for His church. Together, we can make a lasting difference in our community and around the world.
             </p>
-            
+
             <div class="grid md:grid-cols-3 gap-8 mb-12">
                 <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                     <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -434,7 +866,7 @@
                     <h3 class="text-xl font-bold mb-2">Visit Us</h3>
                     <p class="opacity-90">Experience our welcoming community</p>
                 </div>
-                
+
                 <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                     <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-hands-helping text-2xl text-white"></i>
@@ -442,7 +874,7 @@
                     <h3 class="text-xl font-bold mb-2">Get Involved</h3>
                     <p class="opacity-90">Find your place in ministry</p>
                 </div>
-                
+
                 <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                     <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-heart text-2xl text-white"></i>
@@ -451,11 +883,11 @@
                     <p class="opacity-90">Build meaningful relationships</p>
                 </div>
             </div>
-            
+
             <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                <a href="/visit" class="bg-white text-church-purple hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:scale-105 shadow-xl inline-block">
-                    <i class="fas fa-calendar-check mr-2"></i>
-                    Plan Your Visit
+                <a href="/about" class="bg-white text-church-purple hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:scale-105 shadow-xl inline-block">
+                    <i class="fas fa-info-circle mr-2"></i>
+                    Learn About Us
                 </a>
                 <a href="/ministries" class="bg-transparent border-2 border-white hover:bg-white hover:text-church-purple text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:scale-105 inline-block">
                     <i class="fas fa-users mr-2"></i>
@@ -470,135 +902,80 @@
     </div>
 </section>
 
-<!-- Custom Styles -->
-<style>
-    @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-20px); }
-    }
-    
-    @keyframes float-delayed {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-15px); }
-    }
-    
-    @keyframes float-slow {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-10px); }
-    }
-    
-    .animate-float {
-        animation: float 6s ease-in-out infinite;
-    }
-    
-    .animate-float-delayed {
-        animation: float-delayed 8s ease-in-out infinite;
-        animation-delay: 2s;
-    }
-    
-    .animate-float-slow {
-        animation: float-slow 10s ease-in-out infinite;
-        animation-delay: 4s;
-    }
-    
-    .hero-pattern {
-        background-image: 
-            radial-gradient(circle at 25% 25%, rgba(139, 69, 19, 0.1) 0%, transparent 70%),
-            radial-gradient(circle at 75% 75%, rgba(75, 0, 130, 0.1) 0%, transparent 70%);
-    }
-    
-    /* Smooth scroll behavior */
-    html {
-        scroll-behavior: smooth;
-    }
-    
-    /* Custom gradient text */
-    .bg-clip-text {
-        -webkit-background-clip: text;
-        background-clip: text;
-    }
-</style>
 <script>
-        // Enhanced form interactions
-        function toggleChildrenAges(hasChildren) {
-            const agesDiv = document.getElementById('children-ages');
-            const yesDot = document.getElementById('yes-dot');
-            const noDot = document.getElementById('no-dot');
-            
-            if (hasChildren) {
-                agesDiv.classList.remove('hidden');
-                yesDot.style.opacity = '1';
-                noDot.style.opacity = '0';
-            } else {
-                agesDiv.classList.add('hidden');
-                yesDot.style.opacity = '0';
-                noDot.style.opacity = '1';
-            }
+    // Enhanced form interactions
+    function toggleChildrenAges(hasChildren) {
+        const agesDiv = document.getElementById('children-ages');
+        const yesDot = document.getElementById('yes-dot');
+        const noDot = document.getElementById('no-dot');
+
+        if (hasChildren) {
+            agesDiv.classList.remove('hidden');
+            yesDot.style.opacity = '1';
+            noDot.style.opacity = '0';
+        } else {
+            agesDiv.classList.add('hidden');
+            yesDot.style.opacity = '0';
+            noDot.style.opacity = '1';
         }
-        
-        // Smooth scrolling functions
-        function scrollToForm() {
-            document.getElementById('form-section').scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-        
-        function scrollToInfo() {
-            document.getElementById('info-section').scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-        
-        // Add scroll animations
-        const observerOptions = {
+    }
+
+    // Smooth scrolling functions
+    function scrollToForm() {
+        document.getElementById('form-section').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+
+    function scrollToInfo() {
+        document.getElementById('info-section').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+
+    // Add scroll animations
+    const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
         
-        const observer = new IntersectionObserver((entries) => {
+        const observer = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.classList.add('fade-in');
                 }
             });
         }, observerOptions);
         
-        // Observe cards for animation
-        document.addEventListener('DOMContentLoaded', function() {
-            const cards = document.querySelectorAll('.card-hover, .faq-item');
-            cards.forEach((card, index) => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(30px)';
-                card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-                observer.observe(card);
-            });
+        // Observe all cards and sections
+        document.querySelectorAll('section > div').forEach(section => {
+            observer.observe(section);
         });
-        
-        // Form submission with animation
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const button = e.target.querySelector('button[type="submit"]');
-            const originalText = button.innerHTML;
-            
-            button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Submitting...';
-            button.disabled = true;
-            
-            // Simulate form submission
+
+    // Form submission with animation
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const button = e.target.querySelector('button[type="submit"]');
+        const originalText = button.innerHTML;
+
+        button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Submitting...';
+        button.disabled = true;
+
+        // Simulate form submission
+        setTimeout(() => {
+            button.innerHTML = '<i class="fas fa-check mr-2"></i>Visit Confirmed!';
+            button.classList.add('bg-green-500', 'hover:bg-green-600');
+            button.classList.remove('bg-gradient-to-r', 'from-church-purple', 'to-church-purple-light');
+
             setTimeout(() => {
-                button.innerHTML = '<i class="fas fa-check mr-2"></i>Visit Confirmed!';
-                button.classList.add('bg-green-500', 'hover:bg-green-600');
-                button.classList.remove('bg-gradient-to-r', 'from-church-purple', 'to-church-purple-light');
-                
-                setTimeout(() => {
-                    button.innerHTML = originalText;
-                    button.disabled = false;
-                    button.classList.remove('bg-green-500', 'hover:bg-green-600');
-                    button.classList.add('bg-gradient-to-r', 'from-church-purple', 'to-church-purple-light');
-                }, 3000);
-            }, 2000);
-        });
-    </script>
+                button.innerHTML = originalText;
+                button.disabled = false;
+                button.classList.remove('bg-green-500', 'hover:bg-green-600');
+                button.classList.add('bg-gradient-to-r', 'from-church-purple', 'to-church-purple-light');
+            }, 3000);
+        }, 2000);
+    });
+</script>
 @endsection

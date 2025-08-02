@@ -2,7 +2,55 @@
 
 @section('title', 'Youth Ministry')
 
-@section('description', 'TRC AGC Church Youth Ministry - Empowering the Next Generation')
+@section('description', 'TRC AGC Church Youth Ministry - Empowering the Next Generation for Christ')
+
+@section('styles')
+<style>
+    .text-church-purple-light { color: #a855f7; }
+    .bg-church-purple-light { background-color: #a855f7; }
+    .border-church-purple-light { border-color: #a855f7; }
+    .text-nature-green { color: #22c55e; }
+    .text-nature-brown { color: #a16207; }
+    .text-safari-gold { color: #f59e0b; }
+    .text-kenya-red { color: #dc2626; }
+    .bg-nature-green { background-color: #22c55e; }
+    .bg-nature-brown { background-color: #a16207; }
+    .bg-safari-gold { background-color: #f59e0b; }
+    .border-nature-green { border-color: #22c55e; }
+    .border-nature-brown { border-color: #a16207; }
+    .border-safari-gold { border-color: #f59e0b; }
+    
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
+    
+    .animate-bounce-slow {
+        animation: bounce 3s ease-in-out infinite;
+    }
+    
+    .animate-pulse-glow {
+        animation: pulse-glow 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 20px rgba(147, 51, 234, 0.3); }
+        50% { box-shadow: 0 0 40px rgba(147, 51, 234, 0.6); }
+    }
+    
+    .gradient-text {
+        background: linear-gradient(135deg, #7c3aed, #dc2626);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .glass-effect {
+        backdrop-filter: blur(16px);
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+</style>
+@endsection
 
 @section('content')
 <!-- Dark mode design with vibrant accents -->
@@ -24,7 +72,7 @@
         <div class="relative z-10 flex flex-col justify-center items-center h-full px-6 text-center">
             <div class="mb-8">
                 <h1 class="text-7xl md:text-9xl font-black mb-4 tracking-tight">
-                    <span class="inline-block transform hover:rotate-3 transition duration-500 text-transparent bg-clip-text bg-gradient-to-r from-church-red to-church-purple-light">YOUTH</span>
+                    <span class="inline-block transform hover:rotate-3 transition duration-500 gradient-text">YOUTH</span>
                 </h1>
                 <div class="w-32 h-2 bg-gradient-to-r from-church-red to-church-purple mx-auto rounded-full"></div>
             </div>
@@ -39,15 +87,13 @@
             <div class="flex flex-wrap justify-center gap-6">
                 <a href="#about" class="group bg-gradient-to-r from-church-red to-red-600 hover:from-red-600 hover:to-church-red text-white font-bold py-4 px-10 rounded-full transition duration-300 transform hover:scale-105 hover:shadow-2xl">
                     <span class="flex items-center">
-                        Join Us
+                        Join Our Family
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-1 transition duration-300" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                         </svg>
                     </span>
                 </a>
-                <a href="#events" class="group bg-transparent border-3 border-white hover:bg-white hover:text-gray-900 text-white font-bold py-4 px-10 rounded-full transition duration-300 transform hover:scale-105 backdrop-blur-sm">
-                    What's Coming Up
-                </a>
+               
             </div>
         </div>
 
@@ -85,7 +131,7 @@
                         </div>
                     </div>
                     <div class="lg:w-1/2">
-                        <h2 class="text-5xl font-black mb-8 text-transparent bg-clip-text bg-gradient-to-r from-church-red to-church-purple-light">
+                        <h2 class="text-5xl font-black mb-8 gradient-text">
                             This Is Us
                         </h2>
                         <p class="text-xl text-gray-300 mb-6 leading-relaxed">
@@ -102,16 +148,16 @@
 
                         <div class="grid grid-cols-3 gap-8">
                             <div class="text-center group">
-                                <div class="text-4xl font-black text-church-purple-light mb-2 group-hover:scale-110 transition duration-300">500+</div>
-                                <div class="text-gray-400 font-medium">Young Lives Touched</div>
+                                <div class="text-4xl font-black text-church-purple-light mb-2 group-hover:scale-110 transition duration-300">50+</div>
+                                <div class="text-gray-400 font-medium">Active Youth</div>
                             </div>
                             <div class="text-center group">
-                                <div class="text-4xl font-black text-church-red mb-2 group-hover:scale-110 transition duration-300">12</div>
+                                <div class="text-4xl font-black text-church-red mb-2 group-hover:scale-110 transition duration-300">4</div>
                                 <div class="text-gray-400 font-medium">Years Strong</div>
                             </div>
                             <div class="text-center group">
-                                <div class="text-4xl font-black text-church-purple-light mb-2 group-hover:scale-110 transition duration-300">30+</div>
-                                <div class="text-gray-400 font-medium">Amazing Leaders</div>
+                                <div class="text-4xl font-black text-church-purple-light mb-2 group-hover:scale-110 transition duration-300">10+</div>
+                                <div class="text-gray-400 font-medium">Dedicated Leaders</div>
                             </div>
                         </div>
                     </div>
@@ -120,125 +166,186 @@
         </div>
     </section>
 
-    <!-- Events Section -->
-    <section id="events" class="py-24 bg-gray-900 relative overflow-hidden">
-        <!-- Animated background elements -->
-        <div class="absolute top-0 right-0 w-96 h-96 bg-church-purple rounded-full filter blur-3xl opacity-10 -mr-48 -mt-48 animate-pulse"></div>
-        <div class="absolute bottom-0 left-0 w-64 h-64 bg-church-red rounded-full filter blur-3xl opacity-10 -ml-32 -mb-32 animate-pulse"></div>
-
+    <!-- What We Do Section -->
+    <section class="py-24 bg-gray-900 relative overflow-hidden">
         <div class="container mx-auto px-4 relative z-10">
             <div class="text-center mb-20">
                 <h2 class="text-5xl font-black text-white mb-6">
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-church-red to-church-purple-light">Epic</span> Events Ahead
+                    What We're <span class="gradient-text">All About</span>
                 </h2>
                 <div class="w-32 h-1 bg-gradient-to-r from-church-red to-church-purple mx-auto mb-8 rounded-full"></div>
                 <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                    These aren't just events – they're <span class="text-church-red font-semibold">life-changing experiences</span>
-                    waiting to happen. Mark your calendar and get ready for adventure!
+                    Every Friday night, we gather for worship, teaching, games, and fellowship that's designed to help you grow in your faith and friendships.
                 </p>
             </div>
 
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-12">
-                    <h1 class="text-5xl font-black text-white mb-4 animate-float">🌿 Nairobi Nature Escapes</h1>
-                    <p class="text-xl text-green-200 max-w-2xl mx-auto">Discover Kenya's breathtaking natural wonders just outside the capital</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Worship -->
+                <div class="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-church-purple transition duration-500 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="text-church-purple text-4xl mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 group-hover:text-church-purple transition duration-300">Worship Together</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Experience God through powerful worship music, prayer, and authentic community. Our worship team creates an atmosphere where you can encounter Jesus personally.
+                    </p>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Nairobi National Park -->
-                    <div class="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden border border-gray-700 hover:border-nature-green transition duration-500 transform hover:-translate-y-2 hover:shadow-2xl">
-                        <div class="relative">
-                            <div class="bg-gradient-to-r from-nature-green to-green-600 text-white py-3 px-6 flex justify-between items-center">
-                                <div class="font-black text-lg">DAILY VISITS</div>
-                                <div class="bg-white text-nature-green text-xs font-black px-3 py-1 rounded-full animate-pulse">LIONS SPOTTED!</div>
-                            </div>
-                            <div class="p-8">
-                                <h3 class="text-2xl font-black mb-4 group-hover:text-nature-green transition duration-300">🦁 Nairobi National Park</h3>
-                                <p class="text-gray-300 mb-6 leading-relaxed">
-                                    Experience Africa's wildlife just 7km from the city center! Lions, giraffes, rhinos,
-                                    and zebras roam free with Nairobi's skyline as backdrop.
-                                </p>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-2xl font-bold text-safari-gold">KSh 1,500</span>
-                                    <a href="#" class="flex items-center text-nature-green font-bold hover:text-white transition group-hover:translate-x-2 duration-300">
-                                        Book Safari!
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                <!-- Bible Study -->
+                <div class="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-church-red transition duration-500 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="text-church-red text-4xl mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-book-open"></i>
                     </div>
-
-                    <!-- Karura Forest -->
-                    <div class="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden border border-gray-700 hover:border-nature-brown transition duration-500 transform hover:-translate-y-2 hover:shadow-2xl">
-                        <div class="relative">
-                            <div class="bg-gradient-to-r from-nature-brown to-amber-700 text-white py-3 px-6 flex justify-between items-center">
-                                <div class="font-black text-lg">OPEN DAILY</div>
-                                <div class="bg-white text-nature-brown text-xs font-black px-3 py-1 rounded-full animate-pulse">PERFECT WEATHER!</div>
-                            </div>
-                            <div class="p-8">
-                                <h3 class="text-2xl font-black mb-4 group-hover:text-nature-brown transition duration-300">🌳 Karura Forest Reserve</h3>
-                                <p class="text-gray-300 mb-6 leading-relaxed">
-                                    Peaceful forest trails, stunning waterfalls, caves, and picnic spots.
-                                    Perfect for hiking, cycling, and reconnecting with nature.
-                                </p>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-2xl font-bold text-kenya-red">KSh 300</span>
-                                    <a href="#" class="flex items-center text-nature-brown font-bold hover:text-white transition group-hover:translate-x-2 duration-300">
-                                        Explore Now!
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- David Sheldrick Wildlife Trust -->
-                    <div class="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden border border-gray-700 hover:border-safari-gold transition duration-500 transform hover:-translate-y-2 hover:shadow-2xl">
-                        <div class="relative">
-                            <div class="bg-gradient-to-r from-safari-gold to-orange-600 text-white py-3 px-6 flex justify-between items-center">
-                                <div class="font-black text-lg">11AM DAILY</div>
-                                <div class="bg-white text-safari-gold text-xs font-black px-3 py-1 rounded-full animate-pulse">BABY ELEPHANTS!</div>
-                            </div>
-                            <div class="p-8">
-                                <h3 class="text-2xl font-black mb-4 group-hover:text-safari-gold transition duration-300">🐘 Elephant Orphanage</h3>
-                                <p class="text-gray-300 mb-6 leading-relaxed">
-                                    Watch adorable baby elephants play, feed, and splash in mud baths!
-                                    Support conservation while creating unforgettable memories.
-                                </p>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-2xl font-bold text-nature-green">KSh 650</span>
-                                    <a href="#" class="flex items-center text-safari-gold font-bold hover:text-white transition group-hover:translate-x-2 duration-300">
-                                        Visit Babies!
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <h3 class="text-2xl font-black mb-4 group-hover:text-church-red transition duration-300">Dig Deep</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Explore God's Word through interactive Bible studies, small groups, and discussions that make ancient truths relevant to your everyday life.
+                    </p>
                 </div>
 
-                <div class="text-center mt-12">
-                    <p class="text-green-200 text-lg">🇰🇪 Discover the wild side of Nairobi - where urban meets untamed!</p>
+                <!-- Community -->
+                <div class="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-church-purple-light transition duration-500 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="text-church-purple-light text-4xl mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 group-hover:text-church-purple-light transition duration-300">Build Community</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Form lasting friendships with peers who share your values. Our community extends beyond Friday nights into everyday life support and encouragement.
+                    </p>
                 </div>
-            </div>
 
+                <!-- Service -->
+                <div class="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-church-red transition duration-500 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="text-church-red text-4xl mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 group-hover:text-church-red transition duration-300">Serve Others</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Make a real difference in our community through service projects, outreach programs, and mission trips that put faith into action.
+                    </p>
+                </div>
 
-            <div class="text-center mt-16">
-                <a href="/youth/calendar" class="inline-flex items-center bg-gradient-to-r from-church-purple to-church-red hover:from-church-red hover:to-church-purple text-white font-black py-4 px-10 rounded-full transition duration-300 transform hover:scale-105 hover:shadow-2xl">
-                    See Everything We're Up To
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-3" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </a>
+                <!-- Leadership -->
+                <div class="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-church-purple transition duration-500 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="text-church-purple text-4xl mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 group-hover:text-church-purple transition duration-300">Grow as Leaders</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Develop your gifts and talents through leadership opportunities, mentorship programs, and training that prepares you for your future calling.
+                    </p>
+                </div>
+
+                <!-- Fun & Games -->
+                <div class="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-church-purple-light transition duration-500 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="text-church-purple-light text-4xl mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 group-hover:text-church-purple-light transition duration-300">Have Fun!</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Enjoy games, competitions, movie nights, and social events that prove faith and fun go hand in hand. Laughter is part of our DNA!
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    @endsection
+
+    <!-- Call to Action Section -->
+    <section class="py-24 bg-gradient-to-br from-church-purple via-church-red to-red-600 relative overflow-hidden">
+        <!-- Animated background elements -->
+        <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full filter blur-3xl opacity-5 -ml-48 -mt-48 animate-pulse"></div>
+        <div class="absolute bottom-0 right-0 w-64 h-64 bg-white rounded-full filter blur-3xl opacity-5 -mr-32 -mb-32 animate-pulse"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <h2 class="text-5xl md:text-6xl font-black text-white mb-8">
+                    Ready to Start Your <span class="text-yellow-300">Journey</span>?
+                </h2>
+                <p class="text-2xl text-gray-100 mb-12 leading-relaxed">
+                    You don't need to have it all figured out. Come as you are, and let's discover what God has in store for your life together.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <a href="#" class="group bg-white text-church-purple font-black py-4 px-10 rounded-full hover:bg-gray-100 transition duration-300 transform hover:scale-105 hover:shadow-2xl">
+                        <span class="flex items-center">
+                            Join Us This Friday
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-1 transition duration-300" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </a>
+                  
+                </div>
+
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="group">
+                        <div class="text-3xl font-black text-white mb-2 group-hover:text-yellow-300 transition duration-300">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">When</h3>
+                        <p class="text-gray-200">Every Friday • 8:30 PM</p>
+                    </div>
+                    <div class="group">
+                        <div class="text-3xl font-black text-white mb-2 group-hover:text-yellow-300 transition duration-300">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Where</h3>
+                        <p class="text-gray-200">Google meet</p>
+                    </div>
+                    <div class="group">
+                        <div class="text-3xl font-black text-white mb-2 group-hover:text-yellow-300 transition duration-300">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Who</h3>
+                        <p class="text-gray-200">All Youth<br>Ages 13-25</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+</div>
+
+<script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all cards and sections
+        document.querySelectorAll('section > div').forEach(section => {
+            observer.observe(section);
+        });
+    // Add scroll-triggered animations
+    window.addEventListener('scroll', () => {
+        const cards = document.querySelectorAll('.group');
+        cards.forEach(card => {
+            const rect = card.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+            
+            if (isVisible) {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }
+        });
+    });
+</script>
+@endsection

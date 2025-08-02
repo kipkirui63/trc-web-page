@@ -5,29 +5,390 @@
 @section('description', 'Contact TRC AGC Church - Reach out to us with any questions or prayer requests')
 
 @section('content')
-<!-- Hero Section with Floating Elements -->
-<section class="relative overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-church-purple via-church-purple-light to-purple-900"></div>
-    <div class="absolute inset-0 opacity-10">
-        <div class="absolute top-20 left-10 w-20 h-20 bg-white rounded-full animate-pulse"></div>
-        <div class="absolute top-40 right-20 w-12 h-12 bg-church-red rounded-full animate-bounce"></div>
-        <div class="absolute bottom-20 left-1/4 w-16 h-16 bg-white rounded-full animate-pulse delay-1000"></div>
-    </div>
+<style>
+    .hero-section {
+        background: linear-gradient(135deg, #7c3aed 0%, #dc2626 50%, #ea580c 100%);
+        background-size: 400% 400%;
+        animation: gradientShift 15s ease infinite;
+        position: relative;
+        overflow: hidden;
+    }
+
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    .hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        animation: patternMove 20s linear infinite;
+    }
+
+    @keyframes patternMove {
+        0% { transform: translateX(0) translateY(0); }
+        25% { transform: translateX(-10px) translateY(-10px); }
+        50% { transform: translateX(-20px) translateY(0); }
+        75% { transform: translateX(-10px) translateY(10px); }
+        100% { transform: translateX(0) translateY(0); }
+    }
+
+    .floating-element {
+        animation: float 8s ease-in-out infinite;
+        will-change: transform;
+    }
+
+    .floating-element:nth-child(2) {
+        animation: floatReverse 10s ease-in-out infinite;
+        animation-delay: -2s;
+    }
+
+    .floating-element:nth-child(3) {
+        animation: floatSpin 12s ease-in-out infinite;
+        animation-delay: -4s;
+    }
+
+    .floating-element:nth-child(4) {
+        animation: floatPulse 9s ease-in-out infinite;
+        animation-delay: -6s;
+    }
+
+    .floating-element:nth-child(5) {
+        animation: iconFloat 15s ease-in-out infinite;
+        animation-delay: -1s;
+    }
+
+    .floating-element:nth-child(6) {
+        animation: iconGlow 8s ease-in-out infinite;
+        animation-delay: -3s;
+    }
+
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0px) rotate(0deg) scale(1);
+        }
+        33% {
+            transform: translateY(-25px) rotate(2deg) scale(1.05);
+        }
+        66% {
+            transform: translateY(-15px) rotate(-1deg) scale(0.95);
+        }
+    }
+
+    @keyframes floatReverse {
+        0%, 100% {
+            transform: translateY(0px) rotate(0deg) scale(1);
+        }
+        50% {
+            transform: translateY(35px) rotate(-5deg) scale(1.1);
+        }
+    }
+
+    @keyframes floatSpin {
+        0%, 100% {
+            transform: translateY(0px) rotate(0deg) scale(1);
+        }
+        25% {
+            transform: translateY(-20px) rotate(90deg) scale(1.05);
+        }
+        50% {
+            transform: translateY(-30px) rotate(180deg) scale(0.9);
+        }
+        75% {
+            transform: translateY(-10px) rotate(270deg) scale(1.1);
+        }
+    }
+
+    @keyframes floatPulse {
+        0%, 100% {
+            transform: translateY(0px) scale(1);
+            opacity: 0.7;
+        }
+        50% {
+            transform: translateY(-40px) scale(1.3);
+            opacity: 1;
+        }
+    }
+
+    @keyframes iconFloat {
+        0%, 100% {
+            transform: translateY(0px) translateX(0px) rotate(0deg);
+            opacity: 0.2;
+        }
+        25% {
+            transform: translateY(-15px) translateX(10px) rotate(5deg);
+            opacity: 0.4;
+        }
+        50% {
+            transform: translateY(-25px) translateX(-5px) rotate(-3deg);
+            opacity: 0.3;
+        }
+        75% {
+            transform: translateY(-10px) translateX(-10px) rotate(2deg);
+            opacity: 0.5;
+        }
+    }
+
+    @keyframes iconGlow {
+        0%, 100% {
+            transform: translateY(0px) scale(1);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            opacity: 0.2;
+        }
+        50% {
+            transform: translateY(-30px) scale(1.2);
+            text-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+            opacity: 0.4;
+        }
+    }
+
+    .pulse-glow {
+        animation: pulse-glow 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse-glow {
+        0%, 100% {
+            box-shadow: 
+                0 0 30px rgba(255, 255, 255, 0.2),
+                inset 0 0 20px rgba(255, 255, 255, 0.1);
+            transform: scale(1);
+        }
+        50% {
+            box-shadow: 
+                0 0 60px rgba(255, 255, 255, 0.4),
+                0 0 100px rgba(124, 58, 237, 0.2),
+                inset 0 0 30px rgba(255, 255, 255, 0.2);
+            transform: scale(1.02);
+        }
+    }
+
+    .text-shadow {
+        text-shadow: 
+            0 4px 8px rgba(0, 0, 0, 0.3),
+            0 0 30px rgba(255, 255, 255, 0.1);
+        animation: textGlow 4s ease-in-out infinite;
+    }
+
+    @keyframes textGlow {
+        0%, 100% {
+            text-shadow: 
+                0 4px 8px rgba(0, 0, 0, 0.3),
+                0 0 30px rgba(255, 255, 255, 0.1);
+        }
+        50% {
+            text-shadow: 
+                0 4px 8px rgba(0, 0, 0, 0.3),
+                0 0 50px rgba(255, 255, 255, 0.2),
+                0 0 80px rgba(255, 193, 7, 0.1);
+        }
+    }
+
+    .backdrop-blur {
+        backdrop-filter: blur(10px);
+    }
+
+    .hero-card {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        animation: cardFloat 6s ease-in-out infinite;
+        will-change: transform;
+    }
+
+    .hero-card:nth-child(1) { animation-delay: 0s; }
+    .hero-card:nth-child(2) { animation-delay: -2s; }
+    .hero-card:nth-child(3) { animation-delay: -4s; }
+
+    @keyframes cardFloat {
+        0%, 100% {
+            transform: translateY(0px) rotate(0deg);
+        }
+        50% {
+            transform: translateY(-8px) rotate(0.5deg);
+        }
+    }
+
+    .hero-card:hover {
+        background: rgba(255, 255, 255, 0.18);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        transform: translateY(-10px) scale(1.05) rotate(-1deg);
+        box-shadow: 
+            0 20px 40px rgba(0, 0, 0, 0.1),
+            0 0 50px rgba(255, 255, 255, 0.2);
+        animation-play-state: paused;
+    }
+
+    .scroll-indicator {
+        animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+        40% {
+            transform: translateY(-15px) scale(1.1);
+            opacity: 0.8;
+        }
+        60% {
+            transform: translateY(-8px) scale(1.05);
+            opacity: 0.9;
+        }
+    }
+
+    .bg-clip-text {
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: shimmer 3s ease-in-out infinite;
+    }
+
+    @keyframes shimmer {
+        0%, 100% {
+            background-position: -200% center;
+        }
+        50% {
+            background-position: 200% center;
+        }
+    }
+
+    /* Button Animations */
+    .hero-section a {
+        position: relative;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .hero-section a::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+        transition: all 0.6s ease;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+    }
+
+    .hero-section a:hover::before {
+        width: 200%;
+        height: 200%;
+    }
+
+    .hero-section a:hover {
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Add particle effect */
+    .hero-section::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: 
+            radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,0.3), transparent),
+            radial-gradient(2px 2px at 40% 70%, rgba(255,255,255,0.2), transparent),
+            radial-gradient(1px 1px at 90% 40%, rgba(255,255,255,0.3), transparent),
+            radial-gradient(1px 1px at 50% 60%, rgba(255,255,255,0.2), transparent);
+        background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+        animation: particles 25s linear infinite;
+        pointer-events: none;
+    }
+
+    @keyframes particles {
+        0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+        50% { opacity: 0.5; }
+        100% { transform: translateY(-100px) rotate(360deg); opacity: 1; }
+    }
+</style>
+
+
+<!-- Hero Section -->
+<section class="hero-section flex items-center justify-center relative min-h-screen">
+    <!-- Floating Elements -->
+    <div class="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full floating-element"></div>
+    <div class="absolute top-40 right-20 w-16 h-16 bg-white/10 rounded-full floating-element"></div>
+    <div class="absolute bottom-40 left-20 w-24 h-24 bg-white/10 rounded-full floating-element"></div>
+    <div class="absolute bottom-20 right-10 w-18 h-18 bg-white/10 rounded-full floating-element"></div>
     
-    <div class="relative container mx-auto px-4 py-20">
-        <div class="text-center text-white">
-            <div class="inline-block p-4 bg-white/10 backdrop-blur-sm rounded-full mb-6">
-                <i class="fas fa-envelope text-4xl"></i>
+    <!-- Cross Elements -->
+    <div class="absolute top-32 right-1/4 text-white/20 text-4xl floating-element">
+        <i class="fas fa-cross"></i>
+    </div>
+    <div class="absolute bottom-32 left-1/4 text-white/20 text-3xl floating-element">
+        <i class="fas fa-dove"></i>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-6xl mx-auto text-center text-white">
+            <!-- Main Content -->
+            <div class="mb-12">
+                <!-- Subtitle -->
+                <div class="mb-8">
+                    <span class="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur rounded-full text-white/90 font-semibold text-lg border border-white/30 pulse-glow">
+                        <i class="fas fa-phone mr-3 text-xl"></i>
+                        We'd Love to Hear From You
+                    </span>
+                </div>
+
+                <!-- Main Title -->
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 text-shadow leading-tight">
+                    <span class="block mb-2">Contact</span>
+                    <span class="block bg-gradient-to-r from-white via-yellow-200 to-white bg-clip-text text-transparent">Us Today</span>
+                </h1>
+
+                <!-- Description -->
+                <p class="text-xl md:text-2xl mb-12 leading-relaxed text-white/90 max-w-4xl mx-auto">
+                    Whether you're seeking prayer, have questions about faith, or want to connect with our community, 
+                    we're here to support you on your spiritual journey
+                </p>
+
+                <!-- Contact Cards -->
+                <div class="grid md:grid-cols-3 gap-6 mb-12">
+                    <div class="hero-card backdrop-blur rounded-2xl p-6">
+                        <div class="text-3xl mb-2"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="text-white/80 font-semibold">Visit Us</div>
+                    </div>
+                    <div class="hero-card backdrop-blur rounded-2xl p-6">
+                        <div class="text-3xl mb-2"><i class="fas fa-phone"></i></div>
+                        <div class="text-white/80 font-semibold">Call Us</div>
+                    </div>
+                    <div class="hero-card backdrop-blur rounded-2xl p-6">
+                        <div class="text-3xl mb-2"><i class="fas fa-envelope"></i></div>
+                        <div class="text-white/80 font-semibold">Email Us</div>
+                    </div>
+                </div>
+
+               
             </div>
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-                Get In Touch
-            </h1>
-            <p class="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed opacity-90">
-                We're here to listen, pray with you, and welcome you into our church family
-            </p>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 scroll-indicator">
+                <div class="w-8 h-12 border-2 border-white/50 rounded-full flex justify-center">
+                    <div class="w-1 h-3 bg-white/70 rounded-full mt-2"></div>
+                </div>
+                <p class="text-white/60 text-sm mt-2">Scroll to explore</p>
+            </div>
         </div>
     </div>
 </section>
+
+
 
 <!-- Quick Contact Cards -->
 <section class="py-16 bg-gray-50 relative">
@@ -365,6 +726,23 @@ function loadMap() {
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(loadMap, 1000); // Small delay to improve perceived performance
 });
+const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all cards and sections
+        document.querySelectorAll('section > div').forEach(section => {
+            observer.observe(section);
+        });
 </script>
 
 @endsection

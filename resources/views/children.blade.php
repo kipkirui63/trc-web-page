@@ -637,7 +637,7 @@
 
                                     <div class="bg-white/20 p-4 rounded-2xl backdrop-blur-sm mt-8">
                                         <h4 class="font-bold mb-2">📞 Questions?</h4>
-                                        <p class="text-orange-100 text-sm">Contact Pastor Johnson at<br><strong>pastor@trcagc.org</strong><br>or call <strong>(555) 123-4567</strong></p>
+                                        <p class="text-orange-100 text-sm">Call Pastor Vince on <strong>+254 793 708731</strong></p>
                                     </div>
                                 </div>
                             </div>
@@ -764,20 +764,23 @@
         });
     }
 
-    // Add scroll animations
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all cards and sections
+        document.querySelectorAll('section > div').forEach(section => {
+            observer.observe(section);
         });
-    }, observerOptions);
 
     // Observe cards for animation
     document.addEventListener('DOMContentLoaded', function() {

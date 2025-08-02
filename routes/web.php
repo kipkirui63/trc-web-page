@@ -24,8 +24,8 @@ Route::get('/children', function () {
 Route::get('/youth', function () {
     return view('youth');
 });
-Route::get('/women', function () {
-    return view('women');
+Route::get('/women-ministry', function () {
+    return view('women-ministry');
 });
 Route::get('/men', function () {
     return view('men');
@@ -60,3 +60,12 @@ Route::get('/blog/{category}', function ($category) {
 Route::view('/livestream', 'livestream')->name('livestream');
 
 
+Route::get('/worship-ministry', function () {
+    return view('worship-ministry');
+});
+Route::get('/discipleship-ministry', function () {
+    return view('discipleship-ministry');
+});
+Route::get('/outreach-ministry', function () {
+    return view('outreach-ministry');
+});
