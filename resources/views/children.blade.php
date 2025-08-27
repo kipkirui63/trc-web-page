@@ -101,8 +101,7 @@
 
                         <!-- Main image container -->
                         <div class="relative bg-gradient-to-br from-white via-purple-50 to-pink-50 p-8 rounded-3xl shadow-2xl border-4 border-white float-animation">
-                            <img src="https://i.pinimg.com/736x/de/b4/43/deb443cafd393aff67e14dc86cc6c384.jpg"
-                                alt="Happy children at church"
+                            <img src="{{ asset('images/happy-children.jpg') }}" alt="Happy children" 
                                 class="w-full h-auto rounded-2xl shadow-xl" />
 
                             <!-- Floating decorative elements around image -->
