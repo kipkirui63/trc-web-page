@@ -33,3 +33,30 @@ Route::get('/men', function () {
 Route::get('/ministries', function () {
     return view('ministries');
 });
+
+Route::get('/events', function () {
+    return view('events');
+});
+
+Route::get('/blog', function () {
+    return view('blog');
+});
+
+
+use App\Http\Controllers\EventController;
+
+Route::get('/events', [EventController::class, 'index']);
+
+use App\Http\Controllers\ContactController;
+
+Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
+
+
+
+Route::get('/blog/{category}', function ($category) {
+    return view('blog-category', ['category' => $category]);
+})->name('blog.category');
+
+Route::view('/livestream', 'livestream')->name('livestream');
+
+

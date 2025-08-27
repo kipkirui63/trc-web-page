@@ -259,7 +259,7 @@
                                 <div class="flex items-start">
                                     <span class="w-8 h-8 bg-church-red text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0 mt-1">4</span>
                                     <div>
-                                        <p class="font-medium text-gray-800">Enter Business Number: <span class="number-highlight text-3xl">404953</span></p>
+                                        <p class="font-medium text-gray-800">Enter Business Number: <span class="number-highlight text-3xl">7535398</span></p>
                                         <p class="text-gray-600 text-sm">Our official paybill number</p>
                                     </div>
                                 </div>
@@ -306,7 +306,7 @@
                                         <i class="fas fa-envelope mr-1"></i>finance@trcchurch.org
                                     </a>
                                     <a href="tel:+254123456789" class="text-church-purple hover:text-church-purple-light font-medium transition-colors">
-                                        <i class="fas fa-phone mr-1"></i>+254 123 456 789
+                                        <i class="fas fa-phone mr-1"></i>+254 710 668 173
                                     </a>
                                 </div>
                             </div>
@@ -316,7 +316,7 @@
                             <div class="mb-8 bg-gradient-to-br from-green-500 to-green-600 rounded-3xl p-6 text-center text-white shadow-xl">
                                 <p class="text-lg font-bold mb-4">M-Pesa Paybill Number</p>
                                 <div class="bg-white rounded-2xl p-6 shadow-inner">
-                                    <p class="text-gray-800 text-4xl font-bold tracking-widest">404953</p>
+                                    <p class="text-gray-800 text-4xl font-bold tracking-widest">522533</p>
                                 </div>
                             </div>
                             
@@ -503,7 +503,7 @@
                             <i class="fas fa-mobile-alt"></i>
                         </div>
                         <h3 class="text-xl font-bold text-gray-800 mb-2">Quick M-Pesa Giving</h3>
-                        <p class="text-gray-600 mb-4">Give instantly using paybill <span class="font-bold text-2xl text-green-600">404953</span></p>
+                        <p class="text-gray-600 mb-4">Give instantly using paybill <span class="font-bold text-2xl text-green-600"></span></p>
                         <a href="#mpesa-section" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 inline-block">
                             Give Now
                         </a>

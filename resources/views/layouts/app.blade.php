@@ -313,7 +313,7 @@
 <body class="bg-gray-50 text-gray-800">
     <!-- Announcement Bar -->
     <div class="bg-gradient-to-r from-church-purple to-church-purple-light text-white text-center py-2 px-4">
-        <p class="text-sm md:text-base">Join us this Sunday 10:00 AM for our worship service | <a href="#" class="underline hover:text-church-red transition">Live Stream</a></p>
+        <p class="text-sm md:text-base">Join us this Sunday 10:00 AM for our worship service | <a href="{{ route('livestream') }}" class="hover:text-church-purple">Live Stream</a></p>
     </div>
 
     <!-- Header/Navigation -->
@@ -332,8 +332,12 @@
                     <a href="/" class="text-gray-800 hover:text-church-purple font-medium transition">Home</a>
                     <a href="about" class="text-gray-800 hover:text-church-purple font-medium transition">About Us</a>
                     <a href="ministries" class="text-gray-800 hover:text-church-purple font-medium transition">Ministries</a>
-                    <a href="#" class="text-gray-800 hover:text-church-purple font-medium transition">Events</a>
+                    <a href="events" class="text-gray-800 hover:text-church-purple font-medium transition">Events</a>
                     <a href="contact" class="text-gray-800 hover:text-church-purple font-medium transition">Contact</a>
+                    <a href="blog" class="text-gray-800 hover:text-church-purple font-medium transition">Blog</a>
+
+
+                </nav>
                 </nav>
 
                 <!-- CTA Button -->
