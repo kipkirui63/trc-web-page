@@ -3,6 +3,8 @@
 @section('title', 'Live Stream')
 @section('description', 'Join our live worship service every Sunday at 10:00 AM.')
 
+@section('styles')
+
 @section('content')
 <section class="py-20 bg-gray-50">
     <div class="container mx-auto px-4">
@@ -75,10 +77,10 @@
 
 <script>
     // ---------- CONFIG ----------
-    const YOUTUBE_VIDEO_ID = "YOUR_VIDEO_ID";   // e.g. "dQw4w9WgXcQ"
-    const YOUTUBE_CHANNEL_ID = "YOUR_CHANNEL_ID"; // UCxxxxxx
-    const FACEBOOK_PAGE = "YOUR_PAGE";          // e.g. "YourChurchPage"
-    const FACEBOOK_VIDEO_ID = "YOUR_VIDEO_ID";  // numeric
+    const YOUTUBE_VIDEO_ID = "YOUR_VIDEO_ID";   
+    const YOUTUBE_CHANNEL_ID = "YOUR_CHANNEL_ID"; 
+    const FACEBOOK_PAGE = "YOUR_PAGE";          
+    const FACEBOOK_VIDEO_ID = "YOUR_VIDEO_ID";  
 
     // Countdown target (next Sunday at 10 AM)
     function getNextSunday10am() {

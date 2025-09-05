@@ -105,8 +105,6 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
     }
-
-    
 </style>
 @endpush
 
@@ -164,12 +162,12 @@
 
                 <!-- CTA Buttons -->
                 <div class="flex flex-col sm:flex-row gap-4 mb-12">
-                    <button class="group relative overflow-hidden bg-gradient-to-r from-purple-500 via-pink-500 to-purple-600 hover:from-pink-500 hover:via-purple-500 hover:to-pink text-white font-semibold py-4 px-8 rounded-2xl transition-all duration-300 hover:shadow-2xl hover:scale-105">
+                    <a href="/livestream" class="group relative overflow-hidden bg-gradient-to-r from-purple-500 via-pink-500 to-purple-600 hover:from-pink-500 hover:via-purple-500 hover:to-pink text-white font-semibold py-4 px-8 rounded-2xl transition-all duration-300 hover:shadow-2xl hover:scale-105">
                         <span class="flex items-center justify-center">
                             <i class="fas fa-play mr-2"></i>
                             Watch Live
                         </span>
-                    </button>
+                    </a>
                 </div>
             </div>
 
@@ -272,7 +270,7 @@
 
                 <div class="text-center pt-4">
                     <!-- Foundation Header -->
-                    <div class="inline-flex items-center bg-white/10 backdrop-blur-md rounded-full px-6 py-2 mb-6 border border-white/20">
+                    <div class="inline-flex items-center bg-white/10  rounded-full px-6 py-2 mb-6 border border-white/20">
                         <i class="fas fa-star text-white mr-2 text-sm"></i>
                         <span class="text-white font-semibold text-sm">Our Foundation</span>
                     </div>
@@ -331,15 +329,26 @@
         --church-red: #DC2626;
     }
 
-    .church-purple { color: var(--church-purple); }
-    .bg-church-purple { background-color: var(--church-purple); }
-    .church-red { color: var(--church-red); }
-    .bg-church-red { background-color: var(--church-red); }
+    .church-purple {
+        color: var(--church-purple);
+    }
+
+    .bg-church-purple {
+        background-color: var(--church-purple);
+    }
+
+    .church-red {
+        color: var(--church-red);
+    }
+
+    .bg-church-red {
+        background-color: var(--church-red);
+    }
 
     .pattern-overlay {
-        background-image: 
-            radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 2px, transparent 2px),
-            radial-gradient(circle at 75% 75%, rgba(255,255,255,0.05) 1px, transparent 1px);
+        background-image:
+            radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
+            radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
         background-size: 50px 50px, 30px 30px;
     }
 
@@ -364,9 +373,19 @@
     }
 
     @keyframes float {
-        0%, 100% { transform: translateY(0px) rotate(0deg); }
-        33% { transform: translateY(-20px) rotate(1deg); }
-        66% { transform: translateY(-10px) rotate(-1deg); }
+
+        0%,
+        100% {
+            transform: translateY(0px) rotate(0deg);
+        }
+
+        33% {
+            transform: translateY(-20px) rotate(1deg);
+        }
+
+        66% {
+            transform: translateY(-10px) rotate(-1deg);
+        }
     }
 
     .slide-left {
@@ -378,13 +397,27 @@
     }
 
     @keyframes slideInLeft {
-        from { opacity: 0; transform: translateX(-100px); }
-        to { opacity: 1; transform: translateX(0); }
+        from {
+            opacity: 0;
+            transform: translateX(-100px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
 
     @keyframes slideInRight {
-        from { opacity: 0; transform: translateX(100px); }
-        to { opacity: 1; transform: translateX(0); }
+        from {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
 </style>
 
@@ -394,15 +427,26 @@
         --church-red: #DC2626;
     }
 
-    .church-purple { color: var(--church-purple); }
-    .bg-church-purple { background-color: var(--church-purple); }
-    .church-red { color: var(--church-red); }
-    .bg-church-red { background-color: var(--church-red); }
+    .church-purple {
+        color: var(--church-purple);
+    }
+
+    .bg-church-purple {
+        background-color: var(--church-purple);
+    }
+
+    .church-red {
+        color: var(--church-red);
+    }
+
+    .bg-church-red {
+        background-color: var(--church-red);
+    }
 
     .pattern-overlay {
-        background-image: 
-            radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 2px, transparent 2px),
-            radial-gradient(circle at 75% 75%, rgba(255,255,255,0.05) 1px, transparent 1px);
+        background-image:
+            radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
+            radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
         background-size: 50px 50px, 30px 30px;
     }
 
@@ -427,9 +471,19 @@
     }
 
     @keyframes float {
-        0%, 100% { transform: translateY(0px) rotate(0deg); }
-        33% { transform: translateY(-20px) rotate(1deg); }
-        66% { transform: translateY(-10px) rotate(-1deg); }
+
+        0%,
+        100% {
+            transform: translateY(0px) rotate(0deg);
+        }
+
+        33% {
+            transform: translateY(-20px) rotate(1deg);
+        }
+
+        66% {
+            transform: translateY(-10px) rotate(-1deg);
+        }
     }
 
     .slide-left {
@@ -441,13 +495,27 @@
     }
 
     @keyframes slideInLeft {
-        from { opacity: 0; transform: translateX(-100px); }
-        to { opacity: 1; transform: translateX(0); }
+        from {
+            opacity: 0;
+            transform: translateX(-100px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
 
     @keyframes slideInRight {
-        from { opacity: 0; transform: translateX(100px); }
-        to { opacity: 1; transform: translateX(0); }
+        from {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
 </style>
 

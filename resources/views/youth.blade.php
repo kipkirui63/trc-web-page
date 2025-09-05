@@ -6,44 +6,89 @@
 
 @section('styles')
 <style>
-    .text-church-purple-light { color: #a855f7; }
-    .bg-church-purple-light { background-color: #a855f7; }
-    .border-church-purple-light { border-color: #a855f7; }
-    .text-nature-green { color: #22c55e; }
-    .text-nature-brown { color: #a16207; }
-    .text-safari-gold { color: #f59e0b; }
-    .text-kenya-red { color: #dc2626; }
-    .bg-nature-green { background-color: #22c55e; }
-    .bg-nature-brown { background-color: #a16207; }
-    .bg-safari-gold { background-color: #f59e0b; }
-    .border-nature-green { border-color: #22c55e; }
-    .border-nature-brown { border-color: #a16207; }
-    .border-safari-gold { border-color: #f59e0b; }
-    
+    .text-church-purple-light {
+        color: #a855f7;
+    }
+
+    .bg-church-purple-light {
+        background-color: #a855f7;
+    }
+
+    .border-church-purple-light {
+        border-color: #a855f7;
+    }
+
+    .text-nature-green {
+        color: #22c55e;
+    }
+
+    .text-nature-brown {
+        color: #a16207;
+    }
+
+    .text-safari-gold {
+        color: #f59e0b;
+    }
+
+    .text-kenya-red {
+        color: #dc2626;
+    }
+
+    .bg-nature-green {
+        background-color: #22c55e;
+    }
+
+    .bg-nature-brown {
+        background-color: #a16207;
+    }
+
+    .bg-safari-gold {
+        background-color: #f59e0b;
+    }
+
+    .border-nature-green {
+        border-color: #22c55e;
+    }
+
+    .border-nature-brown {
+        border-color: #a16207;
+    }
+
+    .border-safari-gold {
+        border-color: #f59e0b;
+    }
+
     .animate-float {
         animation: float 6s ease-in-out infinite;
     }
-    
+
     .animate-bounce-slow {
         animation: bounce 3s ease-in-out infinite;
     }
-    
+
     .animate-pulse-glow {
         animation: pulse-glow 2s ease-in-out infinite;
     }
-    
+
     @keyframes pulse-glow {
-        0%, 100% { box-shadow: 0 0 20px rgba(147, 51, 234, 0.3); }
-        50% { box-shadow: 0 0 40px rgba(147, 51, 234, 0.6); }
+
+        0%,
+        100% {
+            box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
+        }
+
+        50% {
+            box-shadow: 0 0 40px rgba(147, 51, 234, 0.6);
+        }
     }
-    
+
     .gradient-text {
         background: linear-gradient(135deg, #7c3aed, #dc2626);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
     }
-    
+
     .glass-effect {
         backdrop-filter: blur(16px);
         background: rgba(255, 255, 255, 0.1);
@@ -93,7 +138,7 @@
                         </svg>
                     </span>
                 </a>
-               
+
             </div>
         </div>
 
@@ -122,7 +167,7 @@
                         <div class="relative group">
                             <div class="absolute -inset-4 bg-gradient-to-r from-church-red to-church-purple rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
                             <div class="relative">
-                                <img src="{{ asset('images/youths.jpg') }}"  alt="Youth group gathering" class="w-full h-auto rounded-lg shadow-2xl transform group-hover:rotate-1 transition duration-300" />
+                                <img src="{{ asset('images/Youth-hike.jpg') }}" alt="Youth group gathering" class="w-full h-auto rounded-lg shadow-2xl transform group-hover:rotate-1 transition duration-300" />
                                 <div class="absolute -bottom-6 -right-6 bg-church-red text-white p-4 rounded-lg shadow-lg">
                                     <div class="text-2xl font-bold">All Ages</div>
                                     <div class="text-sm">Welcome!</div>
@@ -274,7 +319,7 @@
                             </svg>
                         </span>
                     </a>
-                  
+
                 </div>
 
                 <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -304,43 +349,49 @@
         </div>
     </section>
 
- 
+
 </div>
 
 <script>
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+        anchor.addEventListener('click', function(e) {
             e.preventDefault();
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
         });
     });
-    const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                }
-            });
-        }, observerOptions);
-        
-        // Observe all cards and sections
-        document.querySelectorAll('section > div').forEach(section => {
-            observer.observe(section);
+    const observerOptions1 = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -80px 0px'
+    };
+
+    const observer1 = new IntersectionObserver(function(entries) {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, index * 100); // Stagger by 100ms
+            }
         });
+    }, observerOptions1);
+
+    // Initialize elements with starting state
+    document.querySelectorAll('section > div').forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(30px)';
+        section.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        observer1.observe(section);
+    });
     // Add scroll-triggered animations
     window.addEventListener('scroll', () => {
         const cards = document.querySelectorAll('.group');
         cards.forEach(card => {
             const rect = card.getBoundingClientRect();
             const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-            
+
             if (isVisible) {
                 card.style.opacity = '1';
                 card.style.transform = 'translateY(0)';

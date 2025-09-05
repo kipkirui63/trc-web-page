@@ -49,18 +49,64 @@
         animation: float-hearts 12s ease-in-out infinite;
     }
 
-    .heart:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
-    .heart:nth-child(2) { left: 85%; top: 15%; animation-delay: 3s; }
-    .heart:nth-child(3) { left: 15%; bottom: 25%; animation-delay: 6s; }
-    .heart:nth-child(4) { right: 10%; bottom: 20%; animation-delay: 9s; }
-    .heart:nth-child(5) { left: 70%; top: 60%; animation-delay: 2s; }
-    .heart:nth-child(6) { left: 30%; top: 70%; animation-delay: 8s; }
+    .heart:nth-child(1) {
+        left: 10%;
+        top: 20%;
+        animation-delay: 0s;
+    }
+
+    .heart:nth-child(2) {
+        left: 85%;
+        top: 15%;
+        animation-delay: 3s;
+    }
+
+    .heart:nth-child(3) {
+        left: 15%;
+        bottom: 25%;
+        animation-delay: 6s;
+    }
+
+    .heart:nth-child(4) {
+        right: 10%;
+        bottom: 20%;
+        animation-delay: 9s;
+    }
+
+    .heart:nth-child(5) {
+        left: 70%;
+        top: 60%;
+        animation-delay: 2s;
+    }
+
+    .heart:nth-child(6) {
+        left: 30%;
+        top: 70%;
+        animation-delay: 8s;
+    }
 
     @keyframes float-hearts {
-        0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); opacity: 0.1; }
-        25% { transform: translateY(-20px) rotate(5deg) scale(1.1); opacity: 0.15; }
-        50% { transform: translateY(-10px) rotate(-3deg) scale(0.9); opacity: 0.12; }
-        75% { transform: translateY(-25px) rotate(8deg) scale(1.05); opacity: 0.18; }
+
+        0%,
+        100% {
+            transform: translateY(0px) rotate(0deg) scale(1);
+            opacity: 0.1;
+        }
+
+        25% {
+            transform: translateY(-20px) rotate(5deg) scale(1.1);
+            opacity: 0.15;
+        }
+
+        50% {
+            transform: translateY(-10px) rotate(-3deg) scale(0.9);
+            opacity: 0.12;
+        }
+
+        75% {
+            transform: translateY(-25px) rotate(8deg) scale(1.05);
+            opacity: 0.18;
+        }
     }
 
     .sisterhood-card {
@@ -133,8 +179,15 @@
     }
 
     @keyframes gradient-flow {
-        0%, 100% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
+
+        0%,
+        100% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
     }
 
     .vision-card {
@@ -236,8 +289,13 @@
     }
 
     @keyframes rotate-gradient {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
     }
 
     .community-card:hover {
@@ -315,8 +373,15 @@
     }
 
     @keyframes pulse-line {
-        0%, 100% { opacity: 0.2; }
-        50% { opacity: 0.6; }
+
+        0%,
+        100% {
+            opacity: 0.2;
+        }
+
+        50% {
+            opacity: 0.6;
+        }
     }
 
     .hero-crown {
@@ -330,11 +395,14 @@
     }
 
     @keyframes gentle-pulse {
-        0%, 100% { 
+
+        0%,
+        100% {
             transform: scale(1);
             box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
         }
-        50% { 
+
+        50% {
             transform: scale(1.05);
             box-shadow: 0 0 50px rgba(255, 255, 255, 0.4);
         }
@@ -362,12 +430,12 @@
             min-height: 90vh;
             padding: 2rem 0;
         }
-        
+
         .community-grid {
             grid-template-columns: 1fr;
             gap: 1.5rem;
         }
-        
+
         .hero-crown {
             padding: 1.5rem;
         }
@@ -386,7 +454,7 @@
         <div class="heart"><i class="fas fa-heart"></i></div>
         <div class="heart"><i class="fas fa-heart"></i></div>
     </div>
-    
+
     <div class="container mx-auto px-4 relative z-10">
         <div class="text-center max-w-5xl mx-auto">
             <div class="space-y-8">
@@ -404,7 +472,7 @@
                         </span>
                     </h1>
                     <p class="text-xl md:text-2xl opacity-90 leading-relaxed max-w-4xl mx-auto">
-                        Where women of faith gather to grow, support, and inspire each other in their journey with Christ. 
+                        Where women of faith gather to grow, support, and inspire each other in their journey with Christ.
                         <span class="text-pink-200 font-semibold">You belong here, sister.</span>
                     </p>
                 </div>
@@ -434,7 +502,7 @@
                 <div class="pt-12">
                     <div class=" bg-opacity-15 backdrop-filter backdrop-blur-lg rounded-3xl p-8 border border-white border-opacity-20 max-w-4xl mx-auto">
                         <p class="text-lg md:text-xl italic opacity-95 mb-4 leading-relaxed text-gray-600">
-                            "She is clothed with strength and dignity; she can laugh at the days to come. 
+                            "She is clothed with strength and dignity; she can laugh at the days to come.
                             She speaks with wisdom, and faithful instruction is on her tongue."
                         </p>
                         <div class="flex items-center justify-center space-x-4">
@@ -457,7 +525,7 @@
                 <span class="gradient-text">Our Heart</span>
             </h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                We exist to create a safe space where women can discover their identity in Christ, 
+                We exist to create a safe space where women can discover their identity in Christ,
                 build authentic relationships, and live out their God-given purpose.
             </p>
         </div>
@@ -470,7 +538,7 @@
                 </div>
                 <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Our Vision</h3>
                 <p class="text-gray-600 text-center leading-relaxed">
-                    To see every woman walk confidently in her calling, supported by a community of sisters 
+                    To see every woman walk confidently in her calling, supported by a community of sisters
                     who celebrate her journey and cheer her on to greatness.
                 </p>
             </div>
@@ -482,7 +550,7 @@
                 </div>
                 <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Our Mission</h3>
                 <p class="text-gray-600 text-center leading-relaxed">
-                    To nurture authentic relationships, provide biblical teaching, and create opportunities 
+                    To nurture authentic relationships, provide biblical teaching, and create opportunities
                     for women to grow spiritually, emotionally, and relationally.
                 </p>
             </div>
@@ -494,7 +562,7 @@
                 </div>
                 <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Our Values</h3>
                 <p class="text-gray-600 text-center leading-relaxed">
-                    Authenticity over perfection, grace over judgment, community over competition, 
+                    Authenticity over perfection, grace over judgment, community over competition,
                     and Christ as the center of everything we do.
                 </p>
             </div>
@@ -524,7 +592,7 @@
                     <div class="flex-1">
                         <h3 class="text-3xl font-bold text-gray-800 mb-3">Spiritual Growth</h3>
                         <p class="text-gray-600 mb-4 text-lg leading-relaxed">
-                            Deepen your relationship with God through Bible study, prayer groups, and spiritual mentorship. 
+                            Deepen your relationship with God through Bible study, prayer groups, and spiritual mentorship.
                             Discover who you are in Christ and walk confidently in His plans for your life.
                         </p>
                         <div class="flex flex-wrap gap-3">
@@ -545,7 +613,7 @@
                     <div class="flex-1">
                         <h3 class="text-3xl font-bold text-gray-800 mb-3">Personal Development</h3>
                         <p class="text-gray-600 mb-4 text-lg leading-relaxed">
-                            Grow in confidence, discover your gifts, and develop practical life skills. 
+                            Grow in confidence, discover your gifts, and develop practical life skills.
                             We believe every woman has unique talents that deserve to be nurtured and celebrated.
                         </p>
                         <div class="flex flex-wrap gap-3">
@@ -566,7 +634,7 @@
                     <div class="flex-1">
                         <h3 class="text-3xl font-bold text-gray-800 mb-3">Relational Connection</h3>
                         <p class="text-gray-600 mb-4 text-lg leading-relaxed">
-                            Build meaningful friendships and find your tribe. Whether you're single, married, a mom, or career-focused, 
+                            Build meaningful friendships and find your tribe. Whether you're single, married, a mom, or career-focused,
                             there's a place for you in our community of sisters.
                         </p>
                         <div class="flex flex-wrap gap-3">
@@ -587,7 +655,7 @@
                     <div class="flex-1">
                         <h3 class="text-3xl font-bold text-gray-800 mb-3">Service & Impact</h3>
                         <p class="text-gray-600 mb-4 text-lg leading-relaxed">
-                            Use your gifts to make a difference in our church and community. 
+                            Use your gifts to make a difference in our church and community.
                             From serving in ministries to outreach programs, find meaningful ways to impact lives.
                         </p>
                         <div class="flex flex-wrap gap-3">
@@ -609,7 +677,7 @@
         <div class="connection-line" style="top: 60%; right: 15%; width: 150px; transform: rotate(-30deg);"></div>
         <div class="connection-line" style="bottom: 30%; left: 20%; width: 180px; transform: rotate(60deg);"></div>
     </div>
-    
+
     <div class="container mx-auto px-4 relative z-10">
         <div class="text-center mb-20">
             <h2 class="text-5xl md:text-6xl font-bold mb-6">
@@ -628,7 +696,7 @@
                 </div>
                 <h3 class="text-2xl font-bold text-gray-800 mb-4">Small Groups</h3>
                 <p class="text-gray-600 mb-6 leading-relaxed">
-                    Intimate gatherings where authentic relationships are built. Share life, study God's word, 
+                    Intimate gatherings where authentic relationships are built. Share life, study God's word,
                     and pray together in a safe, encouraging environment.
                 </p>
                 <div class="flex justify-center space-x-4 text-sm text-gray-500">
@@ -650,7 +718,7 @@
                 </div>
                 <h3 class="text-2xl font-bold text-gray-800 mb-4">Mentorship Program</h3>
                 <p class="text-gray-600 mb-6 leading-relaxed">
-                    Connect with wise women who've walked the path before you, or become a mentor yourself. 
+                    Connect with wise women who've walked the path before you, or become a mentor yourself.
                     Share wisdom, offer guidance, and grow together across generations.
                 </p>
                 <div class="flex justify-center space-x-4 text-sm text-gray-500">
@@ -672,7 +740,7 @@
                 </div>
                 <h3 class="text-2xl font-bold text-gray-800 mb-4">Special Interest Groups</h3>
                 <p class="text-gray-600 mb-6 leading-relaxed">
-                    Bond over shared interests and hobbies. From book clubs to fitness groups, 
+                    Bond over shared interests and hobbies. From book clubs to fitness groups,
                     creative arts to professional networking - find your tribe within the tribe.
                 </p>
                 <div class="flex justify-center space-x-4 text-sm text-gray-500">
@@ -694,7 +762,7 @@
                 </div>
                 <h3 class="text-2xl font-bold text-gray-800 mb-4">Life Stage Groups</h3>
                 <p class="text-gray-600 mb-6 leading-relaxed">
-                    Navigate life's seasons with others who understand your journey. Young professionals, 
+                    Navigate life's seasons with others who understand your journey. Young professionals,
                     mothers, empty nesters - every stage has its unique joys and challenges.
                 </p>
                 <div class="flex justify-center space-x-4 text-sm text-gray-500">
@@ -716,7 +784,7 @@
                 </div>
                 <h3 class="text-2xl font-bold text-gray-800 mb-4">Prayer & Support</h3>
                 <p class="text-gray-600 mb-6 leading-relaxed">
-                    Experience the power of prayer and community support during life's challenges. 
+                    Experience the power of prayer and community support during life's challenges.
                     Share burdens, celebrate victories, and witness God's faithfulness together.
                 </p>
                 <div class="flex justify-center space-x-4 text-sm text-gray-500">
@@ -738,7 +806,7 @@
                 </div>
                 <h3 class="text-2xl font-bold text-gray-800 mb-4">Service Teams</h3>
                 <p class="text-gray-600 mb-6 leading-relaxed">
-                    Make a difference together through serving our church and community. 
+                    Make a difference together through serving our church and community.
                     Use your gifts to bless others while building meaningful friendships through service.
                 </p>
                 <div class="flex justify-center space-x-4 text-sm text-gray-500">
@@ -771,16 +839,16 @@
             <div class="hero-crown mb-8">
                 <i class="fas fa-sparkles text-5xl text-yellow-300"></i>
             </div>
-            
+
             <h2 class="text-5xl md:text-7xl font-black mb-8 leading-tight">
                 Your Sisterhood
                 <span class="block bg-gradient-to-r from-yellow-300 via-pink-200 to-yellow-300 bg-clip-text text-transparent">
                     Awaits You
                 </span>
             </h2>
-            
+
             <p class="text-xl md:text-2xl opacity-90 leading-relaxed mb-12">
-                You don't have to walk this journey alone. Step into a community where you're celebrated, 
+                You don't have to walk this journey alone. Step into a community where you're celebrated,
                 supported, and empowered to become everything God created you to be.
                 <span class="block mt-4 text-pink-200 font-semibold">
                     Your chair at the table is waiting, sister.
@@ -804,5 +872,30 @@
         </div>
     </div>
 </section>
+<script>
+    const observerOptions1 = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -80px 0px'
+    };
+
+    const observer1 = new IntersectionObserver(function(entries) {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, index * 100); // Stagger by 100ms
+            }
+        });
+    }, observerOptions1);
+
+    // Initialize elements with starting state
+    document.querySelectorAll('section > div').forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(30px)';
+        section.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        observer1.observe(section);
+    });
+</script>
 
 @endsection

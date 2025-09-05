@@ -439,15 +439,15 @@
                 <!-- Stats Cards -->
                 <div class="grid md:grid-cols-3 gap-6 mb-12">
                     <div class="hero-card backdrop-blur rounded-2xl p-6">
-                        <div class="text-4xl font-bold mb-2">10+</div>
+                        <div class="text-4xl font-bold mb-2">5+</div>
                         <div class="text-white/80">Years of Ministry</div>
                     </div>
                     <div class="hero-card backdrop-blur rounded-2xl p-6">
-                        <div class="text-4xl font-bold mb-2">500+</div>
+                        <div class="text-4xl font-bold mb-2">200+</div>
                         <div class="text-white/80">Church Family</div>
                     </div>
                     <div class="hero-card backdrop-blur rounded-2xl p-6">
-                        <div class="text-4xl font-bold mb-2">15+</div>
+                        <div class="text-4xl font-bold mb-2">7</div>
                         <div class="text-white/80">Active Ministries</div>
                     </div>
                 </div>
@@ -506,7 +506,7 @@
                 </div>
                 <div class="order-1 lg:order-2">
                     <div class="relative">
-                        <img src="/api/placeholder/600/400" alt="Church history" class="w-full h-80 object-cover rounded-2xl shadow-2xl" />
+                        <img src="{{ asset('images/history.jpg') }}" alt="Church history" class="w-full h-80 object-cover rounded-2xl shadow-2xl" />
                         <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-church-red rounded-full flex items-center justify-center text-white text-3xl shadow-xl">
                             <i class="fas fa-church"></i>
                         </div>
@@ -541,7 +541,7 @@
                 <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
                     <div class="lg:flex">
                         <div class="lg:w-1/3 relative">
-                            <img src="/api/placeholder/400/500" alt="Rev. Ernest Korir" class="w-full h-80 lg:h-full object-cover" />
+                            <img src="{{ asset('images/rev.jpg') }}" alt="Rev. Ernest Korir" class="w-full h-80 lg:h-full object-cover" />
                             <div class="absolute inset-0 bg-gradient-to-t from-church-purple/20 to-transparent"></div>
                         </div>
                         <div class="lg:w-2/3 p-8 lg:p-12">
@@ -608,7 +608,7 @@
                 <!-- Pastor Vince -->
                 <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                     <div class="relative">
-                        <img src="/api/placeholder/400/300" alt="Pastor Vince" class="w-full h-64 object-cover" />
+                        <img src="{{ asset('images/pastor-vince.jpg') }}" alt="Pastor Vince" class="w-full h-64 object-cover" />
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                         <div class="absolute bottom-4 left-4">
                             <span class="inline-block bg-church-red text-white px-3 py-1 rounded-full text-sm font-semibold">Pastor</span>
@@ -936,23 +936,29 @@
     }
 
     // Add scroll animations
-    const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                }
-            });
-        }, observerOptions);
-        
-        // Observe all cards and sections
-        document.querySelectorAll('section > div').forEach(section => {
-            observer.observe(section);
+    const observerOptions1 = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -80px 0px'
+    };
+
+    const observer1 = new IntersectionObserver(function(entries) {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, index * 100); // Stagger by 100ms
+            }
         });
+    }, observerOptions1);
+
+    // Initialize elements with starting state
+    document.querySelectorAll('section > div').forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(30px)';
+        section.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        observer1.observe(section);
+    });
 
     // Form submission with animation
     document.querySelector('form').addEventListener('submit', function(e) {

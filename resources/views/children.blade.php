@@ -83,7 +83,7 @@
                         <a href="#dedication" class="group relative overflow-hidden bg-gradient-to-r from-green-500 via-teal-500 to-blue-500 hover:from-blue-500 hover:via-teal-500 hover:to-green-500 text-white font-bold py-3 px-6 rounded-full shadow-2xl transform hover:scale-105 transition duration-500 text-base">
                             <span class="relative z-10 flex items-center gap-2">
                                 <span class="text-lg group-hover:animate-pulse">🎪</span>
-                               Children's Dedication
+                                Children's Dedication
                                 <span class="text-lg group-hover:animate-bounce">🎈</span>
                             </span>
                             <div class="absolute inset-0 bg-gradient-to-r from-orange-400 to-red-400 opacity-0 group-hover:opacity-100 transition duration-500"></div>
@@ -101,7 +101,7 @@
 
                         <!-- Main image container -->
                         <div class="relative bg-gradient-to-br from-white via-purple-50 to-pink-50 p-8 rounded-3xl shadow-2xl border-4 border-white float-animation">
-                            <img src="{{ asset('images/happy-children.jpg') }}" alt="Happy children" 
+                            <img src="{{ asset('images/happy-children.jpg') }}" alt="Happy children"
                                 class="w-full h-auto rounded-2xl shadow-xl" />
 
                             <!-- Floating decorative elements around image -->
@@ -764,24 +764,29 @@
         });
     }
 
-    const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                }
-            });
-        }, observerOptions);
-        
-        // Observe all cards and sections
-        document.querySelectorAll('section > div').forEach(section => {
-            observer.observe(section);
-        });
+    const observerOptions1 = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -80px 0px'
+    };
 
+    const observer1 = new IntersectionObserver(function(entries) {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, index * 100); // Stagger by 100ms
+            }
+        });
+    }, observerOptions1);
+
+    // Initialize elements with starting state
+    document.querySelectorAll('section > div').forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(30px)';
+        section.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        observer1.observe(section);
+    });
     // Observe cards for animation
     document.addEventListener('DOMContentLoaded', function() {
         const cards = document.querySelectorAll('.card-hover, .faq-item');
