@@ -425,8 +425,8 @@
                     <ul class="space-y-2 text-gray-400">
                         <li class="flex items-start">
                             <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
-                            <span>Kasarani Group of Schools<br>
-                                icipe Road, Nairobi, Kenya</span>
+                            <span>Kasarani Seasons<br>
+                                Opposite DO's Offices</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-phone mr-2"></i>

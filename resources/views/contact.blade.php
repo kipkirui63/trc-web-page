@@ -601,9 +601,9 @@
                             <div>
                                 <h3 class="text-xl font-bold text-church-purple mb-2">Our Location</h3>
                                 <p class="text-gray-700 leading-relaxed">
-                                    Kasarani Group of Schools<br>
-                                    icipe Road, Nairobi, Kenya<br>
-                                    <span class="text-sm text-gray-500">Opposite International Centre Of Insect Physiology And Ecology</span>
+                                    Mwiki Road<br>
+                                    Kasarani Seasons<br>
+                                    <span class="text-sm text-gray-500">Opposite DO's Office</span>
                                 </p>
                             </div>
                         </div>
@@ -724,7 +724,7 @@
             </p>
 
             <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                <a href="/visit" class="group relative overflow-hidden bg-white text-church-purple font-bold py-4 px-8 rounded-2xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                <a href="" class="group relative overflow-hidden bg-white text-church-purple font-bold py-4 px-8 rounded-2xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
                     <span class="relative flex items-center justify-center">
                         <i class="fas fa-map-marker-alt mr-3 group-hover:animate-bounce"></i>
                         Plan Your Visit

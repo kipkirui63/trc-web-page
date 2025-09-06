@@ -580,7 +580,7 @@
                 <!-- Rev. Ann Korir -->
                 <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                     <div class="relative">
-                        <img src="/api/placeholder/400/300" alt="Rev. Ann Korir" class="w-full h-64 object-cover" />
+                        <img src="{{ asset('images/rev-ann.jpg') }}" alt="Rev. Ann Korir" class="w-full h-64 object-cover" />
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                         <div class="absolute bottom-4 left-4">
                             <span class="inline-block bg-church-purple text-white px-3 py-1 rounded-full text-sm font-semibold">Pastor</span>
