@@ -424,7 +424,8 @@
                     <h3 class="text-xl font-bold mb-4">Contact Us</h3>
                     <ul class="space-y-2 text-gray-400">
                         <li class="flex items-start">
-                            <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
+                            <a href="https://maps.app.goo.gl/NkM9TiWEwJPjxRgf6"> <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
+                            </a>
                             <span>Kasarani Seasons<br>
                                 Opposite DO's Offices</span>
                         </li>

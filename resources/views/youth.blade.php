@@ -313,7 +313,7 @@
                 <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
                     <a href="#" class="group bg-white text-church-purple font-black py-4 px-10 rounded-full hover:bg-gray-100 transition duration-300 transform hover:scale-105 hover:shadow-2xl">
                         <span class="flex items-center">
-                            Join Us This Friday
+                            Join Us This Sunday
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-1 transition duration-300" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                             </svg>
@@ -328,21 +328,21 @@
                             <i class="fas fa-clock"></i>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-2">When</h3>
-                        <p class="text-gray-200">Every Friday • 8:30 PM</p>
+                        <p class="text-gray-200">Every Sunday • 12:00 PM</p>
                     </div>
                     <div class="group">
                         <div class="text-3xl font-black text-white mb-2 group-hover:text-yellow-300 transition duration-300">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-2">Where</h3>
-                        <p class="text-gray-200">Google meet</p>
+                        <p class="text-gray-200">Church</p>
                     </div>
                     <div class="group">
                         <div class="text-3xl font-black text-white mb-2 group-hover:text-yellow-300 transition duration-300">
                             <i class="fas fa-heart"></i>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-2">Who</h3>
-                        <p class="text-gray-200">All Youth<br>Ages 13-25</p>
+                        <p class="text-gray-200">All Youth<br>Ages 18-25</p>
                     </div>
                 </div>
             </div>

@@ -479,10 +479,11 @@
             <!-- Location Card -->
             <div class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
                 <div class="w-16 h-16 bg-gradient-to-br from-church-purple to-church-purple-light rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                    <a href="https://maps.app.goo.gl/Ct76RfxeJ7WxXYBG9"> <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                    </a>
                 </div>
                 <h3 class="font-bold text-church-purple mb-2">Visit Us</h3>
-                <p class="text-gray-600 text-sm">Kasarani Group of Schools, icipe Road</p>
+                <p class="text-gray-600 text-sm">Kasarani Seasons, Opposite DO's Office</p>
             </div>
 
             <!-- Phone Card -->
@@ -596,7 +597,8 @@
                     <div class="space-y-6">
                         <div class="flex items-start group">
                             <div class="w-14 h-14 bg-gradient-to-br from-church-purple to-church-purple-light rounded-2xl flex items-center justify-center text-white text-xl mr-4 group-hover:scale-110 transition-transform">
-                                <i class="fas fa-map-marker-alt"></i>
+                                <a href="https://maps.app.goo.gl/Ct76RfxeJ7WxXYBG9"> <i class="fas fa-map-marker-alt"></i>
+                                </a>
                             </div>
                             <div>
                                 <h3 class="text-xl font-bold text-church-purple mb-2">Our Location</h3>
@@ -675,7 +677,7 @@
                         </div>
                         <div>
                             <h4 class="font-bold text-church-purple">TRC AGC Church</h4>
-                            <p class="text-sm text-gray-600">Kasarani Group of Schools</p>
+                            <p class="text-sm text-gray-600">Kasarani Seasons, Opposite DO's Office </p>
                         </div>
                     </div>
 
@@ -691,11 +693,11 @@
                     </div>
 
                     <div class="flex space-x-2">
-                        <a href="https://www.google.com/maps/dir/?api=1&destination=Kasarani+Group+of+Schools+Nairobi+Kenya" target="_blank" class="flex-1 bg-church-purple text-white text-sm py-2 px-3 rounded-lg hover:bg-church-purple-light transition text-center">
+                        <a href="https://maps.app.goo.gl/Ct76RfxeJ7WxXYBG9" target="_blank" class="flex-1 bg-church-purple text-white text-sm py-2 px-3 rounded-lg hover:bg-church-purple-light transition text-center">
                             <i class="fas fa-directions mr-1"></i>
                             Directions
                         </a>
-                        <a href="https://www.google.com/maps/place/Kasarani+Group+of+Schools/@-1.2395899,36.8912113,17z/" target="_blank" class="flex-1 bg-gray-200 text-gray-700 text-sm py-2 px-3 rounded-lg hover:bg-gray-300 transition text-center">
+                        <a href="https://maps.app.goo.gl/Ct76RfxeJ7WxXYBG9" target="_blank" class="flex-1 bg-gray-200 text-gray-700 text-sm py-2 px-3 rounded-lg hover:bg-gray-300 transition text-center">
                             View Map
                         </a>
                     </div>
@@ -765,14 +767,14 @@
         const loadingElement = document.getElementById('map-loading');
 
         // Create iframe element
-        const iframe = document.createElement('iframe');
-        iframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8196851062135!2d36.89121131475444!3d-1.2395899359539297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f3ef282c3c599%3A0x1b64fa1f30ef6c83!2sKasarani%20Group%20of%20Schools!5e0!3m2!1sen!2sus!4v1651508287656!5m2!1sen!2sus";
-        iframe.width = "100%";
-        iframe.height = "384";
-        iframe.style.border = "0";
-        iframe.allowFullscreen = "";
-        iframe.loading = "lazy";
-        iframe.referrerPolicy = "no-referrer-when-downgrade";
+            const iframe = document.createElement('iframe');
+            iframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.915561910429!2d36.9036869!3d-1.2188634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1503ac5b0a07%3A0xb2e0440f57b10cba!2sThika%20Road%20Connect%20(TRC)%20-%20Africa%20Gospel%20Church%20(AGC)%20Kenya.!5e0!3m2!1sen!2ske!4v1757497380177!5m2!1sen!2ske";
+            iframe.width = "100%";
+            iframe.height = "384";
+            iframe.style.border = "0";
+            iframe.allowFullscreen = "";
+            iframe.loading = "lazy";
+            iframe.referrerPolicy = "no-referrer-when-downgrade";
 
         // Handle iframe load
         iframe.onload = function() {

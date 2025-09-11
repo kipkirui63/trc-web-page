@@ -1,430 +1,273 @@
 @extends('layouts.app')
 
 @section('title', 'Discipleship Ministry')
-@section('description', 'Grow deeper in faith through Bible study, catechism classes, and cell groups at TRC AGC Church')
+
+@section('description', 'Join our Discipleship Ministry at TRC AGC Church - Bible Study, Cell Groups, and Catechism Classes to grow in your faith journey.')
 
 @section('styles')
 <style>
-    .gradient-overlay {
-        background: linear-gradient(135deg, rgba(124, 58, 237, 0.9) 0%, rgba(220, 38, 38, 0.8) 100%);
-    }
-    
     .ministry-card {
-        backdrop-filter: blur(20px);
-        background: rgba(255, 255, 255, 0.95);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        background: linear-gradient(135deg, rgba(124, 58, 237, 0.05) 0%, rgba(220, 38, 38, 0.05) 100%);
+        border-left: 4px solid #7c3aed;
+        transition: all 0.3s ease;
     }
     
     .ministry-card:hover {
-        transform: translateY(-15px) scale(1.02);
-        box-shadow: 0 30px 60px rgba(124, 58, 237, 0.2);
-        background: rgba(255, 255, 255, 1);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(124, 58, 237, 0.15);
+        border-left-color: #dc2626;
     }
-    
-    .icon-glow {
-        filter: drop-shadow(0 0 20px rgba(124, 58, 237, 0.4));
-        transition: all 0.3s ease;
+
+    .icon-circle {
+        background: linear-gradient(135deg, #7c3aed, #dc2626);
+        animation: pulse-glow 3s ease-in-out infinite;
     }
-    
-    .ministry-card:hover .icon-glow {
-        filter: drop-shadow(0 0 30px rgba(220, 38, 38, 0.6));
-        transform: scale(1.1);
+
+    .form-input:focus {
+        border-color: #7c3aed;
+        box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
     }
-    
-    .text-shimmer {
-        background: linear-gradient(45deg, #7c3aed, #dc2626, #7c3aed);
-        background-size: 200% 200%;
-        animation: shimmer 3s ease-in-out infinite;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+
+    .baptism-form {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(249, 250, 251, 0.98));
+        backdrop-filter: blur(10px);
     }
-    
-    @keyframes shimmer {
-        0%, 100% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-    }
-    
-    .floating-element {
-        animation: float 6s ease-in-out infinite;
-    }
-    
-    .floating-element:nth-child(2) {
-        animation-delay: -2s;
-    }
-    
-    .floating-element:nth-child(3) {
-        animation-delay: -4s;
-    }
-    
-    .section-bg {
-        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+
+    .section-header {
         position: relative;
-        overflow: hidden;
+        padding-bottom: 10px;
     }
-    
-    .section-bg::before {
+
+    .section-header::after {
         content: '';
         position: absolute;
-        top: -50%;
-        right: -50%;
-        width: 100%;
-        height: 200%;
-        background: radial-gradient(circle, rgba(124, 58, 237, 0.05) 0%, transparent 70%);
-        animation: rotate 20s linear infinite;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, #7c3aed, #dc2626);
+        border-radius: 2px;
     }
-    
-    @keyframes rotate {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-    }
-    
-    .feature-highlight {
+
+    .timeline-item {
         position: relative;
-        padding: 2rem;
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
-        backdrop-filter: blur(10px);
-        border-radius: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        transition: all 0.3s ease;
+        padding-left: 30px;
     }
-    
-    .feature-highlight:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    }
-    
-    .pulse-ring {
+
+    .timeline-item::before {
+        content: '';
         position: absolute;
-        border: 2px solid rgba(124, 58, 237, 0.3);
+        left: 0;
+        top: 8px;
+        width: 12px;
+        height: 12px;
+        background: #7c3aed;
         border-radius: 50%;
-        animation: pulse-ring 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
-    }
-    
-    @keyframes pulse-ring {
-        0% {
-            transform: scale(0.8);
-            opacity: 1;
-        }
-        100% {
-            transform: scale(2.5);
-            opacity: 0;
-        }
+        box-shadow: 0 0 10px rgba(124, 58, 237, 0.3);
     }
 </style>
 @endsection
 
 @section('content')
 <!-- Hero Section -->
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-    <!-- Dynamic Background -->
-    <div class="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800"></div>
-    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-    
-    <!-- Animated Geometric Shapes -->
-    <div class="absolute inset-0 pointer-events-none overflow-hidden">
-        <!-- Large Cross Pattern -->
-        <div class="absolute top-1/4 left-1/4 w-32 h-32 opacity-10">
-            <div class="absolute inset-0 bg-white transform rotate-45 floating-element"></div>
-            <div class="absolute top-1/2 left-1/2 w-1 h-full bg-white transform -translate-x-1/2 -translate-y-1/2"></div>
-            <div class="absolute top-1/2 left-1/2 w-full h-1 bg-white transform -translate-x-1/2 -translate-y-1/2"></div>
-        </div>
-        
-        <!-- Floating Bible Icons -->
-        <div class="absolute top-20 right-20 text-white text-4xl opacity-20 floating-element">
-            <i class="fas fa-book-open"></i>
-        </div>
-        <div class="absolute bottom-32 left-20 text-white text-3xl opacity-15 floating-element" style="animation-delay: -2s;">
-            <i class="fas fa-users"></i>
-        </div>
-        <div class="absolute top-1/2 right-10 text-white text-2xl opacity-25 floating-element" style="animation-delay: -4s;">
-            <i class="fas fa-praying-hands"></i>
-        </div>
-        
-        <!-- Glowing Orbs -->
-        <div class="absolute top-16 left-1/3 w-24 h-24 bg-purple-500 rounded-full opacity-20 blur-xl floating-element"></div>
-        <div class="absolute bottom-24 right-1/3 w-32 h-32 bg-pink-500 rounded-full opacity-15 blur-2xl floating-element" style="animation-delay: -3s;"></div>
-        <div class="absolute top-1/3 right-1/4 w-20 h-20 bg-indigo-400 rounded-full opacity-30 blur-lg floating-element" style="animation-delay: -1s;"></div>
+<section class="relative bg-gradient-to-br from-purple-600 via-purple-700 to-red-600 text-white py-20 overflow-hidden">
+    <div class="absolute inset-0 bg-black opacity-20"></div>
+    <div class="absolute inset-0">
+        <div class="hero-pattern opacity-10"></div>
     </div>
     
-    <!-- Main Content -->
-    <div class="relative z-10 text-center text-white px-4 max-w-7xl mx-auto">
-       
-        <!-- Main Headline -->
-        <h1 class="text-6xl md:text-8xl font-black mb-8 leading-tight">
-            <span class="block text-white">Transform Your</span>
-            <span class="block bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent animate-pulse">
-                Faith Journey
-            </span>
-        </h1>
-        
-        <!-- Subtitle -->
-        <p class="text-xl md:text-2xl mb-12 text-gray-200 max-w-4xl mx-auto leading-relaxed font-light">
-            Join a community of believers committed to deepening their relationship with Christ through 
-            <span class="text-yellow-300 font-semibold">Bible Study</span>, 
-            <span class="text-pink-300 font-semibold">Catechism</span>, and 
-            <span class="text-purple-300 font-semibold">Cell Groups</span>
-        </p>
-        
-        <!-- Action Buttons -->
-        <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <button class="group relative overflow-hidden bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold py-4 px-10 rounded-full transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                <span class="relative z-10">Start Your Journey</span>
-                <div class="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </button>
-          
-        </div>
-      
-        
-        <!-- Scripture Quote -->
-        <div class="max-w-5xl mx-auto backdrop-blur-lg  bg-opacity-10 rounded-3xl p-8 border border-white border-opacity-20 shadow-2xl">
-            <blockquote class="text-lg md:text-xl font-medium mb-4 italic text-gray-100 leading-relaxed">
-                "Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, teaching them to observe all that I have commanded you."
-            </blockquote>
-            <div class="flex items-center justify-center space-x-2">
-                <div class="w-12 h-0.5 bg-gradient-to-r from-transparent to-yellow-400"></div>
-                <cite class="text-yellow-400 font-bold text-lg">Matthew 28:19-20</cite>
-                <div class="w-12 h-0.5 bg-gradient-to-l from-transparent to-yellow-400"></div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Scroll Indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div class="w-8 h-12 border-2 border-white rounded-full flex justify-center items-start pt-2">
-            <div class="w-1 h-3 bg-white rounded-full animate-pulse"></div>
-        </div>
-        <div class="text-white text-xs mt-2 tracking-wider">SCROLL</div>
-    </div>
-</section>
-
-<!-- Main Content -->
-<section class="section-bg py-20 relative">
     <div class="container mx-auto px-4 relative z-10">
-        <!-- Section Header -->
-        <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-                Our <span class="text-gradient">Discipleship</span> Focus
-            </h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                We believe in building strong foundations through three core pillars of discipleship
+        <div class="text-center max-w-4xl mx-auto">
+            <div class="float-animation mb-6">
+                <div class="icon-circle w-20 h-20 mx-auto rounded-full flex items-center justify-center">
+                    <i class="fas fa-users text-3xl text-white"></i>
+                </div>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                Discipleship <span class="text-yellow-300">Ministry</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
+                Growing Together in Faith, Knowledge, and Community
             </p>
-        </div>
-        
-        <!-- Ministry Cards -->
-        <div class="grid md:grid-cols-3 gap-8 mb-16">
-            <!-- Bible Study Card -->
-            <div class="ministry-card rounded-3xl p-8 text-center group">
-                <div class="relative mb-6">
-                    <div class="pulse-ring w-20 h-20 mx-auto"></div>
-                    <div class="relative z-10 w-20 h-20 bg-gradient-to-br from-church-purple to-church-red rounded-2xl flex items-center justify-center mx-auto icon-glow">
-                        <i class="fas fa-book-open text-3xl text-white"></i>
-                    </div>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">Bible Study</h3>
-                <p class="text-gray-600 mb-6 leading-relaxed">
-                    Dive deep into God's Word through systematic study, exploring the richness of Scripture with fellow believers in an environment of learning and growth.
-                </p>
-                <div class="space-y-3">
-                    <div class="flex items-center justify-center space-x-2 text-church-purple">
-                        <i class="fas fa-check-circle"></i>
-                        <span class="font-medium">Verse-by-verse studies</span>
-                    </div>
-                    <div class="flex items-center justify-center space-x-2 text-church-purple">
-                        <i class="fas fa-check-circle"></i>
-                        <span class="font-medium">Topical explorations</span>
-                    </div>
-                    <div class="flex items-center justify-center space-x-2 text-church-purple">
-                        <i class="fas fa-check-circle"></i>
-                        <span class="font-medium">Interactive discussions</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Catechism Card -->
-            <div class="ministry-card rounded-3xl p-8 text-center group">
-                <div class="relative mb-6">
-                    <div class="pulse-ring w-20 h-20 mx-auto"></div>
-                    <div class="relative z-10 w-20 h-20 bg-gradient-to-br from-church-red to-church-purple rounded-2xl flex items-center justify-center mx-auto icon-glow">
-                        <i class="fas fa-graduation-cap text-3xl text-white"></i>
-                    </div>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">Catechism Classes</h3>
-                <p class="text-gray-600 mb-6 leading-relaxed">
-                    Build a solid foundation of Christian doctrine and faith principles through structured teaching that equips you for lifelong spiritual growth.
-                </p>
-                <div class="space-y-3">
-                    <div class="flex items-center justify-center space-x-2 text-church-red">
-                        <i class="fas fa-check-circle"></i>
-                        <span class="font-medium">Core doctrine</span>
-                    </div>
-                    <div class="flex items-center justify-center space-x-2 text-church-red">
-                        <i class="fas fa-check-circle"></i>
-                        <span class="font-medium">Faith foundations</span>
-                    </div>
-                    <div class="flex items-center justify-center space-x-2 text-church-red">
-                        <i class="fas fa-check-circle"></i>
-                        <span class="font-medium">Practical application</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Cell Groups Card -->
-            <div class="ministry-card rounded-3xl p-8 text-center group">
-                <div class="relative mb-6">
-                    <div class="pulse-ring w-20 h-20 mx-auto"></div>
-                    <div class="relative z-10 w-20 h-20 bg-gradient-to-br from-church-purple via-purple-500 to-church-red rounded-2xl flex items-center justify-center mx-auto icon-glow">
-                        <i class="fas fa-users text-3xl text-white"></i>
-                    </div>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">Cell Groups</h3>
-                <p class="text-gray-600 mb-6 leading-relaxed">
-                    Experience authentic fellowship and accountability in small group settings where faith is strengthened through shared experiences and mutual support.
-                </p>
-                <div class="space-y-3">
-                    <div class="flex items-center justify-center space-x-2 text-purple-600">
-                        <i class="fas fa-check-circle"></i>
-                        <span class="font-medium">Small group fellowship</span>
-                    </div>
-                    <div class="flex items-center justify-center space-x-2 text-purple-600">
-                        <i class="fas fa-check-circle"></i>
-                        <span class="font-medium">Prayer & support</span>
-                    </div>
-                    <div class="flex items-center justify-center space-x-2 text-purple-600">
-                        <i class="fas fa-check-circle"></i>
-                        <span class="font-medium">Life application</span>
-                    </div>
-                </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#bible-study" class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition transform hover:scale-105">
+                    Join Bible Study
+                </a>
+                <a href="#baptism" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition">
+                    Request Baptism
+                </a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Why Join Section -->
-<section class="py-20 bg-white">
+<!-- Ministry Overview -->
+<section class="py-16 bg-white">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-                Why Join Our <span class="text-gradient">Discipleship</span> Journey?
-            </h2>
+            <h2 class="text-4xl font-bold text-gray-800 mb-4 section-header">Our Discipleship Programs</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                We offer comprehensive discipleship programs designed to help you grow in your relationship with Christ and serve His kingdom effectively.
+            </p>
         </div>
-        
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="feature-highlight text-center">
-                <div class="w-16 h-16 bg-gradient-to-br from-church-purple to-church-red rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-seedling text-2xl text-white"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">Spiritual Growth</h3>
-                <p class="text-gray-600">Develop a deeper relationship with God through structured learning and spiritual disciplines.</p>
-            </div>
-            
-            <div class="feature-highlight text-center">
-                <div class="w-16 h-16 bg-gradient-to-br from-church-red to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-hands-helping text-2xl text-white"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">Community</h3>
-                <p class="text-gray-600">Build meaningful relationships with fellow believers who share your journey of faith.</p>
-            </div>
-            
-            <div class="feature-highlight text-center">
-                <div class="w-16 h-16 bg-gradient-to-br from-purple-600 to-church-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-compass text-2xl text-white"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">Direction</h3>
-                <p class="text-gray-600">Gain clarity on God's purpose for your life through biblical wisdom and guidance.</p>
-            </div>
-            
-            <div class="feature-highlight text-center">
-                <div class="w-16 h-16 bg-gradient-to-br from-church-purple to-church-red rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-hands-praying text-2xl text-white"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">Accountability</h3>
-                <p class="text-gray-600">Experience the support and encouragement that comes from committed Christian fellowship.</p>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- Schedule Section -->
-<section class="section-bg py-20">
-    <div class="container mx-auto px-4 relative z-10">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-                <span class="text-gradient">Meeting</span> Schedule
-            </h2>
-            <p class="text-xl text-gray-600">Join us at these regular times for discipleship activities</p>
-        </div>
-        
-        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <!-- Bible Study Schedule -->
-            <div class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300">
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Bible Study Card -->
+            <div class="ministry-card p-8 rounded-xl card-hover">
                 <div class="text-center mb-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-church-purple to-church-red rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-book-open text-2xl text-white"></i>
+                    <div class="icon-circle w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-bible text-2xl text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800">Bible Study</h3>
+                    <h3 class="text-2xl font-bold text-church-purple mb-2">Bible Study</h3>
                 </div>
-                <div class="space-y-4">
-                    <div class="flex items-center space-x-3">
-                        <i class="fas fa-calendar-alt text-church-purple"></i>
-                        <span class="font-medium">Wednesday Evenings</span>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    Join our weekly Bible study sessions where we dive deep into God's Word, exploring its relevance to our daily lives and growing in understanding together.
+                </p>
+                <div class="space-y-3 mb-6">
+                    <div class="timeline-item">
+                        <strong class="text-church-purple">When:</strong> Every Wednesday
                     </div>
-                    <div class="flex items-center space-x-3">
-                        <i class="fas fa-clock text-church-purple"></i>
-                        <span class="font-medium">8:30 PM - 9:30 PM</span>
+                    <div class="timeline-item">
+                        <strong class="text-church-purple">Time:</strong> 8:30 PM - 9:30 PM
                     </div>
-                    <div class="flex items-center space-x-3">
-                        <i class="fas fa-map-marker-alt text-church-purple"></i>
-                        <span class="font-medium">Church Sanctuary</span>
+                    <div class="timeline-item">
+                        <strong class="text-church-purple">Format:</strong> Interactive Discussion
                     </div>
                 </div>
+                <a href="#bible-study" class="inline-block bg-church-purple text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition transform hover:scale-105">
+                    Learn More
+                </a>
             </div>
-            
-            <!-- Catechism Schedule -->
-            <div class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300">
+
+            <!-- Cell Groups Card -->
+            <div class="ministry-card p-8 rounded-xl card-hover">
                 <div class="text-center mb-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-church-red to-church-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <div class="icon-circle w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-home text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-church-red mb-2">Cell Groups</h3>
+                </div>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    Experience intimate fellowship and spiritual growth in small group settings. Our cell groups provide a supportive environment for prayer, study, and community.
+                </p>
+                <div class="space-y-3 mb-6">
+                    <div class="timeline-item">
+                        <strong class="text-church-red">Format:</strong> Small Groups
+                    </div>
+                    <div class="timeline-item">
+                        <strong class="text-church-red">Focus:</strong> Fellowship & Growth
+                    </div>
+                    <div class="timeline-item">
+                        <strong class="text-church-red">Locations:</strong> Coming Soon
+                    </div>
+                </div>
+                <button class="inline-block bg-church-red text-white px-6 py-3 rounded-lg hover:bg-red-700 transition opacity-75 cursor-not-allowed">
+                    Locations Coming Soon
+                </button>
+            </div>
+
+            <!-- Catechism Classes Card -->
+            <div class="ministry-card p-8 rounded-xl card-hover">
+                <div class="text-center mb-6">
+                    <div class="icon-circle w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
                         <i class="fas fa-graduation-cap text-2xl text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800">Catechism Classes</h3>
+                    <h3 class="text-2xl font-bold text-church-purple mb-2">Catechism Classes</h3>
                 </div>
-                <div class="space-y-4">
-                    <div class="flex items-center space-x-3">
-                        <i class="fas fa-calendar-alt text-church-red"></i>
-                        <span class="font-medium">Saturday Mornings</span>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    Prepare for baptism and deepen your understanding of Christian doctrine through our comprehensive catechism classes led by experienced teachers.
+                </p>
+                <div class="space-y-3 mb-6">
+                    <div class="timeline-item">
+                        <strong class="text-church-purple">Purpose:</strong> Baptism Preparation
                     </div>
-                    <div class="flex items-center space-x-3">
-                        <i class="fas fa-clock text-church-red"></i>
-                        <span class="font-medium">9:00 AM - 10:30 AM</span>
+                    <div class="timeline-item">
+                        <strong class="text-church-purple">Content:</strong> Christian Doctrine
                     </div>
-                    <div class="flex items-center space-x-3">
-                        <i class="fas fa-map-marker-alt text-church-red"></i>
-                        <span class="font-medium">Fellowship Hall</span>
+                    <div class="timeline-item">
+                        <strong class="text-church-purple">Outcome:</strong> Water Baptism
                     </div>
                 </div>
+                <a href="#baptism" class="inline-block bg-church-purple text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition transform hover:scale-105">
+                    Apply for Baptism
+                </a>
             </div>
-            
-            <!-- Cell Groups Schedule -->
-            <div class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300">
-                <div class="text-center mb-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-purple-600 to-church-red rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-users text-2xl text-white"></i>
+        </div>
+    </div>
+</section>
+
+<!-- Bible Study Section -->
+<section id="bible-study" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4 section-header">Wednesday Bible Study</h2>
+                <p class="text-xl text-gray-600">
+                    Join us every Wednesday evening for an enriching study of God's Word
+                </p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="bg-gradient-to-r from-church-purple to-church-red p-8 text-white text-center">
+                    <h3 class="text-3xl font-bold mb-4">Weekly Bible Study Sessions</h3>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bounce-slow">
+                            <i class="fas fa-clock text-4xl mb-2"></i>
+                            <h4 class="text-xl font-semibold mb-2">Time</h4>
+                            <p class="text-lg">Every Wednesday<br>8:30 PM - 9:30 PM</p>
+                        </div>
+                        <div class="bounce-slow" style="animation-delay: 0.5s;">
+                            <i class="fas fa-link text-4xl mb-2"></i>
+                            <h4 class="text-xl font-semibold mb-2">Join Online</h4>
+                            <p class="text-lg">Click the link below to join<br>our virtual Bible study</p>
+                        </div>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800">Cell Groups</h3>
                 </div>
-                <div class="space-y-4">
-                    <div class="flex items-center space-x-3">
-                        <i class="fas fa-calendar-alt text-purple-600"></i>
-                        <span class="font-medium">Various Days</span>
+                
+                <div class="p-8">
+                    <div class="text-center mb-8">
+                        <h4 class="text-2xl font-bold text-gray-800 mb-4">What to Expect</h4>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-check-circle text-church-purple text-xl mt-1"></i>
+                                <div>
+                                    <h5 class="font-semibold text-gray-800">Interactive Discussion</h5>
+                                    <p class="text-gray-600">Engage with fellow believers in meaningful conversations</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-check-circle text-church-purple text-xl mt-1"></i>
+                                <div>
+                                    <h5 class="font-semibold text-gray-800">Deep Scripture Study</h5>
+                                    <p class="text-gray-600">Explore the Bible verse by verse with context</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-check-circle text-church-purple text-xl mt-1"></i>
+                                <div>
+                                    <h5 class="font-semibold text-gray-800">Prayer Time</h5>
+                                    <p class="text-gray-600">End each session with prayer and fellowship</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-check-circle text-church-purple text-xl mt-1"></i>
+                                <div>
+                                    <h5 class="font-semibold text-gray-800">All Welcome</h5>
+                                    <p class="text-gray-600">Open to all believers, regardless of experience</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex items-center space-x-3">
-                        <i class="fas fa-clock text-purple-600"></i>
-                        <span class="font-medium">Flexible Times</span>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <i class="fas fa-map-marker-alt text-purple-600"></i>
-                        <span class="font-medium">Various Locations</span>
+                    
+                    <div class="text-center">
+                        <a href="#" class="inline-block bg-church-purple text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-purple-700 transition transform hover:scale-105 pulse-glow">
+                            <i class="fas fa-external-link-alt mr-2"></i>
+                            Join Bible Study Link
+                        </a>
+                        <p class="mt-4 text-gray-600">
+                            Link will be activated 15 minutes before each session
+                        </p>
                     </div>
                 </div>
             </div>
@@ -432,23 +275,316 @@
     </div>
 </section>
 
-<!-- Call to Action -->
-<section class="relative py-20 overflow-hidden">
-    <div class="absolute inset-0 gradient-overlay"></div>
-    <div class="container mx-auto px-4 text-center relative z-10">
-        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Begin Your <span class="text-shimmer">Discipleship Journey?</span>
-        </h2>
-        <p class="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-            Take the next step in your faith journey. Join us for Bible study, catechism classes, or find a cell group near you.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="contact" class="bg-white text-church-purple font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                Get Connected Today
-            </a>
-            <a href="about" class="border-2 border-white text-white font-bold py-4 px-8 rounded-full hover:bg-white hover:text-church-purple transition-all duration-300 transform hover:scale-105">
-                Learn More About Us
-            </a>
+<!-- Cell Groups Section -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4 section-header">Cell Groups</h2>
+            <p class="text-xl text-gray-600 mb-12">
+                Intimate fellowship groups for spiritual growth and community building
+            </p>
+            
+            <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-12 shadow-lg">
+                <div class="float-animation mb-8">
+                    <i class="fas fa-map-marked-alt text-6xl text-church-red"></i>
+                </div>
+                <h3 class="text-3xl font-bold text-gray-800 mb-6">Locations Coming Soon</h3>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    We're currently organizing cell groups in different locations around Kasarani and neighboring areas. 
+                    These small group gatherings will provide opportunities for deeper fellowship, prayer, and spiritual growth 
+                    in a more intimate setting.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div class="text-left">
+                        <h4 class="text-xl font-bold text-church-red mb-3">What Cell Groups Offer:</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-heart text-church-red mr-3"></i>
+                                Personal spiritual growth
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-hands-helping text-church-red mr-3"></i>
+                                Mutual support and care
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-pray text-church-red mr-3"></i>
+                                Group prayer and worship
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-book-open text-church-red mr-3"></i>
+                                Bible study and discussion
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="text-xl font-bold text-church-red mb-3">Benefits of Joining:</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-users text-church-red mr-3"></i>
+                                Build lasting friendships
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-seedling text-church-red mr-3"></i>
+                                Accelerated spiritual growth
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-shield-alt text-church-red mr-3"></i>
+                                Accountability and encouragement
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-home text-church-red mr-3"></i>
+                                Sense of belonging
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-church-red text-white p-6 rounded-xl">
+                    <h4 class="text-xl font-bold mb-3">Stay Informed</h4>
+                    <p class="mb-4">
+                        Be the first to know when cell group locations are announced. 
+                        Contact us to express your interest and preferred area.
+                    </p>
+                    <a href="mailto:thikaroadagc@gmail.com" class="inline-block bg-white text-church-red px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        <i class="fas fa-envelope mr-2"></i>
+                        Express Interest
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Baptism Application Section -->
+<section id="baptism" class="py-16 bg-gradient-to-br from-purple-50 to-red-50">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4 section-header">Catechism & Baptism Application</h2>
+                <p class="text-xl text-gray-600">
+                    Take the next step in your faith journey through baptism preparation
+                </p>
+            </div>
+
+            <div class="baptism-form rounded-2xl shadow-xl p-8 md:p-12">
+                <div class="text-center mb-8">
+                    <div class="float-animation">
+                        <i class="fas fa-water text-5xl text-church-purple mb-4"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">Application for Baptism</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Baptism is a public declaration of your faith and commitment to follow Jesus Christ. 
+                        Our catechism classes will prepare you for this important step in your spiritual journey.
+                    </p>
+                </div>
+
+                <form class="space-y-6" method="POST" action="#">
+                    @csrf
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="first_name" class="block text-sm font-semibold text-gray-700 mb-2">
+                                First Name *
+                            </label>
+                            <input type="text" id="first_name" name="first_name" required
+                                   class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition">
+                        </div>
+                        <div>
+                            <label for="last_name" class="block text-sm font-semibold text-gray-700 mb-2">
+                                Last Name *
+                            </label>
+                            <input type="text" id="last_name" name="last_name" required
+                                   class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
+                                Email Address *
+                            </label>
+                            <input type="email" id="email" name="email" required
+                                   class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">
+                                Phone Number *
+                            </label>
+                            <input type="tel" id="phone" name="phone" required
+                                   class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="age" class="block text-sm font-semibold text-gray-700 mb-2">
+                                Age *
+                            </label>
+                            <input type="number" id="age" name="age" min="12" required
+                                   class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition">
+                        </div>
+                        <div>
+                            <label for="gender" class="block text-sm font-semibold text-gray-700 mb-2">
+                                Gender *
+                            </label>
+                            <select id="gender" name="gender" required
+                                    class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition">
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="address" class="block text-sm font-semibold text-gray-700 mb-2">
+                            Address *
+                        </label>
+                        <textarea id="address" name="address" rows="3" required
+                                  class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition"
+                                  placeholder="Please provide your full address"></textarea>
+                    </div>
+
+                    <div>
+                        <label for="salvation_experience" class="block text-sm font-semibold text-gray-700 mb-2">
+                            Please share your salvation experience *
+                        </label>
+                        <textarea id="salvation_experience" name="salvation_experience" rows="4" required
+                                  class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition"
+                                  placeholder="Tell us about when and how you accepted Jesus Christ as your Lord and Savior"></textarea>
+                    </div>
+
+                    <div>
+                        <label for="baptism_reason" class="block text-sm font-semibold text-gray-700 mb-2">
+                            Why do you want to be baptized? *
+                        </label>
+                        <textarea id="baptism_reason" name="baptism_reason" rows="4" required
+                                  class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition"
+                                  placeholder="Explain your motivation for water baptism"></textarea>
+                    </div>
+
+                    <div>
+                        <label for="church_attendance" class="block text-sm font-semibold text-gray-700 mb-2">
+                            How long have you been attending TRC AGC Church? *
+                        </label>
+                        <select id="church_attendance" name="church_attendance" required
+                                class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition">
+                            <option value="">Select Duration</option>
+                            <option value="less_than_3_months">Less than 3 months</option>
+                            <option value="3_to_6_months">3 to 6 months</option>
+                            <option value="6_months_to_1_year">6 months to 1 year</option>
+                            <option value="more_than_1_year">More than 1 year</option>
+                            <option value="first_time">This is my first time</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="previous_baptism" class="block text-sm font-semibold text-gray-700 mb-2">
+                            Have you been baptized before? *
+                        </label>
+                        <div class="space-y-2">
+                            <label class="flex items-center">
+                                <input type="radio" name="previous_baptism" value="no" required class="text-church-purple mr-3">
+                                <span>No, this will be my first baptism</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="previous_baptism" value="yes" required class="text-church-purple mr-3">
+                                <span>Yes, I have been baptized before</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div id="previous_baptism_details" class="hidden">
+                        <label for="baptism_details" class="block text-sm font-semibold text-gray-700 mb-2">
+                            Please provide details about your previous baptism
+                        </label>
+                        <textarea id="baptism_details" name="baptism_details" rows="3"
+                                  class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition"
+                                  placeholder="When and where were you baptized? Why are you seeking baptism again?"></textarea>
+                    </div>
+
+                    <div>
+                        <label for="emergency_contact" class="block text-sm font-semibold text-gray-700 mb-2">
+                            Emergency Contact Name & Phone *
+                        </label>
+                        <input type="text" id="emergency_contact" name="emergency_contact" required
+                               class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition"
+                               placeholder="Name and phone number of emergency contact">
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">
+                            <i class="fas fa-info-circle text-church-purple mr-2"></i>
+                            What Happens Next?
+                        </h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-church-purple mr-3 mt-1"></i>
+                                Our pastoral team will review your application
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-church-purple mr-3 mt-1"></i>
+                                You'll be contacted to schedule a meeting with a pastor
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-church-purple mr-3 mt-1"></i>
+                                Attend catechism classes to prepare for baptism
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-church-purple mr-3 mt-1"></i>
+                                Participate in water baptism ceremony
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="flex items-center">
+                        <input type="checkbox" id="terms" name="terms" required class="text-church-purple mr-3">
+                        <label for="terms" class="text-sm text-gray-700">
+                            I understand that baptism is a public declaration of my faith in Jesus Christ and commitment to follow Him. I agree to attend the required catechism classes. *
+                        </label>
+                    </div>
+
+                    <div class="text-center pt-6">
+                        <button type="submit" class="bg-gradient-to-r from-church-purple to-church-red text-white px-12 py-4 rounded-full font-bold text-lg hover:shadow-lg transition transform hover:scale-105 pulse-glow">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Submit Application
+                        </button>
+                        <p class="mt-4 text-sm text-gray-600">
+                            All fields marked with * are required
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Information -->
+<section class="py-16 bg-gray-900 text-white">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8">Questions About Discipleship?</h2>
+            <p class="text-xl mb-8 text-gray-300">
+                Our pastoral team is here to help guide you in your faith journey
+            </p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card-hover bg-gray-800 p-6 rounded-xl">
+                    <i class="fas fa-phone text-3xl text-church-purple mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Call Us</h3>
+                    <p class="text-gray-300 mb-4">Speak directly with our pastoral team</p>
+                    <a href="tel:+254791049004" class="text-church-purple hover:text-purple-300 font-semibold">
+                        +254 791 049004
+                    </a>
+                </div>
+                <div class="card-hover bg-gray-800 p-6 rounded-xl">
+                    <i class="fas fa-envelope text-3xl text-church-red mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Email Us</h3>
+                    <p class="text-gray-300 mb-4">Send us your questions or concerns</p>
+                    <a href="mailto:thikaroadagc@gmail.com" class="text-church-red hover:text-red-300 font-semibold">
+                        thikaroadagc@gmail.com
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -456,29 +592,108 @@
 
 @section('scripts')
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Add fade-in animation to elements on scroll
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
+    document.addEventListener('DOMContentLoaded', function() {
+        // Show/hide previous baptism details
+        const previousBaptismRadios = document.querySelectorAll('input[name="previous_baptism"]');
+        const previousBaptismDetails = document.getElementById('previous_baptism_details');
+        const baptismDetailsTextarea = document.getElementById('baptism_details');
+
+        previousBaptismRadios.forEach(radio => {
+            radio.addEventListener('change', function() {
+                if (this.value === 'yes') {
+                    previousBaptismDetails.classList.remove('hidden');
+                    baptismDetailsTextarea.required = true;
+                } else {
+                    previousBaptismDetails.classList.add('hidden');
+                    baptismDetailsTextarea.required = false;
+                    baptismDetailsTextarea.value = '';
+                }
+            });
         });
-    }, observerOptions);
-    
-    // Observe all cards and features
-    document.querySelectorAll('.ministry-card, .feature-highlight').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form validation and submission
+        const baptismForm = document.querySelector('form');
+        if (baptismForm) {
+            baptismForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Basic validation
+                const requiredFields = baptismForm.querySelectorAll('[required]');
+                let isValid = true;
+                
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        isValid = false;
+                        field.style.borderColor = '#dc2626';
+                    } else {
+                        field.style.borderColor = '#d1d5db';
+                    }
+                });
+
+                if (isValid) {
+                    // Show success message (you can replace this with actual form submission)
+                    alert('Thank you for your baptism application! Our pastoral team will contact you soon.');
+                    baptismForm.reset();
+                } else {
+                    alert('Please fill in all required fields.');
+                }
+            });
+        }
+
+        // Add floating animation delay to cards
+        const cards = document.querySelectorAll('.ministry-card');
+        cards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.2}s`;
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.ministry-card, .baptism-form').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
     });
-});
+
+    // Add some interactive effects
+    document.querySelectorAll('.form-input').forEach(input => {
+        input.addEventListener('focus', function() {
+            this.parentElement.style.transform = 'scale(1.02)';
+            this.parentElement.style.transition = 'transform 0.2s ease';
+        });
+        
+        input.addEventListener('blur', function() {
+            this.parentElement.style.transform = 'scale(1)';
+        });
+    });
 </script>
 @endsection

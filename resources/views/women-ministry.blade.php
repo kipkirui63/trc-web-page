@@ -12,10 +12,17 @@
         --rose-pink: #f43f5e;
         --soft-pink: #fce7f3;
         --lavender: #ddd6fe;
+        --electric-purple: #8b5cf6;
+        --hot-pink: #ec4899;
+        --coral: #f97316;
+        --gold: #f59e0b;
+        --deep-purple: #6366f1;
+        --gradient-main: linear-gradient(135deg, #8b5cf6 0%, #ec4899 50%, #f97316 100%);
+        --gradient-alt: linear-gradient(45deg, #6366f1, #8b5cf6, #ec4899, #f97316);
     }
 
     .sisterhood-hero {
-        background: linear-gradient(135deg, var(--church-purple) 0%, var(--rose-pink) 40%, var(--church-red) 70%, var(--church-yellow) 100%);
+        background: linear-gradient(135deg, var(--church-purple) 0%, var(--rose-pink) 40%, var(--church-red) 70%, var(--church-yellow) );
         position: relative;
         min-height: 100vh;
         display: flex;
@@ -336,26 +343,6 @@
         background: linear-gradient(135deg, var(--rose-pink), var(--church-red));
     }
 
-    .testimonial-card {
-        background: rgba(255, 255, 255, 0.9);
-        backdrop-filter: blur(20px);
-        border-radius: 20px;
-        border: 1px solid rgba(244, 63, 94, 0.15);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .testimonial-card::before {
-        content: '"';
-        position: absolute;
-        top: -20px;
-        left: 30px;
-        font-size: 8rem;
-        color: var(--rose-pink);
-        opacity: 0.1;
-        font-family: serif;
-        line-height: 1;
-    }
 
     .connection-web {
         position: absolute;
@@ -394,19 +381,175 @@
         border: 2px solid rgba(255, 255, 255, 0.3);
     }
 
-    @keyframes gentle-pulse {
+    /* Slideshow Section */
+    .slideshow-container {
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 0px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
 
-        0%,
-        100% {
+    .slide {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        display: none;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .slide.active {
+        display: block;
+        opacity: 1;
+
+    }
+
+    .slide-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg,
+                rgba(0, 0, 0, 0.3) 0%,
+                rgba(236, 72, 153, 0.2) 50%,
+                rgba(0, 0, 0, 0.4) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slide-content {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .slide-content img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 0px;
+        transition: opacity 0.5s ease-in-out;
+
+
+    }
+
+    @keyframes zoomInOut {
+        0% {
             transform: scale(1);
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
         }
 
         50% {
-            transform: scale(1.05);
-            box-shadow: 0 0 50px rgba(255, 255, 255, 0.4);
+            transform: scale(1.1);
+        }
+
+        100% {
+            transform: scale(1);
         }
     }
+
+
+    /* Navigation arrows */
+    .nav-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.9);
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        color: #333;
+        transition: all 0.3s ease;
+        z-index: 10;
+    }
+
+    .nav-arrow:hover {
+        background: white;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .prev {
+        left: 20px;
+    }
+
+    .next {
+        right: 20px;
+    }
+
+    /* Dots indicator */
+    .dots-container {
+        text-align: center;
+        padding: 20px 0;
+        background: rgba(245, 245, 247, 0.8);
+    }
+
+    .dot {
+        height: 12px;
+        width: 12px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .dot.active,
+    .dot:hover {
+        background-color: #ec4899;
+        transform: scale(1.2);
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+        .slide {
+            height: 300px;
+        }
+
+        .slide-text {
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            padding: 15px;
+        }
+
+        .slide-text h3 {
+            font-size: 1.2rem;
+        }
+
+        .nav-arrow {
+            width: 40px;
+            height: 40px;
+            font-size: 1rem;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .slide {
+            height: 250px;
+        }
+    }
+
 
     .value-badge {
         background: rgba(255, 255, 255, 0.15);
@@ -444,6 +587,7 @@
 @endsection
 
 @section('content')
+
 <!-- Hero Section -->
 <section class="sisterhood-hero text-white">
     <div class="floating-hearts">
@@ -498,22 +642,67 @@
                     </button>
                 </div>
 
-                <!-- Scripture -->
-                <div class="pt-12">
-                    <div class=" bg-opacity-15 backdrop-filter backdrop-blur-lg rounded-3xl p-8 border border-white border-opacity-20 max-w-4xl mx-auto">
-                        <p class="text-lg md:text-xl italic opacity-95 mb-4 leading-relaxed text-gray-600">
-                            "She is clothed with strength and dignity; she can laugh at the days to come.
-                            She speaks with wisdom, and faithful instruction is on her tongue."
-                        </p>
-                        <div class="flex items-center justify-center space-x-4">
-                            <div class="w-12 h-0.5 bg-gradient-to-r from-transparent via-pink-200 to-transparent"></div>
-                            <span class="text-pink-500 font-semibold">Proverbs 31:25-26</span>
-                            <div class="w-12 h-0.5 bg-gradient-to-r from-transparent via-pink-200 to-transparent"></div>
-                        </div>
-                    </div>
+
+                <br />
+                <br />
+            </div>
+        </div>
+    </div>
+</section>
+
+</br>
+</br>
+
+<!-- Slideshow Section -->
+<section class="slideshow-section">
+    <div class="slideshow-container">
+        <div class="slide active" style="background-image: linear-gradient(45deg, rgba(245, 245, 247, 0.3), rgba(236, 72, 153, 0.3)), url('data:image/svg+xml,%3Csvg viewBox=\'0 0 400 300\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23ec4899\'/%3E%3Ctext x=\'200\' y=\'150\' text-anchor=\'middle\' dominant-baseline=\'middle\' fill=\'white\' font-family=\'Arial\' font-size=\'20\'%3EEmpowerment Summit 2024%3C/text%3E%3C/svg%3E');">
+            <div class="slide-overlay">
+                <div class="slide-content">
+                    <img src="{{ asset('images/ladies1.jpg') }}" alt="Ladies 1" class="w-full h-80 lg:h-full object-cover" />
                 </div>
             </div>
         </div>
+
+        <div class="slide" style="background-image: linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(236, 72, 153, 0.3)), url('data:image/svg+xml,%3Csvg viewBox=\'0 0 400 300\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%238b5cf6\'/%3E%3Ctext x=\'200\' y=\'150\' text-anchor=\'middle\' dominant-baseline=\'middle\' fill=\'white\' font-family=\'Arial\' font-size=\'18\'%3ECrown & Confidence Retreat%3C/text%3E%3C/svg%3E');">
+            <div class="slide-overlay">
+                <div class="slide-content">
+                    <img src="{{ asset('images/ladies2.jpg') }}" alt="Ladies 1" class="w-full h-80 lg:h-full object-cover" />
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(236, 72, 153, 0.3)), url('data:image/svg+xml,%3Csvg viewBox=\'0 0 400 300\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23f97316\'/%3E%3Ctext x=\'200\' y=\'150\' text-anchor=\'middle\' dominant-baseline=\'middle\' fill=\'white\' font-family=\'Arial\' font-size=\'20\'%3EFearless & Fabulous Night%3C/text%3E%3C/svg%3E');">
+            <div class="slide-overlay">
+                <div class="slide-content">
+                    <img src="{{ asset('images/ladies1.jpg') }}" alt="Ladies 1" class="w-full h-80 lg:h-full object-cover" />
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(236, 72, 153, 0.3)), url('data:image/svg+xml,%3Csvg viewBox=\'0 0 400 300\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23f59e0b\'/%3E%3Ctext x=\'200\' y=\'150\' text-anchor=\'middle\' dominant-baseline=\'middle\' fill=\'white\' font-family=\'Arial\' font-size=\'18\'%3ERoyal Daughters Conference%3C/text%3E%3C/svg%3E');">
+            <div class="slide-overlay">
+                <div class="slide-content">
+                    <img src="{{ asset('images/ladies1.jpg') }}" alt="Ladies 1" class="w-full h-80 lg:h-full object-cover" />
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(236, 72, 153, 0.3)), url('data:image/svg+xml,%3Csvg viewBox=\'0 0 400 300\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%236366f1\'/%3E%3Ctext x=\'200\' y=\'150\' text-anchor=\'middle\' dominant-baseline=\'middle\' fill=\'white\' font-family=\'Arial\' font-size=\'20\'%3EGlow Up & God Up Workshop%3C/text%3E%3C/svg%3E');">
+            <div class="slide-overlay">
+                <div class="slide-content">
+                    <img src="{{ asset('images/ladies1.jpg') }}" alt="Ladies 1" class="w-full h-80 lg:h-full object-cover" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slideshow-nav">
+        <div class="nav-dot active" onclick="currentSlide(1)"></div>
+        <div class="nav-dot" onclick="currentSlide(2)"></div>
+        <div class="nav-dot" onclick="currentSlide(3)"></div>
+        <div class="nav-dot" onclick="currentSlide(4)"></div>
+        <div class="nav-dot" onclick="currentSlide(5)"></div>
     </div>
 </section>
 
@@ -634,7 +823,7 @@
                     <div class="flex-1">
                         <h3 class="text-3xl font-bold text-gray-800 mb-3">Relational Connection</h3>
                         <p class="text-gray-600 mb-4 text-lg leading-relaxed">
-                            Build meaningful friendships and find your tribe. Whether you're single, married, a mom, or career-focused,
+                            Build meaningful friendships. Whether you're single, married, a mom, or career-focused,
                             there's a place for you in our community of sisters.
                         </p>
                         <div class="flex flex-wrap gap-3">
@@ -825,6 +1014,7 @@
 </section>
 
 
+
 <!-- Join Us Section -->
 <section class="py-24 bg-gradient-to-br from-purple-600 via-pink-600 to-red-600 text-white relative overflow-hidden">
     <div class="floating-hearts">
@@ -873,28 +1063,109 @@
     </div>
 </section>
 <script>
-    const observerOptions1 = {
-        threshold: 0.15,
-        rootMargin: '0px 0px -80px 0px'
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.nav-dot');
+    let isTransitioning = false;
+
+    function showSlide(index) {
+        if (isTransitioning) return; // Prevent rapid clicking
+        
+        isTransitioning = true;
+        const currentSlide = document.querySelector('.slide.active');
+        const nextSlide = slides[index];
+        
+        // If it's the same slide, don't transition
+        if (currentSlide === nextSlide) {
+            isTransitioning = false;
+            return;
+        }
+
+        // Remove active class from all dots
+        dots.forEach(dot => {
+            dot.classList.remove('active');
+        });
+
+        // Add active class to current dot
+        dots[index].classList.add('active');
+
+        if (currentSlide) {
+            // Fade out current slide
+            currentSlide.style.opacity = '0';
+            
+            setTimeout(() => {
+                // Hide current slide and show next slide
+                currentSlide.classList.remove('active');
+                nextSlide.classList.add('active');
+                nextSlide.style.opacity = '1';
+                
+                // Reset transition flag
+                setTimeout(() => {
+                    isTransitioning = false;
+                }, 50);
+            }, ); 
+        } else {
+            // First slide initialization
+            nextSlide.classList.add('active');
+            nextSlide.style.opacity = '1';
+            isTransitioning = false;
+        }
+    }
+
+    function currentSlide(index) {
+        slideIndex = index - 1;
+        showSlide(slideIndex);
+    }
+
+    function nextSlide() {
+        if (isTransitioning) return;
+        slideIndex = (slideIndex + 1) % slides.length;
+        showSlide(slideIndex);
+    }
+
+    // Initialize slides with proper styling
+    document.addEventListener('DOMContentLoaded', function() {
+        slides.forEach((slide, index) => {
+            slide.style.transition = 'opacity 0.6s ease-in-out';
+            slide.style.opacity = index === 0 ? '1' : '0';
+        });
+        
+        // Show first slide
+        if (slides.length > 0) {
+            slides[0].classList.add('active');
+            if (dots.length > 0) {
+                dots[0].classList.add('active');
+            }
+        }
+    });
+
+    // Auto-advance slides every 5 seconds
+    setInterval(nextSlide, 5000);
+
+    // Intersection Observer for smooth animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
     };
 
-    const observer1 = new IntersectionObserver(function(entries) {
-        entries.forEach((entry, index) => {
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
-                setTimeout(() => {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }, index * 100); // Stagger by 100ms
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
             }
         });
-    }, observerOptions1);
+    }, observerOptions);
 
-    // Initialize elements with starting state
-    document.querySelectorAll('section > div').forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(30px)';
-        section.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-        observer1.observe(section);
+    // Observe all major sections for animation
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('.identity-section, .slideshow-section, .empowerment-section, .final-cta');
+        sections.forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(50px)';
+            section.style.transition = 'all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            observer.observe(section);
+        });
     });
 </script>
 

@@ -573,14 +573,14 @@
                         </h4>
                         <p class="text-gray-700 mb-4">We encourage regular, faithful giving to missions as part of your stewardship:</p>
                         <div class="grid sm:grid-cols-2 gap-4">
-                            <div class="bg-white rounded-xl p-4 shadow-sm">
+                            <!-- <div class="bg-white rounded-xl p-4 shadow-sm">
                                 <div class="font-bold text-church-purple mb-1">M-Pesa</div>
                                 <div class="text-gray-600">Use account <span class="number-highlight text-2xl">7535398</span> for all giving</div>
                             </div>
                             <div class="bg-white rounded-xl p-4 shadow-sm">
                                 <div class="font-bold text-church-purple mb-1">Monthly Pledges</div>
                                 <div class="text-gray-600">Commit to regular support</div>
-                            </div>
+                            </div> -->
                         </div>
                         <p class="text-sm text-church-purple font-medium mt-4 bg-church-purple/10 rounded-lg p-3">
                             💯 100% of mission designated funds go directly to field operations and missionary support.
@@ -717,9 +717,8 @@
                             <div class="flex items-start">
                                 <span class="w-8 h-8 bg-church-red text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0 mt-1">4</span>
                                 <div>
-                                    <p class="font-medium text-gray-800">Enter Business Number: <span class="number-highlight text-3xl">7535398</span></p>
-                                    <p class="font-medium text-gray-800">Enter Business Number: <span class="number-highlight text-3xl">522533</span></p>
-                                    <p class="text-gray-600 text-sm">Our official paybill number</p>
+                                    <p class="font-medium text-gray-800 mb-2">Enter Account Number: <span class="number-highlight text-2xl">522533</span></p>
+                                    <p class="text-gray-600 text-sm">Our Official Paybill Number</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
