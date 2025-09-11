@@ -858,8 +858,7 @@
         </div>
     </div>
 </section>
-
-<!-- Community Connections -->
+<!-- Women's Ministry Connections -->
 <section class="py-24 bg-gradient-to-br from-purple-50 via-pink-50 to-red-50 relative">
     <div class="connection-web">
         <div class="connection-line" style="top: 20%; left: 10%; width: 200px; transform: rotate(45deg);"></div>
@@ -870,148 +869,84 @@
     <div class="container mx-auto px-4 relative z-10">
         <div class="text-center mb-20">
             <h2 class="text-5xl md:text-6xl font-bold mb-6">
-                <span class="gradient-text">Community Connections</span>
+                <span class="gradient-text">Women's Ministry</span>
             </h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Life is better together. Discover the different ways you can connect, grow, and thrive in our sisterhood.
+                Together we grow in faith, encourage one another, and serve with love. 
+                Discover how you can be part of this sisterhood.
             </p>
         </div>
 
         <div class="community-grid">
-            <!-- Small Groups -->
+            <!-- Fellowship Gatherings -->
             <div class="community-card p-8 text-center">
-                <div class="circle-icon w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 relative z-10">
-                    <i class="fas fa-circle-nodes text-3xl text-white"></i>
+                <div class="circle-icon w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-users text-3xl text-white"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">Small Groups</h3>
-                <p class="text-gray-600 mb-6 leading-relaxed">
-                    Intimate gatherings where authentic relationships are built. Share life, study God's word,
-                    and pray together in a safe, encouraging environment.
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Fellowship Gatherings</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    A time to connect, share meals, laugh, and strengthen friendships rooted in Christ.
                 </p>
-                <div class="flex justify-center space-x-4 text-sm text-gray-500">
-                    <span class="flex items-center">
-                        <i class="fas fa-users mr-2 text-pink-500"></i>
-                        8-12 Women
-                    </span>
-                    <span class="flex items-center">
-                        <i class="fas fa-clock mr-2 text-pink-500"></i>
-                        Weekly
-                    </span>
-                </div>
             </div>
 
-            <!-- Mentorship Program -->
+            <!-- Bible Study -->
             <div class="community-card p-8 text-center">
-                <div class="circle-icon w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 relative z-10">
-                    <i class="fas fa-hand-holding-heart text-3xl text-white"></i>
+                <div class="circle-icon w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-book-bible text-3xl text-white"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">Mentorship Program</h3>
-                <p class="text-gray-600 mb-6 leading-relaxed">
-                    Connect with wise women who've walked the path before you, or become a mentor yourself.
-                    Share wisdom, offer guidance, and grow together across generations.
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Bible Study</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Growing together in the Word of God through study, reflection, and discussion.
                 </p>
-                <div class="flex justify-center space-x-4 text-sm text-gray-500">
-                    <span class="flex items-center">
-                        <i class="fas fa-lightbulb mr-2 text-pink-500"></i>
-                        Wisdom Sharing
-                    </span>
-                    <span class="flex items-center">
-                        <i class="fas fa-heart mr-2 text-pink-500"></i>
-                        Life Guidance
-                    </span>
-                </div>
             </div>
 
-            <!-- Special Interest Groups -->
+            <!-- Prayer & Intercession -->
             <div class="community-card p-8 text-center">
-                <div class="circle-icon w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 relative z-10">
-                    <i class="fas fa-palette text-3xl text-white"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">Special Interest Groups</h3>
-                <p class="text-gray-600 mb-6 leading-relaxed">
-                    Bond over shared interests and hobbies. From book clubs to fitness groups,
-                    creative arts to professional networking - find your tribe within the tribe.
-                </p>
-                <div class="flex justify-center space-x-4 text-sm text-gray-500">
-                    <span class="flex items-center">
-                        <i class="fas fa-book mr-2 text-pink-500"></i>
-                        Book Clubs
-                    </span>
-                    <span class="flex items-center">
-                        <i class="fas fa-dumbbell mr-2 text-pink-500"></i>
-                        Fitness Groups
-                    </span>
-                </div>
-            </div>
-
-            <!-- Life Stage Groups -->
-            <div class="community-card p-8 text-center">
-                <div class="circle-icon w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 relative z-10">
-                    <i class="fas fa-seedling text-3xl text-white"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">Life Stage Groups</h3>
-                <p class="text-gray-600 mb-6 leading-relaxed">
-                    Navigate life's seasons with others who understand your journey. Young professionals,
-                    mothers, empty nesters - every stage has its unique joys and challenges.
-                </p>
-                <div class="flex justify-center space-x-4 text-sm text-gray-500">
-                    <span class="flex items-center">
-                        <i class="fas fa-baby mr-2 text-pink-500"></i>
-                        Moms Groups
-                    </span>
-                    <span class="flex items-center">
-                        <i class="fas fa-briefcase mr-2 text-pink-500"></i>
-                        Professionals
-                    </span>
-                </div>
-            </div>
-
-            <!-- Prayer & Support -->
-            <div class="community-card p-8 text-center">
-                <div class="circle-icon w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 relative z-10">
+                <div class="circle-icon w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                     <i class="fas fa-praying-hands text-3xl text-white"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">Prayer & Support</h3>
-                <p class="text-gray-600 mb-6 leading-relaxed">
-                    Experience the power of prayer and community support during life's challenges.
-                    Share burdens, celebrate victories, and witness God's faithfulness together.
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Prayer & Intercession</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Standing together in prayer, lifting one another’s burdens, and interceding for our families and church.
                 </p>
-                <div class="flex justify-center space-x-4 text-sm text-gray-500">
-                    <span class="flex items-center">
-                        <i class="fas fa-hands mr-2 text-pink-500"></i>
-                        Prayer Warriors
-                    </span>
-                    <span class="flex items-center">
-                        <i class="fas fa-shield-alt mr-2 text-pink-500"></i>
-                        Safe Space
-                    </span>
-                </div>
             </div>
 
-            <!-- Service Teams -->
+            <!-- Worship & Praise -->
             <div class="community-card p-8 text-center">
-                <div class="circle-icon w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 relative z-10">
-                    <i class="fas fa-hands-helping text-3xl text-white"></i>
+                <div class="circle-icon w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-music text-3xl text-white"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">Service Teams</h3>
-                <p class="text-gray-600 mb-6 leading-relaxed">
-                    Make a difference together through serving our church and community.
-                    Use your gifts to bless others while building meaningful friendships through service.
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Worship & Praise</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Celebrating God through music, dance, and joyful worship as a community of sisters.
                 </p>
-                <div class="flex justify-center space-x-4 text-sm text-gray-500">
-                    <span class="flex items-center">
-                        <i class="fas fa-church mr-2 text-pink-500"></i>
-                        Church Ministry
-                    </span>
-                    <span class="flex items-center">
-                        <i class="fas fa-globe mr-2 text-pink-500"></i>
-                        Outreach
-                    </span>
+            </div>
+
+            <!-- Outreach & Service -->
+            <div class="community-card p-8 text-center">
+                <div class="circle-icon w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-hand-holding-heart text-3xl text-white"></i>
                 </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Outreach & Service</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Extending love beyond our walls through acts of kindness, community service, and outreach.
+                </p>
+            </div>
+
+            <!-- Encouragement & Testimonies -->
+            <div class="community-card p-8 text-center">
+                <div class="circle-icon w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-heart text-3xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Encouragement & Testimonies</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Sharing testimonies and stories that inspire faith, hope, and strength for every season of life.
+                </p>
             </div>
         </div>
     </div>
 </section>
+
 
 
 

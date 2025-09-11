@@ -639,7 +639,7 @@
                 </p>
                 <div class="ministry-preview rounded-lg p-4 mb-6 bg-gray-50">
                     <div class="flex items-center justify-between text-sm text-gray-600">
-                        <span><i class="fas fa-users mr-2"></i>Ages 3-12</span>
+                        <span><i class="fas fa-users mr-2"></i>Ages 3-13</span>
                         <span><i class="fas fa-clock mr-2"></i>Sundays 11:15 AM</span>
                     </div>
                 </div>
@@ -659,8 +659,8 @@
                 </p>
                 <div class="ministry-preview rounded-lg p-4 mb-6 bg-gray-50">
                     <div class="flex items-center justify-between text-sm text-gray-600">
-                        <span><i class="fas fa-users mr-2"></i>Ages 13-25</span>
-                        <span><i class="fas fa-clock mr-2"></i>Fridays 8:30 PM</span>
+                        <span><i class="fas fa-users mr-2"></i>Ages 18-25</span>
+                        <span><i class="fas fa-clock mr-2"></i>Sundays 12:00 PM</span>
                     </div>
                 </div>
                 <a href="youth" class="cta-button inline-block px-6 py-3 text-white font-semibold rounded-full hover:shadow-lg transition">
