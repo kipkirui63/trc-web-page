@@ -114,7 +114,7 @@
     <!-- Animated Background -->
     <div class="absolute inset-0">
         <div class="absolute inset-0 pattern-overlay"></div>
-        <img src="https://i.pinimg.com/736x/d9/a3/cb/d9a3cb64544754fc8790c1c76c3ff686.jpg"
+        <img src=""
             alt="Church worship"
             class="w-full h-full object-cover opacity-20 mix-blend-overlay" />
     </div>
