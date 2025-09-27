@@ -360,8 +360,10 @@
                 <a href="/" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Home</a>
                 <a href="about" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">About Us</a>
                 <a href="ministries" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Ministries</a>
-                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Events</a>
+                <a href="events" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Events</a>
                 <a href="contact" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Contact</a>
+                <a href="blog" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Blog</a>
+
                 <a href="donate" class="mt-3 block text-center bg-church-red hover:bg-red-600 text-white font-medium py-2 px-4 rounded-md transition">Partner With Us</a>
             </div>
         </div>
@@ -412,10 +414,10 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Service Times</h3>
                     <ul class="space-y-2 text-gray-400">
-                        <li>Sunday Worship: 10:00 AM - 12:00 AM</li>
+                        <li>Sunday Worship: 10:00 AM - 12:00 PM</li>
                         <li>Sunday School: 11:15 AM</li>
                         <li>Wednesday Bible Study: 8:30 PM - 9:30 PM</li>
-                        <li>Youth Group: Friday, 8:30 PM</li>
+                        <li>Youth Group: Sunday, 12: 00 PM</li>
                     </ul>
                 </div>
 
