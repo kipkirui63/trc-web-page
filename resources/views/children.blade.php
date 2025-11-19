@@ -101,7 +101,7 @@
 
                         <!-- Main image container -->
                         <div class="relative bg-gradient-to-br from-white via-purple-50 to-pink-50 p-8 rounded-3xl shadow-2xl border-4 border-white float-animation">
-                            <img src="{{ asset('images/happy-children.webp') }}" alt="Happy children"
+                            <img src="{{ asset('images/vbs8.webp') }}" alt="Happy children"
                                 class="w-full h-auto rounded-2xl shadow-xl" />
 
                             <!-- Floating decorative elements around image -->
@@ -666,7 +666,7 @@
 
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
                 <div class="group relative overflow-hidden rounded-2xl shadow-lg">
-                    <img src="{{ asset('images/vbs1.webp') }}" alt="Children in Sunday School" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+                    <img src="{{ asset('images/happy-children.webp') }}" alt="Children in Sunday School" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
                         <div class="absolute bottom-4 left-4 text-white">
                             <div class="font-semibold">Sunday School</div>
@@ -687,7 +687,7 @@
                     <img src="{{ asset('images/vbs3.webp') }}" alt="Craft Time" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
                         <div class="absolute bottom-4 left-4 text-white">
-                            <div class="font-semibold">Friendships Time</div>
+                            <div class="font-semibold">Chill Time</div>
                         </div>
                     </div>
                 </div>
@@ -711,19 +711,19 @@
                 </div>
 
                 <div class="group relative overflow-hidden rounded-2xl shadow-lg">
-                    <img src="{{ asset('images/vbs6.webp') }}" alt="Bible Study" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+                    <img src="{{ asset('images/vbs7.webp') }}" alt="Bible Study" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
                         <div class="absolute bottom-4 left-4 text-white">
-                            <div class="font-semibold">Victory Has a Sound</div>
+                            <div class="font-semibold">Play Time</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-2xl shadow-lg">
-                    <img src="{{ asset('images/vbs7.webp') }}" alt="Game Time" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+                    <img src="{{ asset('images/vbs6.webp') }}" alt="Game Time" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
                         <div class="absolute bottom-4 left-4 text-white">
-                            <div class="font-semibold">Play Time</div>
+                            <div class="font-semibold">Victory Has a Sound</div>
                         </div>
                     </div>
                 </div>
