@@ -887,10 +887,10 @@
             </p>
 
             <div class="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-                <button class="interactive-button text-lg font-semibold">
-                    <i class="fa-solid fa-heart-circle-plus mr-3"></i>
-                    Join Us Today
-                </button>
+                <a href="mailto:worship@thikaroadconnectagc.org	"><button class="interactive-button text-lg font-semibold">
+                        <i class="fa-solid fa-heart-circle-plus mr-3"></i>
+                        Contact Us
+                    </button></a>
 
             </div>
 

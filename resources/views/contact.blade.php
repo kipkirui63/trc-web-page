@@ -501,7 +501,7 @@
                     <i class="fas fa-envelope text-white text-xl"></i>
                 </div>
                 <h3 class="font-bold text-church-purple mb-2">Email Us</h3>
-                <p class="text-gray-600 text-sm">thikaroadagc@gmail.com</p>
+                <p class="text-gray-600 text-sm">trcagc@thikaroadconnect.org	</p>
             </div>
 
             <!-- Service Times Card -->
@@ -726,7 +726,7 @@
             </p>
 
             <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                <a href="" class="group relative overflow-hidden bg-white text-church-purple font-bold py-4 px-8 rounded-2xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                <a href="mailto:trcagc@thikaroadconnect.org	" class="group relative overflow-hidden bg-white text-church-purple font-bold py-4 px-8 rounded-2xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
                     <span class="relative flex items-center justify-center">
                         <i class="fas fa-map-marker-alt mr-3 group-hover:animate-bounce"></i>
                         Plan Your Visit

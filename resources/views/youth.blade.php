@@ -311,9 +311,9 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                    <a href="#" class="group bg-white text-church-purple font-black py-4 px-10 rounded-full hover:bg-gray-100 transition duration-300 transform hover:scale-105 hover:shadow-2xl">
+                    <a href="mailto:youth@thikaroadconnect.org	" class="group bg-white text-church-purple font-black py-4 px-10 rounded-full hover:bg-gray-100 transition duration-300 transform hover:scale-105 hover:shadow-2xl">
                         <span class="flex items-center">
-                            Join Us This Sunday
+                            Contact Us 
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-1 transition duration-300" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                             </svg>

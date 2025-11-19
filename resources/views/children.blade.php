@@ -637,7 +637,9 @@
 
                                     <div class="bg-white/20 p-4 rounded-2xl backdrop-blur-sm mt-8">
                                         <h4 class="font-bold mb-2">📞 Questions?</h4>
-                                        <p class="text-orange-100 text-sm">Call Pastor Vince on <strong>+254 793 708731</strong></p>
+                                        <a href="mailto:children@thikaroadconnect.org" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 inline-block">
+                                            Contact Us
+                                        </a>
                                     </div>
                                 </div>
                             </div>

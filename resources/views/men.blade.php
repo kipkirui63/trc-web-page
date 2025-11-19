@@ -300,9 +300,9 @@
         </p>
 
         <div class="space-y-6">
-            <button class="brotherhood-glow bg-white text-church-red font-black text-2xl px-16 py-6 rounded-full hover:bg-gray-100 transition transform hover:scale-105">
-                JOIN THE RANKS
-            </button>
+            <a href="mailto:men@thikaroadconnect.org	"><button class="brotherhood-glow bg-white text-church-red font-black text-2xl px-16 py-6 rounded-full hover:bg-gray-100 transition transform hover:scale-105">
+                    Contact Us
+                </button></a>
 
 
         </div>

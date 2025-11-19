@@ -10,19 +10,19 @@
         backdrop-filter: blur(10px);
         border: 1px solid rgba(124, 58, 237, 0.2);
     }
-    
+
     .mission-card:hover {
         transform: translateY(-8px) scale(1.02);
         box-shadow: 0 20px 40px rgba(124, 58, 237, 0.2);
     }
-    
+
     .impact-counter {
         background: linear-gradient(135deg, #7c3aed 0%, #dc2626 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
     }
-    
+
     .ministry-icon {
         background: linear-gradient(135deg, #7c3aed 0%, #dc2626 100%);
         color: white;
@@ -36,18 +36,18 @@
         margin: 0 auto 1rem;
         box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
     }
-    
+
     .partner-highlight {
         background: linear-gradient(135deg, rgba(220, 38, 38, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
         border-left: 4px solid #dc2626;
     }
-    
+
     .donation-cta {
         background: linear-gradient(135deg, #dc2626 0%, #7c3aed 100%);
         position: relative;
         overflow: hidden;
     }
-    
+
     .donation-cta::before {
         content: '';
         position: absolute;
@@ -59,12 +59,17 @@
         transform: rotate(45deg);
         animation: shine 3s infinite;
     }
-    
+
     @keyframes shine {
-        0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-        100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        0% {
+            transform: translateX(-100%) translateY(-100%) rotate(45deg);
+        }
+
+        100% {
+            transform: translateX(100%) translateY(100%) rotate(45deg);
+        }
     }
-    
+
     .gallery-placeholder {
         background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
         border: 2px dashed #9ca3af;
@@ -75,7 +80,7 @@
         position: relative;
         overflow: hidden;
     }
-    
+
     .gallery-placeholder::before {
         content: '';
         position: absolute;
@@ -86,10 +91,15 @@
         background: linear-gradient(90deg, transparent, rgba(124, 58, 237, 0.1), transparent);
         animation: shimmer 2s infinite;
     }
-    
+
     @keyframes shimmer {
-        0% { left: -100%; }
-        100% { left: 100%; }
+        0% {
+            left: -100%;
+        }
+
+        100% {
+            left: 100%;
+        }
     }
 </style>
 @endsection
@@ -101,7 +111,7 @@
     <div class="absolute inset-0">
         <div class="hero-pattern opacity-10"></div>
     </div>
-    
+
     <div class="container mx-auto px-4 relative z-10">
         <div class="text-center max-w-4xl mx-auto">
             <div class="floating-animation mb-6">
@@ -118,7 +128,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Floating Elements -->
     <div class="absolute top-20 left-10 text-white opacity-20">
         <i class="fas fa-cross text-3xl bounce-slow"></i>
@@ -137,8 +147,8 @@
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-4xl font-bold mb-8 text-gradient">Our Outreach Mission</h2>
             <p class="text-lg text-gray-600 leading-relaxed">
-                At TRC AGC Church, we believe in living out the Great Commission by taking the Gospel beyond our church walls. 
-                Our Outreach Ministry is dedicated to sharing God's love through evangelism, community service, missions, 
+                At TRC AGC Church, we believe in living out the Great Commission by taking the Gospel beyond our church walls.
+                Our Outreach Ministry is dedicated to sharing God's love through evangelism, community service, missions,
                 and compassionate action that transforms lives and communities.
             </p>
         </div>
@@ -243,8 +253,8 @@
                 <div class="partner-highlight p-6 rounded-lg">
                     <h4 class="text-xl font-bold text-church-red mb-3">Kinango Mission Field Partnership</h4>
                     <p class="text-gray-600 mb-4">
-                        Through AGC Kenya, we have the blessed opportunity to partner with the Kinango Mission Field, 
-                        supporting Pastor Abraham and his wife Faith in their ministry work. Together, we're expanding 
+                        Through AGC Kenya, we have the blessed opportunity to partner with the Kinango Mission Field,
+                        supporting Pastor Abraham and his wife Faith in their ministry work. Together, we're expanding
                         God's kingdom in rural Kenya.
                     </p>
                     <div class="grid md:grid-cols-3 gap-4 text-sm text-gray-600">
@@ -286,30 +296,22 @@
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            <div class="gallery-placeholder rounded-2xl">
-                <div class="text-center text-gray-500">
-                    <i class="fas fa-camera text-4xl mb-4"></i>
-                    <p class="font-medium">Mission Field Photos</p>
-                    <p class="text-sm">Coming Soon</p>
-                </div>
+            <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <img src="{{asset('images/kwale-missions1.webp')}}"
+                    alt="Mission Field Activities"
+                    class="w-full h-80 object-cover">
             </div>
-            <div class="gallery-placeholder rounded-2xl">
-                <div class="text-center text-gray-500">
-                    <i class="fas fa-church text-4xl mb-4"></i>
-                    <p class="font-medium">Church Building</p>
-                    <p class="text-sm">Progress Updates</p>
-                </div>
+            <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <img src="{{asset('images/kwale-missions2.webp')}}"
+                    alt="Mission Field Activities"
+                    class="w-full h-80 object-cover">
             </div>
-            <div class="gallery-placeholder rounded-2xl">
-                <div class="text-center text-gray-500">
-                    <i class="fas fa-users text-4xl mb-4"></i>
-                    <p class="font-medium">Community Impact</p>
-                    <p class="text-sm">Lives Transformed</p>
-                </div>
+            <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <img src="{{asset('images/kwale-missions3.webp')}}"
+                    alt="Community Impact"
+                    class="w-full h-80 object-cover">
             </div>
         </div>
-
-
     </div>
 </section>
 
@@ -319,7 +321,7 @@
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-4xl font-bold mb-8 text-gradient">Join Our Outreach Team</h2>
             <p class="text-xl text-gray-600 mb-12">
-                God is calling you to be part of something bigger than yourself. Whether through prayer, 
+                God is calling you to be part of something bigger than yourself. Whether through prayer,
                 volunteering, or financial support, there's a place for you in our outreach ministry.
             </p>
 
@@ -348,11 +350,11 @@
                     Your partnership helps Pastor Abraham and Faith reach more souls for Christ in rural Kenya
                 </p>
                 <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-                    <a href="#" class="bg-white text-church-purple font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition inline-flex items-center shadow-lg">
+                    <a href="/donate" class="bg-white text-church-purple font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition inline-flex items-center shadow-lg">
                         <i class="fas fa-heart mr-2"></i>
                         Partner With Us
                     </a>
-                    <a href="#" class="border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white hover:text-church-purple transition inline-flex items-center">
+                    <a href="mailto:missions@thikaroadconnectagc.org	" class="border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white hover:text-church-purple transition inline-flex items-center">
                         <i class="fas fa-envelope mr-2"></i>
                         Get Involved
                     </a>
@@ -372,7 +374,7 @@
             Contact our Outreach Ministry team to learn more about volunteer opportunities and partnerships.
         </p>
         <div class="flex flex-col md:flex-row gap-4 justify-center">
-            <a href="mailto:thikaroadagc@gmail.com" class="bg-church-red hover:bg-red-600 text-white font-medium px-8 py-3 rounded-lg transition inline-flex items-center justify-center">
+            <a href="mailto:missions@thikaroadconnectagc.org	" class="bg-church-red hover:bg-red-600 text-white font-medium px-8 py-3 rounded-lg transition inline-flex items-center justify-center">
                 <i class="fas fa-envelope mr-2"></i>
                 Email Us
             </a>

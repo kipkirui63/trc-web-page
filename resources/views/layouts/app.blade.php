@@ -8,6 +8,8 @@
     <meta name="description" content="@yield('description', 'TRC AGC Church - Fulfilling the Great Commandment and Great Commission of the Lord Jesus Christ')">
 
     <!-- Favicon - Church Logo -->
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('images/trcc-.png') }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('images/trcc-.png') }}">
     <link rel="icon" type="image/png" sizes="48x48" href="{{ asset('images/trcc-.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/trcc-.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/trcc-.png') }}">
@@ -321,12 +323,11 @@
         <div class="container mx-auto px-4">
             <div class="h-16 flex justify-between items-center">
                 <!-- Logo -->
-                <div class="flex items-center space-x-2">
-                    <a href="/">
-                        <img src="{{ asset('images/trcc-.png') }}" alt="TRC Logo" class="h-20 w-auto object-contain max-h-full">
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center">
+                        <img src="{{ asset('images/trcLogo.png') }}" alt="TRC Logo" class="mt-11 h-50 w-auto object-contain">
                     </a>
                 </div>
-
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-6">
                     <a href="/" class="text-gray-800 hover:text-church-purple font-medium transition">Home</a>
@@ -380,7 +381,7 @@
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <!-- About Column -->
                 <div>
-                    <h3 class="text-xl font-bold mb-4">TRC AGC Church</h3>
+                    <h3 class="text-xl font-bold mb-4">Thika Road Connect AGC Church</h3>
                     <p class="text-gray-400 mb-4">The Whole Church taking the Whole Gospel to the Whole World.</p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-white hover:text-church-red transition">
@@ -434,7 +435,7 @@
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope mr-2"></i>
-                            <span>thikaroadagc@gmail.com</span>
+                            <span>trcagc@thikaroadconnect.org</span>
                         </li>
                     </ul>
                 </div>

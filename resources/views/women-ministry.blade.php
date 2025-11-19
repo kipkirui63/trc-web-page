@@ -22,7 +22,7 @@
     }
 
     .sisterhood-hero {
-        background: linear-gradient(135deg, var(--church-purple) 0%, var(--rose-pink) 40%, var(--church-red) 70%, var(--church-yellow) );
+        background: linear-gradient(135deg, var(--church-purple) 0%, var(--rose-pink) 40%, var(--church-red) 70%, var(--church-yellow));
         position: relative;
         min-height: 100vh;
         display: flex;
@@ -659,49 +659,49 @@
         <div class="slide active" style="background-image: linear-gradient(45deg, rgba(245, 245, 247, 0.3), rgba(236, 72, 153, 0.3)), url('data:image/svg+xml,%3Csvg viewBox=\'0 0 400 300\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23ec4899\'/%3E%3Ctext x=\'200\' y=\'150\' text-anchor=\'middle\' dominant-baseline=\'middle\' fill=\'white\' font-family=\'Arial\' font-size=\'20\'%3E%3C/text%3E%3C/svg%3E');">
             <div class="slide-overlay">
                 <div class="slide-content">
+                </div>
             </div>
-        </div>
 
-        <div class="slide" style="background-image: linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(236, 72, 153, 0.3)), url('data:image/svg+xml,%3Csvg viewBox=\'0 0 400 300\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%238b5cf6\'/%3E%3Ctext x=\'200\' y=\'150\' text-anchor=\'middle\' dominant-baseline=\'middle\' fill=\'white\' font-family=\'Arial\' font-size=\'18\'%3E %3C/text%3E%3C/svg%3E');">
-            <div class="slide-overlay">
-                <div class="slide-content">
-                    <img src="{{ asset('images/ladies2.webp') }}" alt="Ladies 1" class="w-full h-80 lg:h-full object-cover" />
+            <div class="slide" style="background-image: linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(236, 72, 153, 0.3)), url('data:image/svg+xml,%3Csvg viewBox=\'0 0 400 300\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%238b5cf6\'/%3E%3Ctext x=\'200\' y=\'150\' text-anchor=\'middle\' dominant-baseline=\'middle\' fill=\'white\' font-family=\'Arial\' font-size=\'18\'%3E %3C/text%3E%3C/svg%3E');">
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <img src="{{ asset('images/ladies2.webp') }}" alt="Ladies 1" class="w-full h-80 lg:h-full object-cover" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" style="background-image: linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(236, 72, 153, 0.3)), url('data:image/svg+xml,%3Csvg viewBox=\'0 0 400 300\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23f97316\'/%3E%3Ctext x=\'200\' y=\'150\' text-anchor=\'middle\' dominant-baseline=\'middle\' fill=\'white\' font-family=\'Arial\' font-size=\'20\'%3E%3C/text%3E%3C/svg%3E');">
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <img src="{{ asset('images/ladies1.webp') }}" alt="Ladies 1" class="w-full h-80 lg:h-full object-cover" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" style="background-image: linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(236, 72, 153, 0.3)), url('data:image/svg+xml,%3Csvg viewBox=\'0 0 400 300\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23f59e0b\'/%3E%3Ctext x=\'200\' y=\'150\' text-anchor=\'middle\' dominant-baseline=\'middle\' fill=\'white\' font-family=\'Arial\' font-size=\'18\'%3E%3C/text%3E%3C/svg%3E');">
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <img src="{{ asset('images/ladies1.webp') }}" alt="Ladies 1" class="w-full h-80 lg:h-full object-cover" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" style="background-image: linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(236, 72, 153, 0.3)), url('data:image/svg+xml,%3Csvg viewBox=\'0 0 400 300\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%236366f1\'/%3E%3Ctext x=\'200\' y=\'150\' text-anchor=\'middle\' dominant-baseline=\'middle\' fill=\'white\' font-family=\'Arial\' font-size=\'20\'%3E%3C/text%3E%3C/svg%3E');">
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <img src="{{ asset('images/ladies1.webp') }}" alt="Ladies 1" class="w-full h-80 lg:h-full object-cover" />
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="slide" style="background-image: linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(236, 72, 153, 0.3)), url('data:image/svg+xml,%3Csvg viewBox=\'0 0 400 300\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23f97316\'/%3E%3Ctext x=\'200\' y=\'150\' text-anchor=\'middle\' dominant-baseline=\'middle\' fill=\'white\' font-family=\'Arial\' font-size=\'20\'%3E%3C/text%3E%3C/svg%3E');">
-            <div class="slide-overlay">
-                <div class="slide-content">
-                    <img src="{{ asset('images/ladies1.webp') }}" alt="Ladies 1" class="w-full h-80 lg:h-full object-cover" />
-                </div>
-            </div>
+        <div class="slideshow-nav">
+            <div class="nav-dot active" onclick="currentSlide(1)"></div>
+            <div class="nav-dot" onclick="currentSlide(2)"></div>
+            <div class="nav-dot" onclick="currentSlide(3)"></div>
+            <div class="nav-dot" onclick="currentSlide(4)"></div>
+            <div class="nav-dot" onclick="currentSlide(5)"></div>
         </div>
-
-        <div class="slide" style="background-image: linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(236, 72, 153, 0.3)), url('data:image/svg+xml,%3Csvg viewBox=\'0 0 400 300\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23f59e0b\'/%3E%3Ctext x=\'200\' y=\'150\' text-anchor=\'middle\' dominant-baseline=\'middle\' fill=\'white\' font-family=\'Arial\' font-size=\'18\'%3E%3C/text%3E%3C/svg%3E');">
-            <div class="slide-overlay">
-                <div class="slide-content">
-                    <img src="{{ asset('images/ladies1.webp') }}" alt="Ladies 1" class="w-full h-80 lg:h-full object-cover" />
-                </div>
-            </div>
-        </div>
-
-        <div class="slide" style="background-image: linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(236, 72, 153, 0.3)), url('data:image/svg+xml,%3Csvg viewBox=\'0 0 400 300\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%236366f1\'/%3E%3Ctext x=\'200\' y=\'150\' text-anchor=\'middle\' dominant-baseline=\'middle\' fill=\'white\' font-family=\'Arial\' font-size=\'20\'%3E%3C/text%3E%3C/svg%3E');">
-            <div class="slide-overlay">
-                <div class="slide-content">
-                    <img src="{{ asset('images/ladies1.webp') }}" alt="Ladies 1" class="w-full h-80 lg:h-full object-cover" />
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="slideshow-nav">
-        <div class="nav-dot active" onclick="currentSlide(1)"></div>
-        <div class="nav-dot" onclick="currentSlide(2)"></div>
-        <div class="nav-dot" onclick="currentSlide(3)"></div>
-        <div class="nav-dot" onclick="currentSlide(4)"></div>
-        <div class="nav-dot" onclick="currentSlide(5)"></div>
-    </div>
 </section>
 
 <!-- Our Heart Section -->
@@ -870,7 +870,7 @@
                 <span class="gradient-text">Women's Ministry</span>
             </h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Together we grow in faith, encourage one another, and serve with love. 
+                Together we grow in faith, encourage one another, and serve with love.
                 Discover how you can be part of this sisterhood.
             </p>
         </div>
@@ -985,10 +985,10 @@
                         <i class="fas fa-door-open mr-3"></i>
                         Join Our Sisterhood
                     </button>
-                    <button class="ripple-button text-xl px-8 py-4" style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px);">
-                        <i class="fas fa-calendar-heart mr-3"></i>
-                        Attend Next Gathering
-                    </button>
+                    <a href="mailto:women@thikaroadconnect.org	"> <button class="ripple-button text-xl px-8 py-4" style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px);">
+                            <i class="fas fa-calendar-heart mr-3"></i>
+                            Contact Us Today
+                        </button></a>
                 </div>
 
             </div>
@@ -1003,11 +1003,11 @@
 
     function showSlide(index) {
         if (isTransitioning) return; // Prevent rapid clicking
-        
+
         isTransitioning = true;
         const currentSlide = document.querySelector('.slide.active');
         const nextSlide = slides[index];
-        
+
         // If it's the same slide, don't transition
         if (currentSlide === nextSlide) {
             isTransitioning = false;
@@ -1025,18 +1025,18 @@
         if (currentSlide) {
             // Fade out current slide
             currentSlide.style.opacity = '0';
-            
+
             setTimeout(() => {
                 // Hide current slide and show next slide
                 currentSlide.classList.remove('active');
                 nextSlide.classList.add('active');
                 nextSlide.style.opacity = '1';
-                
+
                 // Reset transition flag
                 setTimeout(() => {
                     isTransitioning = false;
                 }, 50);
-            }, ); 
+            }, );
         } else {
             // First slide initialization
             nextSlide.classList.add('active');
@@ -1062,7 +1062,7 @@
             slide.style.transition = 'opacity 0.6s ease-in-out';
             slide.style.opacity = index === 0 ? '1' : '0';
         });
-        
+
         // Show first slide
         if (slides.length > 0) {
             slides[0].classList.add('active');

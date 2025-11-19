@@ -346,7 +346,7 @@
                         Be the first to know when cell group locations are announced. 
                         Contact us to express your interest and preferred area.
                     </p>
-                    <a href="mailto:thikaroadagc@gmail.com" class="inline-block bg-white text-church-red px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                    <a href="mailto:discipleship@thikaroadconnect.org		" class="inline-block bg-white text-church-red px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
                         <i class="fas fa-envelope mr-2"></i>
                         Express Interest
                     </a>
@@ -580,8 +580,8 @@
                     <i class="fas fa-envelope text-3xl text-church-red mb-4"></i>
                     <h3 class="text-xl font-bold mb-2">Email Us</h3>
                     <p class="text-gray-300 mb-4">Send us your questions or concerns</p>
-                    <a href="mailto:thikaroadagc@gmail.com" class="text-church-red hover:text-red-300 font-semibold">
-                        thikaroadagc@gmail.com
+                    <a href="mailto:discipleship@thikaroadconnect.org" class="text-church-red hover:text-red-300 font-semibold">
+                        discipleship@thikaroadconnect.org	
                     </a>
                 </div>
             </div>

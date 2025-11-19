@@ -114,9 +114,9 @@
     <!-- Animated Background -->
     <div class="absolute inset-0">
         <div class="absolute inset-0 pattern-overlay"></div>
-        <img src=""
+        <!-- <img src=""
             alt="Church worship"
-            class="w-full h-full object-cover opacity-20 mix-blend-overlay" />
+            class="w-full h-full object-cover opacity-20 mix-blend-overlay" /> -->
     </div>
 
     <!-- Floating Elements -->
@@ -145,15 +145,15 @@
                 <!-- Welcome Badge -->
                 <div class="inline-flex items-center glass-card rounded-full px-6 py-3 mb-8">
                     <div class="w-3 h-3 bg-green-400 rounded-full mr-3 animate-pulse"></div>
-                    <span class="text-white font-medium">Welcome to Our Church Family</span>
+                    <span class="text-white font-medium">Find Your Purpose In Faith</span>
                 </div>
 
                 <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                    Find Your
+                    Welcome To 
                     <span class="gradient-text block bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
-                        Purpose
+                        Thika Road Connect
                     </span>
-                    in Faith
+                    AGC
                 </h1>
 
                 <p class="text-xl text-white/90 mb-10 max-w-xl leading-relaxed">
@@ -272,7 +272,7 @@
                     <!-- Foundation Header -->
                     <div class="inline-flex items-center bg-white/10  rounded-full px-6 py-2 mb-6 border border-white/20">
                         <i class="fas fa-star text-white mr-2 text-sm"></i>
-                        <span class="text-white font-semibold text-sm">Our Foundation</span>
+                        <span class="text-white font-semibold text-sm">Africa Gospel Church Foundation</span>
                     </div>
 
                     <!-- Compact Mission & Vision -->

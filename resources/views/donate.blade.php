@@ -616,7 +616,7 @@
                         <a href="#mpesa-section" class="glass-effect hover:bg-white hover:text-church-purple font-semibold py-4 px-8 rounded-full transition-all duration-300">
                             <i class="fas fa-donate mr-2"></i>Give to Missions Now
                         </a>
-                        <a href="mailto:thikaroadagc@gmail.com" class="bg-church-red hover:bg-red-700 text-white font-semibold py-4 px-8 rounded-full transition-all duration-300 shadow-xl">
+                        <a href="mailto:finance@thikaroadconnect.org" class="bg-church-red hover:bg-red-700 text-white font-semibold py-4 px-8 rounded-full transition-all duration-300 shadow-xl">
                             <i class="fas fa-envelope mr-2"></i>Contact Mission Office
                         </a>
                     </div>
@@ -743,8 +743,8 @@
                                 Need a receipt or have questions about your donation?
                             </p>
                             <div class="flex flex-col sm:flex-row gap-4">
-                                <a href="mailto:thikaroadagc@gmail.com" class="text-church-purple hover:text-church-purple-light font-medium transition-colors">
-                                    <i class="fas fa-envelope mr-1"></i>thikaroadagc@gmail.com
+                                <a href="mailto:finance@thikaroadconnect.org	" class="text-church-purple hover:text-church-purple-light font-medium transition-colors">
+                                    <i class="fas fa-envelope mr-1"></i>finance@thikaroadconnect.org	
                                 </a>
                                 <a href="tel:+254123456789" class="text-church-purple hover:text-church-purple-light font-medium transition-colors">
                                     <i class="fas fa-phone mr-1"></i>+254 710 668 173
@@ -970,7 +970,7 @@
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-2">Have Questions?</h3>
                     <p class="text-gray-600 mb-4">Our finance team is here to help with any giving inquiries</p>
-                    <a href="mailto:thikaroadagc@gmail.com" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 inline-block">
+                    <a href="mailto:finance@thikaroadconnect.org	" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 inline-block">
                         Contact Us
                     </a>
                 </div>
