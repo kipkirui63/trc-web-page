@@ -666,7 +666,7 @@
 
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
                 <div class="group relative overflow-hidden rounded-2xl shadow-lg">
-                    <img src="https://i.pinimg.com/736x/8d/a3/42/8da3420c87c6b35c0b9dd8b5dc5c7c37.jpg" alt="Children in Sunday School" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+                    <img src="{{ asset('images/vbs1.webp') }}" alt="Children in Sunday School" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
                         <div class="absolute bottom-4 left-4 text-white">
                             <div class="font-semibold">Sunday School</div>
@@ -675,7 +675,7 @@
                 </div>
 
                 <div class="group relative overflow-hidden rounded-2xl shadow-lg">
-                    <img src="https://i.pinimg.com/736x/f5/8e/9d/f58e9d6c8b5f4a1e2d3c7b9e8f6a5d4c.jpg" alt="VBS Activities" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+                    <img src="{{ asset('images/vbs2.webp') }}" alt="VBS Activities" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
                         <div class="absolute bottom-4 left-4 text-white">
                             <div class="font-semibold">VBS Fun</div>
@@ -684,25 +684,25 @@
                 </div>
 
                 <div class="group relative overflow-hidden rounded-2xl shadow-lg">
-                    <img src="https://i.pinimg.com/736x/3c/7d/1a/3c7d1a8f9e2b5c4d6a7e8f9c1b2a3d4e.jpg" alt="Craft Time" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+                    <img src="{{ asset('images/vbs3.webp') }}" alt="Craft Time" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
                         <div class="absolute bottom-4 left-4 text-white">
-                            <div class="font-semibold">Craft Time</div>
+                            <div class="font-semibold">Friendships Time</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-2xl shadow-lg">
-                    <img src="https://i.pinimg.com/736x/9a/4b/7c/9a4b7c3e5f8d2a6b9c1e4f7a8b3c5d6e.jpg" alt="Worship Time" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+                    <img src="{{ asset('images/vbs4.webp') }}" alt="Worship Time" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
                         <div class="absolute bottom-4 left-4 text-white">
-                            <div class="font-semibold">Worship</div>
+                            <div class="font-semibold">Dance</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-2xl shadow-lg md:col-span-2">
-                    <img src="https://i.pinimg.com/736x/6e/2f/8a/6e2f8a1b4c9d7e3f5a8b2c6d9e1f4a7b.jpg" alt="Group Photo" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+                    <img src="{{ asset('images/vbs5.webp') }}" alt="Group Photo" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
                         <div class="absolute bottom-4 left-4 text-white">
                             <div class="font-semibold">Our Amazing Kids</div>
@@ -711,16 +711,16 @@
                 </div>
 
                 <div class="group relative overflow-hidden rounded-2xl shadow-lg">
-                    <img src="https://i.pinimg.com/736x/2b/5c/8e/2b5c8e4a7d1f9c3b6e2a5f8c1d4b7e9a.jpg" alt="Bible Study" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+                    <img src="{{ asset('images/vbs6.webp') }}" alt="Bible Study" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
                         <div class="absolute bottom-4 left-4 text-white">
-                            <div class="font-semibold">Bible Time</div>
+                            <div class="font-semibold">Victory Has a Sound</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-2xl shadow-lg">
-                    <img src="https://i.pinimg.com/736x/7f/3a/6d/7f3a6d9c2e5b8f1a4c7e9b2d5a8f3c6e.jpg" alt="Game Time" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+                    <img src="{{ asset('images/vbs7.webp') }}" alt="Game Time" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
                         <div class="absolute bottom-4 left-4 text-white">
                             <div class="font-semibold">Play Time</div>
