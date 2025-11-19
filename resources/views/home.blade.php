@@ -561,7 +561,7 @@
     
     <div class="order-1 lg:order-2">
         <div class="relative group">
-            <img src="{{ asset('images/history.jpg') }}" alt="Church history" class="w-full h-96 object-cover rounded-3xl shadow-2xl transform group-hover:scale-105 transition-all duration-500" />
+            <img src="{{ asset('images/history.webp') }}" alt="Church history" class="w-full h-96 object-cover rounded-3xl shadow-2xl transform group-hover:scale-105 transition-all duration-500" />
             <div class="absolute -bottom-8 -right-8 w-28 h-28 bg-gradient-to-r from-church-red to-orange-500 rounded-full flex items-center justify-center text-white text-4xl shadow-2xl animate-pulse">
                 <i class="fas fa-church"></i>
             </div>

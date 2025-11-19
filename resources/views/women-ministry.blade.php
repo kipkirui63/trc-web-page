@@ -659,15 +659,13 @@
         <div class="slide active" style="background-image: linear-gradient(45deg, rgba(245, 245, 247, 0.3), rgba(236, 72, 153, 0.3)), url('data:image/svg+xml,%3Csvg viewBox=\'0 0 400 300\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23ec4899\'/%3E%3Ctext x=\'200\' y=\'150\' text-anchor=\'middle\' dominant-baseline=\'middle\' fill=\'white\' font-family=\'Arial\' font-size=\'20\'%3E%3C/text%3E%3C/svg%3E');">
             <div class="slide-overlay">
                 <div class="slide-content">
-                    <img src="{{ asset('images/ladies1.jpg') }}" alt="Ladies 1" class="w-full h-80 lg:h-full object-cover" />
-                </div>
             </div>
         </div>
 
         <div class="slide" style="background-image: linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(236, 72, 153, 0.3)), url('data:image/svg+xml,%3Csvg viewBox=\'0 0 400 300\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%238b5cf6\'/%3E%3Ctext x=\'200\' y=\'150\' text-anchor=\'middle\' dominant-baseline=\'middle\' fill=\'white\' font-family=\'Arial\' font-size=\'18\'%3E %3C/text%3E%3C/svg%3E');">
             <div class="slide-overlay">
                 <div class="slide-content">
-                    <img src="{{ asset('images/ladies2.jpg') }}" alt="Ladies 1" class="w-full h-80 lg:h-full object-cover" />
+                    <img src="{{ asset('images/ladies2.webp') }}" alt="Ladies 1" class="w-full h-80 lg:h-full object-cover" />
                 </div>
             </div>
         </div>
@@ -675,7 +673,7 @@
         <div class="slide" style="background-image: linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(236, 72, 153, 0.3)), url('data:image/svg+xml,%3Csvg viewBox=\'0 0 400 300\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23f97316\'/%3E%3Ctext x=\'200\' y=\'150\' text-anchor=\'middle\' dominant-baseline=\'middle\' fill=\'white\' font-family=\'Arial\' font-size=\'20\'%3E%3C/text%3E%3C/svg%3E');">
             <div class="slide-overlay">
                 <div class="slide-content">
-                    <img src="{{ asset('images/ladies1.jpg') }}" alt="Ladies 1" class="w-full h-80 lg:h-full object-cover" />
+                    <img src="{{ asset('images/ladies1.webp') }}" alt="Ladies 1" class="w-full h-80 lg:h-full object-cover" />
                 </div>
             </div>
         </div>
@@ -683,7 +681,7 @@
         <div class="slide" style="background-image: linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(236, 72, 153, 0.3)), url('data:image/svg+xml,%3Csvg viewBox=\'0 0 400 300\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23f59e0b\'/%3E%3Ctext x=\'200\' y=\'150\' text-anchor=\'middle\' dominant-baseline=\'middle\' fill=\'white\' font-family=\'Arial\' font-size=\'18\'%3E%3C/text%3E%3C/svg%3E');">
             <div class="slide-overlay">
                 <div class="slide-content">
-                    <img src="{{ asset('images/ladies1.jpg') }}" alt="Ladies 1" class="w-full h-80 lg:h-full object-cover" />
+                    <img src="{{ asset('images/ladies1.webp') }}" alt="Ladies 1" class="w-full h-80 lg:h-full object-cover" />
                 </div>
             </div>
         </div>
@@ -691,7 +689,7 @@
         <div class="slide" style="background-image: linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(236, 72, 153, 0.3)), url('data:image/svg+xml,%3Csvg viewBox=\'0 0 400 300\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%236366f1\'/%3E%3Ctext x=\'200\' y=\'150\' text-anchor=\'middle\' dominant-baseline=\'middle\' fill=\'white\' font-family=\'Arial\' font-size=\'20\'%3E%3C/text%3E%3C/svg%3E');">
             <div class="slide-overlay">
                 <div class="slide-content">
-                    <img src="{{ asset('images/ladies1.jpg') }}" alt="Ladies 1" class="w-full h-80 lg:h-full object-cover" />
+                    <img src="{{ asset('images/ladies1.webp') }}" alt="Ladies 1" class="w-full h-80 lg:h-full object-cover" />
                 </div>
             </div>
         </div>

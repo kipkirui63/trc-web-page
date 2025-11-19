@@ -167,7 +167,7 @@
                         <div class="relative group">
                             <div class="absolute -inset-4 bg-gradient-to-r from-church-red to-church-purple rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
                             <div class="relative">
-                                <img src="{{ asset('images/Youth-hike.jpg') }}" alt="Youth group gathering" class="w-full h-auto rounded-lg shadow-2xl transform group-hover:rotate-1 transition duration-300" />
+                                <img src="{{ asset('images/Youth-hike.webp') }}" alt="Youth group gathering" class="w-full h-auto rounded-lg shadow-2xl transform group-hover:rotate-1 transition duration-300" />
                                 <div class="absolute -bottom-6 -right-6 bg-church-red text-white p-4 rounded-lg shadow-lg">
                                     <div class="text-2xl font-bold">All Ages</div>
                                     <div class="text-sm">Welcome!</div>

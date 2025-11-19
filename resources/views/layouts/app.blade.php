@@ -386,10 +386,7 @@
                         <a href="#" class="text-white hover:text-church-red transition">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="text-white hover:text-church-red transition">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                        <a href="#" class="text-white hover:text-church-red transition">
+                        <a href="https://www.instagram.com/trc_agc/" class="text-white hover:text-church-red transition">
                             <i class="fab fa-instagram"></i>
                         </a>
                         <a href="#" class="text-white hover:text-church-red transition">

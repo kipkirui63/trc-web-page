@@ -494,7 +494,7 @@
                 <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
                     <div class="lg:flex">
                         <div class="lg:w-1/3 relative">
-                            <img src="{{ asset('images/rev.jpg') }}" alt="Rev. Ernest Korir" class="w-full h-80 lg:h-full object-cover" />
+                            <img src="{{ asset('images/rev.webp') }}" alt="Rev. Ernest Korir" class="w-full h-80 lg:h-full object-cover" />
                             <div class="absolute inset-0 bg-gradient-to-t from-church-purple/20 to-transparent"></div>
                         </div>
                         <div class="lg:w-2/3 p-8 lg:p-12">
@@ -533,7 +533,7 @@
                 <!-- Rev. Ann Korir -->
                 <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                     <div class="relative">
-                        <img src="{{ asset('images/rev-ann.jpg') }}" alt="Rev. Ann Korir" class="w-full h-80 object-cover" />
+                        <img src="{{ asset('images/rev-ann.webp') }}" alt="Rev. Ann Korir" class="w-full h-80 object-cover" />
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                         <div class="absolute bottom-4 left-4">
                             <span class="inline-block bg-church-purple text-white px-3 py-1 rounded-full text-sm font-semibold">Pastor</span>
@@ -561,7 +561,7 @@
                 <!-- Pastor Vince -->
                 <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                     <div class="relative">
-                        <img src="{{ asset('images/pst-vince.jpg') }}" alt="Pastor Vince" class="w-full h-80 object-cover" />
+                        <img src="{{ asset('images/pst-vince.webp') }}" alt="Pastor Vince" class="w-full h-80 object-cover" />
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                         <div class="absolute bottom-4 left-4">
                             <span class="inline-block bg-church-red text-white px-3 py-1 rounded-full text-sm font-semibold">Pastor</span>
