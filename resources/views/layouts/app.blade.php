@@ -321,11 +321,11 @@
     <!-- Header/Navigation -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4">
-            <div class="h-16 flex justify-between items-center">
+            <div class="h-22 flex justify-between items-center">
                 <!-- Logo -->
                 <div class="flex items-center">
                     <a href="/" class="flex items-center">
-                        <img src="{{ asset('images/trcLogo.png') }}" alt="TRC Logo" class="mt-11 h-50 w-auto object-contain">
+                        <img src="{{ asset('images/trcLogo.png') }}" alt="TRC Logo" class="h-24 w-auto object-contain">
                     </a>
                 </div>
                 <!-- Desktop Navigation -->
