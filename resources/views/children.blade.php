@@ -8,28 +8,13 @@
 <div class="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
     <!-- Hero Section with Animated Elements -->
     <section class="relative overflow-hidden pt-20 pb-16 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 min-h-screen flex items-center">
-        <!-- Enhanced Floating Animation Elements -->
+        <!-- Simplified Floating Animation Elements -->
         <div class="absolute inset-0 pointer-events-none">
-            <!-- Stars -->
-            <div class="absolute top-20 left-10 w-8 h-8 sparkle" style="animation-delay: 0.5s;">⭐</div>
-            <div class="absolute top-32 right-20 w-8 h-8 sparkle" style="animation-delay: 1.2s;">✨</div>
-            <div class="absolute bottom-40 left-1/4 w-8 h-8 sparkle" style="animation-delay: 2.1s;">🌟</div>
-            <div class="absolute top-60 right-1/3 w-8 h-8 sparkle" style="animation-delay: 0.8s;">💫</div>
-            <div class="absolute bottom-20 right-16 w-8 h-8 sparkle" style="animation-delay: 1.8s;">⭐</div>
-
-            <!-- Floating shapes -->
+            <!-- Just a few floating shapes -->
             <div class="absolute top-24 left-20 w-16 h-16 bg-gradient-to-br from-yellow-300 to-orange-400 rounded-full opacity-80 float-animation shadow-lg" style="animation-delay: 0.5s;"></div>
             <div class="absolute top-40 right-32 w-12 h-12 bg-gradient-to-br from-pink-400 to-purple-500 opacity-70 bounce-slow shadow-lg" style="animation-delay: 1s; clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"></div>
             <div class="absolute bottom-32 left-1/3 w-20 h-20 bg-gradient-to-br from-green-400 to-teal-500 rounded-full opacity-75 wiggle shadow-lg" style="animation-delay: 1.5s;"></div>
             <div class="absolute top-72 right-1/4 w-14 h-14 bg-gradient-to-br from-blue-400 to-indigo-500 opacity-80 float-animation shadow-lg" style="animation-delay: 2s; border-radius: 50% 50% 0 50%;"></div>
-            <div class="absolute bottom-60 right-12 w-18 h-18 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full opacity-70 bounce-slow shadow-lg" style="animation-delay: 0.8s;"></div>
-
-            <!-- Hearts and fun elements -->
-            <div class="absolute top-16 right-1/2 text-4xl float-animation" style="animation-delay: 1.3s;">💖</div>
-            <div class="absolute bottom-24 left-12 text-3xl wiggle" style="animation-delay: 2.5s;">🎨</div>
-            <div class="absolute top-48 left-1/2 text-4xl bounce-slow" style="animation-delay: 0.3s;">🎈</div>
-            <div class="absolute bottom-48 right-20 text-3xl float-animation" style="animation-delay: 1.7s;">🌈</div>
-            <div class="absolute top-80 left-16 text-3xl sparkle" style="animation-delay: 2.2s;">🦋</div>
         </div>
 
         <div class="container mx-auto px-4 relative z-10">
@@ -51,46 +36,27 @@
                             <span class="rainbow-text block mb-2">Little Hearts</span>
                             <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 block mb-2">Big Faith</span>
                             <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-blue-500 to-purple-600 block">Endless Joy!</span>
-
-                            <!-- Decorative elements around title -->
-                            <div class="absolute -top-4 -left-4 text-4xl sparkle">🎪</div>
-                            <div class="absolute top-8 -right-8 text-3xl float-animation">🎭</div>
-                            <div class="absolute bottom-4 left-1/2 text-3xl bounce-slow">🎨</div>
                         </div>
                     </h1>
 
                     <!-- Description -->
                     <div class="relative mb-10">
                         <p class="text-2xl text-gray-700 leading-relaxed font-medium bg-white/60 p-6 rounded-3xl shadow-lg border-4 border-dashed border-purple-300">
-                            <span class="text-3xl mr-2"></span>
                             Where every child discovers they are <span class="font-bold text-purple-600">God's masterpiece</span>!
                             Join our magical world of faith, friendship, and fantastic adventures!
-                            <span class="text-3xl ml-2"></span>
                         </p>
                     </div>
 
                     <!-- Call to Action Buttons -->
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="#programs" class="group relative overflow-hidden bg-gradient-to-r from-purple-500 via-pink-500 to-purple-600 hover:from-pink-500 hover:via-purple-500 hover:to-pink-600 text-white font-bold py-3 px-6 rounded-full shadow-2xl transform hover:scale-105 transition duration-500 text-base">
+                        <a href="#dedication" class="group relative overflow-hidden bg-gradient-to-r from-purple-500 via-pink-500 to-purple-600 hover:from-pink-500 hover:via-purple-500 hover:to-pink-600 text-white font-bold py-3 px-6 rounded-full shadow-2xl transform hover:scale-105 transition duration-500 text-base">
                             <span class="relative z-10 flex items-center gap-2">
-                                <span class="text-lg group-hover:animate-spin">🎨</span>
-                                Explore Our World
-                                <span class="text-lg group-hover:animate-bounce">✨</span>
+                                Children's Dedication
                             </span>
                             <div class="absolute inset-0 bg-gradient-to-r from-yellow-400 to-pink-400 opacity-0 group-hover:opacity-100 transition duration-500"></div>
                         </a>
 
-                        <a href="#dedication" class="group relative overflow-hidden bg-gradient-to-r from-green-500 via-teal-500 to-blue-500 hover:from-blue-500 hover:via-teal-500 hover:to-green-500 text-white font-bold py-3 px-6 rounded-full shadow-2xl transform hover:scale-105 transition duration-500 text-base">
-                            <span class="relative z-10 flex items-center gap-2">
-                                <span class="text-lg group-hover:animate-pulse">🎪</span>
-                                Children's Dedication
-                                <span class="text-lg group-hover:animate-bounce">🎈</span>
-                            </span>
-                            <div class="absolute inset-0 bg-gradient-to-r from-orange-400 to-red-400 opacity-0 group-hover:opacity-100 transition duration-500"></div>
-                        </a>
                     </div>
-
-
                 </div>
 
                 <!-- Image Side -->
@@ -104,19 +70,7 @@
                             <img src="{{ asset('images/vbs8.webp') }}" alt="Happy children"
                                 class="w-full h-auto rounded-2xl shadow-xl" />
 
-                            <!-- Floating decorative elements around image -->
-                            <div class="absolute -top-6 -left-6 bg-gradient-to-br from-yellow-400 to-orange-500 text-white p-4 rounded-full shadow-xl bounce-slow">
-                                <span class="text-3xl">🌟</span>
-                            </div>
-                            <div class="absolute -top-4 -right-4 bg-gradient-to-br from-pink-400 to-purple-500 text-white p-4 rounded-full shadow-xl wiggle">
-                                <span class="text-3xl">💖</span>
-                            </div>
-                            <div class="absolute -bottom-6 -left-4 bg-gradient-to-br from-green-400 to-teal-500 text-white p-4 rounded-full shadow-xl float-animation">
-                                <span class="text-3xl">🎈</span>
-                            </div>
-                            <div class="absolute -bottom-4 -right-6 bg-gradient-to-br from-blue-400 to-indigo-500 text-white p-4 rounded-full shadow-xl sparkle">
-                                <span class="text-3xl">✨</span>
-                            </div>
+
 
                             <!-- Speech bubble -->
                             <div class="absolute top-4 right-4 bg-white p-3 rounded-2xl shadow-lg border-2 border-purple-200 max-w-32">
@@ -152,28 +106,24 @@
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                 <div class="group">
                     <div class="bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-3xl shadow-lg group-hover:shadow-xl transition duration-300">
-                        <div class="text-4xl mb-4">👥</div>
                         <div class="text-3xl font-bold text-church-purple mb-2">50+</div>
                         <div class="text-gray-600 font-medium">Happy Children</div>
                     </div>
                 </div>
                 <div class="group">
                     <div class="bg-gradient-to-br from-green-100 to-green-200 p-6 rounded-3xl shadow-lg group-hover:shadow-xl transition duration-300">
-                        <div class="text-4xl mb-4">📖</div>
                         <div class="text-3xl font-bold text-church-purple mb-2">52</div>
                         <div class="text-gray-600 font-medium">Weekly Lessons</div>
                     </div>
                 </div>
                 <div class="group">
                     <div class="bg-gradient-to-br from-pink-100 to-pink-200 p-6 rounded-3xl shadow-lg group-hover:shadow-xl transition duration-300">
-                        <div class="text-4xl mb-4">🎉</div>
                         <div class="text-3xl font-bold text-church-purple mb-2">5+</div>
                         <div class="text-gray-600 font-medium">Years of VBS</div>
                     </div>
                 </div>
                 <div class="group">
                     <div class="bg-gradient-to-br from-purple-100 to-purple-200 p-6 rounded-3xl shadow-lg group-hover:shadow-xl transition duration-300">
-                        <div class="text-4xl mb-4">❤️</div>
                         <div class="text-3xl font-bold text-church-purple mb-2">100%</div>
                         <div class="text-gray-600 font-medium">Love & Care</div>
                     </div>
@@ -182,240 +132,75 @@
         </div>
     </section>
 
-    <!-- Programs Section -->
-    <section id="programs" class="py-20 bg-gradient-to-r from-purple-50 to-pink-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl lg:text-5xl font-bold mb-6">
-                    <span class="text-church-purple">Our Amazing</span>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600"> Programs</span>
-                </h2>
-                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
-                    Two incredible programs designed to nurture young hearts and minds in their faith journey
-                </p>
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-                <!-- Sunday School Program -->
-                <div class="group">
-                    <div class="bg-white rounded-3xl shadow-xl overflow-hidden transform group-hover:scale-105 transition duration-500">
-                        <div class="bg-gradient-to-br from-church-purple to-purple-600 p-8 text-white relative overflow-hidden">
-                            <div class="absolute top-0 right-0 w-32 h-32 bg-white opacity-10 rounded-full -mr-16 -mt-16"></div>
-                            <div class="absolute bottom-0 left-0 w-24 h-24 bg-white opacity-10 rounded-full -ml-12 -mb-12"></div>
-                            <div class="relative z-10">
-                                <div class="text-6xl mb-4">📚</div>
-                                <h3 class="text-3xl font-bold mb-4">Sunday School</h3>
-                                <p class="text-purple-100 text-lg">Every Sunday | 11:15 AM</p>
-                            </div>
-                        </div>
-                        <div class="p-8">
-                            <div class="space-y-4 mb-8">
-                                <div class="flex items-start space-x-3">
-                                    <div class="w-6 h-6 bg-church-purple rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                                        </svg>
-                                    </div>
-                                    <p class="text-gray-700">Interactive Bible stories and lessons</p>
-                                </div>
-                                <div class="flex items-start space-x-3">
-                                    <div class="w-6 h-6 bg-church-purple rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                                        </svg>
-                                    </div>
-                                    <p class="text-gray-700">Age-appropriate worship songs and prayers</p>
-                                </div>
-                                <div class="flex items-start space-x-3">
-                                    <div class="w-6 h-6 bg-church-purple rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                                        </svg>
-                                    </div>
-                                    <p class="text-gray-700">Fun crafts and creative activities</p>
-                                </div>
-                                <div class="flex items-start space-x-3">
-                                    <div class="w-6 h-6 bg-church-purple rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                                        </svg>
-                                    </div>
-                                    <p class="text-gray-700">Character building and moral lessons</p>
-                                </div>
-                                <div class="flex items-start space-x-3">
-                                    <div class="w-6 h-6 bg-church-purple rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                                        </svg>
-                                    </div>
-                                    <p class="text-gray-700">Safe environment with trained teachers</p>
-                                </div>
-                            </div>
-                            <div class="bg-purple-50 p-6 rounded-2xl">
-                                <h4 class="font-bold text-church-purple mb-2 text-lg">Age Groups:</h4>
-                                <div class="grid grid-cols-3 gap-2 text-sm">
-                                    <div class="bg-white p-3 rounded-lg text-center">
-                                        <div class="font-bold text-church-purple">3-5</div>
-                                        <div class="text-gray-600">Little Lambs</div>
-                                    </div>
-                                    <div class="bg-white p-3 rounded-lg text-center">
-                                        <div class="font-bold text-church-purple">6-9</div>
-                                        <div class="text-gray-600">Growing Stars</div>
-                                    </div>
-                                    <div class="bg-white p-3 rounded-lg text-center">
-                                        <div class="font-bold text-church-purple">10-12</div>
-                                        <div class="text-gray-600">Young Leaders</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- VBS Program -->
-                <div class="group">
-                    <div class="bg-white rounded-3xl shadow-xl overflow-hidden transform group-hover:scale-105 transition duration-500">
-                        <div class="bg-gradient-to-br from-church-red to-pink-500 p-8 text-white relative overflow-hidden">
-                            <div class="absolute top-0 right-0 w-32 h-32 bg-white opacity-10 rounded-full -mr-16 -mt-16"></div>
-                            <div class="absolute bottom-0 left-0 w-24 h-24 bg-white opacity-10 rounded-full -ml-12 -mb-12"></div>
-                            <div class="relative z-10">
-                                <div class="text-6xl mb-4">🎪</div>
-                                <h3 class="text-3xl font-bold mb-4">Vacation Bible School</h3>
-                                <p class="text-red-100 text-lg">December Holidays | 6 Amazing Days</p>
-                            </div>
-                        </div>
-                        <div class="p-8">
-                            <div class="space-y-4 mb-8">
-                                <div class="flex items-start space-x-3">
-                                    <div class="w-6 h-6 bg-church-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                                        </svg>
-                                    </div>
-                                    <p class="text-gray-700">Themed adventures and Bible exploration</p>
-                                </div>
-                                <div class="flex items-start space-x-3">
-                                    <div class="w-6 h-6 bg-church-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                                        </svg>
-                                    </div>
-                                    <p class="text-gray-700">Exciting games and outdoor activities</p>
-                                </div>
-                                <div class="flex items-start space-x-3">
-                                    <div class="w-6 h-6 bg-church-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                                        </svg>
-                                    </div>
-                                    <p class="text-gray-700">Arts, crafts, and creative workshops</p>
-                                </div>
-                                <div class="flex items-start space-x-3">
-                                    <div class="w-6 h-6 bg-church-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                                        </svg>
-                                    </div>
-                                    <p class="text-gray-700">Music, drama, and talent showcase</p>
-                                </div>
-                                <div class="flex items-start space-x-3">
-                                    <div class="w-6 h-6 bg-church-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                                        </svg>
-                                    </div>
-                                    <p class="text-gray-700">Special treats and memorable experiences</p>
-                                </div>
-                            </div>
-                            <div class="bg-red-50 p-6 rounded-2xl">
-                                <h4 class="font-bold text-church-red mb-3 text-lg">VBS 2025 Theme:</h4>
-                                <div class="bg-white p-4 rounded-lg text-center">
-                                    <div class="text-2xl font-bold text-church-red mb-2">Stay tuned for updates!</div>
-                                    <!-- <div class="text-gray-600">December 16-20, 2025</div>
-                                    <div class="text-sm text-gray-500 mt-2">Ages 3-12 Welcome</div> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- What Makes Us Special -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl lg:text-5xl font-bold mb-6">
-                    <span class="text-church-purple">What Makes</span>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600"> Our Ministry Special</span>
-                </h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="text-center group">
+            <div class="bg-gradient-to-br from-blue-100 to-blue-200 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition duration-300">
+                <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
             </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="text-center group">
-                    <div class="bg-gradient-to-br from-blue-100 to-blue-200 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition duration-300">
-                        <div class="text-3xl">🛡️</div>
-                    </div>
-                    <h3 class="text-xl font-bold text-church-purple mb-4">Safe Environment</h3>
-                    <p class="text-gray-600">Background-checked volunteers and secure facilities ensure your child's safety and peace of mind for parents.</p>
-                </div>
-
-                <div class="text-center group">
-                    <div class="bg-gradient-to-br from-green-100 to-green-200 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition duration-300">
-                        <div class="text-3xl">🎨</div>
-                    </div>
-                    <h3 class="text-xl font-bold text-church-purple mb-4">Creative Learning</h3>
-                    <p class="text-gray-600">Interactive lessons, hands-on activities, and creative expression make learning about God fun and memorable.</p>
-                </div>
-
-                <div class="text-center group">
-                    <div class="bg-gradient-to-br from-purple-100 to-purple-200 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition duration-300">
-                        <div class="text-3xl">👥</div>
-                    </div>
-                    <h3 class="text-xl font-bold text-church-purple mb-4">Strong Community</h3>
-                    <p class="text-gray-600">Children build lasting friendships and learn the importance of fellowship and caring for one another.</p>
-                </div>
-
-                <div class="text-center group">
-                    <div class="bg-gradient-to-br from-yellow-100 to-yellow-200 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition duration-300">
-                        <div class="text-3xl">📖</div>
-                    </div>
-                    <h3 class="text-xl font-bold text-church-purple mb-4">Bible-Centered</h3>
-                    <p class="text-gray-600">All activities and lessons are rooted in Scripture, helping children develop a strong foundation of faith.</p>
-                </div>
-
-                <div class="text-center group">
-                    <div class="bg-gradient-to-br from-pink-100 to-pink-200 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition duration-300">
-                        <div class="text-3xl">🌟</div>
-                    </div>
-                    <h3 class="text-xl font-bold text-church-purple mb-4">Character Building</h3>
-                    <p class="text-gray-600">We focus on developing Christian values, kindness, respect, and leadership qualities in every child.</p>
-                </div>
-
-                <div class="text-center group">
-                    <div class="bg-gradient-to-br from-red-100 to-red-200 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition duration-300">
-                        <div class="text-3xl">❤️</div>
-                    </div>
-                    <h3 class="text-xl font-bold text-church-purple mb-4">Loving Care</h3>
-                    <p class="text-gray-600">Every child receives individual attention and care from our dedicated team of volunteers and staff.</p>
-                </div>
-            </div>
+            <h3 class="text-xl font-bold text-church-purple mb-4">Safe Environment</h3>
+            <p class="text-gray-600">Background-checked volunteers and secure facilities for peace of mind.</p>
         </div>
-    </section>
+
+        <div class="text-center group">
+            <div class="bg-gradient-to-br from-green-100 to-green-200 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition duration-300">
+                <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                </svg>
+            </div>
+            <h3 class="text-xl font-bold text-church-purple mb-4">Creative Learning</h3>
+            <p class="text-gray-600">Interactive lessons and hands-on activities make learning fun.</p>
+        </div>
+
+        <div class="text-center group">
+            <div class="bg-gradient-to-br from-purple-100 to-purple-200 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition duration-300">
+                <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+            </div>
+            <h3 class="text-xl font-bold text-church-purple mb-4">Strong Community</h3>
+            <p class="text-gray-600">Building lasting friendships and learning to care for one another.</p>
+        </div>
+
+        <div class="text-center group">
+            <div class="bg-gradient-to-br from-yellow-100 to-yellow-200 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition duration-300">
+                <svg class="w-10 h-10 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+            </div>
+            <h3 class="text-xl font-bold text-church-purple mb-4">Bible-Centered</h3>
+            <p class="text-gray-600">Scripture-rooted activities building a strong foundation of faith.</p>
+        </div>
+
+        <div class="text-center group">
+            <div class="bg-gradient-to-br from-pink-100 to-pink-200 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition duration-300">
+                <svg class="w-10 h-10 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                </svg>
+            </div>
+            <h3 class="text-xl font-bold text-church-purple mb-4">Character Building</h3>
+            <p class="text-gray-600">Developing Christian values, kindness, and leadership qualities.</p>
+        </div>
+
+        <div class="text-center group">
+            <div class="bg-gradient-to-br from-red-100 to-red-200 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition duration-300">
+                <svg class="w-10 h-10 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+            </div>
+            <h3 class="text-xl font-bold text-church-purple mb-4">Loving Care</h3>
+            <p class="text-gray-600">Individual attention from our dedicated team of volunteers.</p>
+        </div>
+    </div>
 
 
     <!-- Child Dedication Section -->
     <section id="dedication" class="py-20 bg-gradient-to-br from-yellow-50 via-orange-50 to-pink-50 relative overflow-hidden">
-        <!-- Floating Animation Elements -->
+        <!-- Simplified Floating Animation Elements -->
         <div class="absolute inset-0 pointer-events-none">
-            <div class="absolute top-20 left-10 text-4xl sparkle" style="animation-delay: 0.5s;">🕊️</div>
-            <div class="absolute top-40 right-20 text-3xl float-animation" style="animation-delay: 1.2s;">💝</div>
-            <div class="absolute bottom-32 left-1/4 text-4xl bounce-slow" style="animation-delay: 2.1s;">🌟</div>
-            <div class="absolute top-60 right-1/3 text-3xl wiggle" style="animation-delay: 0.8s;">🙏</div>
-            <div class="absolute bottom-20 right-16 text-4xl sparkle" style="animation-delay: 1.8s;">👶</div>
-
-            <!-- Floating shapes -->
             <div class="absolute top-24 left-20 w-12 h-12 bg-gradient-to-br from-yellow-300 to-orange-400 rounded-full opacity-80 float-animation shadow-lg" style="animation-delay: 0.5s;"></div>
             <div class="absolute bottom-40 right-32 w-16 h-16 bg-gradient-to-br from-pink-400 to-purple-500 opacity-70 wiggle shadow-lg" style="animation-delay: 1.5s; clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"></div>
             <div class="absolute top-72 left-1/3 w-14 h-14 bg-gradient-to-br from-blue-400 to-teal-500 rounded-full opacity-75 bounce-slow shadow-lg" style="animation-delay: 2s;"></div>
@@ -426,9 +211,7 @@
             <div class="text-center mb-16">
                 <div class="inline-block bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 text-white px-8 py-3 rounded-full text-lg font-bold mb-8 shadow-2xl pulse-glow transform hover:scale-105 transition duration-300">
                     <span class="flex items-center gap-2">
-                        <span class="text-2xl wiggle">🕊️</span>
                         A Sacred Moment
-                        <span class="text-2xl wiggle">💝</span>
                     </span>
                 </div>
 
@@ -438,10 +221,8 @@
                 </h2>
 
                 <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed bg-white/60 p-6 rounded-3xl shadow-lg border-4 border-dashed border-orange-300">
-                    <span class="text-3xl mr-2">🙏</span>
                     A beautiful ceremony where parents publicly commit to raising their child in the knowledge and love of God,
                     surrounded by our church family's prayers and support.
-                    <span class="text-3xl ml-2">✨</span>
                 </p>
             </div>
 
@@ -514,23 +295,7 @@
                                     </div>
                                 </div>
 
-                                <!-- Ceremony Preferences -->
-                                <div class="bg-gradient-to-r from-blue-50 to-teal-50 p-6 rounded-2xl border-2 border-blue-200">
-                                    <h4 class="text-xl font-bold text-blue-600 mb-4 flex items-center gap-2">
-                                        <span class="text-2xl">📅</span>
-                                        Ceremony Preferences
-                                    </h4>
-
-                                    <div>
-                                        <label class="block text-gray-700 font-semibold mb-2" for="preferredDate">Preferred Sunday Date</label>
-                                        <input type="date" id="preferredDate" name="preferred_date" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none transition duration-300">
-                                    </div>
-
-                                    <div class="mt-4">
-                                        <label class="block text-gray-700 font-semibold mb-2" for="specialRequests">Special Requests or Notes</label>
-                                        <textarea id="specialRequests" name="special_requests" rows="3" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none transition duration-300" placeholder="Any special requests, family members to mention, or additional information..."></textarea>
-                                    </div>
-                                </div>
+                            
 
                                 <!-- Commitment Statement -->
                                 <div class="bg-gradient-to-r from-green-50 to-teal-50 p-6 rounded-2xl border-2 border-green-200">
@@ -551,23 +316,17 @@
                                             <input type="checkbox" id="commitment2" name="commitment2" class="w-5 h-5 text-green-600 border-2 border-gray-300 rounded focus:ring-green-500 mt-1" required>
                                             <label for="commitment2" class="text-gray-700">
                                                 We will actively participate in church life and model Christian values at home. *
+                                                We will actively participate in church life and model Christian values at home. *
                                             </label>
                                         </div>
 
-                                        <div class="flex items-start space-x-3">
-                                            <input type="checkbox" id="commitment3" name="commitment3" class="w-5 h-5 text-green-600 border-2 border-gray-300 rounded focus:ring-green-500 mt-1" required>
-                                            <label for="commitment3" class="text-gray-700">
-                                                We welcome the prayers and support of our church family in this journey. *
-                                            </label>
-                                        </div>
+                                       
                                     </div>
                                 </div>
 
                                 <button type="submit" class="w-full bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500 hover:from-purple-500 hover:via-pink-500 hover:to-orange-500 text-white font-bold py-4 px-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300 text-lg">
                                     <span class="flex items-center justify-center gap-2">
-                                        <span class="text-2xl">🕊️</span>
                                         Register for Child Dedication
-                                        <span class="text-2xl">💝</span>
                                     </span>
                                 </button>
                             </form>
@@ -637,7 +396,7 @@
 
                                     <div class="bg-white/20 p-4 rounded-2xl backdrop-blur-sm mt-8">
                                         <h4 class="font-bold mb-2">📞 Questions?</h4>
-                                        <a href="mailto:children@thikaroadconnect.org" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 inline-block">
+                                        <a href="mailto:children@thikaroadconnectagc.org" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 inline-block">
                                             Contact Us
                                         </a>
                                     </div>
@@ -687,7 +446,7 @@
                     <img src="{{ asset('images/vbs3.webp') }}" alt="Craft Time" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
                         <div class="absolute bottom-4 left-4 text-white">
-                            <div class="font-semibold">Chill Time</div>
+                            <div class="font-semibold">Bonding Time</div>
                         </div>
                     </div>
                 </div>
@@ -777,7 +536,7 @@
                 setTimeout(() => {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
-                }, index * 100); // Stagger by 100ms
+                }, index * 100);
             }
         });
     }, observerOptions1);

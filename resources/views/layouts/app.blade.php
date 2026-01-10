@@ -281,6 +281,33 @@
             animation: float 6s ease-in-out infinite;
         }
 
+        .top-line {
+            top: 6px;
+        }
+
+        .middle-line {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .bottom-line {
+            bottom: 6px;
+        }
+
+        .menu-open .top-line {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        .menu-open .middle-line {
+            opacity: 0;
+        }
+
+        .menu-open .bottom-line {
+            bottom: 50%;
+            transform: translateY(50%) rotate(-45deg);
+        }
+
         @keyframes float {
 
             0%,
@@ -348,10 +375,13 @@
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-toggle" class="text-gray-600 hover:text-church-purple focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
+                    <button id="mobile-menu-toggle" class="relative w-10 h-10 flex items-center justify-center text-gray-600 hover:text-church-purple focus:outline-none focus:ring-2 focus:ring-church-purple focus:ring-opacity-50 rounded-lg transition-all duration-300">
+                        <span class="sr-only">Open main menu</span>
+                        <div class="relative w-6 h-6 flex flex-col justify-center items-center">
+                            <span class="absolute h-0.5 w-full bg-current transform transition-all duration-300 ease-in-out top-line"></span>
+                            <span class="absolute h-0.5 w-full bg-current transform transition-all duration-300 ease-in-out middle-line"></span>
+                            <span class="absolute h-0.5 w-full bg-current transform transition-all duration-300 ease-in-out bottom-line"></span>
+                        </div>
                     </button>
                 </div>
             </div>
@@ -435,7 +465,7 @@
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope mr-2"></i>
-                            <span>trcagc@thikaroadconnect.org</span>
+                            <span>info@thikaroadconnectagc.org</span>
                         </li>
                     </ul>
                 </div>
@@ -454,13 +484,14 @@
 
     <!-- Scripts -->
     <script>
-        // Mobile menu toggle
+        // Mobile menu toggle with animation
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
             const mobileMenu = document.getElementById('mobile-menu');
 
             mobileMenuToggle.addEventListener('click', function() {
                 mobileMenu.classList.toggle('hidden');
+                mobileMenuToggle.classList.toggle('menu-open');
             });
         });
 

@@ -346,7 +346,7 @@
                         Be the first to know when cell group locations are announced. 
                         Contact us to express your interest and preferred area.
                     </p>
-                    <a href="mailto:discipleship@thikaroadconnect.org		" class="inline-block bg-white text-church-red px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                    <a href="mailto:discipleship@thikaroadconnect.org" class="inline-block bg-white text-church-red px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
                         <i class="fas fa-envelope mr-2"></i>
                         Express Interest
                     </a>
@@ -437,80 +437,6 @@
                     </div>
 
                     <div>
-                        <label for="address" class="block text-sm font-semibold text-gray-700 mb-2">
-                            Address *
-                        </label>
-                        <textarea id="address" name="address" rows="3" required
-                                  class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition"
-                                  placeholder="Please provide your full address"></textarea>
-                    </div>
-
-                    <div>
-                        <label for="salvation_experience" class="block text-sm font-semibold text-gray-700 mb-2">
-                            Please share your salvation experience *
-                        </label>
-                        <textarea id="salvation_experience" name="salvation_experience" rows="4" required
-                                  class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition"
-                                  placeholder="Tell us about when and how you accepted Jesus Christ as your Lord and Savior"></textarea>
-                    </div>
-
-                    <div>
-                        <label for="baptism_reason" class="block text-sm font-semibold text-gray-700 mb-2">
-                            Why do you want to be baptized? *
-                        </label>
-                        <textarea id="baptism_reason" name="baptism_reason" rows="4" required
-                                  class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition"
-                                  placeholder="Explain your motivation for water baptism"></textarea>
-                    </div>
-
-                    <div>
-                        <label for="church_attendance" class="block text-sm font-semibold text-gray-700 mb-2">
-                            How long have you been attending TRC AGC Church? *
-                        </label>
-                        <select id="church_attendance" name="church_attendance" required
-                                class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition">
-                            <option value="">Select Duration</option>
-                            <option value="less_than_3_months">Less than 3 months</option>
-                            <option value="3_to_6_months">3 to 6 months</option>
-                            <option value="6_months_to_1_year">6 months to 1 year</option>
-                            <option value="more_than_1_year">More than 1 year</option>
-                            <option value="first_time">This is my first time</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label for="previous_baptism" class="block text-sm font-semibold text-gray-700 mb-2">
-                            Have you been baptized before? *
-                        </label>
-                        <div class="space-y-2">
-                            <label class="flex items-center">
-                                <input type="radio" name="previous_baptism" value="no" required class="text-church-purple mr-3">
-                                <span>No, this will be my first baptism</span>
-                            </label>
-                            <label class="flex items-center">
-                                <input type="radio" name="previous_baptism" value="yes" required class="text-church-purple mr-3">
-                                <span>Yes, I have been baptized before</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div id="previous_baptism_details" class="hidden">
-                        <label for="baptism_details" class="block text-sm font-semibold text-gray-700 mb-2">
-                            Please provide details about your previous baptism
-                        </label>
-                        <textarea id="baptism_details" name="baptism_details" rows="3"
-                                  class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition"
-                                  placeholder="When and where were you baptized? Why are you seeking baptism again?"></textarea>
-                    </div>
-
-                    <div>
-                        <label for="emergency_contact" class="block text-sm font-semibold text-gray-700 mb-2">
-                            Emergency Contact Name & Phone *
-                        </label>
-                        <input type="text" id="emergency_contact" name="emergency_contact" required
-                               class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition"
-                               placeholder="Name and phone number of emergency contact">
-                    </div>
 
                     <div class="bg-gray-50 p-6 rounded-xl">
                         <h4 class="text-lg font-bold text-gray-800 mb-3">
@@ -580,8 +506,8 @@
                     <i class="fas fa-envelope text-3xl text-church-red mb-4"></i>
                     <h3 class="text-xl font-bold mb-2">Email Us</h3>
                     <p class="text-gray-300 mb-4">Send us your questions or concerns</p>
-                    <a href="mailto:discipleship@thikaroadconnect.org" class="text-church-red hover:text-red-300 font-semibold">
-                        discipleship@thikaroadconnect.org	
+                    <a href="mailto:discipleship@thikaroadconnectagc.org" class="text-church-red hover:text-red-300 font-semibold">
+                        discipleship@thikaroadconnectagc.org	
                     </a>
                 </div>
             </div>

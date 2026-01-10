@@ -354,10 +354,7 @@
                         <i class="fas fa-heart mr-2"></i>
                         Partner With Us
                     </a>
-                    <a href="mailto:missions@thikaroadconnectagc.org	" class="border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white hover:text-church-purple transition inline-flex items-center">
-                        <i class="fas fa-envelope mr-2"></i>
-                        Get Involved
-                    </a>
+                  
                 </div>
             </div>
         </div>

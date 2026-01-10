@@ -621,25 +621,15 @@
                     </p>
                 </div>
 
-                <!-- Values Badges -->
-                <div class="flex flex-wrap justify-center gap-4 pt-8">
-                    <span class="value-badge">Faith</span>
-                    <span class="value-badge">Friendship</span>
-                    <span class="value-badge">Growth</span>
-                    <span class="value-badge">Purpose</span>
-                    <span class="value-badge">Community</span>
-                </div>
+
 
                 <!-- Call to Actions -->
                 <div class="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
-                    <button class="ripple-button text-lg">
+                    <a href="mailto:women@thikaroadconnectagc.org" class="inline-block bg-white text-church-red px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
                         <i class="fas fa-hand-holding-heart mr-3"></i>
-                        Join Our Sisterhood
-                    </button>
-                    <button class="ripple-button text-lg" style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px);">
-                        <i class="fas fa-calendar-heart mr-3"></i>
-                        Connect With Us
-                    </button>
+                        Contact us
+                    </a>
+
                 </div>
 
 
@@ -652,57 +642,6 @@
 
 </br>
 </br>
-
-<!-- Slideshow Section -->
-<section class="slideshow-section">
-    <div class="slideshow-container">
-        <div class="slide active" style="background-image: linear-gradient(45deg, rgba(245, 245, 247, 0.3), rgba(236, 72, 153, 0.3)), url('data:image/svg+xml,%3Csvg viewBox=\'0 0 400 300\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23ec4899\'/%3E%3Ctext x=\'200\' y=\'150\' text-anchor=\'middle\' dominant-baseline=\'middle\' fill=\'white\' font-family=\'Arial\' font-size=\'20\'%3E%3C/text%3E%3C/svg%3E');">
-            <div class="slide-overlay">
-                <div class="slide-content">
-                </div>
-            </div>
-
-            <div class="slide" style="background-image: linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(236, 72, 153, 0.3)), url('data:image/svg+xml,%3Csvg viewBox=\'0 0 400 300\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%238b5cf6\'/%3E%3Ctext x=\'200\' y=\'150\' text-anchor=\'middle\' dominant-baseline=\'middle\' fill=\'white\' font-family=\'Arial\' font-size=\'18\'%3E %3C/text%3E%3C/svg%3E');">
-                <div class="slide-overlay">
-                    <div class="slide-content">
-                        <img src="{{ asset('images/ladies2.webp') }}" alt="Ladies 1" class="w-full h-80 lg:h-full object-cover" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="slide" style="background-image: linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(236, 72, 153, 0.3)), url('data:image/svg+xml,%3Csvg viewBox=\'0 0 400 300\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23f97316\'/%3E%3Ctext x=\'200\' y=\'150\' text-anchor=\'middle\' dominant-baseline=\'middle\' fill=\'white\' font-family=\'Arial\' font-size=\'20\'%3E%3C/text%3E%3C/svg%3E');">
-                <div class="slide-overlay">
-                    <div class="slide-content">
-                        <img src="{{ asset('images/ladies1.webp') }}" alt="Ladies 1" class="w-full h-80 lg:h-full object-cover" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="slide" style="background-image: linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(236, 72, 153, 0.3)), url('data:image/svg+xml,%3Csvg viewBox=\'0 0 400 300\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23f59e0b\'/%3E%3Ctext x=\'200\' y=\'150\' text-anchor=\'middle\' dominant-baseline=\'middle\' fill=\'white\' font-family=\'Arial\' font-size=\'18\'%3E%3C/text%3E%3C/svg%3E');">
-                <div class="slide-overlay">
-                    <div class="slide-content">
-                        <img src="{{ asset('images/ladies1.webp') }}" alt="Ladies 1" class="w-full h-80 lg:h-full object-cover" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="slide" style="background-image: linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(236, 72, 153, 0.3)), url('data:image/svg+xml,%3Csvg viewBox=\'0 0 400 300\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%236366f1\'/%3E%3Ctext x=\'200\' y=\'150\' text-anchor=\'middle\' dominant-baseline=\'middle\' fill=\'white\' font-family=\'Arial\' font-size=\'20\'%3E%3C/text%3E%3C/svg%3E');">
-                <div class="slide-overlay">
-                    <div class="slide-content">
-                        <img src="{{ asset('images/ladies1.webp') }}" alt="Ladies 1" class="w-full h-80 lg:h-full object-cover" />
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="slideshow-nav">
-            <div class="nav-dot active" onclick="currentSlide(1)"></div>
-            <div class="nav-dot" onclick="currentSlide(2)"></div>
-            <div class="nav-dot" onclick="currentSlide(3)"></div>
-            <div class="nav-dot" onclick="currentSlide(4)"></div>
-            <div class="nav-dot" onclick="currentSlide(5)"></div>
-        </div>
-</section>
 
 <!-- Our Heart Section -->
 <section class="py-24 bg-gradient-to-br from-purple-50 via-pink-50 to-red-50">
@@ -948,53 +887,7 @@
 
 
 
-<!-- Join Us Section -->
-<section class="py-24 bg-gradient-to-br from-purple-600 via-pink-600 to-red-600 text-white relative overflow-hidden">
-    <div class="floating-hearts">
-        <div class="heart"><i class="fas fa-star"></i></div>
-        <div class="heart"><i class="fas fa-crown"></i></div>
-        <div class="heart"><i class="fas fa-gem"></i></div>
-        <div class="heart"><i class="fas fa-star"></i></div>
-    </div>
 
-    <div class="container mx-auto px-4 relative z-10">
-        <div class="text-center max-w-4xl mx-auto">
-            <div class="hero-crown mb-8">
-                <i class="fas fa-sparkles text-5xl text-yellow-300"></i>
-            </div>
-
-            <h2 class="text-5xl md:text-7xl font-black mb-8 leading-tight">
-                Your Sisterhood
-                <span class="block bg-gradient-to-r from-yellow-300 via-pink-200 to-yellow-300 bg-clip-text text-transparent">
-                    Awaits You
-                </span>
-            </h2>
-
-            <p class="text-xl md:text-2xl opacity-90 leading-relaxed mb-12">
-                You don't have to walk this journey alone. Step into a community where you're celebrated,
-                supported, and empowered to become everything God created you to be.
-                <span class="block mt-4 text-pink-200 font-semibold">
-                    Your chair at the table is waiting, sister.
-                </span>
-            </p>
-
-            <div class="space-y-8">
-                <!-- Main CTA Buttons -->
-                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                    <button class="ripple-button text-xl px-8 py-4">
-                        <i class="fas fa-door-open mr-3"></i>
-                        Join Our Sisterhood
-                    </button>
-                    <a href="mailto:women@thikaroadconnect.org	"> <button class="ripple-button text-xl px-8 py-4" style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px);">
-                            <i class="fas fa-calendar-heart mr-3"></i>
-                            Contact Us Today
-                        </button></a>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section>
 <script>
     let slideIndex = 0;
     const slides = document.querySelectorAll('.slide');

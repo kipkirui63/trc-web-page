@@ -501,7 +501,7 @@
                     <i class="fas fa-envelope text-white text-xl"></i>
                 </div>
                 <h3 class="font-bold text-church-purple mb-2">Email Us</h3>
-                <p class="text-gray-600 text-sm">trcagc@thikaroadconnect.org	</p>
+                <p class="text-gray-600 text-sm">info@thikaroadconnectagc.org	</p>
             </div>
 
             <!-- Service Times Card -->
@@ -633,7 +633,7 @@
                             <a href="#" class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300 hover:scale-110">
                                 <i class="fab fa-facebook-f text-lg"></i>
                             </a>
-                            <a href="#" class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300 hover:scale-110">
+                            <a href="https://www.instagram.com/trc_agc/" class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300 hover:scale-110">
                                 <i class="fab fa-instagram text-lg"></i>
                             </a>
                             <a href="#" class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300 hover:scale-110">
@@ -702,45 +702,6 @@
                         </a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-<!-- Call to Action -->
-<section class="py-20 bg-gradient-to-br from-church-purple via-church-purple-light to-purple-900 text-white relative overflow-hidden">
-    <div class="absolute inset-0 opacity-10">
-        <div class="absolute top-10 right-10 w-32 h-32 bg-white rounded-full animate-pulse"></div>
-        <div class="absolute bottom-10 left-10 w-24 h-24 bg-church-red rounded-full animate-bounce"></div>
-    </div>
-
-    <div class="container mx-auto px-4 text-center relative z-10">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">
-                Ready to Join Our Family?
-            </h2>
-            <p class="text-xl md:text-2xl mb-10 opacity-90 leading-relaxed">
-                We can't wait to welcome you into our loving church community this Sunday
-            </p>
-
-            <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                <a href="mailto:trcagc@thikaroadconnect.org	" class="group relative overflow-hidden bg-white text-church-purple font-bold py-4 px-8 rounded-2xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
-                    <span class="relative flex items-center justify-center">
-                        <i class="fas fa-map-marker-alt mr-3 group-hover:animate-bounce"></i>
-                        Plan Your Visit
-                        <i class="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform"></i>
-                    </span>
-                </a>
-
-                <a href="#" class="group relative overflow-hidden bg-church-red hover:bg-red-600 text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
-                    <span class="relative flex items-center justify-center">
-                        <i class="fas fa-calendar-alt mr-3 group-hover:animate-pulse"></i>
-                        View Service Times
-                        <i class="fas fa-clock ml-3 group-hover:animate-spin"></i>
-                    </span>
-                </a>
             </div>
         </div>
     </div>

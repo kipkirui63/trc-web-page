@@ -605,24 +605,7 @@
             </div>
         </div>
 
-        <!-- Scripture Call to Action -->
-        <div class="mt-16 max-w-4xl mx-auto">
-            <div class="elegant-gradient rounded-3xl p-10 text-white text-center shadow-2xl">
-                <div class="max-w-2xl mx-auto">
-                    <p class="text-2xl italic mb-6 leading-relaxed">"How beautiful are the feet of those who preach the good news!"</p>
-                    <p class="text-lg font-medium mb-2">— Romans 10:15</p>
-                    <p class="text-xl mb-8 text-gray-100">Your giving enables feet to carry the Good News to the ends of the earth.</p>
-                    <div class="flex flex-col sm:flex-row justify-center gap-6">
-                        <a href="#mpesa-section" class="glass-effect hover:bg-white hover:text-church-purple font-semibold py-4 px-8 rounded-full transition-all duration-300">
-                            <i class="fas fa-donate mr-2"></i>Give to Missions Now
-                        </a>
-                        <a href="mailto:finance@thikaroadconnect.org" class="bg-church-red hover:bg-red-700 text-white font-semibold py-4 px-8 rounded-full transition-all duration-300 shadow-xl">
-                            <i class="fas fa-envelope mr-2"></i>Contact Mission Office
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    
     </div>
 </section>
 
@@ -717,7 +700,7 @@
                             <div class="flex items-start">
                                 <span class="w-8 h-8 bg-church-red text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0 mt-1">4</span>
                                 <div>
-                                    <p class="font-medium text-gray-800 mb-2">Enter Account Number: <span class="number-highlight text-2xl">522533</span></p>
+                                    <p class="font-medium text-gray-800 mb-2">Enter Paybill Number: <span class="number-highlight text-2xl">522533</span></p>
                                     <p class="text-gray-600 text-sm">Our Official Paybill Number</p>
                                 </div>
                             </div>
@@ -874,114 +857,6 @@
                         <p class="text-gray-700 font-medium">Every gift, no matter the size, makes a difference in advancing God's kingdom.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Scripture Quote Section -->
-<section class="py-16 bg-gradient-to-br from-gray-50 to-white">
-    <div class="container mx-auto px-6">
-        <div class="max-w-5xl mx-auto">
-            <div class="elegant-gradient rounded-3xl p-12 text-white text-center shadow-2xl">
-                <div class="max-w-4xl mx-auto">
-                    <!-- Scripture Quote -->
-                    <div class="mb-8">
-                        <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-4xl mx-auto mb-6">
-                            <i class="fas fa-quote-left text-white/80"></i>
-                        </div>
-                        <p class="italic text-xl md:text-2xl text-gray-100 leading-relaxed mb-6">
-                            "Bring all the tithes...so that the servants (who have no allotment or inheritance of their own), and the foreigners, the fatherless and the widows who live in your towns may come and eat and be satisfied, and so that the LORD your God may bless you in all the work of your hands."
-                        </p>
-                        <p class="text-lg font-semibold text-yellow-200">— Deuteronomy 14:28-29</p>
-                    </div>
-
-                    <!-- Three Values Grid -->
-                    <div class="grid md:grid-cols-3 gap-6 mt-12">
-                        <div class="glass-effect rounded-2xl p-6 text-center">
-                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
-                                <i class="fas fa-praying-hands"></i>
-                            </div>
-                            <h4 class="font-bold mb-2">Faithful Stewardship</h4>
-                            <p class="text-sm text-gray-200">Managing God's resources with integrity</p>
-                        </div>
-                        <div class="glass-effect rounded-2xl p-6 text-center">
-                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
-                                <i class="fas fa-globe-americas"></i>
-                            </div>
-                            <h4 class="font-bold mb-2">Global Impact</h4>
-                            <p class="text-sm text-gray-200">Reaching nations with the Gospel</p>
-                        </div>
-                        <div class="glass-effect rounded-2xl p-6 text-center">
-                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <h4 class="font-bold mb-2">Generous Hearts</h4>
-                            <p class="text-sm text-gray-200">Reflecting God's love through giving</p>
-                        </div>
-                    </div>
-
-                    <!-- Action Buttons -->
-                    <div class="flex flex-col sm:flex-row justify-center gap-6 mt-10">
-                        <a href="#mpesa-section" class="glass-effect hover:bg-white hover:text-church-purple font-semibold py-4 px-8 rounded-full transition-all duration-300 text-center">
-                            <i class="fas fa-donate mr-2"></i>Start Giving Today
-                        </a>
-                        <a href="#giving-options" class="bg-white text-church-purple hover:bg-gray-100 font-semibold py-4 px-8 rounded-full transition-all duration-300 text-center shadow-xl">
-                            <i class="fas fa-info-circle mr-2"></i>Learn More
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Footer Call to Action Section -->
-<section class="py-16 bg-white">
-    <div class="container mx-auto px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <!-- Section Header -->
-            <h2 class="text-3xl md:text-4xl font-bold text-gradient mb-6">Ready to Partner With Us?</h2>
-            <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                Join us in taking the Whole Gospel to the Whole World through your faithful giving and support.
-            </p>
-
-            <!-- Giving Options Grid -->
-            <div class="grid md:grid-cols-2 gap-6 mb-12">
-                <!-- M-Pesa Giving Card -->
-                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 border border-green-200">
-                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center text-white text-2xl mx-auto mb-4">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Quick M-Pesa Giving</h3>
-                    <div class="text-gray-700 mb-4">
-                        <p class="mb-2">Paybill: <span class="font-bold text-2xl text-green-600">522533</span></p>
-                        <p>Account: <span class="font-bold text-xl text-green-600">7535398</span></p>
-                        <p class="text-sm text-gray-500 mt-2">For tithes, offerings and other contributions</p>
-                    </div>
-                    <a href="#mpesa-section" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 inline-block">
-                        Give Now
-                    </a>
-                </div>
-
-                <!-- Questions Card -->
-                <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-6 border border-purple-200">
-                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-white text-2xl mx-auto mb-4">
-                        <i class="fas fa-question-circle"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Have Questions?</h3>
-                    <p class="text-gray-600 mb-4">Our finance team is here to help with any giving inquiries</p>
-                    <a href="mailto:finance@thikaroadconnect.org	" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 inline-block">
-                        Contact Us
-                    </a>
-                </div>
-            </div>
-
-            <!-- Bottom Scripture Quote -->
-            <div class="bg-gradient-to-r from-gray-50 to-white rounded-2xl p-8 border border-gray-200">
-                <p class="text-lg text-gray-700 italic leading-relaxed">
-                    "Remember this: Whoever sows sparingly will also reap sparingly, and whoever sows generously will also reap generously. Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver."
-                </p>
-                <p class="font-semibold text-purple-600 mt-4">— 2 Corinthians 9:6-7</p>
             </div>
         </div>
     </div>
