@@ -18,7 +18,7 @@ class ContactController extends Controller
             'phone'   => 'nullable|string|max:20',
         ]);
 
-        Mail::to('thikaroadagc@gmail.com')->send(new ContactMail($validated));
+        Mail::to('info@thikaroadconnectagc.org')->send(new ContactMail($validated));
 
         return back()->with('success', 'Thank you for reaching out! We’ll respond soon.');
     }

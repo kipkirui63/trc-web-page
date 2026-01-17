@@ -1,3 +1,4 @@
+<!-- /home/sir-sang/Documents/church/trc-agc-web/resources/views/children.blade.php -->
 @extends('layouts.app')
 
 @section('title', 'Children\'s Ministry')
@@ -231,12 +232,21 @@
                     <div class="lg:flex">
                         <!-- Left Side - Form -->
                         <div class="lg:w-3/5 p-8 lg:p-12">
+                            <!-- Success Message -->
+                            @if(session('success'))
+                                <div class="mb-6 bg-green-100 border border-green-300 text-green-800 px-6 py-4 rounded-xl">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
+
                             <div class="text-center lg:text-left mb-8">
                                 <h3 class="text-3xl lg:text-4xl font-bold text-orange-600 mb-4">Register for Dedication</h3>
                                 <p class="text-gray-600 text-lg">Take this meaningful step in your child's spiritual journey with our church community.</p>
                             </div>
 
-                            <form class="space-y-6" action="#" method="POST">
+                            <form class="space-y-6" action="{{ route('child.dedication.store') }}" method="POST">
+                                @csrf
+
                                 <!-- Child Information -->
                                 <div class="bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-2xl border-2 border-yellow-200">
                                     <h4 class="text-xl font-bold text-orange-600 mb-4 flex items-center gap-2">
@@ -557,30 +567,6 @@
             card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
             observer.observe(card);
         });
-    });
-
-    // Form submission with animation
-    document.querySelector('form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const button = e.target.querySelector('button[type="submit"]');
-        const originalText = button.innerHTML;
-
-        button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Submitting...';
-        button.disabled = true;
-
-        // Simulate form submission
-        setTimeout(() => {
-            button.innerHTML = '<i class="fas fa-check mr-2"></i>Visit Confirmed!';
-            button.classList.add('bg-green-500', 'hover:bg-green-600');
-            button.classList.remove('bg-gradient-to-r', 'from-church-purple', 'to-church-purple-light');
-
-            setTimeout(() => {
-                button.innerHTML = originalText;
-                button.disabled = false;
-                button.classList.remove('bg-green-500', 'hover:bg-green-600');
-                button.classList.add('bg-gradient-to-r', 'from-church-purple', 'to-church-purple-light');
-            }, 3000);
-        }, 2000);
     });
 </script>
 @endsection

@@ -1,3 +1,4 @@
+<!-- home/sir-sang/Documents/church/trc-agc-web/resources/views/emails/contact.blade.php -->
 <h2>New Contact Message</h2>
 
 <p><strong>Name:</strong> {{ $data['name'] }}</p>

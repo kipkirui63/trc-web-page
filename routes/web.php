@@ -69,3 +69,9 @@ Route::get('/discipleship-ministry', function () {
 Route::get('/outreach-ministry', function () {
     return view('outreach-ministry');
 });
+
+use App\Http\Controllers\ChildDedicationController;
+
+Route::post('/child-dedication', [ChildDedicationController::class, 'store'])
+    ->name('child.dedication.store');
+
