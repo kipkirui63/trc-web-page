@@ -110,13 +110,14 @@
 
 @section('content')
 <!-- Unified Hero & Foundation Section -->
-<section class="relative min-h-screen bg-gradient-to-br from-church-purple via-purple-800 to-church-red overflow-hidden">
-    <!-- Animated Background -->
+<section class="relative min-h-screen overflow-hidden">
+    <!-- Background Image with Overlay -->
     <div class="absolute inset-0">
-        <div class="absolute inset-0 pattern-overlay"></div>
-        <!-- <img src=""
+        <img src="{{ asset('images/vbs7.webp') }}" 
             alt="Church worship"
-            class="w-full h-full object-cover opacity-20 mix-blend-overlay" /> -->
+            class="w-full h-full object-cover" />
+        <!-- Dark overlay for better text readability -->
+        <!-- <div class="absolute inset-0 bg-gradient-to-br from-purple-900/70 via-purple-800/60 to-red-900/70"></div> -->
     </div>
 
     <!-- Floating Elements -->
@@ -134,8 +135,8 @@
     </div>
 
     <!-- Decorative Background Elements -->
-    <div class="absolute top-0 left-0 w-96 h-96 bg-church-purple/20 rounded-full blur-3xl -translate-x-48 -translate-y-48 animate-pulse"></div>
-    <div class="absolute bottom-0 right-0 w-96 h-96 bg-church-red/20 rounded-full blur-3xl translate-x-48 translate-y-48 animate-pulse"></div>
+    <div class="absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -translate-x-48 -translate-y-48 animate-pulse"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-red-500/10 rounded-full blur-3xl translate-x-48 translate-y-48 animate-pulse"></div>
 
     <div class="relative z-10 container mx-auto px-6 lg:px-16 py-20">
         <!-- Hero Content -->
@@ -162,7 +163,7 @@
 
                 <!-- CTA Buttons -->
                 <div class="flex flex-col sm:flex-row gap-4 mb-12">
-                    <a href="/livestream" class="group relative overflow-hidden bg-gradient-to-r from-purple-500 via-pink-500 to-purple-600 hover:from-pink-500 hover:via-purple-500 hover:to-pink text-white font-semibold py-4 px-8 rounded-2xl transition-all duration-300 hover:shadow-2xl hover:scale-105">
+                    <a href="/livestream" class="group relative overflow-hidden bg-church-red hover:bg-red-700 text-white font-semibold py-4 px-8 rounded-2xl transition-all duration-300 hover:shadow-2xl hover:scale-105">
                         <span class="flex items-center justify-center">
                             <i class="fas fa-play mr-2"></i>
                             Watch Live
@@ -353,105 +354,8 @@
     }
 </style>
 
-<style>
-    :root {
-        --church-purple: #6B46C1;
-        --church-red: #DC2626;
-    }
 
-    .church-purple {
-        color: var(--church-purple);
-    }
-
-    .bg-church-purple {
-        background-color: var(--church-purple);
-    }
-
-    .church-red {
-        color: var(--church-red);
-    }
-
-    .bg-church-red {
-        background-color: var(--church-red);
-    }
-
-    .pattern-overlay {
-        background-image:
-            radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
-            radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-        background-size: 50px 50px, 30px 30px;
-    }
-
-    .glass-card {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .glass-card-dark {
-        background: rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .floating {
-        animation: float 6s ease-in-out infinite;
-    }
-
-    .glow {
-        filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
-    }
-
-    @keyframes float {
-
-        0%,
-        100% {
-            transform: translateY(0px) rotate(0deg);
-        }
-
-        33% {
-            transform: translateY(-20px) rotate(1deg);
-        }
-
-        66% {
-            transform: translateY(-10px) rotate(-1deg);
-        }
-    }
-
-    .slide-left {
-        animation: slideInLeft 1s ease-out;
-    }
-
-    .slide-right {
-        animation: slideInRight 1s ease-out;
-    }
-
-    @keyframes slideInLeft {
-        from {
-            opacity: 0;
-            transform: translateX(-100px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    @keyframes slideInRight {
-        from {
-            opacity: 0;
-            transform: translateX(100px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-</style>
-
-
+<!-- Our Sacred Story Section - CORRECTED LAYOUT -->
 <section class="py-24 bg-gradient-to-br from-white via-purple-50/30 to-red-50/30 relative overflow-hidden">
     <!-- Enhanced Decorative Background Elements -->
     <div class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl -translate-x-48 -translate-y-48 floating"></div>
@@ -462,56 +366,61 @@
     <div class="absolute top-20 right-20 w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg rotate-45 floating"></div>
     <div class="absolute bottom-32 left-16 w-12 h-12 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full floating" style="animation-delay: -3s;"></div>
 
-  <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
-    <div class="order-2 lg:order-1">
-        <div class="bg-gradient-to-br from-gray-50 to-white p-10 rounded-3xl shadow-2xl border border-gray-100 transform hover:scale-105 transition-all duration-300">
-            <div class="flex items-center mb-8">
-                <div class="w-16 h-16 bg-gradient-to-r from-church-purple to-church-red rounded-full flex items-center justify-center mr-4">
-                    <i class="fas fa-scroll text-white text-2xl"></i>
+    <!-- THIS IS THE KEY FIX: Adding container with max-width -->
+    <div class="container mx-auto px-6 lg:px-16">
+        <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div class="order-2 lg:order-1">
+                <div class="bg-gradient-to-br from-gray-50 to-white p-10 rounded-3xl shadow-2xl border border-gray-100 transform hover:scale-105 transition-all duration-300">
+                    <div class="flex items-center mb-8">
+                        <div class="w-16 h-16 bg-church-red rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-scroll text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-4xl font-bold text-church-red">
+                            Our Sacred Story
+                        </h3>
+
+                    </div>
+                    
+                    <p class="text-xl text-gray-700 mb-8 leading-relaxed font-medium">
+                        From humble whispers of prayer to a thunderous chorus of worship - TRC AGC Church's story is one of miraculous growth, unwavering faith, and divine purpose. What began as a small circle of dreamers has blossomed into a powerhouse of spiritual transformation.
+                    </p>
+                    
+                    <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                        Every chapter of our journey bears witness to God's extraordinary faithfulness. Through seasons of challenge and celebration, we've remained anchored in our calling to ignite hearts, build bridges across cultures, and serve as a lighthouse of hope in our community. Our legacy isn't just measured in years, but in the countless lives forever changed by encountering God's love within our walls.
+                    </p>
+                    
+                    <div class="bg-church-red p-6 rounded-xl">
+                        <div class="flex items-center text-white font-bold text-lg">
+                            <i class="fas fa-fire mr-3 text-2xl"></i>
+                            <span class="text-xl">Igniting hearts & transforming destinies since day one</span>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="text-4xl font-bold bg-gradient-to-r from-church-purple to-church-red bg-clip-text text-transparent">
-                    Our Sacred Story
-                </h3>
             </div>
             
-            <p class="text-xl text-gray-700 mb-8 leading-relaxed font-medium">
-                From humble whispers of prayer to a thunderous chorus of worship - TRC AGC Church's story is one of miraculous growth, unwavering faith, and divine purpose. What began as a small circle of dreamers has blossomed into a powerhouse of spiritual transformation.
-            </p>
-            
-            <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-                Every chapter of our journey bears witness to God's extraordinary faithfulness. Through seasons of challenge and celebration, we've remained anchored in our calling to ignite hearts, build bridges across cultures, and serve as a lighthouse of hope in our community. Our legacy isn't just measured in years, but in the countless lives forever changed by encountering God's love within our walls.
-            </p>
-            
-            <div class="bg-gradient-to-r from-church-purple to-church-red p-6 rounded-xl">
-                <div class="flex items-center text-white font-bold text-lg">
-                    <i class="fas fa-fire mr-3 text-2xl"></i>
-                    <span class="text-xl">Igniting hearts & transforming destinies since day one</span>
+            <div class="order-1 lg:order-2">
+                <div class="relative group">
+                    <img src="{{ asset('images/history.webp') }}" alt="Church history" class="w-full h-96 object-cover rounded-3xl shadow-2xl transform group-hover:scale-105 transition-all duration-500" />
+                    <div class="absolute -bottom-8 -right-8 w-28 h-28 bg-gradient-to-r from-church-red to-orange-500 rounded-full flex items-center justify-center text-white text-4xl shadow-2xl animate-pulse">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
             </div>
         </div>
     </div>
-    
-    <div class="order-1 lg:order-2">
-        <div class="relative group">
-            <img src="{{ asset('images/history.webp') }}" alt="Church history" class="w-full h-96 object-cover rounded-3xl shadow-2xl transform group-hover:scale-105 transition-all duration-500" />
-            <div class="absolute -bottom-8 -right-8 w-28 h-28 bg-gradient-to-r from-church-red to-orange-500 rounded-full flex items-center justify-center text-white text-4xl shadow-2xl animate-pulse">
-                <i class="fas fa-church"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        </div>
-    </div>
-</div>
 
    <!-- Vision Forward -->
    <div class="text-center">
                 <div class="bg-gradient-to-br from-gray-50 to-white p-12 rounded-3xl shadow-xl border border-gray-100 max-w-4xl mx-auto">
                     <div class="flex items-center justify-center mb-6">
-                        <div class="w-20 h-20 bg-gradient-to-r from-church-purple to-church-red rounded-full flex items-center justify-center mr-6">
+                        <div class="w-20 h-20 bg-church-red rounded-full flex items-center justify-center mr-6">
                             <i class="fas fa-rocket text-white text-3xl"></i>
                         </div>
-                        <h3 class="text-4xl font-bold bg-gradient-to-r from-church-purple to-church-red bg-clip-text text-transparent">
+                        <h3 class="text-4xl font-bold text-church-red">
                             The Journey Continues
                         </h3>
+
                     </div>
                     
                     <p class="text-xl text-gray-700 mb-8 leading-relaxed">
@@ -605,28 +514,32 @@
     });
 
     // Form submission with animation
-    document.querySelector('form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const button = e.target.querySelector('button[type="submit"]');
-        const originalText = button.innerHTML;
+    const form = document.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const button = e.target.querySelector('button[type="submit"]');
+            const originalText = button.innerHTML;
 
-        button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Submitting...';
-        button.disabled = true;
+            button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Submitting...';
+            button.disabled = true;
 
-        // Simulate form submission
-        setTimeout(() => {
-            button.innerHTML = '<i class="fas fa-check mr-2"></i>Visit Confirmed!';
-            button.classList.add('bg-green-500', 'hover:bg-green-600');
-            button.classList.remove('bg-gradient-to-r', 'from-church-purple', 'to-church-purple-light');
-
+            // Simulate form submission
             setTimeout(() => {
-                button.innerHTML = originalText;
-                button.disabled = false;
-                button.classList.remove('bg-green-500', 'hover:bg-green-600');
-                button.classList.add('bg-gradient-to-r', 'from-church-purple', 'to-church-purple-light');
-            }, 3000);
-        }, 2000);
-    });
+                button.innerHTML = '<i class="fas fa-check mr-2"></i>Visit Confirmed!';
+                button.classList.add('bg-green-500', 'hover:bg-green-600');
+                button.classList.remove('bg-gradient-to-r', 'from-church-purple', 'to-church-purple-light');
+
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.disabled = false;
+                    button.classList.remove('bg-green-500', 'hover:bg-green-600');
+                    button.classList.add('bg-gradient-to-r', 'from-church-purple', 'to-church-purple-light');
+                }, 3000);
+            }, 2000);
+        });
+    }
+    
     // Enhanced interaction effects
     document.addEventListener('DOMContentLoaded', function() {
         // Add hover effects to cards

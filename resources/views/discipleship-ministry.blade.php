@@ -6,6 +6,8 @@
 
 @section('styles')
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap');
+    
     .ministry-card {
         background: linear-gradient(135deg, rgba(124, 58, 237, 0.05) 0%, rgba(220, 38, 38, 0.05) 100%);
         border-left: 4px solid #7c3aed;
@@ -379,7 +381,7 @@
                     </p>
                 </div>
 
-                <form class="space-y-6" method="POST" action="#">
+                <form class="space-y-6" method="POST" action="{{ route('baptism.apply') }}">
                     @csrf
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
@@ -436,8 +438,6 @@
                         </div>
                     </div>
 
-                    <div>
-
                     <div class="bg-gray-50 p-6 rounded-xl">
                         <h4 class="text-lg font-bold text-gray-800 mb-3">
                             <i class="fas fa-info-circle text-church-purple mr-2"></i>
@@ -455,10 +455,6 @@
                             <li class="flex items-start">
                                 <i class="fas fa-check text-church-purple mr-3 mt-1"></i>
                                 Attend catechism classes to prepare for baptism
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-church-purple mr-3 mt-1"></i>
-                                Participate in water baptism ceremony
                             </li>
                         </ul>
                     </div>
@@ -524,18 +520,20 @@
         const previousBaptismDetails = document.getElementById('previous_baptism_details');
         const baptismDetailsTextarea = document.getElementById('baptism_details');
 
-        previousBaptismRadios.forEach(radio => {
-            radio.addEventListener('change', function() {
-                if (this.value === 'yes') {
-                    previousBaptismDetails.classList.remove('hidden');
-                    baptismDetailsTextarea.required = true;
-                } else {
-                    previousBaptismDetails.classList.add('hidden');
-                    baptismDetailsTextarea.required = false;
-                    baptismDetailsTextarea.value = '';
-                }
+        if (previousBaptismRadios.length > 0 && previousBaptismDetails && baptismDetailsTextarea) {
+            previousBaptismRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    if (this.value === 'yes') {
+                        previousBaptismDetails.classList.remove('hidden');
+                        baptismDetailsTextarea.required = true;
+                    } else {
+                        previousBaptismDetails.classList.add('hidden');
+                        baptismDetailsTextarea.required = false;
+                        baptismDetailsTextarea.value = '';
+                    }
+                });
             });
-        });
+        }
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -555,7 +553,8 @@
         const baptismForm = document.querySelector('form');
         if (baptismForm) {
             baptismForm.addEventListener('submit', function(e) {
-                e.preventDefault();
+                // Allow normal form submission to Laravel backend
+                // Remove e.preventDefault() to let Laravel handle the form
                 
                 // Basic validation
                 const requiredFields = baptismForm.querySelectorAll('[required]');
@@ -570,11 +569,8 @@
                     }
                 });
 
-                if (isValid) {
-                    // Show success message (you can replace this with actual form submission)
-                    alert('Thank you for your baptism application! Our pastoral team will contact you soon.');
-                    baptismForm.reset();
-                } else {
+                if (!isValid) {
+                    e.preventDefault();
                     alert('Please fill in all required fields.');
                 }
             });

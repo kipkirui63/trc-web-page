@@ -1,586 +1,208 @@
 @extends('layouts.app')
 
-@section('title', 'Women\'s Ministry - Sisterhood')
-@section('description', 'Join our vibrant sisterhood at TRC AGC Church. Connect, grow, and flourish together in faith, friendship, and divine purpose.')
+@section('title', "Women's Ministry - TRC AGC Church")
+@section('description', 'Join the vibrant women of TRC AGC Church as we gather for retreats, morning breakfasts, fellowship, and growth in faith.')
 
 @section('styles')
 <style>
     :root {
-        --church-purple: #7c3aed;
         --church-red: #dc2626;
-        --church-yellow: #f59e0b;
-        --rose-pink: #f43f5e;
-        --soft-pink: #fce7f3;
-        --lavender: #ddd6fe;
-        --electric-purple: #8b5cf6;
-        --hot-pink: #ec4899;
-        --coral: #f97316;
-        --gold: #f59e0b;
-        --deep-purple: #6366f1;
-        --gradient-main: linear-gradient(135deg, #8b5cf6 0%, #ec4899 50%, #f97316 100%);
-        --gradient-alt: linear-gradient(45deg, #6366f1, #8b5cf6, #ec4899, #f97316);
+        --church-red-light: #ef4444;
+        --church-red-dark: #b91c1c;
+        --white: #ffffff;
+        --off-white: #f9fafb;
+        --gray-light: #f3f4f6;
+        --gradient-red: linear-gradient(135deg, #dc2626 0%, #ef4444 50%, #b91c1c 100%);
     }
 
-    .sisterhood-hero {
-        background: linear-gradient(135deg, var(--church-purple) 0%, var(--rose-pink) 40%, var(--church-red) 70%, var(--church-yellow));
+    /* Hero Section */
+    .ministry-hero {
         position: relative;
         min-height: 100vh;
         display: flex;
         align-items: center;
         overflow: hidden;
-    }
-
-    .sisterhood-hero::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M50 30c11.046 0 20 8.954 20 20s-8.954 20-20 20-20-8.954-20-20 8.954-20 20-20zm0 5c-8.284 0-15 6.716-15 15s6.716 15 15 15 15-6.716 15-15-6.716-15-15-15z'/%3E%3C/g%3E%3C/svg%3E");
-        opacity: 0.6;
-    }
-
-    .floating-hearts {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        pointer-events: none;
-    }
-
-    .heart {
-        position: absolute;
-        color: rgba(255, 255, 255, 0.1);
-        font-size: 2rem;
-        animation: float-hearts 12s ease-in-out infinite;
-    }
-
-    .heart:nth-child(1) {
-        left: 10%;
-        top: 20%;
-        animation-delay: 0s;
-    }
-
-    .heart:nth-child(2) {
-        left: 85%;
-        top: 15%;
-        animation-delay: 3s;
-    }
-
-    .heart:nth-child(3) {
-        left: 15%;
-        bottom: 25%;
-        animation-delay: 6s;
-    }
-
-    .heart:nth-child(4) {
-        right: 10%;
-        bottom: 20%;
-        animation-delay: 9s;
-    }
-
-    .heart:nth-child(5) {
-        left: 70%;
-        top: 60%;
-        animation-delay: 2s;
-    }
-
-    .heart:nth-child(6) {
-        left: 30%;
-        top: 70%;
-        animation-delay: 8s;
-    }
-
-    @keyframes float-hearts {
-
-        0%,
-        100% {
-            transform: translateY(0px) rotate(0deg) scale(1);
-            opacity: 0.1;
-        }
-
-        25% {
-            transform: translateY(-20px) rotate(5deg) scale(1.1);
-            opacity: 0.15;
-        }
-
-        50% {
-            transform: translateY(-10px) rotate(-3deg) scale(0.9);
-            opacity: 0.12;
-        }
-
-        75% {
-            transform: translateY(-25px) rotate(8deg) scale(1.05);
-            opacity: 0.18;
-        }
-    }
-
-    .sisterhood-card {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(20px);
-        border: 1px solid rgba(244, 63, 94, 0.2);
-        border-radius: 28px;
-        box-shadow: 0 8px 32px rgba(124, 58, 237, 0.15);
-        transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
-        overflow: hidden;
-        position: relative;
-    }
-
-    .sisterhood-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: linear-gradient(90deg, var(--church-purple), var(--rose-pink), var(--church-red));
-        opacity: 0;
-        transition: opacity 0.4s ease;
-    }
-
-    .sisterhood-card:hover::before {
-        opacity: 1;
-    }
-
-    .sisterhood-card:hover {
-        transform: translateY(-20px) rotateX(3deg);
-        box-shadow: 0 30px 60px rgba(244, 63, 94, 0.25);
-        border-color: rgba(244, 63, 94, 0.4);
-    }
-
-    .circle-icon {
-        background: linear-gradient(135deg, var(--church-purple), var(--rose-pink));
-        transition: all 0.5s ease;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .circle-icon::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(135deg, var(--rose-pink), var(--church-red));
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-
-    .sisterhood-card:hover .circle-icon::before {
-        opacity: 1;
-    }
-
-    .sisterhood-card:hover .circle-icon {
-        transform: scale(1.15) rotate(15deg);
-    }
-
-    .gradient-text {
-        background: linear-gradient(135deg, var(--church-purple), var(--rose-pink), var(--church-red));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        background-size: 200% 200%;
-        animation: gradient-flow 4s ease-in-out infinite;
-    }
-
-    @keyframes gradient-flow {
-
-        0%,
-        100% {
-            background-position: 0% 50%;
-        }
-
-        50% {
-            background-position: 100% 50%;
-        }
-    }
-
-    .vision-card {
-        background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), rgba(244, 63, 94, 0.08));
-        backdrop-filter: blur(10px);
-        border-radius: 24px;
-        border: 1px solid rgba(244, 63, 94, 0.15);
-        transition: all 0.4s ease;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .vision-card::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 1px;
-        height: 100%;
-        background: linear-gradient(180deg, var(--church-purple), var(--rose-pink), var(--church-red));
-        transform: scaleY(0);
-        transition: transform 0.4s ease;
-    }
-
-    .vision-card:hover::after {
-        transform: scaleY(1);
-    }
-
-    .vision-card:hover {
-        transform: translateX(8px);
-        box-shadow: 0 20px 40px rgba(244, 63, 94, 0.15);
-        border-color: rgba(244, 63, 94, 0.3);
-    }
-
-    .growth-path {
-        background: rgba(255, 255, 255, 0.9);
-        backdrop-filter: blur(15px);
-        border-radius: 20px;
-        border: 2px solid transparent;
-        background-clip: padding-box;
-        position: relative;
-        transition: all 0.5s ease;
-    }
-
-    .growth-path::before {
-        content: '';
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        right: -2px;
-        bottom: -2px;
-        background: linear-gradient(45deg, var(--church-purple), var(--rose-pink), var(--church-red), var(--church-yellow));
-        border-radius: 20px;
-        z-index: -1;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-
-    .growth-path:hover::before {
-        opacity: 1;
-    }
-
-    .growth-path:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 25px 50px rgba(244, 63, 94, 0.2);
-    }
-
-    .community-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 2rem;
-    }
-
-    .community-card {
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(252, 231, 243, 0.9));
-        backdrop-filter: blur(15px);
-        border-radius: 24px;
-        border: 1px solid rgba(244, 63, 94, 0.2);
-        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        overflow: hidden;
-        position: relative;
-    }
-
-    .community-card::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: conic-gradient(from 0deg, var(--church-purple), var(--rose-pink), var(--church-red), var(--church-yellow), var(--church-purple));
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        animation: rotate-gradient 10s linear infinite;
-    }
-
-    .community-card:hover::before {
-        opacity: 0.03;
-    }
-
-    @keyframes rotate-gradient {
-        from {
-            transform: rotate(0deg);
-        }
-
-        to {
-            transform: rotate(360deg);
-        }
-    }
-
-    .community-card:hover {
-        transform: translateY(-12px) scale(1.02);
-        box-shadow: 0 25px 50px rgba(244, 63, 94, 0.2);
-    }
-
-    .ripple-button {
-        background: linear-gradient(135deg, var(--church-purple), var(--rose-pink));
-        border-radius: 50px;
-        border: none;
-        color: white;
-        padding: 1rem 2.5rem;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .ripple-button::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-        transition: left 0.6s ease;
-    }
-
-    .ripple-button:hover::before {
-        left: 100%;
-    }
-
-    .ripple-button:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 15px 35px rgba(244, 63, 94, 0.4);
-        background: linear-gradient(135deg, var(--rose-pink), var(--church-red));
-    }
-
-
-    .connection-web {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        pointer-events: none;
-    }
-
-    .connection-line {
-        position: absolute;
-        height: 1px;
-        background: linear-gradient(90deg, transparent, rgba(244, 63, 94, 0.2), transparent);
-        animation: pulse-line 3s ease-in-out infinite;
-    }
-
-    @keyframes pulse-line {
-
-        0%,
-        100% {
-            opacity: 0.2;
-        }
-
-        50% {
-            opacity: 0.6;
-        }
-    }
-
-    .hero-crown {
-        display: inline-block;
-        background: rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(15px);
-        border-radius: 50%;
-        padding: 2rem;
-        animation: gentle-pulse 4s ease-in-out infinite;
-        border: 2px solid rgba(255, 255, 255, 0.3);
-    }
-
-    /* Slideshow Section */
-    .slideshow-container {
-        position: relative;
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        overflow: hidden;
-        border-radius: 0px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    }
-
-    .slide {
-        position: relative;
-        width: 100%;
-        height: 500px;
-        display: none;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(220, 38, 38, 0.3)), url('/images/ladies1.webp');
         background-size: cover;
         background-position: center;
-        background-repeat: no-repeat;
+        background-attachment: fixed;
     }
 
-    .slide.active {
-        display: block;
-        opacity: 1;
-
-    }
-
-    .slide-overlay {
+    .hero-overlay {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg,
-                rgba(0, 0, 0, 0.3) 0%,
-                rgba(236, 72, 153, 0.2) 50%,
-                rgba(0, 0, 0, 0.4) 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at center, transparent 0%, rgba(220, 38, 38, 0.2) 100%);
+        pointer-events: none;
     }
 
-    .slide-content {
-        width: 100%;
-        height: 100%;
+    /* Cards and Components */
+    .ministry-card {
+        background: var(--white);
+        border-radius: 1.5rem;
+        overflow: hidden;
+        box-shadow: 0 10px 40px rgba(220, 38, 38, 0.1);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1px solid rgba(220, 38, 38, 0.1);
+    }
+
+    .ministry-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 30px 60px rgba(220, 38, 38, 0.2);
+        border-color: var(--church-red);
+    }
+
+    .red-gradient-bg {
+        background: var(--gradient-red);
+    }
+
+    .red-button {
+        background: var(--church-red);
+        color: white;
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+        border: 2px solid transparent;
+    }
+
+    .red-button:hover {
+        background: white;
+        color: var(--church-red);
+        border-color: var(--church-red);
+        transform: translateY(-3px);
+        box-shadow: 0 15px 35px rgba(220, 38, 38, 0.3);
+    }
+
+    .outline-red-button {
+        background: transparent;
+        color: var(--church-red);
+        border: 2px solid var(--church-red);
+        padding: 0.75rem 2rem;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+    }
+
+    .outline-red-button:hover {
+        background: var(--church-red);
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(220, 38, 38, 0.25);
+    }
+
+    .section-title {
+        font-size: 3rem;
+        font-weight: 800;
+        color: #1f2937;
         position: relative;
+        display: inline-block;
+        margin-bottom: 1.5rem;
     }
 
-    .slide-content img {
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: var(--gradient-red);
+        border-radius: 2px;
+    }
+
+    .section-title-left {
+        font-size: 3rem;
+        font-weight: 800;
+        color: #1f2937;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 1.5rem;
+    }
+
+    .section-title-left::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 80px;
+        height: 4px;
+        background: var(--gradient-red);
+        border-radius: 2px;
+    }
+
+    .verse-card {
+        background: rgba(220, 38, 38, 0.03);
+        border-left: 4px solid var(--church-red);
+        padding: 1.5rem;
+        border-radius: 1rem;
+        margin-top: 1.5rem;
+        font-style: italic;
+    }
+
+    .verse-text {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #374151;
+        font-family: 'Georgia', serif;
+    }
+
+    .verse-ref {
+        color: var(--church-red);
+        font-weight: 600;
+        margin-top: 0.5rem;
+        display: block;
+        font-style: normal;
+    }
+
+    .feature-block {
+        padding: 4rem 0;
+    }
+
+    .feature-image {
+        border-radius: 2rem;
+        overflow: hidden;
+        box-shadow: 0 25px 50px -12px rgba(220, 38, 38, 0.25);
+    }
+
+    .feature-image img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center;
-        border-radius: 0px;
-        transition: opacity 0.5s ease-in-out;
-
-
+        transition: transform 0.6s ease;
     }
 
-    @keyframes zoomInOut {
-        0% {
-            transform: scale(1);
-        }
-
-        50% {
-            transform: scale(1.1);
-        }
-
-        100% {
-            transform: scale(1);
-        }
+    .feature-image:hover img {
+        transform: scale(1.05);
     }
 
-
-    /* Navigation arrows */
-    .nav-arrow {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(255, 255, 255, 0.9);
-        border: none;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2rem;
-        color: #333;
-        transition: all 0.3s ease;
-        z-index: 10;
-    }
-
-    .nav-arrow:hover {
-        background: white;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .prev {
-        left: 20px;
-    }
-
-    .next {
-        right: 20px;
-    }
-
-    /* Dots indicator */
-    .dots-container {
-        text-align: center;
-        padding: 20px 0;
-        background: rgba(245, 245, 247, 0.8);
-    }
-
-    .dot {
-        height: 12px;
-        width: 12px;
-        margin: 0 5px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .dot.active,
-    .dot:hover {
-        background-color: #ec4899;
-        transform: scale(1.2);
-    }
-
-    /* Responsive design */
-    @media (max-width: 768px) {
-        .slide {
-            height: 300px;
-        }
-
-        .slide-text {
-            bottom: 10px;
-            left: 10px;
-            right: 10px;
-            padding: 15px;
-        }
-
-        .slide-text h3 {
-            font-size: 1.2rem;
-        }
-
-        .nav-arrow {
-            width: 40px;
-            height: 40px;
-            font-size: 1rem;
-        }
-
-        .prev {
-            left: 10px;
-        }
-
-        .next {
-            right: 10px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .slide {
-            height: 250px;
-        }
-    }
-
-
-    .value-badge {
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 50px;
-        padding: 0.5rem 1.5rem;
+    .scripture-badge {
+        background: var(--church-red);
         color: white;
-        font-size: 0.9rem;
-        font-weight: 500;
-        transition: all 0.3s ease;
-    }
-
-    .value-badge:hover {
-        background: rgba(255, 255, 255, 0.25);
-        transform: translateY(-2px);
+        padding: 0.25rem 1rem;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        display: inline-block;
+        margin-bottom: 1rem;
     }
 
     @media (max-width: 768px) {
-        .sisterhood-hero {
-            min-height: 90vh;
+        .ministry-hero {
+            min-height: 80vh;
+            background-attachment: scroll;
+        }
+        
+        .section-title, .section-title-left {
+            font-size: 2.5rem;
+        }
+
+        .feature-block {
             padding: 2rem 0;
-        }
-
-        .community-grid {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
-        .hero-crown {
-            padding: 1.5rem;
         }
     }
 </style>
@@ -589,410 +211,297 @@
 @section('content')
 
 <!-- Hero Section -->
-<section class="sisterhood-hero text-white">
-    <div class="floating-hearts">
-        <div class="heart"><i class="fas fa-heart"></i></div>
-        <div class="heart"><i class="fas fa-heart"></i></div>
-        <div class="heart"><i class="fas fa-heart"></i></div>
-        <div class="heart"><i class="fas fa-heart"></i></div>
-        <div class="heart"><i class="fas fa-heart"></i></div>
-        <div class="heart"><i class="fas fa-heart"></i></div>
-    </div>
-
+<section class="ministry-hero text-white">
+    <div class="hero-overlay"></div>
     <div class="container mx-auto px-4 relative z-10">
-        <div class="text-center max-w-5xl mx-auto">
-            <div class="space-y-8">
-                <!-- Hero Crown -->
-                <div class="hero-crown">
-                    <i class="fas fa-crown text-5xl text-yellow-300"></i>
-                </div>
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-block bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full mb-8 border border-white/30">
+                <span class="text-sm font-semibold tracking-wider">WOMEN'S MINISTRY</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+                Women of Faith
+                <span class="block text-red-200">Rising Together</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl mb-12 text-gray-100 leading-relaxed max-w-3xl mx-auto">
+                "She is clothed with strength and dignity, and she laughs without fear of the future."
+                <span class="block mt-2 text-red-200">— Proverbs 31:25</span>
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#ministry-story" class="red-button">Discover Our Story</a>
+                <a href="#join" class="outline-red-button text-white border-white hover:bg-white hover:text-church-red">Become Part of Us</a>
+            </div>
+        </div>
+    </div>
+</section>
 
-                <!-- Main Heading -->
-                <div class="space-y-6">
-                    <h1 class="text-6xl md:text-8xl font-black leading-tight">
-                        Beautiful
-                        <span class="block bg-gradient-to-r from-yellow-300 via-pink-200 to-yellow-300 bg-clip-text text-transparent">
-                            Sisterhood
-                        </span>
-                    </h1>
-                    <p class="text-xl md:text-2xl opacity-90 leading-relaxed max-w-4xl mx-auto">
-                        Where women of faith gather to grow, support, and inspire each other in their journey with Christ.
-                        <span class="text-pink-200 font-semibold">You belong here, sister.</span>
+<!-- Welcome Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
+            <div class="lg:w-1/2">
+                <span class="text-church-red font-semibold tracking-wider uppercase">Welcome</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-4 mb-6">
+                    A Place for Every Woman
+                </h2>
+                <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                    Whether you're a young professional, a mother, a grandmother, or just starting your faith journey, 
+                    there's a place for you here. Our Women's Ministry is built on the foundation of authentic relationships, 
+                    spiritual growth, and shared experiences.
+                </p>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    From intimate morning breakfasts to transformative retreats, we create spaces where women can connect, 
+                    grow, and flourish in their God-given purpose.
+                </p>
+                
+                <div class="verse-card">
+                    <p class="verse-text">
+                        "Therefore encourage one another and build each other up, just as in fact you are doing."
                     </p>
+                    <span class="verse-ref">— 1 Thessalonians 5:11</span>
                 </div>
-
-
-
-                <!-- Call to Actions -->
-                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
-                    <a href="mailto:women@thikaroadconnectagc.org" class="inline-block bg-white text-church-red px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
-                        <i class="fas fa-hand-holding-heart mr-3"></i>
-                        Contact us
-                    </a>
-
+            </div>
+            
+            <div class="lg:w-1/2">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <img src="/images/ladies1.webp" alt="Women's Ministry" class="rounded-2xl shadow-lg w-full h-48 object-cover">
+                        <img src="/images/ladies2.webp" alt="Women's Fellowship" class="rounded-2xl shadow-lg w-full h-64 object-cover">
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <img src="/images/ladies2.webp" alt="Women in Prayer" class="rounded-2xl shadow-lg w-full h-64 object-cover">
+                        <img src="/images/ladies1.webp" alt="Sisterhood" class="rounded-2xl shadow-lg w-full h-48 object-cover">
+                    </div>
                 </div>
-
-
-                <br />
-                <br />
             </div>
         </div>
     </div>
 </section>
 
-</br>
-</br>
-
-<!-- Our Heart Section -->
-<section class="py-24 bg-gradient-to-br from-purple-50 via-pink-50 to-red-50">
+<!-- Ministry Story - What We've Been Doing -->
+<section id="ministry-story" class="py-20 bg-gray-50">
     <div class="container mx-auto px-4">
-        <div class="text-center mb-20">
-            <h2 class="text-5xl md:text-6xl font-bold mb-6">
-                <span class="gradient-text">Our Heart</span>
-            </h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                We exist to create a safe space where women can discover their identity in Christ,
-                build authentic relationships, and live out their God-given purpose.
+        <div class="text-center mb-16">
+            <span class="text-church-red font-semibold tracking-wider uppercase">Our Journey</span>
+            <h2 class="section-title">What We've Been Doing</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mt-6">
+                Taking a look back at the beautiful moments God has given us together.
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <!-- Vision -->
-            <div class="vision-card p-8">
-                <div class="circle-icon w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-eye text-3xl text-white relative z-10"></i>
+        <!-- Feature 1: Morning Breakfasts (Image Left, Text Right) -->
+        <div class="feature-block">
+            <div class="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
+                <div class="lg:w-1/2">
+                    <div class="feature-image">
+                        <img src="/images/ladies2.webp" alt="Morning Breakfast Fellowship" class="w-full h-[400px]">
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Our Vision</h3>
-                <p class="text-gray-600 text-center leading-relaxed">
-                    To see every woman walk confidently in her calling, supported by a community of sisters
-                    who celebrate her journey and cheer her on to greatness.
-                </p>
-            </div>
+                <div class="lg:w-1/2">
+                    <span class="scripture-badge">Psalm 34:8</span>
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Morning Breakfast Fellowship</h3>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Every first Saturday of the month we gather. These breakfast fellowships 
+                        have become sacred spaces where burdens are shared, prayers are lifted, and lifelong friendships are forged.
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-heart text-church-red text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Taste and see that the Lord is good</h4>
+                                <p class="text-gray-600">Women gathering around the table to experience God's goodness together</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-hands-praying text-church-red text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Where two or three gather in my name</h4>
+                                <p class="text-gray-600">Small accountability groups that meet beyond the breakfast table</p>
+                            </div>
+                        </div>
+                    </div>
 
-            <!-- Mission -->
-            <div class="vision-card p-8">
-                <div class="circle-icon w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-heart text-3xl text-white relative z-10"></i>
+                    <!-- Bible Verse instead of testimonial -->
+                    <div class="verse-card">
+                        <p class="verse-text">
+                            "Taste and see that the Lord is good; blessed is the one who takes refuge in him."
+                        </p>
+                        <span class="verse-ref">— Psalm 34:8</span>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Our Mission</h3>
-                <p class="text-gray-600 text-center leading-relaxed">
-                    To nurture authentic relationships, provide biblical teaching, and create opportunities
-                    for women to grow spiritually, emotionally, and relationally.
-                </p>
             </div>
+        </div>
 
-            <!-- Values -->
-            <div class="vision-card p-8">
-                <div class="circle-icon w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-gem text-3xl text-white relative z-10"></i>
+        <!-- Feature 2: Annual Retreats (Image Right, Text Left) -->
+        <div class="feature-block">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-12 max-w-6xl mx-auto">
+                <div class="lg:w-1/2">
+                    <div class="feature-image">
+                        <img src="/images/ladies1.webp" alt="Women's Annual Retreat" class="w-full h-[400px]">
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Our Values</h3>
-                <p class="text-gray-600 text-center leading-relaxed">
-                    Authenticity over perfection, grace over judgment, community over competition,
-                    and Christ as the center of everything we do.
-                </p>
+                <div class="lg:w-1/2">
+                    <span class="scripture-badge">Isaiah 40:31</span>
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Refreshed & Renewed Retreats</h3>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        For years, our annual retreat has been the highlight of our ministry calendar. 
+                        Women step away from the noise of daily life to encounter God in fresh ways. 
+                        The retreats have become times of healing, restoration, and renewed vision as 
+                        women seek God together away from their daily routines.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                            <i class="fas fa-dove text-3xl text-church-red mb-2"></i>
+                            <div class="font-semibold text-gray-900">Renewed strength</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                            <i class="fas fa-heart text-3xl text-church-red mb-2"></i>
+                            <div class="font-semibold text-gray-900">Healed hearts</div>
+                        </div>
+                    </div>
+
+                    <div class="verse-card">
+                        <p class="verse-text">
+                            "But those who hope in the Lord will renew their strength. They will soar on wings like eagles; 
+                            they will run and not grow weary, they will walk and not be faint."
+                        </p>
+                        <span class="verse-ref">— Isaiah 40:31</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feature 3: Community Outreach (Image Left, Text Right) -->
+        <div class="feature-block">
+            <div class="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
+                <div class="lg:w-1/2">
+                    <div class="feature-image">
+                        <img src="/images/ladies2.webp" alt="Community Outreach" class="w-full h-[400px]">
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <span class="scripture-badge">Matthew 25:40</span>
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Serving Our Community</h3>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Our women don't just gather—they go. We've visited children's homes, organized medical camps, 
+                        and supported widows in our community. Our hands and feet extend the love of Christ beyond our church walls.
+                    </p>
+                    
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-hand-holding-heart text-church-red"></i>
+                            <span class="text-gray-700">Visiting children's homes with gifts and love</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-hand-holding-heart text-church-red"></i>
+                            <span class="text-gray-700">Medical camps serving our community</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-hand-holding-heart text-church-red"></i>
+                            <span class="text-gray-700">Supporting widows through our outreach program</span>
+                        </div>
+                    </div>
+
+                    <div class="verse-card">
+                        <p class="verse-text">
+                            "Truly I tell you, whatever you did for one of the least of these brothers and sisters of mine, you did for me."
+                        </p>
+                        <span class="verse-ref">— Matthew 25:40</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Growth Paths Section -->
-<section class="py-24 bg-white">
+<!-- Scripture Reflection Section -->
+
+
+<!-- Ministry Activities - What We Do Regularly -->
+<section class="py-20 bg-white">
     <div class="container mx-auto px-4">
-        <div class="text-center mb-20">
-            <h2 class="text-5xl md:text-6xl font-bold mb-6">
-                <span class="gradient-text">Paths of Growth</span>
-            </h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Every season of life offers opportunities for growth. Find your path and flourish in community.
+        <div class="text-center mb-16">
+            <span class="text-church-red font-semibold tracking-wider uppercase">Ongoing Ministries</span>
+            <h2 class="section-title">Gathering Throughout the Week</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mt-6">
+                There are many ways to connect with us throughout the week.
             </p>
         </div>
 
-        <div class="space-y-8 max-w-5xl mx-auto">
-            <!-- Spiritual Growth -->
-            <div class="growth-path p-8">
-                <div class="flex items-center space-x-6">
-                    <div class="w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl flex items-center justify-center flex-shrink-0">
-                        <i class="fas fa-pray text-4xl text-white"></i>
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="text-3xl font-bold text-gray-800 mb-3">Spiritual Growth</h3>
-                        <p class="text-gray-600 mb-4 text-lg leading-relaxed">
-                            Deepen your relationship with God through Bible study, prayer groups, and spiritual mentorship.
-                            Discover who you are in Christ and walk confidently in His plans for your life.
-                        </p>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Bible Study</span>
-                            <span class="px-4 py-2 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">Prayer Ministry</span>
-                            <span class="px-4 py-2 bg-red-100 text-red-700 rounded-full text-sm font-medium">Mentorship</span>
-                        </div>
-                    </div>
+        <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <!-- Weekly Prayer -->
+            <div class="bg-gray-50 p-8 rounded-2xl text-center hover:shadow-xl transition">
+                <div class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-pray text-3xl text-church-red"></i>
                 </div>
-            </div>
-
-            <!-- Personal Development -->
-            <div class="growth-path p-8">
-                <div class="flex items-center space-x-6">
-                    <div class="w-24 h-24 bg-gradient-to-br from-pink-500 to-red-500 rounded-3xl flex items-center justify-center flex-shrink-0">
-                        <i class="fas fa-seedling text-4xl text-white"></i>
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="text-3xl font-bold text-gray-800 mb-3">Personal Development</h3>
-                        <p class="text-gray-600 mb-4 text-lg leading-relaxed">
-                            Grow in confidence, discover your gifts, and develop practical life skills.
-                            We believe every woman has unique talents that deserve to be nurtured and celebrated.
-                        </p>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="px-4 py-2 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">Life Skills</span>
-                            <span class="px-4 py-2 bg-red-100 text-red-700 rounded-full text-sm font-medium">Leadership</span>
-                            <span class="px-4 py-2 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">Confidence Building</span>
-                        </div>
-                    </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Weekly Prayer</h3>
+                <p class="text-gray-600 mb-4">Join us for a time of intercession and prayer for our families, church, and community.</p>
+                <div class="verse-card text-left mt-4">
+                    <p class="verse-text text-sm">"Pray without ceasing."</p>
+                    <span class="verse-ref text-sm">— 1 Thessalonians 5:17</span>
                 </div>
-            </div>
-
-            <!-- Relational Connection -->
-            <div class="growth-path p-8">
-                <div class="flex items-center space-x-6">
-                    <div class="w-24 h-24 bg-gradient-to-br from-red-500 to-yellow-500 rounded-3xl flex items-center justify-center flex-shrink-0">
-                        <i class="fas fa-users text-4xl text-white"></i>
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="text-3xl font-bold text-gray-800 mb-3">Relational Connection</h3>
-                        <p class="text-gray-600 mb-4 text-lg leading-relaxed">
-                            Build meaningful friendships. Whether you're single, married, a mom, or career-focused,
-                            there's a place for you in our community of sisters.
-                        </p>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="px-4 py-2 bg-red-100 text-red-700 rounded-full text-sm font-medium">Small Groups</span>
-                            <span class="px-4 py-2 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">Fellowship</span>
-                            <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Support Networks</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Service & Impact -->
-            <div class="growth-path p-8">
-                <div class="flex items-center space-x-6">
-                    <div class="w-24 h-24 bg-gradient-to-br from-yellow-500 to-purple-500 rounded-3xl flex items-center justify-center flex-shrink-0">
-                        <i class="fas fa-hands-helping text-4xl text-white"></i>
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="text-3xl font-bold text-gray-800 mb-3">Service & Impact</h3>
-                        <p class="text-gray-600 mb-4 text-lg leading-relaxed">
-                            Use your gifts to make a difference in our church and community.
-                            From serving in ministries to outreach programs, find meaningful ways to impact lives.
-                        </p>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="px-4 py-2 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">Ministry Teams</span>
-                            <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Community Outreach</span>
-                            <span class="px-4 py-2 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">Global Missions</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Women's Ministry Connections -->
-<section class="py-24 bg-gradient-to-br from-purple-50 via-pink-50 to-red-50 relative">
-    <div class="connection-web">
-        <div class="connection-line" style="top: 20%; left: 10%; width: 200px; transform: rotate(45deg);"></div>
-        <div class="connection-line" style="top: 60%; right: 15%; width: 150px; transform: rotate(-30deg);"></div>
-        <div class="connection-line" style="bottom: 30%; left: 20%; width: 180px; transform: rotate(60deg);"></div>
-    </div>
-
-    <div class="container mx-auto px-4 relative z-10">
-        <div class="text-center mb-20">
-            <h2 class="text-5xl md:text-6xl font-bold mb-6">
-                <span class="gradient-text">Women's Ministry</span>
-            </h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Together we grow in faith, encourage one another, and serve with love.
-                Discover how you can be part of this sisterhood.
-            </p>
-        </div>
-
-        <div class="community-grid">
-            <!-- Fellowship Gatherings -->
-            <div class="community-card p-8 text-center">
-                <div class="circle-icon w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-users text-3xl text-white"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">Fellowship Gatherings</h3>
-                <p class="text-gray-600 leading-relaxed">
-                    A time to connect, share meals, laugh, and strengthen friendships rooted in Christ.
-                </p>
             </div>
 
             <!-- Bible Study -->
-            <div class="community-card p-8 text-center">
-                <div class="circle-icon w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-book-bible text-3xl text-white"></i>
+            <div class="bg-gray-50 p-8 rounded-2xl text-center hover:shadow-xl transition">
+                <div class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-bible text-3xl text-church-red"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">Bible Study</h3>
-                <p class="text-gray-600 leading-relaxed">
-                    Growing together in the Word of God through study, reflection, and discussion.
-                </p>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Bible Study</h3>
+                <p class="text-gray-600 mb-4">Discovering our identity and purpose.</p>
+                <div class="verse-card text-left mt-4">
+                    <p class="verse-text text-sm">"Your word is a lamp for my feet, a light on my path."</p>
+                    <span class="verse-ref text-sm">— Psalm 119:105</span>
+                </div>
             </div>
 
-            <!-- Prayer & Intercession -->
-            <div class="community-card p-8 text-center">
-                <div class="circle-icon w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-praying-hands text-3xl text-white"></i>
+            <!-- Community Outreach -->
+            <div class="bg-gray-50 p-8 rounded-2xl text-center hover:shadow-xl transition">
+                <div class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-hand-holding-heart text-3xl text-church-red"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">Prayer & Intercession</h3>
-                <p class="text-gray-600 leading-relaxed">
-                    Standing together in prayer, lifting one another’s burdens, and interceding for our families and church.
-                </p>
-            </div>
-
-            <!-- Worship & Praise -->
-            <div class="community-card p-8 text-center">
-                <div class="circle-icon w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-music text-3xl text-white"></i>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Community Outreach</h3>
+                <p class="text-gray-600 mb-4">Visits to children's homes, hospitals, and community service projects.</p>
+                <div class="verse-card text-left mt-4">
+                    <p class="verse-text text-sm">"Faith without works is dead."</p>
+                    <span class="verse-ref text-sm">— James 2:26</span>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">Worship & Praise</h3>
-                <p class="text-gray-600 leading-relaxed">
-                    Celebrating God through music, dance, and joyful worship as a community of sisters.
-                </p>
-            </div>
-
-            <!-- Outreach & Service -->
-            <div class="community-card p-8 text-center">
-                <div class="circle-icon w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-hand-holding-heart text-3xl text-white"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">Outreach & Service</h3>
-                <p class="text-gray-600 leading-relaxed">
-                    Extending love beyond our walls through acts of kindness, community service, and outreach.
-                </p>
-            </div>
-
-            <!-- Encouragement & Testimonies -->
-            <div class="community-card p-8 text-center">
-                <div class="circle-icon w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-heart text-3xl text-white"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">Encouragement & Testimonies</h3>
-                <p class="text-gray-600 leading-relaxed">
-                    Sharing testimonies and stories that inspire faith, hope, and strength for every season of life.
-                </p>
             </div>
         </div>
     </div>
 </section>
 
+<!-- Call to Action -->
+<section id="join" class="py-20 bg-white">
+    <div class="container mx-auto px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Journey With Us</h2>
+            <p class="text-xl text-gray-600 mb-10">
+                Whether you're new to the church or have been here for years, 
+                we'd love to have you. Come as you are and find your people.
+            </p>
+            
+            <!-- Bible verse for encouragement -->
+            <div class="verse-card max-w-2xl mx-auto mb-10">
+                <p class="verse-text">
+                    "Let us not give up meeting together, as some are in the habit of doing, but encouraging one another."
+                </p>
+                <span class="verse-ref">— Hebrews 10:25</span>
+            </div>
+            
+            
 
-
-
-
-<script>
-    let slideIndex = 0;
-    const slides = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.nav-dot');
-    let isTransitioning = false;
-
-    function showSlide(index) {
-        if (isTransitioning) return; // Prevent rapid clicking
-
-        isTransitioning = true;
-        const currentSlide = document.querySelector('.slide.active');
-        const nextSlide = slides[index];
-
-        // If it's the same slide, don't transition
-        if (currentSlide === nextSlide) {
-            isTransitioning = false;
-            return;
-        }
-
-        // Remove active class from all dots
-        dots.forEach(dot => {
-            dot.classList.remove('active');
-        });
-
-        // Add active class to current dot
-        dots[index].classList.add('active');
-
-        if (currentSlide) {
-            // Fade out current slide
-            currentSlide.style.opacity = '0';
-
-            setTimeout(() => {
-                // Hide current slide and show next slide
-                currentSlide.classList.remove('active');
-                nextSlide.classList.add('active');
-                nextSlide.style.opacity = '1';
-
-                // Reset transition flag
-                setTimeout(() => {
-                    isTransitioning = false;
-                }, 50);
-            }, );
-        } else {
-            // First slide initialization
-            nextSlide.classList.add('active');
-            nextSlide.style.opacity = '1';
-            isTransitioning = false;
-        }
-    }
-
-    function currentSlide(index) {
-        slideIndex = index - 1;
-        showSlide(slideIndex);
-    }
-
-    function nextSlide() {
-        if (isTransitioning) return;
-        slideIndex = (slideIndex + 1) % slides.length;
-        showSlide(slideIndex);
-    }
-
-    // Initialize slides with proper styling
-    document.addEventListener('DOMContentLoaded', function() {
-        slides.forEach((slide, index) => {
-            slide.style.transition = 'opacity 0.6s ease-in-out';
-            slide.style.opacity = index === 0 ? '1' : '0';
-        });
-
-        // Show first slide
-        if (slides.length > 0) {
-            slides[0].classList.add('active');
-            if (dots.length > 0) {
-                dots[0].classList.add('active');
-            }
-        }
-    });
-
-    // Auto-advance slides every 5 seconds
-    setInterval(nextSlide, 5000);
-
-    // Intersection Observer for smooth animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-
-    // Observe all major sections for animation
-    document.addEventListener('DOMContentLoaded', function() {
-        const sections = document.querySelectorAll('.identity-section, .slideshow-section, .empowerment-section, .final-cta');
-        sections.forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(50px)';
-            section.style.transition = 'all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-            observer.observe(section);
-        });
-    });
-</script>
+            
+        </div>
+    </div>
+</section>
 
 @endsection

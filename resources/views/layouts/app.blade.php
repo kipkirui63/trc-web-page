@@ -19,6 +19,11 @@
     <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('images/trcc-.png') }}">
     <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('images/trcc-.png') }}">
     <link rel="manifest" href="{{ asset('site.webmanifest') }}">
+    <script src="https://www.google.com/recaptcha/api.js?render={{ env('VITE_RECAPTCHA_SITE_KEY') }}"></script>
+
+
+
+
     <!-- Styles -->
     @vite('resources/css/app.css')
 
@@ -406,7 +411,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white pt-12 pb-6">
+    <footer style="background-color: #4C1C7E;" class="text-white pt-12 pb-6">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <!-- About Column -->

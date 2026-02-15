@@ -75,3 +75,7 @@ use App\Http\Controllers\ChildDedicationController;
 Route::post('/child-dedication', [ChildDedicationController::class, 'store'])
     ->name('child.dedication.store');
 
+use App\Http\Controllers\BaptismController;
+
+Route::post('/baptism/apply', [BaptismController::class, 'store'])
+    ->name('baptism.apply');

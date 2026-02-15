@@ -5,83 +5,317 @@
 @section('description', 'Read inspiring articles, updates, and stories from TRC AGC Church to grow in faith and stay connected.')
 
 @section('content')
-<!-- Professional Hero Section -->
-<section class="relative py-32 bg-gradient-to-br from-gray-900 via-church-purple to-indigo-900 overflow-hidden">
-    <!-- Subtle Background Pattern -->
-    <div class="absolute inset-0 opacity-10">
-        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
-    </div>
+<style>
+    /* Red, Black & White Theme Variables - Same as Events Page */
+    :root {
+        --church-red: #DC2626;
+        --church-red-dark: #B91C1C;
+        --church-red-light: #fce4e8;
+        --church-black: #000000;
+        --church-gray: #4a4a4a;
+        --church-light: #f8f8f8;
+    }
     
+    .hero-section {
+        background: url('/images/vbs5.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .floating-element {
+        animation: float 8s ease-in-out infinite;
+        will-change: transform;
+        z-index: 3;
+    }
+
+    .floating-element:nth-child(2) {
+        animation: floatReverse 10s ease-in-out infinite;
+        animation-delay: -2s;
+    }
+
+    .floating-element:nth-child(3) {
+        animation: floatSpin 12s ease-in-out infinite;
+        animation-delay: -4s;
+    }
+
+    .floating-element:nth-child(4) {
+        animation: floatPulse 9s ease-in-out infinite;
+        animation-delay: -6s;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+        33% { transform: translateY(-25px) rotate(2deg) scale(1.05); }
+        66% { transform: translateY(-15px) rotate(-1deg) scale(0.95); }
+    }
+
+    @keyframes floatReverse {
+        0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+        50% { transform: translateY(35px) rotate(-5deg) scale(1.1); }
+    }
+
+    @keyframes floatSpin {
+        0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+        25% { transform: translateY(-20px) rotate(90deg) scale(1.05); }
+        50% { transform: translateY(-30px) rotate(180deg) scale(0.9); }
+        75% { transform: translateY(-10px) rotate(270deg) scale(1.1); }
+    }
+
+    @keyframes floatPulse {
+        0%, 100% { transform: translateY(0px) scale(1); opacity: 0.7; }
+        50% { transform: translateY(-40px) scale(1.3); opacity: 1; }
+    }
+
+    .scroll-indicator {
+        animation: bounce 2s infinite;
+        z-index: 3;
+    }
+
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% { transform: translateY(0) scale(1); opacity: 1; }
+        40% { transform: translateY(-15px) scale(1.1); opacity: 0.8; }
+        60% { transform: translateY(-8px) scale(1.05); opacity: 0.9; }
+    }
+
+    /* Category Card Styles */
+    .category-card {
+        background: white;
+        border-radius: 1.5rem;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1px solid rgba(220, 38, 38, 0.1);
+        position: relative;
+    }
+
+    .category-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--church-red);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+        transform-origin: left;
+    }
+
+    .category-card:hover::before {
+        transform: scaleX(1);
+    }
+
+    .category-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(220, 38, 38, 0.12);
+        border-color: var(--church-red);
+    }
+
+    .category-image {
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 4/3;
+    }
+
+    .category-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.7s ease;
+    }
+
+    .category-card:hover .category-image img {
+        transform: scale(1.05);
+    }
+
+    .category-badge {
+        display: inline-block;
+        padding: 0.375rem 0.875rem;
+        background: white;
+        color: var(--church-red);
+        border-radius: 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .category-link {
+        color: var(--church-red);
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: gap 0.3s ease;
+    }
+
+    .category-link:hover {
+        gap: 1rem;
+    }
+
+    .category-link svg {
+        transition: transform 0.3s ease;
+    }
+
+    .category-link:hover svg {
+        transform: translateX(4px);
+    }
+
+    /* Section Styles */
+    .section-title {
+        color: var(--church-black);
+        font-weight: 700;
+    }
+
+    .title-underline {
+        background: var(--church-red);
+        height: 0.25rem;
+        width: 5rem;
+        margin: 1rem auto;
+        border-radius: 9999px;
+    }
+
+    .badge {
+        display: inline-block;
+        padding: 0.5rem 1.25rem;
+        background: var(--church-red);
+        color: white;
+        border-radius: 50px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    /* CTA Section */
+    .cta-card {
+        background: white;
+        border-radius: 1.5rem;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(220, 38, 38, 0.1);
+    }
+
+    .icon-circle {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 1rem;
+        background: var(--church-red-light);
+        color: var(--church-red);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-primary {
+        background: var(--church-red);
+        color: white;
+        font-weight: 600;
+        padding: 1rem 2rem;
+        border-radius: 0.75rem;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        border: none;
+        box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+    }
+
+    .btn-primary:hover {
+        background: var(--church-red-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(220, 38, 38, 0.3);
+    }
+</style>
+
+<!-- Hero Section -->
+<section class="hero-section flex items-center justify-center relative min-h-screen">
+    <!-- Floating Elements -->
+    <div class="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full floating-element"></div>
+    <div class="absolute top-40 right-20 w-16 h-16 bg-white/10 rounded-full floating-element"></div>
+    <div class="absolute bottom-40 left-20 w-24 h-24 bg-white/10 rounded-full floating-element"></div>
+    <div class="absolute bottom-20 right-10 w-18 h-18 bg-white/10 rounded-full floating-element"></div>
+
     <div class="container mx-auto px-4 relative z-10">
-        <div class="max-w-4xl mx-auto text-center">
-            <!-- Professional Badge -->
-            <div class="inline-flex items-center px-5 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-sm font-medium mb-8">
-                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-                </svg>
-                Insights & Updates
+        <div class="max-w-6xl mx-auto text-center text-white">
+            <!-- Main Content -->
+            <div class="mb-12">
+                <!-- Subtitle -->
+                <div class="mb-8">
+                    <span class="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur rounded-full text-white/90 font-semibold text-lg border border-white/30">
+                        <i class="fas fa-book-open mr-3 text-xl"></i>
+                        Insights & Updates
+                    </span>
+                </div>
+
+                <!-- Main Title -->
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
+                    <span class="block mb-2">Church</span>
+                    <span class="block mb-2">Blog</span>
+                </h1>
+
+                <!-- Description -->
+                <p class="text-xl md:text-2xl mb-12 leading-relaxed text-white/90 max-w-4xl mx-auto">
+                    Explore sermons, events, and pastoral reflections that inspire faith and strengthen our community
+                </p>
             </div>
-            
-            <!-- Clean Heading -->
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
-                Church Blog
-            </h1>
-            
-            <!-- Professional Subtitle -->
-            <p class="text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
-                Explore sermons, events, and pastoral reflections that inspire faith and strengthen our community
-            </p>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 scroll-indicator">
+                <div class="w-8 h-12 border-2 border-white/50 rounded-full flex justify-center">
+                    <div class="w-1 h-3 bg-white/70 rounded-full mt-2"></div>
+                </div>
+                <p class="text-white/60 text-sm mt-2">Scroll to explore</p>
+            </div>
         </div>
-    </div>
-    
-    <!-- Clean Wave Divider -->
-    <div class="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
-            <path d="M0 0L60 10C120 20 240 40 360 46.7C480 53 600 47 720 43.3C840 40 960 40 1080 46.7C1200 53 1320 67 1380 73.3L1440 80V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V0Z" fill="white"/>
-        </svg>
     </div>
 </section>
 
-<!-- Professional Categories Section -->
-<section class="py-24 bg-white">
+<!-- Categories Section -->
+<section class="py-20 bg-white">
     <div class="container mx-auto px-4">
         <!-- Section Header -->
-        <div class="max-w-3xl mx-auto text-center mb-20">
-            <span class="inline-block px-4 py-1 bg-church-purple/10 text-church-purple text-sm font-semibold rounded-full mb-4">
+        <div class="max-w-3xl mx-auto text-center mb-16">
+            <span class="badge mb-4">
+                <i class="fas fa-th-large mr-2"></i>
                 Content Categories
             </span>
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 class="text-4xl md:text-5xl font-bold section-title mb-6">
                 Explore Our Ministry
             </h2>
-            <p class="text-lg text-gray-600 leading-relaxed">
+            <div class="title-underline"></div>
+            <p class="text-lg text-gray-600 leading-relaxed mt-6">
                 Discover meaningful content across three core areas of our church life
             </p>
         </div>
 
-        <!-- Professional Grid -->
+        <!-- Categories Grid -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
 
             <!-- Sermon Recaps Card -->
-            <article class="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-church-purple/30 hover:shadow-2xl transition-all duration-500">
-                <div class="relative overflow-hidden aspect-[4/3]">
-                    <img src="{{ asset('images/sermon.jpg') }}" 
-                         alt="Weekly Sermon Recaps" 
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0"></div>
+            <article class="category-card">
+                <div class="category-image">
+                    <img src="{{ asset('images/kwale-missions1.webp') }}" 
+                         alt="Weekly Sermon Recaps">
                     
-                    <!-- Category Label -->
+                    <!-- Category Badge -->
                     <div class="absolute top-4 left-4">
-                        <span class="inline-block px-3 py-1 bg-white/95 backdrop-blur-sm text-church-purple text-xs font-semibold rounded-lg shadow-lg">
+                        <span class="category-badge">
                             WEEKLY
                         </span>
                     </div>
                 </div>
                 
                 <div class="p-8">
-                    <div class="flex items-center gap-2 text-church-purple mb-4">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-                        </svg>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center">
+                            <i class="fas fa-book-open text-red-600"></i>
+                        </div>
                         <h3 class="text-2xl font-bold text-gray-900">
                             Sermon Recaps
                         </h3>
@@ -92,35 +326,31 @@
                     </p>
                     
                     <a href="{{ route('blog.category', 'sermons') }}" 
-                       class="inline-flex items-center text-church-purple font-semibold hover:gap-3 gap-2 transition-all duration-300 group/link">
+                       class="category-link">
                         <span>Explore Sermons</span>
-                        <svg class="w-5 h-5 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                        </svg>
+                        <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </article>
 
             <!-- Events & Announcements Card -->
-            <article class="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-church-gold/30 hover:shadow-2xl transition-all duration-500">
-                <div class="relative overflow-hidden aspect-[4/3]">
-                    <img src="{{ asset('images/events.jpg') }}" 
-                         alt="Events & Announcements" 
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0"></div>
+            <article class="category-card">
+                <div class="category-image">
+                    <img src="{{ asset('images/kwale-missions1.webp') }}" 
+                         alt="Events & Announcements">
                     
                     <div class="absolute top-4 left-4">
-                        <span class="inline-block px-3 py-1 bg-white/95 backdrop-blur-sm text-church-gold text-xs font-semibold rounded-lg shadow-lg">
+                        <span class="category-badge">
                             UPCOMING
                         </span>
                     </div>
                 </div>
                 
                 <div class="p-8">
-                    <div class="flex items-center gap-2 text-church-gold mb-4">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                        </svg>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center">
+                            <i class="fas fa-calendar-alt text-red-600"></i>
+                        </div>
                         <h3 class="text-2xl font-bold text-gray-900">
                             Events & Announcements
                         </h3>
@@ -131,35 +361,31 @@
                     </p>
                     
                     <a href="{{ route('blog.category', 'events') }}" 
-                       class="inline-flex items-center text-church-gold font-semibold hover:gap-3 gap-2 transition-all duration-300 group/link">
+                       class="category-link">
                         <span>View Calendar</span>
-                        <svg class="w-5 h-5 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                        </svg>
+                        <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </article>
 
             <!-- Pastor's Desk Card -->
-            <article class="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-indigo-600/30 hover:shadow-2xl transition-all duration-500">
-                <div class="relative overflow-hidden aspect-[4/3]">
-                    <img src="{{ asset('images/pastor.jpg') }}" 
-                         alt="Pastor's Desk" 
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0"></div>
+            <article class="category-card">
+                <div class="category-image">
+                    <img src="{{ asset('images/rev.webp') }}" 
+                         alt="Pastor's Desk">
                     
                     <div class="absolute top-4 left-4">
-                        <span class="inline-block px-3 py-1 bg-white/95 backdrop-blur-sm text-indigo-600 text-xs font-semibold rounded-lg shadow-lg">
+                        <span class="category-badge">
                             FEATURED
                         </span>
                     </div>
                 </div>
                 
                 <div class="p-8">
-                    <div class="flex items-center gap-2 text-indigo-600 mb-4">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
-                        </svg>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center">
+                            <i class="fas fa-pen-fancy text-red-600"></i>
+                        </div>
                         <h3 class="text-2xl font-bold text-gray-900">
                             Pastor's Desk
                         </h3>
@@ -170,11 +396,9 @@
                     </p>
                     
                     <a href="{{ route('blog.category', 'pastors-desk') }}" 
-                       class="inline-flex items-center text-indigo-600 font-semibold hover:gap-3 gap-2 transition-all duration-300 group/link">
+                       class="category-link">
                         <span>Read Reflections</span>
-                        <svg class="w-5 h-5 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                        </svg>
+                        <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </article>
@@ -183,14 +407,12 @@
     </div>
 </section>
 
-<!-- Optional CTA Section -->
-<section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+<!-- CTA Section -->
+<section class="py-20 bg-gray-50">
     <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-12 text-center border border-gray-100">
-            <div class="w-16 h-16 bg-church-purple/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg class="w-8 h-8 text-church-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
-                </svg>
+        <div class="max-w-4xl mx-auto cta-card p-12 text-center">
+            <div class="icon-circle mx-auto mb-6">
+                <i class="fas fa-bell text-3xl"></i>
             </div>
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Never Miss an Update
@@ -198,33 +420,56 @@
             <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
                 Subscribe to receive the latest sermons, event announcements, and spiritual insights directly in your inbox
             </p>
-            <button class="inline-flex items-center px-8 py-4 bg-church-purple text-white font-semibold rounded-xl hover:bg-church-purple/90 transition-colors duration-300 shadow-lg hover:shadow-xl">
+            <button class="btn-primary">
                 Subscribe to Newsletter
-                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                </svg>
+                <i class="fas fa-envelope"></i>
             </button>
         </div>
     </div>
 </section>
 
-<style>
-/* Clean, professional transitions */
-* {
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+<script>
+    // Intersection Observer for animations
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -80px 0px'
+    };
 
-/* Smooth hover effects */
-article {
-    transform-origin: center;
-}
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, index * 100);
+            }
+        });
+    }, observerOptions);
 
-/* Professional focus states */
-a:focus-visible,
-button:focus-visible {
-    outline: 2px solid var(--church-purple, #7C3AED);
-    outline-offset: 4px;
-}
-</style>
+    // Initialize elements with starting state
+    document.querySelectorAll('.category-card').forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        observer.observe(card);
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+</script>
 
 @endsection
