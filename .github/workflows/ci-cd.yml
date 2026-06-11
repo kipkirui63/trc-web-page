@@ -85,10 +85,16 @@ jobs:
           mkdir -p ~/.ssh
           ssh-keyscan -p "${{ secrets.CPANEL_PORT || 22 }}" "${{ secrets.CPANEL_HOST }}" >> ~/.ssh/known_hosts
 
+      - name: Verify cPanel SSH access
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          ssh -p "${{ secrets.CPANEL_PORT || 22 }}" "${{ secrets.CPANEL_USER }}@${{ secrets.CPANEL_HOST }}" \
+            'whoami && mkdir -p ~/repositories/trc-web-page ~/public_html'
+
       - name: Deploy application files
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
-          rsync -az --delete \
+          tar \
             --exclude='.git' \
             --exclude='.env' \
             --exclude='node_modules' \
@@ -98,21 +104,16 @@ jobs:
             --exclude='storage/framework/cache/data/*' \
             --exclude='storage/framework/sessions/*' \
             --exclude='storage/framework/views/*' \
-            -e "ssh -p ${{ secrets.CPANEL_PORT || 22 }}" \
-            ./ "${{ secrets.CPANEL_USER }}@${{ secrets.CPANEL_HOST }}:/home/${{ secrets.CPANEL_USER }}/repositories/trc-web-page/"
+            -czf - . | ssh -p "${{ secrets.CPANEL_PORT || 22 }}" "${{ secrets.CPANEL_USER }}@${{ secrets.CPANEL_HOST }}" \
+            'cd ~/repositories/trc-web-page && tar -xzf -'
 
       - name: Deploy public web root
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
-          rsync -az --delete \
-            --exclude='index.php' \
-            --exclude='.well-known' \
-            --exclude='cgi-bin' \
-            -e "ssh -p ${{ secrets.CPANEL_PORT || 22 }}" \
-            public/ "${{ secrets.CPANEL_USER }}@${{ secrets.CPANEL_HOST }}:/home/${{ secrets.CPANEL_USER }}/public_html/"
-          rsync -az \
-            -e "ssh -p ${{ secrets.CPANEL_PORT || 22 }}" \
-            public_html/ "${{ secrets.CPANEL_USER }}@${{ secrets.CPANEL_HOST }}:/home/${{ secrets.CPANEL_USER }}/public_html/"
+          tar -C public -czf - . | ssh -p "${{ secrets.CPANEL_PORT || 22 }}" "${{ secrets.CPANEL_USER }}@${{ secrets.CPANEL_HOST }}" \
+            'cd ~/public_html && tar -xzf -'
+          tar -C public_html -czf - . | ssh -p "${{ secrets.CPANEL_PORT || 22 }}" "${{ secrets.CPANEL_USER }}@${{ secrets.CPANEL_HOST }}" \
+            'cd ~/public_html && tar -xzf -'
 
       - name: Finish Laravel deployment
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
