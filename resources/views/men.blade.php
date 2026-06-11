@@ -368,7 +368,7 @@
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
             <h2 class="section-title text-4xl md:text-5xl mb-4">
-                What We <span>Offer</span>
+                What We <span>Do</span>
             </h2>
             <div class="red-underline"></div>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto mt-8">

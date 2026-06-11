@@ -69,6 +69,15 @@ Route::get('/discipleship-ministry', function () {
 Route::get('/outreach-ministry', function () {
     return view('outreach-ministry');
 });
+Route::get('/compassion-ministry', function () {
+    return view('compassion-ministry');
+});
+Route::get('/bridge-ministry', function () {
+    return view('bridge-ministry');
+});
+Route::get('/pastoral-ministry', function () {
+    return view('pastoral-ministry');
+});
 
 use App\Http\Controllers\ChildDedicationController;
 

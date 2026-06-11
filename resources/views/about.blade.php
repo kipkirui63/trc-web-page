@@ -7,20 +7,23 @@
 @section('content')
 
 <style>
-    /* Modern Variables - Red & Black Independent */
+    /* Modern Variables - Unified Homepage Color Theme */
     :root {
-        --church-red: #c41e3a;
-        --church-red-dark: #a01830;
-        --church-red-light: #fce4e8;
-        --church-black: #1a1a1a;
-        --church-black-light: #2a2a2a;
+        --church-red: #dc2626;
+        --church-red-dark: #b91c1c;
+        --church-red-light: #fef2f2;
+        --church-black: #dc2626;
+        --church-black-light: #b91c1c;
         --church-gray: #4a4a4a;
         --church-light: #f8f8f8;
     }
 
     /* Modern Hero Section - Pure Red */
     .modern-hero-red {
-        background: linear-gradient(135deg, var(--church-red), var(--church-red-dark));
+        background: url('/images/history.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         position: relative;
         overflow: hidden;
         min-height: 90vh;
@@ -28,16 +31,13 @@
 
     /* Modern Hero Section - Pure Black */
     .modern-hero-black {
-        background: linear-gradient(135deg, var(--church-black), #000000);
+        background: url('/images/rev-ann.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         position: relative;
         overflow: hidden;
         min-height: 90vh;
-    }
-
-    .hero-overlay-red {
-        position: absolute;
-        inset: 0;
-        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     }
 
     .floating-element {
@@ -53,7 +53,7 @@
     .modern-card-red {
         background: white;
         border-radius: 1rem;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 10px 30px rgba(220, 38, 38, 0.06);
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         overflow: hidden;
         position: relative;
@@ -86,11 +86,11 @@
     .modern-card-black {
         background: white;
         border-radius: 1rem;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 10px 30px rgba(220, 38, 38, 0.06);
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         overflow: hidden;
         position: relative;
-        border: 1px solid rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(220, 38, 38, 0.12);
     }
 
     .modern-card-black::before {
@@ -112,7 +112,7 @@
 
     .modern-card-black:hover {
         transform: translateY(-5px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 20px 40px rgba(220, 38, 38, 0.18);
         border-color: var(--church-black);
     }
 
@@ -172,7 +172,7 @@
         font-size: 0.875rem;
         font-weight: 600;
         letter-spacing: 0.5px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 10px rgba(220, 38, 38, 0.22);
     }
 
     /* Timeline Styles - Red */
@@ -230,7 +230,7 @@
         background: var(--church-black);
         border: 3px solid white;
         border-radius: 50%;
-        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.22);
     }
 
     /* Section Header */
@@ -300,7 +300,7 @@
     /* CTA Background - Pure Black */
     .cta-section-black {
         position: relative;
-        background: linear-gradient(135deg, var(--church-black), #000000);
+        background: linear-gradient(135deg, var(--church-black), #7f1d1d);
         overflow: hidden;
     }
 
@@ -323,7 +323,7 @@
     .value-card-red {
         background: white;
         border-radius: 1rem;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 10px 30px rgba(220, 38, 38, 0.06);
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         overflow: hidden;
         position: relative;
@@ -357,11 +357,11 @@
     .value-card-black {
         background: white;
         border-radius: 1rem;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 10px 30px rgba(220, 38, 38, 0.06);
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         overflow: hidden;
         position: relative;
-        border: 1px solid rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(220, 38, 38, 0.12);
     }
 
     .value-card-black::before {
@@ -383,7 +383,7 @@
 
     .value-card-black:hover {
         transform: translateY(-5px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 20px 40px rgba(220, 38, 38, 0.12);
         border-color: var(--church-black);
     }
 
@@ -395,7 +395,7 @@
 
     /* Black Circle Background */
     .black-circle-bg {
-        background: #e5e5e5;
+        background: #fef2f2;
         color: var(--church-black);
     }
 
@@ -430,7 +430,7 @@
     .btn-primary-black:hover {
         background: var(--church-black-light);
         transform: translateY(-2px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 10px 20px rgba(220, 38, 38, 0.28);
     }
 
     .btn-outline-red {
@@ -456,11 +456,11 @@
         border-radius: 0.5rem;
         font-weight: 600;
         transition: all 0.3s ease;
-        border: 2px solid rgba(0, 0, 0, 0.3);
+        border: 2px solid rgba(220, 38, 38, 0.28);
     }
 
     .btn-outline-black:hover {
-        background: rgba(0, 0, 0, 0.05);
+        background: rgba(220, 38, 38, 0.06);
         border-color: var(--church-black);
         transform: translateY(-2px);
     }
@@ -490,7 +490,7 @@
         align-items: center;
         justify-content: center;
         font-size: 1.5rem;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 10px 20px rgba(220, 38, 38, 0.22);
     }
 
     .icon-circle-small-red {
@@ -509,7 +509,7 @@
         width: 40px;
         height: 40px;
         border-radius: 10px;
-        background: #e5e5e5;
+        background: #fef2f2;
         color: var(--church-black);
         display: flex;
         align-items: center;
@@ -531,7 +531,7 @@
     }
 
     .bg-black-light {
-        background: #e5e5e5;
+        background: #fef2f2;
     }
 
     /* Red Section */
@@ -544,6 +544,15 @@
     .black-section {
         background: var(--church-black);
         color: white;
+    }
+
+    /* Force legacy black utility accents to the same red palette on this page */
+    .bg-black {
+        background-color: var(--church-red) !important;
+    }
+
+    .border-black {
+        border-color: var(--church-red) !important;
     }
 </style>
 
@@ -1028,6 +1037,76 @@
     </div>
 </section>
 
+
+
+<!-- Doctrinal Statement Section -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="section-header">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our <span class="text-red">Doctrinal Statement</span></h2>
+            
+            <div class="section-divider-red"></div>
+        </div>
+
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
+            <div class="value-card-red p-8 animate-on-scroll">
+                <h3 class="text-2xl font-bold text-gray-900 mb-3">The Holy Scriptures</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    That both Old and New Testaments constitute the divinely inspired Word of God, inerrant in the originals, and the final authority for life and faith.
+                </p>
+            </div>
+
+            <div class="value-card-red p-8 animate-on-scroll animate-delay-1">
+                <h3 class="text-2xl font-bold text-gray-900 mb-3">The Holy Trinity</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    That there is one God, eternally existent in the Holy Trinity of Father, Son and Holy Spirit, each with personality and deity.
+                </p>
+            </div>
+
+            <div class="value-card-red p-8 animate-on-scroll animate-delay-2">
+                <h3 class="text-2xl font-bold text-gray-900 mb-3">The Son, Jesus Christ</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    That the Son, our Lord Jesus Christ, manifested in the flesh through the virgin birth, died on the cross for the redemption of the human family, all of whom may be saved from sin through faith in Him.
+                </p>
+            </div>
+
+            <div class="value-card-red p-8 animate-on-scroll">
+                <h3 class="text-2xl font-bold text-gray-900 mb-3">The Fall of Man</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    That man, although created by God in His own image and likeness fell into sin through disobedience and "so death passed upon all men, for all have sinned". (Romans 5:12).
+                </p>
+            </div>
+
+            <div class="value-card-red p-8 animate-on-scroll animate-delay-1">
+                <h3 class="text-2xl font-bold text-gray-900 mb-3">Salvation &amp; The Holy Spirit</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    In the salvation of the human soul, including the new birth; and in a subsequent work of God in the soul, a crisis, wrought by faith, whereby the heart is cleansed from all sin and filled with the Holy Spirit. This gracious experience is retained by faith as expressed in a constant obedience to God's revealed will, thus giving us perfect cleansing moment by moment (1 John 1:7-9).
+                </p>
+            </div>
+
+            <div class="value-card-red p-8 animate-on-scroll animate-delay-2">
+                <h3 class="text-2xl font-bold text-gray-900 mb-3">The Church</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    That the Church is the body of Christ; that all who are united by faith to Christ are members of the same; and that, having thus become members of one another, it is our solemn covenant duty to fellowship with one another in peace, and to love one another with pure and fervent hearts.
+                </p>
+            </div>
+
+            <div class="value-card-red p-8 animate-on-scroll">
+                <h3 class="text-2xl font-bold text-gray-900 mb-3">The Resurrection</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    That our Lord Jesus Christ in His literal resurrection from the dead is the living guarantee of the resurrection of all human beings; the believing saved to conscious eternal joy, and the unbelieving lost to conscious eternal punishment.
+                </p>
+            </div>
+
+            <div class="value-card-red p-8 animate-on-scroll animate-delay-1">
+                <h3 class="text-2xl font-bold text-gray-900 mb-3">The Return of Christ</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    That our Lord Jesus Christ, in fulfillment of His own promise, both angelically and apostolically attested that will personally return in power and great glory.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 <script>

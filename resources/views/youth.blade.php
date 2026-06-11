@@ -17,7 +17,7 @@
     }
     
     .hero-section {
-        background: url('/images/Youth-hike.webp');
+        background: url('/images/youths2.JPG');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -185,7 +185,7 @@
 
     /* CTA Section */
     .cta-section {
-        background: url('/images/Youth-hike.webp');
+        background: url('/images/youths4.JPG');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -325,7 +325,7 @@
         <div class="max-w-6xl mx-auto">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="about-image-wrapper">
-                    <img src="{{ asset('images/Youth-hike.webp') }}" 
+                    <img src="{{ asset('images/youths3.JPG') }}" 
                          alt="Youth group gathering" 
                          class="w-full h-auto rounded-2xl shadow-xl">
                     <div class="absolute -bottom-6 -right-6 bg-red-600 text-white p-4 rounded-lg shadow-lg z-10">
@@ -354,20 +354,7 @@
                         we're excited to meet you!
                     </p>
 
-                    <div class="grid grid-cols-3 gap-6">
-                        <div class="stat-card">
-                            <div class="stat-number">50+</div>
-                            <div class="stat-label">Active Youth</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">4</div>
-                            <div class="stat-label">Years Strong</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">10+</div>
-                            <div class="stat-label">Leaders</div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -387,7 +374,7 @@
             </h2>
             <div class="title-underline"></div>
             <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mt-6">
-                Every Sunday at 12 PM, we come together for an experience that's designed to help you grow in your faith and build authentic friendships.
+                Every Sunday at 12:30 PM, we come together for an experience that's designed to help you grow in your faith and build authentic friendships.
             </p>
         </div>
 
@@ -473,6 +460,30 @@
     </div>
 </section>
 
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="badge mb-4">
+                    <i class="fas fa-camera mr-2"></i>
+                    Moments
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold section-title mb-6">
+                    Youth <span class="gradient-text">In Action</span>
+                </h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <img src="{{ asset('images/youths2.JPG') }}" alt="Youth ministry gathering" class="w-full h-72 object-cover rounded-2xl shadow-lg">
+                <img src="{{ asset('images/youths3.JPG') }}" alt="Youth fellowship" class="w-full h-72 object-cover rounded-2xl shadow-lg">
+                <img src="{{ asset('images/youths4.JPG') }}" alt="Youth ministry moments" class="w-full h-72 object-cover rounded-2xl shadow-lg">
+                <img src="{{ asset('images/HKE_0241.JPG') }}" alt="Youth community event" class="w-full h-72 object-cover rounded-2xl shadow-lg">
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Call to Action Section -->
 <section class="py-24 cta-section relative">
     <div class="container mx-auto px-4 relative z-10">
@@ -497,7 +508,7 @@
                         <i class="fas fa-clock"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-2">When</h3>
-                    <p class="text-white/90">Every Sunday • 12:00 PM</p>
+                    <p class="text-white/90">Every Sunday • 12:30 PM</p>
                 </div>
                 <div class="info-box">
                     <div class="text-4xl text-white mb-3">
@@ -511,7 +522,7 @@
                         <i class="fas fa-heart"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-2">Who</h3>
-                    <p class="text-white/90">All Youth<br>Ages 18-25</p>
+                    <p class="text-white/90">All Youth</p>
                 </div>
             </div>
         </div>

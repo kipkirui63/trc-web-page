@@ -68,6 +68,12 @@
         border-color: var(--secondary-color);
     }
 
+    .ministry-photo {
+        height: 220px;
+        width: 100%;
+        object-fit: cover;
+    }
+
     .ministry-icon {
         width: 70px;
         height: 70px;
@@ -285,6 +291,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <!-- Children's Ministry -->
             <div class="ministry-card">
+                <img src="{{ asset('images/children3.JPG') }}" alt="Children's Ministry" class="ministry-photo">
                 <div class="p-8">
                     <div class="ministry-icon mb-6">
                         <i class="fas fa-child text-2xl text-white"></i>
@@ -308,6 +315,7 @@
 
             <!-- Youth Ministry -->
             <div class="ministry-card">
+                <img src="{{ asset('images/youths3.JPG') }}" alt="Youth Ministry" class="ministry-photo">
                 <div class="p-8">
                     <div class="ministry-icon mb-6">
                         <i class="fas fa-users text-2xl text-white"></i>
@@ -331,6 +339,7 @@
 
             <!-- Worship Ministry -->
             <div class="ministry-card">
+                <img src="{{ asset('images/worship5.jpeg') }}" alt="Worship Ministry" class="ministry-photo">
                 <div class="p-8">
                     <div class="ministry-icon mb-6">
                         <i class="fas fa-music text-2xl text-white"></i>
@@ -377,6 +386,7 @@
 
             <!-- Women's Ministry -->
             <div class="ministry-card">
+                <img src="{{ asset('images/women1.JPG') }}" alt="Women's Ministry" class="ministry-photo">
                 <div class="p-8">
                     <div class="ministry-icon mb-6">
                         <i class="fas fa-female text-2xl text-white"></i>
@@ -420,9 +430,78 @@
                     </a>
                 </div>
             </div>
+
+            <!-- Compassion Ministry -->
+            <div class="ministry-card">
+                <div class="p-8">
+                    <div class="ministry-icon mb-6">
+                        <i class="fas fa-hand-holding-heart text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Compassion Ministry</h3>
+                    <p class="text-gray-600 mb-4">
+                        <strong>Purpose:</strong> To demonstrate Christ's love through practical care, mercy, and support for the vulnerable in our community.
+                    </p>
+                    <ul class="benefit-list mb-6">
+                        <li>Food and essentials support</li>
+                        <li>Hospital and home visits</li>
+                        <li>Emergency relief response</li>
+                        <li>Care and encouragement teams</li>
+                    </ul>
+                    
+                    <a href="compassion-ministry" class="cta-button w-full text-center">
+                        Serve with Compassion <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bridge Ministry -->
+            <div class="ministry-card">
+                <div class="p-8">
+                    <div class="ministry-icon mb-6">
+                        <i class="fas fa-bridge text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Bridge Ministry</h3>
+                    <p class="text-gray-600 mb-4">
+                        <strong>Purpose:</strong> To support students transitioning from Form 4 to university with spiritual growth, mentorship, and life skills.
+                    </p>
+                    <ul class="benefit-list mb-6">
+                        <li>Transition mentorship</li>
+                        <li>Faith and life skills training</li>
+                        <li>Career and campus guidance</li>
+                        <li>Community and accountability</li>
+                    </ul>
+                    
+                    <a href="bridge-ministry" class="cta-button w-full text-center">
+                        Join Bridge Ministry <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Pastoral Ministry -->
+            <div class="ministry-card">
+                <div class="p-8">
+                    <div class="ministry-icon mb-6">
+                        <i class="fas fa-user-shield text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Pastoral Ministry</h3>
+                    <p class="text-gray-600 mb-4">
+                        <strong>Purpose:</strong> To provide spiritual care, counseling, and guidance for individuals and families.
+                    </p>
+                    <ul class="benefit-list mb-6">
+                        <li>Couples care and support</li>
+                        <li>Pre-marital counseling</li>
+                        <li>Pastoral visits and prayer</li>
+                        <li>Confidential guidance</li>
+                    </ul>
+                    
+                    <a href="pastoral-ministry" class="cta-button w-full text-center">
+                        Get Pastoral Support <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
         </div>
 
-        <!-- Outreach Ministry - Full Width -->
+        <!-- Evangelism & Missions - Full Width -->
         <div class="mb-16">
             <div class="ministry-card">
                 <div class="p-8 md:p-12">
@@ -431,11 +510,11 @@
                             <div class="ministry-icon mb-6">
                                 <i class="fas fa-hands-helping text-2xl text-white"></i>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Outreach Ministry</h3>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Evangelism & Missions</h3>
                         </div>
                         <div class="md:w-3/4">
                             <p class="text-gray-600 mb-6">
-                                <strong>Purpose:</strong> To extend God's love beyond our church walls through local and global missions, community service, evangelism, and compassionate outreach to those in need.
+                                <strong>Purpose:</strong> To extend God's love beyond our church walls through evangelism, local outreach, and global missions that share the Gospel and serve communities.
                             </p>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                                 <div>

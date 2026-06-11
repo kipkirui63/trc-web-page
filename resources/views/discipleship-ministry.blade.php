@@ -9,25 +9,25 @@
     @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap');
     
     .ministry-card {
-        background: linear-gradient(135deg, rgba(124, 58, 237, 0.05) 0%, rgba(220, 38, 38, 0.05) 100%);
-        border-left: 4px solid #7c3aed;
+        background: linear-gradient(135deg, rgba(220, 38, 38, 0.06) 0%, rgba(220, 38, 38, 0.05) 100%);
+        border-left: 4px solid #dc2626;
         transition: all 0.3s ease;
     }
     
     .ministry-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(124, 58, 237, 0.15);
+        box-shadow: 0 10px 25px rgba(220, 38, 38, 0.18);
         border-left-color: #dc2626;
     }
 
     .icon-circle {
-        background: linear-gradient(135deg, #7c3aed, #dc2626);
+        background: linear-gradient(135deg, #dc2626, #dc2626);
         animation: pulse-glow 3s ease-in-out infinite;
     }
 
     .form-input:focus {
-        border-color: #7c3aed;
-        box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+        border-color: #dc2626;
+        box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12);
     }
 
     .baptism-form {
@@ -48,7 +48,7 @@
         transform: translateX(-50%);
         width: 60px;
         height: 3px;
-        background: linear-gradient(90deg, #7c3aed, #dc2626);
+        background: linear-gradient(90deg, #dc2626, #dc2626);
         border-radius: 2px;
     }
 
@@ -64,21 +64,23 @@
         top: 8px;
         width: 12px;
         height: 12px;
-        background: #7c3aed;
+        background: #dc2626;
         border-radius: 50%;
-        box-shadow: 0 0 10px rgba(124, 58, 237, 0.3);
+        box-shadow: 0 0 10px rgba(220, 38, 38, 0.3);
+    }
+
+    .discipleship-hero {
+        background: url('/images/vbs5.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 </style>
 @endsection
 
 @section('content')
 <!-- Hero Section -->
-<section class="relative bg-gradient-to-br from-purple-600 via-purple-700 to-red-600 text-white py-20 overflow-hidden">
-    <div class="absolute inset-0 bg-black opacity-20"></div>
-    <div class="absolute inset-0">
-        <div class="hero-pattern opacity-10"></div>
-    </div>
-    
+<section class="relative discipleship-hero text-white py-20 overflow-hidden">
     <div class="container mx-auto px-4 relative z-10">
         <div class="text-center max-w-4xl mx-auto">
             <div class="float-animation mb-6">
@@ -87,16 +89,16 @@
                 </div>
             </div>
             <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                Discipleship <span class="text-yellow-300">Ministry</span>
+                Discipleship <span class="text-white">Ministry</span>
             </h1>
             <p class="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
                 Growing Together in Faith, Knowledge, and Community
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#bible-study" class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition transform hover:scale-105">
+                <a href="#bible-study" class="bg-white text-red-700 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition transform hover:scale-105">
                     Join Bible Study
                 </a>
-                <a href="#baptism" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition">
+                <a href="#baptism" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-red-700 transition">
                     Request Baptism
                 </a>
             </div>
@@ -121,23 +123,23 @@
                     <div class="icon-circle w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
                         <i class="fas fa-bible text-2xl text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-church-purple mb-2">Bible Study</h3>
+                    <h3 class="text-2xl font-bold text-church-red mb-2">Bible Study</h3>
                 </div>
                 <p class="text-gray-600 mb-6 leading-relaxed">
                     Join our weekly Bible study sessions where we dive deep into God's Word, exploring its relevance to our daily lives and growing in understanding together.
                 </p>
                 <div class="space-y-3 mb-6">
                     <div class="timeline-item">
-                        <strong class="text-church-purple">When:</strong> Every Wednesday
+                        <strong class="text-church-red">When:</strong> Every Wednesday
                     </div>
                     <div class="timeline-item">
-                        <strong class="text-church-purple">Time:</strong> 8:30 PM - 9:30 PM
+                        <strong class="text-church-red">Time:</strong> 8:30 PM - 9:30 PM
                     </div>
                     <div class="timeline-item">
-                        <strong class="text-church-purple">Format:</strong> Interactive Discussion
+                        <strong class="text-church-red">Format:</strong> Interactive Discussion
                     </div>
                 </div>
-                <a href="#bible-study" class="inline-block bg-church-purple text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition transform hover:scale-105">
+                <a href="#bible-study" class="inline-block bg-church-red text-white px-6 py-3 rounded-lg hover:bg-red-700 transition transform hover:scale-105">
                     Learn More
                 </a>
             </div>
@@ -175,23 +177,23 @@
                     <div class="icon-circle w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
                         <i class="fas fa-graduation-cap text-2xl text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-church-purple mb-2">Catechism Classes</h3>
+                    <h3 class="text-2xl font-bold text-church-red mb-2">Catechism Classes</h3>
                 </div>
                 <p class="text-gray-600 mb-6 leading-relaxed">
                     Prepare for baptism and deepen your understanding of Christian doctrine through our comprehensive catechism classes led by experienced teachers.
                 </p>
                 <div class="space-y-3 mb-6">
                     <div class="timeline-item">
-                        <strong class="text-church-purple">Purpose:</strong> Baptism Preparation
+                        <strong class="text-church-red">Purpose:</strong> Baptism Preparation
                     </div>
                     <div class="timeline-item">
-                        <strong class="text-church-purple">Content:</strong> Christian Doctrine
+                        <strong class="text-church-red">Content:</strong> Christian Doctrine
                     </div>
                     <div class="timeline-item">
-                        <strong class="text-church-purple">Outcome:</strong> Water Baptism
+                        <strong class="text-church-red">Outcome:</strong> Water Baptism
                     </div>
                 </div>
-                <a href="#baptism" class="inline-block bg-church-purple text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition transform hover:scale-105">
+                <a href="#baptism" class="inline-block bg-church-red text-white px-6 py-3 rounded-lg hover:bg-red-700 transition transform hover:scale-105">
                     Apply for Baptism
                 </a>
             </div>
@@ -211,7 +213,7 @@
             </div>
 
             <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div class="bg-gradient-to-r from-church-purple to-church-red p-8 text-white text-center">
+                <div class="bg-gradient-to-r from-church-red to-church-red p-8 text-white text-center">
                     <h3 class="text-3xl font-bold mb-4">Weekly Bible Study Sessions</h3>
                     <div class="grid md:grid-cols-2 gap-8">
                         <div class="bounce-slow">
@@ -232,28 +234,28 @@
                         <h4 class="text-2xl font-bold text-gray-800 mb-4">What to Expect</h4>
                         <div class="grid md:grid-cols-2 gap-6">
                             <div class="flex items-start space-x-3">
-                                <i class="fas fa-check-circle text-church-purple text-xl mt-1"></i>
+                                <i class="fas fa-check-circle text-church-red text-xl mt-1"></i>
                                 <div>
                                     <h5 class="font-semibold text-gray-800">Interactive Discussion</h5>
                                     <p class="text-gray-600">Engage with fellow believers in meaningful conversations</p>
                                 </div>
                             </div>
                             <div class="flex items-start space-x-3">
-                                <i class="fas fa-check-circle text-church-purple text-xl mt-1"></i>
+                                <i class="fas fa-check-circle text-church-red text-xl mt-1"></i>
                                 <div>
                                     <h5 class="font-semibold text-gray-800">Deep Scripture Study</h5>
                                     <p class="text-gray-600">Explore the Bible verse by verse with context</p>
                                 </div>
                             </div>
                             <div class="flex items-start space-x-3">
-                                <i class="fas fa-check-circle text-church-purple text-xl mt-1"></i>
+                                <i class="fas fa-check-circle text-church-red text-xl mt-1"></i>
                                 <div>
                                     <h5 class="font-semibold text-gray-800">Prayer Time</h5>
                                     <p class="text-gray-600">End each session with prayer and fellowship</p>
                                 </div>
                             </div>
                             <div class="flex items-start space-x-3">
-                                <i class="fas fa-check-circle text-church-purple text-xl mt-1"></i>
+                                <i class="fas fa-check-circle text-church-red text-xl mt-1"></i>
                                 <div>
                                     <h5 class="font-semibold text-gray-800">All Welcome</h5>
                                     <p class="text-gray-600">Open to all believers, regardless of experience</p>
@@ -263,7 +265,7 @@
                     </div>
                     
                     <div class="text-center">
-                        <a href="#" class="inline-block bg-church-purple text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-purple-700 transition transform hover:scale-105 pulse-glow">
+                        <a href="#" class="inline-block bg-church-red text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-red-700 transition transform hover:scale-105 pulse-glow">
                             <i class="fas fa-external-link-alt mr-2"></i>
                             Join Bible Study Link
                         </a>
@@ -359,7 +361,7 @@
 </section>
 
 <!-- Baptism Application Section -->
-<section id="baptism" class="py-16 bg-gradient-to-br from-purple-50 to-red-50">
+<section id="baptism" class="py-16 bg-gradient-to-br from-red-50 to-white">
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-12">
@@ -372,7 +374,7 @@
             <div class="baptism-form rounded-2xl shadow-xl p-8 md:p-12">
                 <div class="text-center mb-8">
                     <div class="float-animation">
-                        <i class="fas fa-water text-5xl text-church-purple mb-4"></i>
+                        <i class="fas fa-water text-5xl text-church-red mb-4"></i>
                     </div>
                     <h3 class="text-3xl font-bold text-gray-800 mb-4">Application for Baptism</h3>
                     <p class="text-gray-600 leading-relaxed">
@@ -440,34 +442,34 @@
 
                     <div class="bg-gray-50 p-6 rounded-xl">
                         <h4 class="text-lg font-bold text-gray-800 mb-3">
-                            <i class="fas fa-info-circle text-church-purple mr-2"></i>
+                            <i class="fas fa-info-circle text-church-red mr-2"></i>
                             What Happens Next?
                         </h4>
                         <ul class="space-y-2 text-gray-700">
                             <li class="flex items-start">
-                                <i class="fas fa-check text-church-purple mr-3 mt-1"></i>
+                                <i class="fas fa-check text-church-red mr-3 mt-1"></i>
                                 Our pastoral team will review your application
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check text-church-purple mr-3 mt-1"></i>
+                                <i class="fas fa-check text-church-red mr-3 mt-1"></i>
                                 You'll be contacted to schedule a meeting with a pastor
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check text-church-purple mr-3 mt-1"></i>
+                                <i class="fas fa-check text-church-red mr-3 mt-1"></i>
                                 Attend catechism classes to prepare for baptism
                             </li>
                         </ul>
                     </div>
 
                     <div class="flex items-center">
-                        <input type="checkbox" id="terms" name="terms" required class="text-church-purple mr-3">
+                        <input type="checkbox" id="terms" name="terms" required class="text-church-red mr-3">
                         <label for="terms" class="text-sm text-gray-700">
                             I understand that baptism is a public declaration of my faith in Jesus Christ and commitment to follow Him. I agree to attend the required catechism classes. *
                         </label>
                     </div>
 
                     <div class="text-center pt-6">
-                        <button type="submit" class="bg-gradient-to-r from-church-purple to-church-red text-white px-12 py-4 rounded-full font-bold text-lg hover:shadow-lg transition transform hover:scale-105 pulse-glow">
+                        <button type="submit" class="bg-gradient-to-r from-church-red to-church-red text-white px-12 py-4 rounded-full font-bold text-lg hover:shadow-lg transition transform hover:scale-105 pulse-glow">
                             <i class="fas fa-paper-plane mr-2"></i>
                             Submit Application
                         </button>
@@ -491,10 +493,10 @@
             </p>
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="card-hover bg-gray-800 p-6 rounded-xl">
-                    <i class="fas fa-phone text-3xl text-church-purple mb-4"></i>
+                    <i class="fas fa-phone text-3xl text-church-red mb-4"></i>
                     <h3 class="text-xl font-bold mb-2">Call Us</h3>
                     <p class="text-gray-300 mb-4">Speak directly with our pastoral team</p>
-                    <a href="tel:+254791049004" class="text-church-purple hover:text-purple-300 font-semibold">
+                    <a href="tel:+254791049004" class="text-church-red hover:text-red-300 font-semibold">
                         +254 791 049004
                     </a>
                 </div>

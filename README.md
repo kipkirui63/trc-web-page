@@ -81,7 +81,7 @@ php artisan db:seed
 composer run dev
 ```
 
-The application will be available at `http://localhost:8000`
+The backend application will be available at `http://localhost:8002` and Vite dev server at `http://localhost:5174`
 
 ## Project Structure
 
@@ -138,7 +138,6 @@ For production:
 ```bash
 npm run build
 ```
-
 
 
 

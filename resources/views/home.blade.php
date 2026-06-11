@@ -381,9 +381,7 @@
 
                     </div>
                     
-                    <p class="text-xl text-gray-700 mb-8 leading-relaxed font-medium">
-                        From humble whispers of prayer to a thunderous chorus of worship - TRC AGC Church's story is one of miraculous growth, unwavering faith, and divine purpose. What began as a small circle of dreamers has blossomed into a powerhouse of spiritual transformation.
-                    </p>
+                    
                     
                     <p class="text-lg text-gray-700 mb-8 leading-relaxed">
                         Every chapter of our journey bears witness to God's extraordinary faithfulness. Through seasons of challenge and celebration, we've remained anchored in our calling to ignite hearts, build bridges across cultures, and serve as a lighthouse of hope in our community. Our legacy isn't just measured in years, but in the countless lives forever changed by encountering God's love within our walls.

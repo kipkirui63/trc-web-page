@@ -545,13 +545,13 @@
                         <h3 class="text-xl font-bold mb-4">Follow Our Journey</h3>
                         <p class="mb-6 opacity-90">Stay connected with our church community on social media</p>
                         <div class="flex space-x-4">
-                            <a href="#" class="social-link">
+                            <a href="https://web.facebook.com/profile.php?id=61584163760330" target="_blank" rel="noopener noreferrer" class="social-link">
                                 <i class="fab fa-facebook-f text-lg"></i>
                             </a>
                             <a href="https://www.instagram.com/trc_agc/" class="social-link">
                                 <i class="fab fa-instagram text-lg"></i>
                             </a>
-                            <a href="#" class="social-link">
+                            <a href="https://www.youtube.com/channel/UCOlYLzEsSZfa-Badq9L74-g" target="_blank" rel="noopener noreferrer" class="social-link">
                                 <i class="fab fa-youtube text-lg"></i>
                             </a>
                             <a href="#" class="social-link">
@@ -737,4 +737,3 @@
 </script>
 
 @endsection
-

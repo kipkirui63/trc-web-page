@@ -22,20 +22,10 @@
         display: flex;
         align-items: center;
         overflow: hidden;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(220, 38, 38, 0.3)), url('/images/ladies1.webp');
+        background: url('/images/women1.JPG');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
-    }
-
-    .hero-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(circle at center, transparent 0%, rgba(220, 38, 38, 0.2) 100%);
-        pointer-events: none;
     }
 
     /* Cards and Components */
@@ -212,7 +202,6 @@
 
 <!-- Hero Section -->
 <section class="ministry-hero text-white">
-    <div class="hero-overlay"></div>
     <div class="container mx-auto px-4 relative z-10">
         <div class="max-w-4xl mx-auto text-center">
             <div class="inline-block bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full mb-8 border border-white/30">
@@ -267,12 +256,12 @@
             <div class="lg:w-1/2">
                 <div class="grid grid-cols-2 gap-4">
                     <div class="space-y-4">
-                        <img src="/images/ladies1.webp" alt="Women's Ministry" class="rounded-2xl shadow-lg w-full h-48 object-cover">
-                        <img src="/images/ladies2.webp" alt="Women's Fellowship" class="rounded-2xl shadow-lg w-full h-64 object-cover">
+                        <img src="/images/women1.JPG" alt="Women's Ministry" class="rounded-2xl shadow-lg w-full h-48 object-cover">
+                        <img src="/images/women2.JPG" alt="Women's Fellowship" class="rounded-2xl shadow-lg w-full h-64 object-cover">
                     </div>
                     <div class="space-y-4 pt-8">
-                        <img src="/images/ladies2.webp" alt="Women in Prayer" class="rounded-2xl shadow-lg w-full h-64 object-cover">
-                        <img src="/images/ladies1.webp" alt="Sisterhood" class="rounded-2xl shadow-lg w-full h-48 object-cover">
+                        <img src="/images/womens3.JPG" alt="Women in Prayer" class="rounded-2xl shadow-lg w-full h-64 object-cover">
+                        <img src="/images/women1.JPG" alt="Sisterhood" class="rounded-2xl shadow-lg w-full h-48 object-cover">
                     </div>
                 </div>
             </div>
@@ -296,7 +285,7 @@
             <div class="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
                 <div class="lg:w-1/2">
                     <div class="feature-image">
-                        <img src="/images/ladies2.webp" alt="Morning Breakfast Fellowship" class="w-full h-[400px]">
+                        <img src="/images/women2.JPG" alt="Morning Breakfast Fellowship" class="w-full h-[400px]">
                     </div>
                 </div>
                 <div class="lg:w-1/2">
@@ -344,7 +333,7 @@
             <div class="flex flex-col lg:flex-row-reverse items-center gap-12 max-w-6xl mx-auto">
                 <div class="lg:w-1/2">
                     <div class="feature-image">
-                        <img src="/images/ladies1.webp" alt="Women's Annual Retreat" class="w-full h-[400px]">
+                        <img src="/images/womens3.JPG" alt="Women's Annual Retreat" class="w-full h-[400px]">
                     </div>
                 </div>
                 <div class="lg:w-1/2">
@@ -384,37 +373,24 @@
             <div class="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
                 <div class="lg:w-1/2">
                     <div class="feature-image">
-                        <img src="/images/ladies2.webp" alt="Community Outreach" class="w-full h-[400px]">
+                        <img src="/images/women1.JPG" alt="Community Outreach" class="w-full h-[400px]">
                     </div>
                 </div>
                 <div class="lg:w-1/2">
-                    <span class="scripture-badge">Matthew 25:40</span>
+                    <span class="scripture-badge">Romans 12:11</span>
                     <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Serving Our Community</h3>
                     <p class="text-lg text-gray-600 mb-6 leading-relaxed">
                         Our women don't just gather—they go. We've visited children's homes, organized medical camps, 
                         and supported widows in our community. Our hands and feet extend the love of Christ beyond our church walls.
                     </p>
                     
-                    <div class="space-y-3 mb-6">
-                        <div class="flex items-center gap-3">
-                            <i class="fas fa-hand-holding-heart text-church-red"></i>
-                            <span class="text-gray-700">Visiting children's homes with gifts and love</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fas fa-hand-holding-heart text-church-red"></i>
-                            <span class="text-gray-700">Medical camps serving our community</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fas fa-hand-holding-heart text-church-red"></i>
-                            <span class="text-gray-700">Supporting widows through our outreach program</span>
-                        </div>
-                    </div>
+                   
 
                     <div class="verse-card">
                         <p class="verse-text">
-                            "Truly I tell you, whatever you did for one of the least of these brothers and sisters of mine, you did for me."
+                            "Never be lacking in zeal, but keep your spiritual fervor, serving the Lord."
                         </p>
-                        <span class="verse-ref">— Matthew 25:40</span>
+                        <span class="verse-ref">— Romans 12:11</span>
                     </div>
                 </div>
             </div>
@@ -436,45 +412,34 @@
             </p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <!-- Weekly Prayer -->
-            <div class="bg-gray-50 p-8 rounded-2xl text-center hover:shadow-xl transition">
+            <div class="bg-gray-50 p-8 rounded-2xl text-center hover:shadow-xl transition flex flex-col justify-between">
                 <div class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
                     <i class="fas fa-pray text-3xl text-church-red"></i>
                 </div>
                 <h3 class="text-xl font-bold text-gray-900 mb-3">Weekly Prayer</h3>
-                <p class="text-gray-600 mb-4">Join us for a time of intercession and prayer for our families, church, and community.</p>
-                <div class="verse-card text-left mt-4">
+                <p class="text-gray-600 mb-4 max-w-sm mx-auto">Join us for a time of intercession and prayer for our families, church, and community. Every Friday online, and physically on the last Friday of each month.</p>
+                <div class="verse-card text-center mt-4">
                     <p class="verse-text text-sm">"Pray without ceasing."</p>
                     <span class="verse-ref text-sm">— 1 Thessalonians 5:17</span>
                 </div>
             </div>
 
             <!-- Bible Study -->
-            <div class="bg-gray-50 p-8 rounded-2xl text-center hover:shadow-xl transition">
+            <div class="bg-gray-50 p-8 rounded-2xl text-center hover:shadow-xl transition flex flex-col justify-between">
                 <div class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
                     <i class="fas fa-bible text-3xl text-church-red"></i>
                 </div>
                 <h3 class="text-xl font-bold text-gray-900 mb-3">Bible Study</h3>
-                <p class="text-gray-600 mb-4">Discovering our identity and purpose.</p>
-                <div class="verse-card text-left mt-4">
+                <p class="text-gray-600 mb-4 max-w-sm mx-auto">Discovering our identity and purpose through God's Word.</p>
+                <div class="verse-card text-center mt-4">
                     <p class="verse-text text-sm">"Your word is a lamp for my feet, a light on my path."</p>
                     <span class="verse-ref text-sm">— Psalm 119:105</span>
                 </div>
             </div>
 
-            <!-- Community Outreach -->
-            <div class="bg-gray-50 p-8 rounded-2xl text-center hover:shadow-xl transition">
-                <div class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-hand-holding-heart text-3xl text-church-red"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Community Outreach</h3>
-                <p class="text-gray-600 mb-4">Visits to children's homes, hospitals, and community service projects.</p>
-                <div class="verse-card text-left mt-4">
-                    <p class="verse-text text-sm">"Faith without works is dead."</p>
-                    <span class="verse-ref text-sm">— James 2:26</span>
-                </div>
-            </div>
+            
         </div>
     </div>
 </section>

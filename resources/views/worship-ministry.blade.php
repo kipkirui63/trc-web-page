@@ -6,9 +6,9 @@
 @section('styles')
 <style>
     :root {
-        --church-purple: #7c3aed;
+        --church-purple: #b91c1c;
         --church-red: #dc2626;
-        --church-yellow: #f59e0b;
+        --church-yellow: #ffffff;
     }
 
     .ministry-hero {
@@ -102,14 +102,14 @@
 
     .glass-card:hover {
         transform: translateY(-15px) rotateX(5deg);
-        box-shadow: 0 25px 50px rgba(124, 58, 237, 0.2);
+        box-shadow: 0 25px 50px rgba(220, 38, 38, 0.2);
     }
 
     .ministry-path {
         background: linear-gradient(135deg, rgba(248, 250, 252, 0.9), rgba(255, 255, 255, 0.9));
         backdrop-filter: blur(10px);
         border-radius: 20px;
-        border: 1px solid rgba(124, 58, 237, 0.1);
+        border: 1px solid rgba(220, 38, 38, 0.12);
         position: relative;
         overflow: hidden;
         transition: all 0.4s ease;
@@ -133,13 +133,13 @@
 
     .ministry-path:hover {
         transform: translateX(10px);
-        box-shadow: 0 15px 35px rgba(124, 58, 237, 0.15);
+        box-shadow: 0 15px 35px rgba(220, 38, 38, 0.18);
     }
 
     .experience-card {
         background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), rgba(220, 38, 38, 0.05));
         border-radius: 16px;
-        border: 1px solid rgba(124, 58, 237, 0.1);
+        border: 1px solid rgba(220, 38, 38, 0.12);
         transition: all 0.3s ease;
         position: relative;
         overflow: hidden;
@@ -266,7 +266,7 @@
         top: -10px;
         left: 20px;
         font-size: 6rem;
-        color: var(--church-purple);
+        color: var(--church-red);
         opacity: 0.1;
         font-family: serif;
     }
@@ -377,7 +377,7 @@
         position: relative;
         z-index: 1;
         font-weight: 800;
-        color: var(--church-purple);
+        color: var(--church-red);
     }
 
     @media (max-width: 768px) {
@@ -417,13 +417,13 @@
                 <div class="space-y-6">
                     <h1 class="text-6xl md:text-8xl font-black leading-tight">
                         Lift Your
-                        <span class="block bg-gradient-to-r from-yellow-300 via-white to-yellow-300 bg-clip-text text-transparent">
+                        <span class="block bg-gradient-to-r from-red-200 via-white to-red-200 bg-clip-text text-transparent">
                             Voice to Heaven
                         </span>
                     </h1>
                     <p class="text-xl md:text-3xl opacity-90 leading-relaxed max-w-4xl mx-auto">
                         Join a community of passionate worshippers using their gifts to create
-                        <span class="text-yellow-300 font-semibold">transformational worship experiences</span>
+                        <span class="text-red-200 font-semibold">transformational worship experiences</span>
                         that draw hearts closer to God
                     </p>
                 </div>
@@ -444,9 +444,9 @@
                             Sing to the Lord, praise his name; proclaim his salvation day after day."
                         </p>
                         <div class="flex items-center justify-center space-x-4">
-                            <div class="w-12 h-0.5 bg-gradient-to-r from-transparent via-yellow-300 to-transparent"></div>
-                            <span class="text-yellow-300 font-semibold">Psalm 96:1-2</span>
-                            <div class="w-12 h-0.5 bg-gradient-to-r from-transparent via-yellow-300 to-transparent"></div>
+                            <div class="w-12 h-0.5 bg-gradient-to-r from-transparent via-red-200 to-transparent"></div>
+                            <span class="text-red-200 font-semibold">Psalm 96:1-2</span>
+                            <div class="w-12 h-0.5 bg-gradient-to-r from-transparent via-red-200 to-transparent"></div>
                         </div>
                     </div>
                 </div>
@@ -499,16 +499,16 @@
             <!-- Vocal Ministry -->
             <div class="ministry-path p-8">
                 <div class="flex items-center space-x-6">
-                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-red-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <div class="w-20 h-20 bg-gradient-to-br from-red-600 to-red-500 rounded-2xl flex items-center justify-center flex-shrink-0">
                         <i class="fas fa-microphone-alt text-3xl text-white"></i>
                     </div>
                     <div class="flex-1">
                         <h3 class="text-2xl font-bold text-gray-800 mb-2">Vocal Ministry</h3>
                         <p class="text-gray-600 mb-4">Lead congregational worship, join our choir, or share your solo talents to lift hearts to heaven.</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">Lead Worship</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Lead Worship</span>
                             <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Choir</span>
-                            <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm">Solo Ministry</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Solo Ministry</span>
                         </div>
                     </div>
                 </div>
@@ -517,7 +517,7 @@
             <!-- Instrumental Ministry -->
             <div class="ministry-path p-8">
                 <div class="flex items-center space-x-6">
-                    <div class="w-20 h-20 bg-gradient-to-br from-red-500 to-yellow-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <div class="w-20 h-20 bg-gradient-to-br from-red-500 to-red-500 rounded-2xl flex items-center justify-center flex-shrink-0">
                         <i class="fas fa-guitar text-3xl text-white"></i>
                     </div>
                     <div class="flex-1">
@@ -525,8 +525,8 @@
                         <p class="text-gray-600 mb-4">Create the soundtrack of worship with guitars, keyboards, drums, and orchestral instruments.</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Guitar</span>
-                            <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm">Keys</span>
-                            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">Drums</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Keys</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Drums</span>
                             <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Orchestra</span>
                         </div>
                     </div>
@@ -536,15 +536,15 @@
             <!-- Technical Arts -->
             <div class="ministry-path p-8">
                 <div class="flex items-center space-x-6">
-                    <div class="w-20 h-20 bg-gradient-to-br from-yellow-500 to-purple-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <div class="w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center flex-shrink-0">
                         <i class="fas fa-sliders-h text-3xl text-white"></i>
                     </div>
                     <div class="flex-1">
                         <h3 class="text-2xl font-bold text-gray-800 mb-2">Technical Arts</h3>
                         <p class="text-gray-600 mb-4">Bring worship to life through sound engineering, lighting design, and live streaming excellence.</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm">Sound</span>
-                            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">Lighting</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Sound</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Lighting</span>
                             <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Streaming</span>
                         </div>
                     </div>
@@ -554,15 +554,15 @@
             <!-- Creative Arts -->
             <div class="ministry-path p-8">
                 <div class="flex items-center space-x-6">
-                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-yellow-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <div class="w-20 h-20 bg-gradient-to-br from-red-600 to-red-500 rounded-2xl flex items-center justify-center flex-shrink-0">
                         <i class="fas fa-palette text-3xl text-white"></i>
                     </div>
                     <div class="flex-1">
                         <h3 class="text-2xl font-bold text-gray-800 mb-2">Creative Arts</h3>
                         <p class="text-gray-600 mb-4">Express worship through dance, drama, visual arts, and creative storytelling.</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">Dance</span>
-                            <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm">Drama</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Dance</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Drama</span>
                             <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Visual Arts</span>
                         </div>
                     </div>
@@ -572,7 +572,7 @@
             <!-- Prayer Ministry -->
             <div class="ministry-path p-8">
                 <div class="flex items-center space-x-6">
-                    <div class="w-20 h-20 bg-gradient-to-br from-red-500 to-purple-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <div class="w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center flex-shrink-0">
                         <i class="fas fa-praying-hands text-3xl text-white"></i>
                     </div>
                     <div class="flex-1">
@@ -580,8 +580,8 @@
                         <p class="text-gray-600 mb-4">Intercede for our services, support worship teams, and create spiritual covering through prayer.</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Intercession</span>
-                            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">Worship Prayer</span>
-                            <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm">Spiritual Warfare</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Worship Prayer</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Spiritual Warfare</span>
                         </div>
                     </div>
                 </div>
@@ -590,16 +590,16 @@
             <!-- Hospitality & Ushering -->
             <div class="ministry-path p-8">
                 <div class="flex items-center space-x-6">
-                    <div class="w-20 h-20 bg-gradient-to-br from-yellow-500 to-red-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <div class="w-20 h-20 bg-gradient-to-br from-red-500 to-red-500 rounded-2xl flex items-center justify-center flex-shrink-0">
                         <i class="fas fa-handshake text-3xl text-white"></i>
                     </div>
                     <div class="flex-1">
                         <h3 class="text-2xl font-bold text-gray-800 mb-2">Hospitality & Ushering</h3>
                         <p class="text-gray-600 mb-4">Welcome guests with warmth, guide worship flow, and create an atmosphere where everyone feels at home.</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm">Welcome Team</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Welcome Team</span>
                             <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Ushering</span>
-                            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">Guest Relations</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Guest Relations</span>
                         </div>
                     </div>
                 </div>
@@ -613,7 +613,7 @@
     <div class="container mx-auto px-4">
         <div class="text-center mb-20">
             <h2 class="text-4xl md:text-6xl font-bold mb-6">
-                <span class="gradient-text">Our Vision & Impact</span>
+                <span class="gradient-text">Our Objective </span>
             </h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                 Building a culture of excellence in worship that transforms hearts and glorifies God.
@@ -625,11 +625,10 @@
             <div class="space-y-8">
                 <div class="glass-card p-8">
                     <div class="flex items-start space-x-4 mb-6">
-                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                        <div class="w-12 h-12 bg-gradient-to-br from-red-600 to-red-500 rounded-full flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-eye text-xl text-white"></i>
                         </div>
                         <div>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Our Vision</h3>
                             <p class="text-gray-600 leading-relaxed">
                                 To create an atmosphere where heaven touches earth through authentic worship,
                                 where every heart finds its voice, and where God's presence transforms lives.
@@ -640,11 +639,10 @@
 
                 <div class="glass-card p-8">
                     <div class="flex items-start space-x-4 mb-6">
-                        <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
+                        <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-target text-xl text-white"></i>
                         </div>
                         <div>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Our Mission</h3>
                             <p class="text-gray-600 leading-relaxed">
                                 To equip and empower worshippers to serve with excellence, grow in their gifts,
                                 and lead others into genuine encounters with the living God.
@@ -655,11 +653,10 @@
 
                 <div class="glass-card p-8">
                     <div class="flex items-start space-x-4 mb-6">
-                        <div class="w-12 h-12 bg-gradient-to-br from-yellow-500 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
+                        <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-heart text-xl text-white"></i>
                         </div>
                         <div>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Our Values</h3>
                             <p class="text-gray-600 leading-relaxed">
                                 Excellence without perfection, authenticity over performance,
                                 community above competition, and God's glory as our ultimate goal.
@@ -677,21 +674,7 @@
                 </div>
 
                 <div class="grid grid-cols-2 gap-6">
-                    <div class="glass-card p-6 text-center">
-                        <div class="stat-circle mx-auto mb-4">
-                            <div class="stat-number text-2xl">150+</div>
-                        </div>
-                        <h4 class="font-semibold text-gray-800 mb-1">Lives Touched</h4>
-                        <p class="text-gray-600 text-sm">Weekly through worship</p>
-                    </div>
-
-                    <div class="glass-card p-6 text-center">
-                        <div class="stat-circle mx-auto mb-4">
-                            <div class="stat-number text-2xl">5+</div>
-                        </div>
-                        <h4 class="font-semibold text-gray-800 mb-1">New Members</h4>
-                        <p class="text-gray-600 text-sm">Joined this year</p>
-                    </div>
+                    
 
                     <div class="glass-card p-6 text-center">
                         <div class="stat-circle mx-auto mb-4">
@@ -717,13 +700,10 @@
                         but also in my relationship with God and my church family."
                     </p>
                     <div class="flex items-center space-x-3">
-                        <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-red-500 rounded-full flex items-center justify-center">
+                        <div class="w-10 h-10 bg-gradient-to-br from-red-600 to-red-500 rounded-full flex items-center justify-center">
                             <i class="fas fa-user text-white text-sm"></i>
                         </div>
-                        <div>
-                            <p class="font-semibold text-gray-800">Ruth Kirui</p>
-                            <p class="text-gray-600 text-sm">Vocalist, 2 years</p>
-                        </div>
+                       <!-- replacw with scriture -->
                     </div>
                 </div>
             </div>
@@ -750,7 +730,7 @@
                 <div class="timeline-content">
                     <div class="experience-card p-8">
                         <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                            <div class="w-12 h-12 bg-gradient-to-br from-red-600 to-red-500 rounded-full flex items-center justify-center flex-shrink-0">
                                 <span class="text-white font-bold">1</span>
                             </div>
                             <div>
@@ -772,7 +752,7 @@
                 <div class="timeline-content">
                     <div class="experience-card p-8">
                         <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
+                            <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0">
                                 <span class="text-white font-bold">2</span>
                             </div>
                             <div>
@@ -794,11 +774,11 @@
                 <div class="timeline-content">
                     <div class="experience-card p-8">
                         <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-yellow-500 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
+                            <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center flex-shrink-0">
                                 <span class="text-white font-bold">3</span>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold text-gray-800 mb-2">Practice & Rehearsal</h3>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Practice</h3>
                                 <p class="text-gray-600 mb-4">Join regular practice sessions with your team, build relationships, and prepare for your first service.</p>
                                 <div class="flex items-center text-sm text-gray-500">
                                     <i class="fas fa-clock mr-2"></i>
@@ -816,7 +796,7 @@
                 <div class="timeline-content">
                     <div class="experience-card p-8">
                         <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                            <div class="w-12 h-12 bg-gradient-to-br from-red-600 to-red-500 rounded-full flex items-center justify-center flex-shrink-0">
                                 <span class="text-white font-bold">4</span>
                             </div>
                             <div>
@@ -845,7 +825,7 @@
                     Worship is about declaring the worth of God and bringing glory to His name."
                 </p>
                 <div class="flex items-center justify-center space-x-4">
-                    <div class="w-1 h-16 bg-gradient-to-b from-purple-500 to-red-500 rounded-full"></div>
+                    <div class="w-1 h-16 bg-gradient-to-b from-red-600 to-red-500 rounded-full"></div>
                     <div>
                         <p class="font-semibold text-gray-800">Rev. Ann Korir</p>
                         <p class="text-gray-600">Pastor, TRC AGC Church</p>
@@ -856,70 +836,27 @@
     </div>
 </section>
 
-<!-- Call to Action -->
-<section class="call-to-action py-24 text-white relative">
-    <div class="cta-particles">
-        <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
-        <div class="particle" style="left: 20%; animation-delay: 3s;"></div>
-        <div class="particle" style="left: 30%; animation-delay: 6s;"></div>
-        <div class="particle" style="left: 40%; animation-delay: 9s;"></div>
-        <div class="particle" style="left: 50%; animation-delay: 12s;"></div>
-        <div class="particle" style="left: 60%; animation-delay: 2s;"></div>
-        <div class="particle" style="left: 70%; animation-delay: 5s;"></div>
-        <div class="particle" style="left: 80%; animation-delay: 8s;"></div>
-        <div class="particle" style="left: 90%; animation-delay: 11s;"></div>
-    </div>
-
-    <div class="container mx-auto px-4 relative z-10">
-        <div class="text-center max-w-4xl mx-auto">
-            <div class="mb-8">
-                <div class="inline-block w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center pulse-icon">
-                    <i class="fas fa-hands text-4xl"></i>
-                </div>
-            </div>
-
+<section class="py-24 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
             <h2 class="text-4xl md:text-6xl font-bold mb-6">
-                Your Voice Matters
+                <span class="gradient-text">Worship Moments</span>
             </h2>
-            <p class="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
-                God has placed a unique song in your heart. It's time to let it be heard.
-                Join our worship ministry and become part of something eternal.
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Scenes from our worship ministry in song, service, and fellowship.
             </p>
+        </div>
 
-            <div class="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-                <a href="mailto:worship@thikaroadconnectagc.org	"><button class="interactive-button text-lg font-semibold">
-                        <i class="fa-solid fa-heart-circle-plus mr-3"></i>
-                        Contact Us
-                    </button></a>
-
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-clock text-2xl"></i>
-                    </div>
-                    <h3 class="font-semibold mb-2">Quick Start</h3>
-                    <p class="text-sm opacity-80">Begin serving within 30 days</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-users text-2xl"></i>
-                    </div>
-                    <h3 class="font-semibold mb-2">Community</h3>
-                    <p class="text-sm opacity-80">Join a family of worshippers</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-graduation-cap text-2xl"></i>
-                    </div>
-                    <h3 class="font-semibold mb-2">Growth</h3>
-                    <p class="text-sm opacity-80">Continuous training & development</p>
-                </div>
-            </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <img src="{{ asset('images/worship1.JPG') }}" alt="Worship ministry team" class="w-full h-80 object-cover rounded-3xl shadow-xl">
+            <img src="{{ asset('images/worship2.JPG') }}" alt="Congregation in worship" class="w-full h-80 object-cover rounded-3xl shadow-xl">
+            <img src="{{ asset('images/worship4.JPG') }}" alt="Worship service moment" class="w-full h-80 object-cover rounded-3xl shadow-xl">
+            <img src="{{ asset('images/GRA_0226.JPG') }}" alt="Worship gathering" class="w-full h-80 object-cover rounded-3xl shadow-xl">
         </div>
     </div>
 </section>
+
+
 
 @endsection
 

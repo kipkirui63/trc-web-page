@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Outreach Ministry')
-@section('description', 'Join TRC AGC Church in reaching out to our community and beyond through evangelism, missions, community outreach, and charity programs.')
+@section('title', 'Evangelism & Missions')
+@section('description', 'Join TRC AGC Church in evangelism and missions through community outreach, global missions, and compassion programs.')
 
 @section('styles')
 <style>
@@ -116,7 +116,7 @@
                 <i class="fas fa-hands-helping text-6xl mb-4 opacity-90"></i>
             </div>
             <h1 class="text-5xl md:text-7xl font-bold mb-6">
-                OUTREACH MINISTRY
+                EVANGELISM & MISSIONS
             </h1>
             <p class="text-xl md:text-2xl mb-8 opacity-90">
                 Extending God's Love Beyond Our Walls
@@ -143,39 +143,17 @@
 <section class="py-16 bg-white">
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-8 text-gradient">Our Outreach Mission</h2>
+            <h2 class="text-4xl font-bold mb-8 text-gradient">Our Evangelism & Missions Vision</h2>
             <p class="text-lg text-gray-600 leading-relaxed">
                 At TRC AGC Church, we believe in living out the Great Commission by taking the Gospel beyond our church walls.
-                Our Outreach Ministry is dedicated to sharing God's love through evangelism, community service, missions,
+                Our Evangelism & Missions Ministry is dedicated to sharing God's love through evangelism, community service, missions,
                 and compassionate action that transforms lives and communities.
             </p>
         </div>
     </div>
 </section>
 
-<!-- Impact Stats -->
-<section class="py-16 bg-gradient-to-r from-gray-50 to-red-50">
-    <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-4 gap-8 text-center">
-            <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
-                <div class="text-4xl font-bold impact-counter mb-2">500+</div>
-                <p class="text-gray-600 font-medium">Lives Touched</p>
-            </div>
-            <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
-                <div class="text-4xl font-bold impact-counter mb-2">25+</div>
-                <p class="text-gray-600 font-medium">Community Events</p>
-            </div>
-            <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
-                <div class="text-4xl font-bold impact-counter mb-2">10+</div>
-                <p class="text-gray-600 font-medium">School Partnerships</p>
-            </div>
-            <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
-                <div class="text-4xl font-bold impact-counter mb-2">2</div>
-                <p class="text-gray-600 font-medium">Mission Partnerships</p>
-            </div>
-        </div>
-    </div>
-</section>
+
 
 <!-- Current Mission Field - Masimba -->
 <section class="py-20 bg-white">
@@ -277,7 +255,7 @@
                                 </div>
                                 <div class="bg-white p-4 rounded-xl shadow-sm">
                                     <i class="fas fa-hand-holding-heart text-3xl text-church-red mb-2"></i>
-                                    <h5 class="font-bold text-gray-800 mb-1">Resource Gathering</h5>
+                                     <h5 class="font-bold text-gray-800 mb-1">Support Mission</h5><!--link to payment page and contact -->
                                     <p class="text-sm text-gray-600">Mobilizing support and funding</p>
                                 </div>
                             </div>
@@ -316,7 +294,7 @@
             </span>
             <h2 class="text-4xl font-bold mb-6 text-gradient mt-4">Kinango Mission Field</h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Celebrating God's faithfulness through our successful partnership with Pastor Abraham and Faith
+                Celebrating God's faithfulness through our successful partnership with Kinango Mission Field
             </p>
         </div>
 
@@ -328,27 +306,10 @@
                         Our Journey with Kinango
                     </h3>
                     <p class="text-gray-600 text-lg mb-6 leading-relaxed">
-                        Through AGC Kenya, we had the blessed opportunity to partner with the Kinango Mission Field,
-                        supporting Pastor Abraham and his wife Faith in their ministry work. Together, we witnessed 
-                        incredible transformation and growth in rural Kenya.
+                        Through AGC Kenya, we had the blessed opportunity to partner with the Kinango Mission Field. Together, we witnessed 
+                        incredible transformation and growth in the Mission Field which has resulted in the planting of more Churches.
                     </p>
-                    <div class="grid md:grid-cols-3 gap-6 mb-6">
-                        <div class="text-center p-4 bg-white rounded-xl shadow-sm">
-                            <i class="fas fa-users text-3xl text-church-red mb-2"></i>
-                            <div class="text-2xl font-bold text-gray-800">200+</div>
-                            <div class="text-sm text-gray-600">Souls Reached</div>
-                        </div>
-                        <div class="text-center p-4 bg-white rounded-xl shadow-sm">
-                            <i class="fas fa-church text-3xl text-church-red mb-2"></i>
-                            <div class="text-2xl font-bold text-gray-800">3</div>
-                            <div class="text-sm text-gray-600">Churches Planted</div>
-                        </div>
-                        <div class="text-center p-4 bg-white rounded-xl shadow-sm">
-                            <i class="fas fa-hands-helping text-3xl text-church-red mb-2"></i>
-                            <div class="text-2xl font-bold text-gray-800">50+</div>
-                            <div class="text-sm text-gray-600">Leaders Trained</div>
-                        </div>
-                    </div>
+                    
                 </div>
 
                 <!-- Kinango Photo Gallery -->
@@ -409,7 +370,7 @@
 <section class="py-20 bg-white">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-6 text-gradient">Our Outreach Programs</h2>
+            <h2 class="text-4xl font-bold mb-6 text-gradient">Our Evangelism & Missions Programs</h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover the various ways we serve our community and spread God's love
             </p>
@@ -427,7 +388,6 @@
                 </p>
                 <ul class="text-sm text-gray-600 space-y-2">
                     <li class="flex items-center"><i class="fas fa-check-circle text-church-red mr-2"></i>Food Distribution</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-church-red mr-2"></i>Community Clean-up</li>
                     <li class="flex items-center"><i class="fas fa-check-circle text-church-red mr-2"></i>Health Awareness</li>
                     <li class="flex items-center"><i class="fas fa-check-circle text-church-red mr-2"></i>Skills Training</li>
                 </ul>
@@ -460,29 +420,14 @@
                     Reaching young minds in educational institutions with programs that inspire and encourage spiritual growth.
                 </p>
                 <ul class="text-sm text-gray-600 space-y-2">
-                    <li class="flex items-center"><i class="fas fa-check-circle text-church-red mr-2"></i>High School Tours</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-church-red mr-2"></i>Primary School Visits</li>
+                    
+                    <li class="flex items-center"><i class="fas fa-check-circle text-church-red mr-2"></i>Comprehensive Primary School Visits</li>
                     <li class="flex items-center"><i class="fas fa-check-circle text-church-red mr-2"></i>Campus Ministry</li>
                     <li class="flex items-center"><i class="fas fa-check-circle text-church-red mr-2"></i>Mentorship Programs</li>
                 </ul>
             </div>
 
-            <!-- Charity Programs -->
-            <div class="mission-card p-8 rounded-2xl">
-                <div class="ministry-icon">
-                    <i class="fas fa-heart"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-4 text-church-red text-center">Charity Programs</h3>
-                <p class="text-gray-600 text-center mb-6">
-                    Organized charitable initiatives that address urgent needs in our community with compassion and dignity.
-                </p>
-                <ul class="text-sm text-gray-600 space-y-2">
-                    <li class="flex items-center"><i class="fas fa-check-circle text-church-red mr-2"></i>Emergency Relief</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-church-red mr-2"></i>Clothing Drives</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-church-red mr-2"></i>Medical Support</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-church-red mr-2"></i>Orphan Care</li>
-                </ul>
-            </div>
+    
 
             <!-- Prison Ministry -->
             <div class="mission-card p-8 rounded-2xl">
@@ -525,10 +470,10 @@
 <section class="py-20 bg-gradient-to-br from-gray-50 to-red-50">
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-8 text-gradient">Join Our Outreach Team</h2>
+            <h2 class="text-4xl font-bold mb-8 text-gradient">Join Our Evangelism & Missions Team</h2>
             <p class="text-xl text-gray-600 mb-12">
                 God is calling you to be part of something bigger than yourself. Whether through prayer,
-                volunteering, or financial support, there's a place for you in our outreach ministry.
+                volunteering, or financial support, there's a place for you in our evangelism and missions ministry.
             </p>
 
             <div class="grid md:grid-cols-3 gap-8 mb-12">
@@ -548,6 +493,11 @@
                     <p class="text-gray-600">Partner with us financially to expand our reach and impact.</p>
                 </div>
             </div>
+
+            <a href="/donate" class="inline-flex items-center justify-center bg-church-red hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-xl transition duration-300">
+                <i class="fas fa-hand-holding-heart mr-2"></i>
+                Partner With Us
+            </a>
         </div>
     </div>
 </section>

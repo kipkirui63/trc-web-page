@@ -363,14 +363,31 @@
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-6">
                     <a href="/" class="text-gray-800 hover:text-church-purple font-medium transition">Home</a>
-                    <a href="about" class="text-gray-800 hover:text-church-purple font-medium transition">About Us</a>
-                    <a href="ministries" class="text-gray-800 hover:text-church-purple font-medium transition">Ministries</a>
-                    <a href="events" class="text-gray-800 hover:text-church-purple font-medium transition">Events</a>
-                    <a href="contact" class="text-gray-800 hover:text-church-purple font-medium transition">Contact</a>
-                    <a href="blog" class="text-gray-800 hover:text-church-purple font-medium transition">Blog</a>
-
-
-                </nav>
+                    <a href="/about" class="text-gray-800 hover:text-church-purple font-medium transition">About Us</a>
+                    <div class="relative group">
+                        <a href="/ministries" class="text-gray-800 hover:text-church-purple font-medium transition inline-flex items-center gap-2">
+                            Ministries
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </a>
+                        <div class="absolute left-0 top-full pt-3 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200">
+                            <div class="bg-white border border-gray-100 rounded-lg shadow-lg py-2">
+                                <a href="/ministries" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-church-purple">All Ministries</a>
+                                <a href="/children" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-church-purple">Children Ministry</a>
+                                <a href="/youth" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-church-purple">Youth Ministry</a>
+                                <a href="/women-ministry" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-church-purple">Women's Ministry</a>
+                                <a href="/men" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-church-purple">Men's Ministry</a>
+                                <a href="/worship-ministry" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-church-purple">Worship Ministry</a>
+                                <a href="/discipleship-ministry" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-church-purple">Discipleship Ministry</a>
+                                <a href="/outreach-ministry" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-church-purple">Outreach Ministry</a>
+                                <a href="/compassion-ministry" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-church-purple">Compassion Ministry</a>
+                                <a href="/bridge-ministry" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-church-purple">Bridge Ministry</a>
+                                <a href="/pastoral-ministry" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-church-purple">Pastoral Ministry</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/events" class="text-gray-800 hover:text-church-purple font-medium transition">Events</a>
+                    <a href="/contact" class="text-gray-800 hover:text-church-purple font-medium transition">Contact</a>
+                    <a href="/blog" class="text-gray-800 hover:text-church-purple font-medium transition">Blog</a>
                 </nav>
 
                 <!-- CTA Button -->
@@ -394,13 +411,29 @@
             <!-- Mobile Navigation -->
             <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
                 <a href="/" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Home</a>
-                <a href="about" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">About Us</a>
-                <a href="ministries" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Ministries</a>
-                <a href="events" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Events</a>
-                <a href="contact" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Contact</a>
-                <a href="blog" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Blog</a>
+                <a href="/about" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">About Us</a>
+                <button id="mobile-ministries-toggle" class="w-full flex items-center justify-between py-2 px-4 text-gray-800 hover:bg-gray-100">
+                    <span>Ministries</span>
+                    <i id="mobile-ministries-icon" class="fas fa-chevron-down text-xs transition-transform duration-200"></i>
+                </button>
+                <div id="mobile-ministries-menu" class="hidden ml-4 mb-2 border-l border-gray-200">
+                    <a href="/ministries" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">All Ministries</a>
+                    <a href="/children" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Children Ministry</a>
+                    <a href="/youth" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Youth Ministry</a>
+                    <a href="/women-ministry" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Women's Ministry</a>
+                    <a href="/men" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Men's Ministry</a>
+                    <a href="/worship-ministry" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Worship Ministry</a>
+                    <a href="/discipleship-ministry" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Discipleship Ministry</a>
+                    <a href="/outreach-ministry" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Outreach Ministry</a>
+                    <a href="/compassion-ministry" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Compassion Ministry</a>
+                    <a href="/bridge-ministry" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Bridge Ministry</a>
+                    <a href="/pastoral-ministry" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Pastoral Ministry</a>
+                </div>
+                <a href="/events" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Events</a>
+                <a href="/contact" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Contact</a>
+                <a href="/blog" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Blog</a>
 
-                <a href="donate" class="mt-3 block text-center bg-church-red hover:bg-red-600 text-white font-medium py-2 px-4 rounded-md transition">Partner With Us</a>
+                <a href="/donate" class="mt-3 block text-center bg-church-red hover:bg-red-600 text-white font-medium py-2 px-4 rounded-md transition">Partner With Us</a>
             </div>
         </div>
     </header>
@@ -419,13 +452,13 @@
                     <h3 class="text-xl font-bold mb-4">Thika Road Connect AGC Church</h3>
                     <p class="text-gray-400 mb-4">The Whole Church taking the Whole Gospel to the Whole World.</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-white hover:text-church-red transition">
+                        <a href="https://web.facebook.com/profile.php?id=61584163760330" target="_blank" rel="noopener noreferrer" class="text-white hover:text-church-red transition">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                         <a href="https://www.instagram.com/trc_agc/" class="text-white hover:text-church-red transition">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="text-white hover:text-church-red transition">
+                        <a href="https://www.youtube.com/channel/UCOlYLzEsSZfa-Badq9L74-g" target="_blank" rel="noopener noreferrer" class="text-white hover:text-church-red transition">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
@@ -450,7 +483,7 @@
                         <li>Sunday Worship: 10:00 AM - 12:00 PM</li>
                         <li>Sunday School: 11:15 AM</li>
                         <li>Wednesday Bible Study: 8:30 PM - 9:30 PM</li>
-                        <li>Youth Group: Sunday, 12: 00 PM</li>
+                        <li>Youth Group: Sunday, 12: 30 PM</li>
                     </ul>
                 </div>
 
@@ -493,11 +526,26 @@
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
             const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMinistriesToggle = document.getElementById('mobile-ministries-toggle');
+            const mobileMinistriesMenu = document.getElementById('mobile-ministries-menu');
+            const mobileMinistriesIcon = document.getElementById('mobile-ministries-icon');
 
             mobileMenuToggle.addEventListener('click', function() {
                 mobileMenu.classList.toggle('hidden');
                 mobileMenuToggle.classList.toggle('menu-open');
+
+                if (mobileMenu.classList.contains('hidden') && mobileMinistriesMenu && mobileMinistriesIcon) {
+                    mobileMinistriesMenu.classList.add('hidden');
+                    mobileMinistriesIcon.classList.remove('rotate-180');
+                }
             });
+
+            if (mobileMinistriesToggle && mobileMinistriesMenu && mobileMinistriesIcon) {
+                mobileMinistriesToggle.addEventListener('click', function() {
+                    mobileMinistriesMenu.classList.toggle('hidden');
+                    mobileMinistriesIcon.classList.toggle('rotate-180');
+                });
+            }
         });
 
         // Scroll to Top Button
