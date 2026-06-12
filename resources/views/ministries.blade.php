@@ -244,11 +244,11 @@
     }
 
     /* Pulse effect for header badge */
-    .pulse-glow {
-        animation: pulse-glow 2s ease-in-out infinite;
+    . {
+        animation:  2s ease-in-out infinite;
     }
 
-    @keyframes pulse-glow {
+    @keyframes  {
         0%, 100% {
             box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.4);
         }
@@ -277,7 +277,7 @@
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
             <div class="mb-8">
-                <span class="inline-flex items-center px-6 py-3 rounded-full text-white font-semibold text-lg shadow-md pulse-glow" style="background: linear-gradient(135deg, #E63946, #F25C66); border: 2px solid #E63946;">
+                <span class="inline-flex items-center px-6 py-3 rounded-full text-white font-semibold text-lg shadow-md " style="background: linear-gradient(135deg, #E63946, #F25C66); border: 2px solid #E63946;">
                     <i class="fas fa-users mr-3 text-xl"></i>
                     Serve • Connect • Grow
                 </span>
