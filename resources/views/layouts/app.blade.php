@@ -84,7 +84,7 @@
             }
         }
 
-        @keyframes pulse-glow {
+        @keyframes  {
 
             0%,
             100% {
@@ -136,8 +136,8 @@
             animation: wiggle 2s ease-in-out infinite;
         }
 
-        .pulse-glow {
-            animation: pulse-glow 3s ease-in-out infinite;
+        . {
+            animation:  3s ease-in-out infinite;
         }
 
         .sparkle {
