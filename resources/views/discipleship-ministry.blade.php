@@ -7,10 +7,27 @@
 @section('styles')
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap');
+
+    :root {
+        --discipleship-red: #dc2626;
+        --discipleship-red-dark: #991b1b;
+        --discipleship-soft: #fff5f5;
+        --discipleship-border: rgba(220, 38, 38, 0.15);
+    }
+
+    .discipleship-section {
+        background: #ffffff;
+    }
+
+    .discipleship-section-soft {
+        background: linear-gradient(135deg, var(--discipleship-soft) 0%, #ffffff 100%);
+    }
     
     .ministry-card {
-        background: linear-gradient(135deg, rgba(220, 38, 38, 0.06) 0%, rgba(220, 38, 38, 0.05) 100%);
-        border-left: 4px solid #dc2626;
+        background: #ffffff;
+        border: 1px solid var(--discipleship-border);
+        border-left: 4px solid var(--discipleship-red);
+        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
         transition: all 0.3s ease;
     }
     
@@ -21,18 +38,18 @@
     }
 
     .icon-circle {
-        background: linear-gradient(135deg, #dc2626, #dc2626);
+        background: linear-gradient(135deg, var(--discipleship-red), var(--discipleship-red-dark));
         animation: pulse-glow 3s ease-in-out infinite;
     }
 
     .form-input:focus {
-        border-color: #dc2626;
+        border-color: var(--discipleship-red);
         box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12);
     }
 
     .baptism-form {
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(249, 250, 251, 0.98));
-        backdrop-filter: blur(10px);
+        background: #ffffff;
+        border: 1px solid var(--discipleship-border);
     }
 
     .section-header {
@@ -48,7 +65,7 @@
         transform: translateX(-50%);
         width: 60px;
         height: 3px;
-        background: linear-gradient(90deg, #dc2626, #dc2626);
+        background: linear-gradient(90deg, var(--discipleship-red), var(--discipleship-red-dark));
         border-radius: 2px;
     }
 
@@ -64,7 +81,7 @@
         top: 8px;
         width: 12px;
         height: 12px;
-        background: #dc2626;
+        background: var(--discipleship-red);
         border-radius: 50%;
         box-shadow: 0 0 10px rgba(220, 38, 38, 0.3);
     }
@@ -75,10 +92,39 @@
         background-position: center;
         background-repeat: no-repeat;
     }
+
+    .discipleship-panel {
+        background: #ffffff;
+        border: 1px solid var(--discipleship-border);
+        border-radius: 16px;
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    .discipleship-highlight {
+        background: linear-gradient(135deg, var(--discipleship-red), var(--discipleship-red-dark));
+        color: #ffffff;
+    }
+
+    .discipleship-contact-card {
+        background: #ffffff;
+        border: 1px solid var(--discipleship-border);
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+    }
+
+    .discipleship-page a:focus,
+    .discipleship-page button:focus,
+    .discipleship-page a:focus-visible,
+    .discipleship-page button:focus-visible {
+        outline: 2px solid var(--discipleship-red);
+        outline-offset: 3px;
+        box-shadow: none;
+    }
 </style>
 @endsection
 
 @section('content')
+<div class="discipleship-page">
 <!-- Hero Section -->
 <section class="relative discipleship-hero text-white py-20 overflow-hidden">
     <div class="container mx-auto px-4 relative z-10">
@@ -107,7 +153,7 @@
 </section>
 
 <!-- Ministry Overview -->
-<section class="py-16 bg-white">
+<section class="py-16 discipleship-section">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
             <h2 class="text-4xl font-bold text-gray-800 mb-4 section-header">Our Discipleship Programs</h2>
@@ -202,7 +248,7 @@
 </section>
 
 <!-- Bible Study Section -->
-<section id="bible-study" class="py-16 bg-gray-50">
+<section id="bible-study" class="py-16 discipleship-section-soft">
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-12">
@@ -212,8 +258,8 @@
                 </p>
             </div>
 
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div class="bg-gradient-to-r from-church-red to-church-red p-8 text-white text-center">
+            <div class="discipleship-panel overflow-hidden">
+                <div class="discipleship-highlight p-8 text-center">
                     <h3 class="text-3xl font-bold mb-4">Weekly Bible Study Sessions</h3>
                     <div class="grid md:grid-cols-2 gap-8">
                         <div class="bounce-slow">
@@ -280,7 +326,7 @@
 </section>
 
 <!-- Cell Groups Section -->
-<section class="py-16 bg-white">
+<section class="py-16 discipleship-section">
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-4xl font-bold text-gray-800 mb-4 section-header">Cell Groups</h2>
@@ -288,7 +334,7 @@
                 Intimate fellowship groups for spiritual growth and community building
             </p>
             
-            <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-12 shadow-lg">
+            <div class="discipleship-panel p-12">
                 <div class="float-animation mb-8">
                     <i class="fas fa-map-marked-alt text-6xl text-church-red"></i>
                 </div>
@@ -344,13 +390,13 @@
                     </div>
                 </div>
 
-                <div class="bg-church-red text-white p-6 rounded-xl">
+                <div class="discipleship-highlight p-6 rounded-xl">
                     <h4 class="text-xl font-bold mb-3">Stay Informed</h4>
                     <p class="mb-4">
                         Be the first to know when cell group locations are announced. 
                         Contact us to express your interest and preferred area.
                     </p>
-                    <a href="mailto:discipleship@thikaroadconnect.org" class="inline-block bg-white text-church-red px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                    <a href="mailto:discipleship@thikaroadconnectagc.org" class="inline-block bg-white text-church-red px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
                         <i class="fas fa-envelope mr-2"></i>
                         Express Interest
                     </a>
@@ -361,7 +407,7 @@
 </section>
 
 <!-- Baptism Application Section -->
-<section id="baptism" class="py-16 bg-gradient-to-br from-red-50 to-white">
+<section id="baptism" class="py-16 discipleship-section-soft">
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-12">
@@ -440,7 +486,7 @@
                         </div>
                     </div>
 
-                    <div class="bg-gray-50 p-6 rounded-xl">
+                    <div class="bg-red-50 p-6 rounded-xl border border-red-100">
                         <h4 class="text-lg font-bold text-gray-800 mb-3">
                             <i class="fas fa-info-circle text-church-red mr-2"></i>
                             What Happens Next?
@@ -469,7 +515,7 @@
                     </div>
 
                     <div class="text-center pt-6">
-                        <button type="submit" class="bg-gradient-to-r from-church-red to-church-red text-white px-12 py-4 rounded-full font-bold text-lg hover:shadow-lg transition transform hover:scale-105 pulse-glow">
+                        <button type="submit" class="bg-church-red text-white px-12 py-4 rounded-full font-bold text-lg hover:bg-red-700 hover:shadow-lg transition transform hover:scale-105 pulse-glow">
                             <i class="fas fa-paper-plane mr-2"></i>
                             Submit Application
                         </button>
@@ -484,27 +530,27 @@
 </section>
 
 <!-- Contact Information -->
-<section class="py-16 bg-gray-900 text-white">
+<section class="py-16 discipleship-section">
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-8">Questions About Discipleship?</h2>
-            <p class="text-xl mb-8 text-gray-300">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4 section-header">Questions About Discipleship?</h2>
+            <p class="text-xl mb-8 text-gray-600">
                 Our pastoral team is here to help guide you in your faith journey
             </p>
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="card-hover bg-gray-800 p-6 rounded-xl">
+                <div class="card-hover discipleship-contact-card p-6">
                     <i class="fas fa-phone text-3xl text-church-red mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Call Us</h3>
-                    <p class="text-gray-300 mb-4">Speak directly with our pastoral team</p>
-                    <a href="tel:+254791049004" class="text-church-red hover:text-red-300 font-semibold">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Call Us</h3>
+                    <p class="text-gray-600 mb-4">Speak directly with our pastoral team</p>
+                    <a href="tel:+254791049004" class="text-church-red hover:text-red-700 font-semibold">
                         +254 791 049004
                     </a>
                 </div>
-                <div class="card-hover bg-gray-800 p-6 rounded-xl">
+                <div class="card-hover discipleship-contact-card p-6">
                     <i class="fas fa-envelope text-3xl text-church-red mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Email Us</h3>
-                    <p class="text-gray-300 mb-4">Send us your questions or concerns</p>
-                    <a href="mailto:discipleship@thikaroadconnectagc.org" class="text-church-red hover:text-red-300 font-semibold">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Email Us</h3>
+                    <p class="text-gray-600 mb-4">Send us your questions or concerns</p>
+                    <a href="mailto:discipleship@thikaroadconnectagc.org" class="text-church-red hover:text-red-700 font-semibold break-words">
                         discipleship@thikaroadconnectagc.org	
                     </a>
                 </div>
@@ -512,6 +558,7 @@
         </div>
     </div>
 </section>
+</div>
 @endsection
 
 @section('scripts')
