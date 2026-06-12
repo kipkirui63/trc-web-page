@@ -91,11 +91,11 @@
         50% { transform: translateY(-30px) scale(1.2); text-shadow: 0 0 25px rgba(255, 255, 255, 0.6); opacity: 0.4; }
     }
 
-    .pulse-glow {
-        animation: pulse-glow 4s ease-in-out infinite;
+    . {
+        animation:  4s ease-in-out infinite;
     }
 
-    @keyframes pulse-glow {
+    @keyframes  {
         0%, 100% { box-shadow: 0 0 30px rgba(220, 38, 38, 0.2), inset 0 0 20px rgba(220, 38, 38, 0.1); transform: scale(1); }
         50% { box-shadow: 0 0 60px rgba(220, 38, 38, 0.4), inset 0 0 30px rgba(220, 38, 38, 0.2); transform: scale(1.02); }
     }
@@ -342,7 +342,7 @@
             <div class="mb-12">
                 <!-- Subtitle -->
                 <div class="mb-8">
-                    <span class="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur rounded-full text-white/90 font-semibold text-lg border border-white/30 pulse-glow">
+                    <span class="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur rounded-full text-white/90 font-semibold text-lg border border-white/30 ">
                         <i class="fas fa-phone mr-3 text-xl" style="color: var(--church-white);"></i>
                         We'd Love to Hear From You
                     </span>
