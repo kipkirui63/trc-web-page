@@ -572,7 +572,7 @@
                 <div class="grid md:grid-cols-2 gap-8 items-center">
                     <div>
                         <span class="badge-red mb-4">Established November 23, 2020</span>
-                        <h3 class="text-3xl font-bold text-gray-900 mb-6">Our Humble Beginnings</h3>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-6">Our Humble Beginning</h3>
                         
                         <div class="space-y-6">
                             <div class="timeline-item-red">
