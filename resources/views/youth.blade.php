@@ -290,18 +290,6 @@
         transform: scale(1.06);
     }
 
-    .youth-photo-caption {
-        position: absolute;
-        left: 1rem;
-        right: 1rem;
-        bottom: 1rem;
-        background: rgba(255, 255, 255, 0.93);
-        color: var(--church-black);
-        border-radius: 0.875rem;
-        padding: 0.85rem 1rem;
-        font-weight: 800;
-        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.14);
-    }
 </style>
 
 <!-- Hero Section -->
@@ -520,27 +508,21 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 auto-rows-[230px] gap-5">
                 <div class="youth-photo-card lg:col-span-3 lg:row-span-2">
                     <img src="{{ asset('images/youths5-feature.webp') }}" alt="Youth ministry gathering" loading="lazy" decoding="async" width="1200" height="900">
-                    <div class="youth-photo-caption">Sunday Fellowship</div>
                 </div>
                 <div class="youth-photo-card lg:col-span-3">
                     <img src="{{ asset('images/youthshike1-feature.webp') }}" alt="Youth hiking activity" loading="lazy" decoding="async" width="1200" height="900">
-                    <div class="youth-photo-caption">Adventure & Hikes</div>
                 </div>
                 <div class="youth-photo-card lg:col-span-2">
                     <img src="{{ asset('images/youthsmeeting-feature.webp') }}" alt="Youth meeting together" loading="lazy" decoding="async" width="1200" height="900">
-                    <div class="youth-photo-caption">Faith Conversations</div>
                 </div>
                 <div class="youth-photo-card lg:col-span-1">
                     <img src="{{ asset('images/youthsmeeting2-feature.webp') }}" alt="Youth fellowship meeting" loading="lazy" decoding="async" width="1200" height="900">
-                    <div class="youth-photo-caption">Community</div>
                 </div>
                 <div class="youth-photo-card lg:col-span-3">
                     <img src="{{ asset('images/youths-cta.webp') }}" alt="Youth ministry moments" loading="lazy" decoding="async" width="1600" height="1067">
-                    <div class="youth-photo-caption">Growing Together</div>
                 </div>
                 <div class="youth-photo-card lg:col-span-3">
                     <img src="{{ asset('images/youthsbirthdays-feature.webp') }}" alt="Youth birthday celebration" loading="lazy" decoding="async" width="1200" height="900">
-                    <div class="youth-photo-caption">Celebrating Life</div>
                 </div>
             </div>
         </div>
