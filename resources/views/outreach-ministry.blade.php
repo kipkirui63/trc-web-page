@@ -132,7 +132,7 @@
         <i class="fas fa-cross text-3xl bounce-slow"></i>
     </div>
     <div class="absolute bottom-20 right-10 text-white opacity-20">
-        <i class="fas fa-heart text-4xl pulse-glow"></i>
+        <i class="fas fa-heart text-4xl "></i>
     </div>
     <div class="absolute top-1/2 left-20 text-white opacity-15">
         <i class="fas fa-globe-africa text-5xl wiggle"></i>
