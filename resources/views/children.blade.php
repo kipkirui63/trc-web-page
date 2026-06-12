@@ -251,72 +251,26 @@
 
                         <!-- Right Side - Info -->
                         <div class="lg:w-2/5 bg-church-red p-8 lg:p-12 text-white relative overflow-hidden">
-                            <!-- Decorative elements -->
-                            <div class="absolute top-0 right-0 w-32 h-32 bg-white opacity-10 rounded-full -mr-16 -mt-16"></div>
-                            <div class="absolute bottom-0 left-0 w-24 h-24 bg-white opacity-10 rounded-full -ml-12 -mb-12"></div>
-                            <div class="absolute top-1/2 left-1/2 w-40 h-40 bg-white opacity-5 rounded-full -ml-20 -mt-20"></div>
-
-                            <div class="relative z-10 h-full flex flex-col justify-center">
-                                <div class="text-center mb-8">
-                                    <img src="{{ asset('images/childdedication.png') }}" alt="Child dedication ceremony" class="w-full h-64 object-cover rounded-2xl shadow-2xl mb-6 border-4 border-white/30">
-                                    <h3 class="text-2xl font-bold mb-4">A Sacred Promise</h3>
-                                    <p class="text-red-100 mb-8">Join families who have made this beautiful commitment to raise their children in faith!</p>
+                            <div class="relative z-10 h-full flex flex-col justify-center gap-5">
+                                <div class="grid grid-cols-2 auto-rows-[170px] gap-4">
+                                    <div class="col-span-2 overflow-hidden rounded-2xl shadow-2xl border-4 border-white/30">
+                                        <img src="{{ asset('images/childdedication-panel.webp') }}" alt="Child dedication ceremony" class="w-full h-full object-cover" loading="lazy" decoding="async" width="900" height="600">
+                                    </div>
+                                    <div class="overflow-hidden rounded-2xl shadow-xl border-4 border-white/30">
+                                        <img src="{{ asset('images/childdedication1-panel.webp') }}" alt="Family during child dedication" class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="900">
+                                    </div>
+                                    <div class="overflow-hidden rounded-2xl shadow-xl border-4 border-white/30">
+                                        <img src="{{ asset('images/childdedication3-panel.webp') }}" alt="Children dedication moment" class="w-full h-full object-cover" loading="lazy" decoding="async" width="900" height="600">
+                                    </div>
+                                    <div class="col-span-2 overflow-hidden rounded-2xl shadow-xl border-4 border-white/30">
+                                        <img src="{{ asset('images/children4-panel.webp') }}" alt="Children ministry dedication celebration" class="w-full h-full object-cover" loading="lazy" decoding="async" width="900" height="600">
+                                    </div>
                                 </div>
 
-                                <div class="space-y-6">
-                                    <div class="bg-white/20 p-4 rounded-2xl backdrop-blur-sm">
-                                        <h4 class="font-bold text-lg mb-2">What is Child Dedication?</h4>
-                                        <p class="text-red-100 text-sm">A public ceremony where parents/guardian commit to raising their child according to Christian values, with the support of the church community.</p>
-                                    </div>
-
-                                    <div class="space-y-4">
-                                        <div class="flex items-center space-x-4">
-                                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0">
-                                                <span class="text-2xl">👨‍👩‍👧‍👦</span>
-                                            </div>
-                                            <div>
-                                                <div class="font-semibold">Family Commitment</div>
-                                                <div class="text-red-200 text-sm">Parents dedicate themselves to Christian parenting</div>
-                                            </div>
-                                        </div>
-
-                                        <div class="flex items-center space-x-4">
-                                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0">
-                                                <span class="text-2xl">⛪</span>
-                                            </div>
-                                            <div>
-                                                <div class="font-semibold">Church Support</div>
-                                                <div class="text-red-200 text-sm">Community commits to pray and support</div>
-                                            </div>
-                                        </div>
-
-                                        <div class="flex items-center space-x-4">
-                                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0">
-                                                <span class="text-2xl">📖</span>
-                                            </div>
-                                            <div>
-                                                <div class="font-semibold">Biblical Foundation</div>
-                                                <div class="text-red-200 text-sm">Based on Scripture and tradition</div>
-                                            </div>
-                                        </div>
-
-                                        <div class="flex items-center space-x-4">
-                                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0">
-                                                <span class="text-2xl">💝</span>
-                                            </div>
-                                            <div>
-                                                <div class="font-semibold">Special Blessing</div>
-                                                <div class="text-red-200 text-sm">Pastor's blessing and prayer</div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="bg-white/20 p-4 rounded-2xl backdrop-blur-sm mt-8">
-                                        <h4 class="font-bold mb-2">📞 Questions?</h4>
-                                        <a href="mailto:children@thikaroadconnectagc.org" class="bg-white text-church-red hover:bg-red-50 font-semibold py-3 px-6 rounded-full transition-all duration-300 inline-block">
-                                            Contact Us
-                                        </a>
-                                    </div>
+                                <div class="text-center">
+                                    <a href="mailto:children@thikaroadconnectagc.org" class="bg-white text-church-red hover:bg-red-50 font-semibold py-3 px-6 rounded-full transition-all duration-300 inline-block">
+                                        Contact Us
+                                    </a>
                                 </div>
                             </div>
                         </div>
