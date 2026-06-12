@@ -39,7 +39,7 @@
 
     .icon-circle {
         background: linear-gradient(135deg, var(--discipleship-red), var(--discipleship-red-dark));
-        animation: pulse-glow 3s ease-in-out infinite;
+        animation:  3s ease-in-out infinite;
     }
 
     .form-input:focus {
@@ -311,7 +311,7 @@
                     </div>
                     
                     <div class="text-center">
-                        <a href="#" class="inline-block bg-church-red text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-red-700 transition transform hover:scale-105 pulse-glow">
+                        <a href="#" class="inline-block bg-church-red text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-red-700 transition transform hover:scale-105 ">
                             <i class="fas fa-external-link-alt mr-2"></i>
                             Join Bible Study Link
                         </a>
@@ -515,7 +515,7 @@
                     </div>
 
                     <div class="text-center pt-6">
-                        <button type="submit" class="bg-church-red text-white px-12 py-4 rounded-full font-bold text-lg hover:bg-red-700 hover:shadow-lg transition transform hover:scale-105 pulse-glow">
+                        <button type="submit" class="bg-church-red text-white px-12 py-4 rounded-full font-bold text-lg hover:bg-red-700 hover:shadow-lg transition transform hover:scale-105 ">
                             <i class="fas fa-paper-plane mr-2"></i>
                             Submit Application
                         </button>
