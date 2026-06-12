@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title') | TRC AGC Church</title>
     <meta name="description" content="@yield('description', 'TRC AGC Church - Fulfilling the Great Commandment and Great Commission of the Lord Jesus Christ')">
+    @yield('preloads')
 
     <!-- Favicon - Church Logo -->
     <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('images/trcc-.png') }}">
