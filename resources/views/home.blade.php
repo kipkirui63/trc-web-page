@@ -146,12 +146,12 @@
                 <!-- Welcome Badge -->
                 <div class="inline-flex items-center glass-card rounded-full px-6 py-3 mb-8">
                     <div class="w-3 h-3 bg-green-400 rounded-full mr-3 animate-pulse"></div>
-                    <span class="text-white font-medium">Find Your Purpose In Faith</span>
+                    <span class="text-white font-medium">Purpose In Faith</span>
                 </div>
 
                 <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                     Welcome To 
-                    <span class="gradient-text block bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
+                    <span class="block text-white">
                         Thika Road Connect
                     </span>
                     AGC
