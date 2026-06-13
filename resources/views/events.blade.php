@@ -670,58 +670,8 @@
     </div>
 </section>
 
-<!-- Call to Action - With Background Image -->
-<section class="py-20 cta-section">
-    <div class="container mx-auto px-6 cta-content">
-        <div class="max-w-4xl mx-auto text-center">
-            <span class="modern-badge mb-6 bg-white/20 text-white border border-white/30">
-                <i class="fas fa-heart mr-2"></i>
-                Join Our Community
-            </span>
-            
-            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
-                Experience the Joy of <span class="border-b-4 border-white pb-2">Fellowship</span>
-            </h2>
-            
-            <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Whether you're new to faith or have been walking with Christ for years, you'll find a warm welcome and a place to belong at TRC AGC Church.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/about" class="btn-primary" style="width: auto; padding: 0.75rem 2rem;">
-                    <i class="fas fa-info-circle mr-2"></i>
-                    Learn About Us
-                </a>
-                <a href="/contact" class="btn-outline-light" style="width: auto; padding: 0.75rem 2rem;">
-                    <i class="fas fa-envelope mr-2"></i>
-                    Get in Touch
-                </a>
-            </div>
 
-            <!-- Contact Info -->
-            <div class="mt-12 flex flex-wrap justify-center gap-8 text-white/80 text-sm">
-                <div class="flex items-center">
-                    <div class="icon-circle-small mr-3 bg-white/20 text-white">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <span>Kasarani, Nairobi</span>
-                </div>
-                <div class="flex items-center">
-                    <div class="icon-circle-small mr-3 bg-white/20 text-white">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <span>Sundays @ 10:00 AM</span>
-                </div>
-                <div class="flex items-center">
-                    <div class="icon-circle-small mr-3 bg-white/20 text-white">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <span>+254 XXX XXX XXX</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
