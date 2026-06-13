@@ -286,7 +286,7 @@
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-4xl lg:text-5xl font-bold mb-6">
-                    <span class="text-church-red">Memories We Create</span>
+                    <span class="text-church-red">Memories</span>
                 </h2>
                 <p class="text-xl text-gray-700 max-w-3xl mx-auto">
                     Take a glimpse into the joy, laughter, and learning that happens every day in our Children's Ministry
@@ -296,37 +296,37 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 auto-rows-[220px] gap-5 max-w-6xl mx-auto">
                 <div class="children-photo-card lg:col-span-3 lg:row-span-2">
                     <img src="{{ asset('images/children2-gallery.webp') }}" alt="Children in Sunday School" loading="lazy" decoding="async" width="1200" height="900">
-                    <div class="children-photo-caption">Sunday School</div>
+                    
                 </div>
 
                 <div class="children-photo-card lg:col-span-3">
                     <img src="{{ asset('images/childrean1-gallery.webp') }}" alt="Children learning together" loading="lazy" decoding="async" width="1200" height="900">
-                    <div class="children-photo-caption">VBS Fun</div>
+                    
                 </div>
 
                 <div class="children-photo-card lg:col-span-2">
                     <img src="{{ asset('images/graduands-gallery.webp') }}" alt="Children graduation celebration" loading="lazy" decoding="async" width="1200" height="900">
-                    <div class="children-photo-caption">Bonding Time</div>
+                    
                 </div>
 
                 <div class="children-photo-card lg:col-span-1">
                     <img src="{{ asset('images/children3-gallery.webp') }}" alt="Children worship time" loading="lazy" decoding="async" width="1200" height="900">
-                    <div class="children-photo-caption">Dance</div>
+                    
                 </div>
 
                 <div class="children-photo-card lg:col-span-2">
                     <img src="{{ asset('images/vbs5.webp') }}" alt="Group Photo" loading="lazy" decoding="async" width="1200" height="800">
-                    <div class="children-photo-caption">Our Amazing Kids</div>
+                    
                 </div>
 
                 <div class="children-photo-card lg:col-span-3">
                     <img src="{{ asset('images/vbs7.webp') }}" alt="Bible Study" loading="lazy" decoding="async" width="1200" height="800">
-                    <div class="children-photo-caption">Play Time</div>
+                    
                 </div>
 
                 <div class="children-photo-card lg:col-span-3">
                     <img src="{{ asset('images/vbs6.webp') }}" alt="Game Time" loading="lazy" decoding="async" width="1200" height="800">
-                    <div class="children-photo-caption">Victory Has a Sound</div>                </div>
+                                    </div>
             </div>
         </div>
     </section>
