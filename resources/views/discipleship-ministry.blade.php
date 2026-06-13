@@ -9,10 +9,10 @@
     @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap');
 
     :root {
-        --discipleship-red: #dc2626;
-        --discipleship-red-dark: #991b1b;
+        --discipleship-red: #ED1C24;
+        --discipleship-red-dark: #ED1C24;
         --discipleship-soft: #fff5f5;
-        --discipleship-border: rgba(220, 38, 38, 0.15);
+        --discipleship-border: rgba(237, 28, 36, 0.15);
     }
 
     .discipleship-section {
@@ -33,18 +33,18 @@
     
     .ministry-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(220, 38, 38, 0.18);
-        border-left-color: #dc2626;
+        box-shadow: 0 10px 25px rgba(237, 28, 36, 0.18);
+        border-left-color: #ED1C24;
     }
 
     .icon-circle {
-        background: linear-gradient(135deg, var(--discipleship-red), var(--discipleship-red-dark));
+        background: var(--discipleship-red);
         animation:  3s ease-in-out infinite;
     }
 
     .form-input:focus {
         border-color: var(--discipleship-red);
-        box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12);
+        box-shadow: 0 0 0 3px rgba(237, 28, 36, 0.12);
     }
 
     .baptism-form {
@@ -65,7 +65,7 @@
         transform: translateX(-50%);
         width: 60px;
         height: 3px;
-        background: linear-gradient(90deg, var(--discipleship-red), var(--discipleship-red-dark));
+        background: var(--discipleship-red);
         border-radius: 2px;
     }
 
@@ -83,7 +83,7 @@
         height: 12px;
         background: var(--discipleship-red);
         border-radius: 50%;
-        box-shadow: 0 0 10px rgba(220, 38, 38, 0.3);
+        box-shadow: 0 0 10px rgba(237, 28, 36, 0.3);
     }
 
     .discipleship-hero {
@@ -101,7 +101,7 @@
     }
 
     .discipleship-highlight {
-        background: linear-gradient(135deg, var(--discipleship-red), var(--discipleship-red-dark));
+        background: var(--discipleship-red);
         color: #ffffff;
     }
 
@@ -141,10 +141,10 @@
                 Growing Together in Faith, Knowledge, and Community
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#bible-study" class="bg-white text-red-700 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition transform hover:scale-105">
+                <a href="#bible-study" class="bg-white text-church-red px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition transform hover:scale-105">
                     Join Bible Study
                 </a>
-                <a href="#baptism" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-red-700 transition">
+                <a href="#baptism" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-church-red transition">
                     Request Baptism
                 </a>
             </div>
@@ -185,7 +185,7 @@
                         <strong class="text-church-red">Format:</strong> Interactive Discussion
                     </div>
                 </div>
-                <a href="#bible-study" class="inline-block bg-church-red text-white px-6 py-3 rounded-lg hover:bg-red-700 transition transform hover:scale-105">
+                <a href="#bible-study" class="inline-block bg-church-red text-white px-6 py-3 rounded-lg hover:bg-church-red transition transform hover:scale-105">
                     Learn More
                 </a>
             </div>
@@ -212,7 +212,7 @@
                         <strong class="text-church-red">Locations:</strong> Coming Soon
                     </div>
                 </div>
-                <button class="inline-block bg-church-red text-white px-6 py-3 rounded-lg hover:bg-red-700 transition opacity-75 cursor-not-allowed">
+                <button class="inline-block bg-church-red text-white px-6 py-3 rounded-lg hover:bg-church-red transition opacity-75 cursor-not-allowed">
                     Locations Coming Soon
                 </button>
             </div>
@@ -239,7 +239,7 @@
                         <strong class="text-church-red">Outcome:</strong> Water Baptism
                     </div>
                 </div>
-                <a href="#baptism" class="inline-block bg-church-red text-white px-6 py-3 rounded-lg hover:bg-red-700 transition transform hover:scale-105">
+                <a href="#baptism" class="inline-block bg-church-red text-white px-6 py-3 rounded-lg hover:bg-church-red transition transform hover:scale-105">
                     Apply for Baptism
                 </a>
             </div>
@@ -311,7 +311,7 @@
                     </div>
                     
                     <div class="text-center">
-                        <a href="#" class="inline-block bg-church-red text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-red-700 transition transform hover:scale-105 ">
+                        <a href="#" class="inline-block bg-church-red text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-church-red transition transform hover:scale-105 ">
                             <i class="fas fa-external-link-alt mr-2"></i>
                             Join Bible Study Link
                         </a>
@@ -486,7 +486,7 @@
                         </div>
                     </div>
 
-                    <div class="bg-red-50 p-6 rounded-xl border border-red-100">
+                    <div class="bg-white p-6 rounded-xl border border-gray-100">
                         <h4 class="text-lg font-bold text-gray-800 mb-3">
                             <i class="fas fa-info-circle text-church-red mr-2"></i>
                             What Happens Next?
@@ -515,7 +515,7 @@
                     </div>
 
                     <div class="text-center pt-6">
-                        <button type="submit" class="bg-church-red text-white px-12 py-4 rounded-full font-bold text-lg hover:bg-red-700 hover:shadow-lg transition transform hover:scale-105 ">
+                        <button type="submit" class="bg-church-red text-white px-12 py-4 rounded-full font-bold text-lg hover:bg-church-red hover:shadow-lg transition transform hover:scale-105 ">
                             <i class="fas fa-paper-plane mr-2"></i>
                             Submit Application
                         </button>
@@ -542,7 +542,7 @@
                     <i class="fas fa-phone text-3xl text-church-red mb-4"></i>
                     <h3 class="text-xl font-bold text-gray-800 mb-2">Call Us</h3>
                     <p class="text-gray-600 mb-4">Speak directly with our pastoral team</p>
-                    <a href="tel:+254791049004" class="text-church-red hover:text-red-700 font-semibold">
+                    <a href="tel:+254791049004" class="text-church-red hover:text-church-red font-semibold">
                         +254 791 049004
                     </a>
                 </div>
@@ -550,7 +550,7 @@
                     <i class="fas fa-envelope text-3xl text-church-red mb-4"></i>
                     <h3 class="text-xl font-bold text-gray-800 mb-2">Email Us</h3>
                     <p class="text-gray-600 mb-4">Send us your questions or concerns</p>
-                    <a href="mailto:discipleship@thikaroadconnectagc.org" class="text-church-red hover:text-red-700 font-semibold break-words">
+                    <a href="mailto:discipleship@thikaroadconnectagc.org" class="text-church-red hover:text-church-red font-semibold break-words">
                         discipleship@thikaroadconnectagc.org	
                     </a>
                 </div>
@@ -612,7 +612,7 @@
                 requiredFields.forEach(field => {
                     if (!field.value.trim()) {
                         isValid = false;
-                        field.style.borderColor = '#dc2626';
+                        field.style.borderColor = '#ED1C24';
                     } else {
                         field.style.borderColor = '#d1d5db';
                     }
