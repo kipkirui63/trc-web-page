@@ -10,8 +10,8 @@
 @section('styles')
 <style>
     :root {
-        --pastoral-red: #dc2626;
-        --pastoral-red-dark: #991b1b;
+        --pastoral-red: #ED1C24;
+        --pastoral-red-dark: #ED1C24;
         --pastoral-light: #fff5f5;
     }
 
@@ -26,7 +26,7 @@
 
     .pastoral-card {
         background: white;
-        border: 1px solid rgba(220, 38, 38, 0.15);
+        border: 1px solid rgba(237, 28, 36, 0.15);
         border-radius: 18px;
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -34,23 +34,23 @@
 
     .pastoral-card:hover {
         transform: translateY(-6px);
-        box-shadow: 0 18px 35px rgba(220, 38, 38, 0.2);
+        box-shadow: 0 18px 35px rgba(237, 28, 36, 0.2);
     }
 
     .pastoral-icon {
         width: 70px;
         height: 70px;
         border-radius: 50%;
-        background: linear-gradient(135deg, var(--pastoral-red), var(--pastoral-red-dark));
+        background: var(--pastoral-red);
         color: white;
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 10px 25px rgba(220, 38, 38, 0.25);
+        box-shadow: 0 10px 25px rgba(237, 28, 36, 0.25);
     }
 
     .pastoral-cta {
-        background: linear-gradient(135deg, var(--pastoral-red), var(--pastoral-red-dark));
+        background: var(--pastoral-red);
         color: white;
         border-radius: 12px;
         padding: 12px 28px;
@@ -63,7 +63,7 @@
 
     .pastoral-cta:hover {
         transform: translateY(-3px);
-        box-shadow: 0 12px 24px rgba(220, 38, 38, 0.2);
+        box-shadow: 0 12px 24px rgba(237, 28, 36, 0.2);
     }
 
     .pastoral-photo {
@@ -71,7 +71,7 @@
         border-radius: 14px;
         overflow: hidden;
         box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
-        border: 1px solid rgba(220, 38, 38, 0.12);
+        border: 1px solid rgba(237, 28, 36, 0.12);
     }
 
     .pastoral-photo.feature {
@@ -150,38 +150,38 @@
 <section class="py-16 bg-white">
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-center mb-12">
-            <h2 class="text-4xl font-bold text-gray-800 mb-4">Pastoral Care Focus Areas</h2>
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">Pastoral Team</h2>
             <p class="text-lg text-gray-600">
-                Our pastoral ministry provides confidential, faith-based counseling and care for individuals and families.
+                Our pastoral ministry is led by a team serving the church through teaching, counseling, visitation, and spiritual care.
             </p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8">
+        <div class="grid md:grid-cols-3 gap-8">
             <div class="pastoral-card p-8 text-center">
                 <div class="pastoral-icon mx-auto mb-5">
-                    <i class="fas fa-heart text-2xl"></i>
+                    <i class="fas fa-user-tie text-2xl"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-3">Couples Ministry</h3>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">Senior Pastor</h3>
                 <p class="text-gray-600">
-                    Strengthening marriages through biblical guidance, communication support, and prayerful care.
+                    Providing overall spiritual leadership, preaching, pastoral direction, and care for the church family.
                 </p>
             </div>
             <div class="pastoral-card p-8 text-center">
                 <div class="pastoral-icon mx-auto mb-5">
-                    <i class="fas fa-ring text-2xl"></i>
+                    <i class="fas fa-user-shield text-2xl"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-3">Pre-Marital Counseling</h3>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">Assistant Pastor</h3>
                 <p class="text-gray-600">
-                    Preparing couples for marriage with sessions on faith, communication, conflict resolution, and purpose.
+                    Supporting ministry coordination, discipleship, counseling, and pastoral care across church programs.
                 </p>
             </div>
             <div class="pastoral-card p-8 text-center">
                 <div class="pastoral-icon mx-auto mb-5">
-                    <i class="fas fa-heart text-2xl"></i>
+                    <i class="fas fa-user text-2xl"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-3">Pastoral Visits</h3>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">Pastor</h3>
                 <p class="text-gray-600">
-                    Strengthening marriages through biblical guidance, communication support, and prayerful care.
+                    Serving through visitation, prayer, follow-up, teaching, and care for individuals and families.
                 </p>
             </div>
         </div>
@@ -209,7 +209,7 @@
                         <i class="fas fa-envelope"></i>
                         Request Counseling
                     </a>
-                    <div class="mt-6 bg-red-50 rounded-xl p-5 text-left">
+                    <div class="mt-6 bg-white border border-gray-100 rounded-xl p-5 text-left">
                         <h4 class="text-lg font-bold text-gray-800 mb-3">Pastoral Contact</h4>
                         <p class="text-gray-700 mb-2"><i class="fas fa-phone text-church-red mr-2"></i>+254 719 187 201</p>
                         <p class="text-gray-700"><i class="fas fa-envelope text-church-red mr-2"></i>pastoral@thikaroadconnectagc.org</p>
