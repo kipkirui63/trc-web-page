@@ -61,6 +61,26 @@
         transform: translateY(-3px);
         box-shadow: 0 12px 24px rgba(220, 38, 38, 0.2);
     }
+
+    .pastoral-photo {
+        aspect-ratio: 4 / 3;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+        border: 1px solid rgba(220, 38, 38, 0.12);
+    }
+
+    .pastoral-photo.feature {
+        aspect-ratio: auto;
+        min-height: 100%;
+    }
+
+    .pastoral-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
 </style>
 @endsection
 
@@ -75,6 +95,50 @@
             <p class="text-xl md:text-2xl opacity-90">
                 Shepherding hearts with care, counseling, and spiritual guidance.
             </p>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">Questions About Discipleship?</h2>
+            <p class="text-lg text-gray-600">
+                Our pastoral team is here to help guide you in your faith journey.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
+            <div class="lg:col-span-3 grid grid-cols-2 auto-rows-[210px] gap-4">
+                <div class="pastoral-photo feature row-span-2">
+                    <img src="{{ asset('images/pastoral.webp') }}" alt="Pastoral ministry team sharing with the church" width="1000" height="667" loading="eager" decoding="async">
+                </div>
+                <div class="pastoral-photo">
+                    <img src="{{ asset('images/pastoral1.webp') }}" alt="Pastoral ministry moment at TRC AGC" width="667" height="1000" loading="lazy" decoding="async">
+                </div>
+                <div class="pastoral-photo">
+                    <img src="{{ asset('images/pastoral2.webp') }}" alt="TRC AGC pastoral team ministering" width="1000" height="667" loading="lazy" decoding="async">
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 grid gap-5">
+                <div class="pastoral-card p-6">
+                    <div class="pastoral-icon mb-5">
+                        <i class="fas fa-phone text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Call Us</h3>
+                    <p class="text-gray-600 mb-4">Speak directly with our pastoral team</p>
+                    <a href="tel:+254791049004" class="text-xl font-bold text-church-red">+254 791 049004</a>
+                </div>
+                <div class="pastoral-card p-6">
+                    <div class="pastoral-icon mb-5">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Email Us</h3>
+                    <p class="text-gray-600 mb-4">Send us your questions or concerns</p>
+                    <a href="mailto:discipleship@thikaroadconnectagc.org" class="text-lg font-bold text-church-red break-words">discipleship@thikaroadconnectagc.org</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
