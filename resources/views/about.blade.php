@@ -647,7 +647,7 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-2xl font-bold text-gray-900 mb-1">Rev. Ernest Korir</h3>
-                        <p class="text-red font-medium mb-4">Senior Pastor & Visionary Leader</p>
+                        <p class="text-red font-medium mb-4">Senior Pastor</p>
                         <p class="text-gray-700 leading-relaxed mb-4">
                             Rev. Ernest Korir serves as our Lead Pastor with a heart for God's people and a vision for community transformation.
                         </p>
