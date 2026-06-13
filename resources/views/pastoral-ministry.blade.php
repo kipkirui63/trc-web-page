@@ -17,9 +17,10 @@
 
     .pastoral-hero {
         background: url('/images/pastoral.webp');
-        background-size: cover;
+        background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
+        background-color: #111827;
         position: relative;
         overflow: hidden;
     }
