@@ -285,9 +285,7 @@
     <section class="py-20 bg-gradient-to-r from-red-50 via-white to-red-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl lg:text-5xl font-bold mb-6">
-                    <span class="text-church-red">Memories</span>
-                </h2>
+                
                 <p class="text-xl text-gray-700 max-w-3xl mx-auto">
                     Take a glimpse into the joy, laughter, and learning that happens every day in our Children's Ministry
                 </p>
