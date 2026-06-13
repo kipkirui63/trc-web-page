@@ -112,10 +112,10 @@
 <!-- Unified Hero & Foundation Section -->
 <section class="relative min-h-screen overflow-hidden">
     <!-- Background Image with Overlay -->
-    <div class="absolute inset-0">
+    <div class="absolute inset-x-4 top-8 bottom-8 md:inset-x-10 lg:inset-x-16">
         <img src="{{ asset('images/vbs7.webp') }}" 
             alt="Church worship"
-            class="w-full h-full object-cover" />
+            class="w-full h-full object-cover rounded-3xl shadow-2xl" />
         <!-- Dark overlay for better text readability -->
         <!-- <div class="absolute inset-0 bg-gradient-to-br from-purple-900/70 via-purple-800/60 to-red-900/70"></div> -->
     </div>
