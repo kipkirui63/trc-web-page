@@ -29,14 +29,6 @@
         z-index: 0;
     }
 
-    .compassion-hero::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(135deg, rgba(127, 29, 29, 0.78), rgba(88, 28, 135, 0.42));
-        z-index: 1;
-    }
-
     .compassion-card {
         background: white;
         border: 1px solid rgba(220, 38, 38, 0.15);
@@ -94,6 +86,7 @@
         border-radius: 14px;
         overflow: hidden;
         box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+        border: 1px solid rgba(220, 38, 38, 0.12);
     }
 
     .pastoral-photo img {
@@ -105,6 +98,11 @@
 
     .pastoral-photo.portrait {
         aspect-ratio: 3 / 4;
+    }
+
+    .pastoral-photo.feature {
+        aspect-ratio: auto;
+        min-height: 100%;
     }
 
     .pastoral-contact {
@@ -150,12 +148,12 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            <div class="grid grid-cols-2 gap-4">
-                <div class="pastoral-photo">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
+            <div class="lg:col-span-3 grid grid-cols-2 auto-rows-[210px] gap-4">
+                <div class="pastoral-photo feature row-span-2">
                     <img src="{{ asset('images/pastoral.webp') }}" alt="Pastoral ministry team sharing with the church" width="1000" height="667" loading="eager" decoding="async" fetchpriority="high">
                 </div>
-                <div class="pastoral-photo portrait row-span-2">
+                <div class="pastoral-photo">
                     <img src="{{ asset('images/pastoral1.webp') }}" alt="Pastoral ministry moment at TRC AGC" width="667" height="1000" loading="lazy" decoding="async">
                 </div>
                 <div class="pastoral-photo">
@@ -163,7 +161,7 @@
                 </div>
             </div>
 
-            <div class="grid sm:grid-cols-2 gap-5">
+            <div class="lg:col-span-2 grid gap-5">
                 <div class="pastoral-contact">
                     <div class="compassion-icon mb-5">
                         <i class="fas fa-phone text-2xl"></i>
