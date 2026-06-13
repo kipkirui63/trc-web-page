@@ -21,13 +21,6 @@
         overflow: hidden;
     }
 
-    .worship-hero::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(135deg, rgba(127, 29, 29, 0.72), rgba(15, 23, 42, 0.42));
-    }
-
     .worship-tag {
         display: inline-flex;
         align-items: center;
@@ -103,6 +96,10 @@
         position: relative;
         border: 1px solid var(--worship-border);
         box-shadow: 0 18px 35px rgba(15, 23, 42, 0.12);
+    }
+
+    .worship-photo-card.tall {
+        min-height: 100%;
     }
 
     .worship-photo-card img {
@@ -281,23 +278,23 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 auto-rows-[230px] gap-5 max-w-6xl mx-auto">
-            <div class="worship-photo-card lg:col-span-3 lg:row-span-2">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 auto-rows-[220px] gap-5 max-w-6xl mx-auto">
+            <div class="worship-photo-card tall lg:col-span-3 lg:row-span-2">
                 <img src="{{ asset('images/worship1-feature.webp') }}" alt="Worship ministry team" loading="lazy" decoding="async" width="1600" height="1067">
             </div>
             <div class="worship-photo-card lg:col-span-3">
                 <img src="{{ asset('images/worship2-feature.webp') }}" alt="Congregation in worship" loading="lazy" decoding="async" width="1600" height="1067">
             </div>
-            <div class="worship-photo-card lg:col-span-2">
-                <img src="{{ asset('images/worship4-feature.webp') }}" alt="Worship service moment" loading="lazy" decoding="async" width="1600" height="1067">
-            </div>
-            <div class="worship-photo-card lg:col-span-2">
+            <div class="worship-photo-card lg:col-span-3">
                 <img src="{{ asset('images/worship2-png-feature.webp') }}" alt="Worship ministry team portrait" loading="lazy" decoding="async" width="1600" height="1067">
             </div>
             <div class="worship-photo-card lg:col-span-3">
+                <img src="{{ asset('images/worship4-feature.webp') }}" alt="Worship service moment" loading="lazy" decoding="async" width="1600" height="1067">
+            </div>
+            <div class="worship-photo-card lg:col-span-2">
                 <img src="{{ asset('images/worship-gathering-feature.webp') }}" alt="Worship gathering" loading="lazy" decoding="async" width="1200" height="900">
             </div>
-            <div class="worship-photo-card lg:col-span-3">
+            <div class="worship-photo-card lg:col-span-4">
                 <img src="{{ asset('images/worship5.jpeg') }}" alt="Worship fellowship moment" loading="lazy" decoding="async" width="1200" height="800">
             </div>
         </div>
