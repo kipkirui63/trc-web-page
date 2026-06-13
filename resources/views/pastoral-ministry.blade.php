@@ -3,6 +3,10 @@
 @section('title', 'Pastoral Ministry')
 @section('description', 'Pastoral Ministry offers care, counseling, and guidance with a focus on couples and pre-marital counseling.')
 
+@section('preloads')
+<link rel="preload" as="image" href="{{ asset('images/pastoral.webp') }}" type="image/webp" fetchpriority="high">
+@endsection
+
 @section('styles')
 <style>
     :root {
@@ -12,7 +16,7 @@
     }
 
     .pastoral-hero {
-        background: url('/images/pst-vince.webp');
+        background: url('/images/pastoral.webp');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
