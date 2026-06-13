@@ -10,8 +10,8 @@
 @section('styles')
 <style>
     :root {
-        --compassion-red: #dc2626;
-        --compassion-red-dark: #991b1b;
+        --compassion-red: #ED1C24;
+        --compassion-red-dark: #ED1C24;
         --compassion-light: #fff5f5;
     }
 
@@ -31,7 +31,7 @@
 
     .compassion-card {
         background: white;
-        border: 1px solid rgba(220, 38, 38, 0.15);
+        border: 1px solid rgba(237, 28, 36, 0.15);
         border-radius: 16px;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -39,19 +39,19 @@
 
     .compassion-card:hover {
         transform: translateY(-6px);
-        box-shadow: 0 18px 35px rgba(220, 38, 38, 0.18);
+        box-shadow: 0 18px 35px rgba(237, 28, 36, 0.18);
     }
 
     .compassion-icon {
         width: 72px;
         height: 72px;
         border-radius: 50%;
-        background: linear-gradient(135deg, var(--compassion-red), var(--compassion-red-dark));
+        background: var(--compassion-red);
         color: white;
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 10px 25px rgba(220, 38, 38, 0.25);
+        box-shadow: 0 10px 25px rgba(237, 28, 36, 0.25);
     }
 
     .compassion-tag {
@@ -65,7 +65,7 @@
     }
 
     .cta-red {
-        background: linear-gradient(135deg, var(--compassion-red), var(--compassion-red-dark));
+        background: var(--compassion-red);
         color: white;
         border-radius: 10px;
         padding: 12px 26px;
@@ -78,7 +78,7 @@
 
     .cta-red:hover {
         transform: translateY(-3px);
-        box-shadow: 0 12px 24px rgba(220, 38, 38, 0.2);
+        box-shadow: 0 12px 24px rgba(237, 28, 36, 0.2);
     }
 
 </style>
