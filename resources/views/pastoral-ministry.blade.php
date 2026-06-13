@@ -85,6 +85,17 @@
         object-fit: cover;
         display: block;
     }
+
+    .pastor-portrait {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 24px;
+        border: 4px solid #ffffff;
+        box-shadow: 0 12px 28px rgba(237, 28, 36, 0.18);
+    }
 </style>
 @endsection
 
@@ -158,31 +169,22 @@
 
         <div class="grid md:grid-cols-3 gap-8">
             <div class="pastoral-card p-8 text-center">
-                <div class="pastoral-icon mx-auto mb-5">
-                    <i class="fas fa-user-tie text-2xl"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-3">Senior Pastor</h3>
-                <p class="text-gray-600">
-                    Providing overall spiritual leadership, preaching, pastoral direction, and care for the church family.
-                </p>
+                <img src="{{ asset('images/rev.webp') }}" alt="Rev. Ernest Korir" class="pastor-portrait" loading="lazy" decoding="async" width="140" height="140">
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">Rev. Ernest Korir</h3>
+                <p class="text-church-red font-bold mb-4">Senior Pastor</p>
+                
             </div>
             <div class="pastoral-card p-8 text-center">
-                <div class="pastoral-icon mx-auto mb-5">
-                    <i class="fas fa-user-shield text-2xl"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-3">Assistant Pastor</h3>
-                <p class="text-gray-600">
-                    Supporting ministry coordination, discipleship, counseling, and pastoral care across church programs.
-                </p>
+                <img src="{{ asset('images/rev-ann.webp') }}" alt="Rev. Ann Korir" class="pastor-portrait" loading="lazy" decoding="async" width="140" height="140">
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">Rev. Ann Korir</h3>
+                <p class="text-church-red font-bold mb-4">Assistant Pastor</p>
+                
             </div>
             <div class="pastoral-card p-8 text-center">
-                <div class="pastoral-icon mx-auto mb-5">
-                    <i class="fas fa-user text-2xl"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-3">Pastor</h3>
-                <p class="text-gray-600">
-                    Serving through visitation, prayer, follow-up, teaching, and care for individuals and families.
-                </p>
+                <img src="{{ asset('images/pst-vince.webp') }}" alt="Pastor Vince" class="pastor-portrait" loading="lazy" decoding="async" width="140" height="140">
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">Pastor Vince</h3>
+                <p class="text-church-red font-bold mb-4">Pastor</p>
+                
             </div>
         </div>
     </div>
