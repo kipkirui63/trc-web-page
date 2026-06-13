@@ -1,1026 +1,324 @@
 @extends('layouts.app')
 
-@section('title', 'Worship Ministry - Experience God\'s Presence')
-@section('description', 'Join our Worship Ministry at TRC AGC Church. Discover your calling in music, technical arts, prayer, and creative worship expression.')
+@section('title', 'Worship Ministry')
+@section('description', 'Join our Worship Ministry at TRC AGC Church. Serve through vocals, instruments, technical arts, prayer, and hospitality.')
 
 @section('styles')
 <style>
     :root {
-        --church-purple: #b91c1c;
-        --church-red: #dc2626;
-        --church-yellow: #ffffff;
+        --worship-red: #dc2626;
+        --worship-red-dark: #991b1b;
+        --worship-soft: #fff5f5;
+        --worship-border: rgba(220, 38, 38, 0.15);
     }
 
-    .ministry-hero {
-        background: linear-gradient(45deg, var(--church-purple) 0%, var(--church-red) 50%, var(--church-yellow) 100%);
+    .worship-hero {
+        background: url('/images/worship-hero.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         position: relative;
-        min-height: 100vh;
-        display: flex;
+        overflow: hidden;
+    }
+
+    .worship-hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(127, 29, 29, 0.72), rgba(15, 23, 42, 0.42));
+    }
+
+    .worship-tag {
+        display: inline-flex;
         align-items: center;
-        overflow: hidden;
+        gap: 10px;
+        background: var(--worship-red);
+        color: #ffffff;
+        border-radius: 9999px;
+        padding: 10px 20px;
+        font-weight: 700;
     }
 
-    .ministry-hero::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    }
-
-    .worship-orb {
-        position: absolute;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.1);
-        animation: float-orb 8s ease-in-out infinite;
-    }
-
-    .worship-orb:nth-child(1) {
-        width: 100px;
-        height: 100px;
-        top: 20%;
-        left: 10%;
-        animation-delay: 0s;
-    }
-
-    .worship-orb:nth-child(2) {
-        width: 150px;
-        height: 150px;
-        top: 60%;
-        right: 15%;
-        animation-delay: 2s;
-    }
-
-    .worship-orb:nth-child(3) {
-        width: 80px;
-        height: 80px;
-        bottom: 20%;
-        left: 20%;
-        animation-delay: 4s;
-    }
-
-    @keyframes float-orb {
-
-        0%,
-        100% {
-            transform: translateY(0px) scale(1);
-        }
-
-        50% {
-            transform: translateY(-30px) scale(1.1);
-        }
-    }
-
-    .glass-card {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 24px;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-        overflow: hidden;
-        position: relative;
-    }
-
-    .glass-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 3px;
-        background: linear-gradient(90deg, var(--church-purple), var(--church-red), var(--church-yellow));
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-
-    .glass-card:hover::before {
-        opacity: 1;
-    }
-
-    .glass-card:hover {
-        transform: translateY(-15px) rotateX(5deg);
-        box-shadow: 0 25px 50px rgba(220, 38, 38, 0.2);
-    }
-
-    .ministry-path {
-        background: linear-gradient(135deg, rgba(248, 250, 252, 0.9), rgba(255, 255, 255, 0.9));
-        backdrop-filter: blur(10px);
-        border-radius: 20px;
-        border: 1px solid rgba(220, 38, 38, 0.12);
-        position: relative;
-        overflow: hidden;
-        transition: all 0.4s ease;
-    }
-
-    .ministry-path::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 4px;
-        height: 100%;
-        background: linear-gradient(180deg, var(--church-purple), var(--church-red));
-        transform: scaleY(0);
-        transition: transform 0.4s ease;
-    }
-
-    .ministry-path:hover::after {
-        transform: scaleY(1);
-    }
-
-    .ministry-path:hover {
-        transform: translateX(10px);
-        box-shadow: 0 15px 35px rgba(220, 38, 38, 0.18);
-    }
-
-    .experience-card {
-        background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), rgba(220, 38, 38, 0.05));
+    .worship-card {
+        background: #ffffff;
+        border: 1px solid var(--worship-border);
         border-radius: 16px;
-        border: 1px solid rgba(220, 38, 38, 0.12);
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
+        box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .experience-card::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: conic-gradient(from 0deg, var(--church-purple), var(--church-red), var(--church-yellow), var(--church-purple));
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        animation: rotate 20s linear infinite;
+    .worship-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 36px rgba(220, 38, 38, 0.16);
     }
 
-    .experience-card:hover::before {
-        opacity: 0.1;
-    }
-
-    @keyframes rotate {
-        from {
-            transform: rotate(0deg);
-        }
-
-        to {
-            transform: rotate(360deg);
-        }
-    }
-
-    .gradient-text {
-        background: linear-gradient(135deg, var(--church-purple), var(--church-red), var(--church-yellow));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        background-size: 200% 200%;
-        animation: gradient-shift 3s ease-in-out infinite;
-    }
-
-    @keyframes gradient-shift {
-
-        0%,
-        100% {
-            background-position: 0% 50%;
-        }
-
-        50% {
-            background-position: 100% 50%;
-        }
-    }
-
-    .worship-timeline {
-        position: relative;
-    }
-
-    .worship-timeline::before {
-        content: '';
-        position: absolute;
-        left: 50%;
-        top: 0;
-        bottom: 0;
-        width: 2px;
-        background: linear-gradient(180deg, var(--church-purple), var(--church-red), var(--church-yellow));
-        transform: translateX(-50%);
-    }
-
-    .timeline-item {
-        position: relative;
-        margin-bottom: 3rem;
-    }
-
-    .timeline-dot {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        width: 16px;
-        height: 16px;
-        background: white;
-        border: 3px solid var(--church-purple);
-        border-radius: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 10;
-    }
-
-    .timeline-content {
-        width: 45%;
-    }
-
-    .timeline-item:nth-child(even) .timeline-content {
-        margin-left: 55%;
-    }
-
-    .pulse-icon {
-        animation: pulse-worship 2s ease-in-out infinite;
-    }
-
-    @keyframes pulse-worship {
-
-        0%,
-        100% {
-            transform: scale(1);
-            box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.4);
-        }
-
-        50% {
-            transform: scale(1.05);
-            box-shadow: 0 0 0 20px rgba(124, 58, 237, 0);
-        }
-    }
-
-    .ministry-quote {
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.9));
-        backdrop-filter: blur(15px);
-        border-left: 5px solid var(--church-purple);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .ministry-quote::before {
-        content: '"';
-        position: absolute;
-        top: -10px;
-        left: 20px;
-        font-size: 6rem;
-        color: var(--church-red);
-        opacity: 0.1;
-        font-family: serif;
-    }
-
-    .call-to-action {
-        background: linear-gradient(135deg, var(--church-purple) 0%, var(--church-red) 50%, var(--church-yellow) 100%);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .cta-particles {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-
-    .particle {
-        position: absolute;
-        width: 4px;
-        height: 4px;
-        background: rgba(255, 255, 255, 0.6);
-        border-radius: 50%;
-        animation: particle-float 15s linear infinite;
-    }
-
-    @keyframes particle-float {
-        0% {
-            transform: translateY(100vh) rotate(0deg);
-            opacity: 0;
-        }
-
-        10% {
-            opacity: 1;
-        }
-
-        90% {
-            opacity: 1;
-        }
-
-        100% {
-            transform: translateY(-100vh) rotate(360deg);
-            opacity: 0;
-        }
-    }
-
-    .interactive-button {
-        background: rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(10px);
-        border: 2px solid rgba(255, 255, 255, 0.3);
-        color: white;
-        border-radius: 50px;
-        padding: 1rem 2rem;
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .interactive-button::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-        transition: left 0.5s ease;
-    }
-
-    .interactive-button:hover::before {
-        left: 100%;
-    }
-
-    .interactive-button:hover {
-        background: rgba(255, 255, 255, 0.3);
-        transform: translateY(-3px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    }
-
-    .ministry-stats {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
+    .worship-icon {
+        width: 64px;
+        height: 64px;
         border-radius: 16px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .stat-circle {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        background: conic-gradient(var(--church-purple) 0deg 120deg, var(--church-red) 120deg 240deg, var(--church-yellow) 240deg 360deg);
+        background: var(--worship-red);
+        color: #ffffff;
         display: flex;
         align-items: center;
         justify-content: center;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+    }
+
+    .worship-section-soft {
+        background: linear-gradient(135deg, var(--worship-soft) 0%, #ffffff 100%);
+    }
+
+    .worship-cta {
+        background: var(--worship-red);
+        color: #ffffff;
+        border-radius: 9999px;
+        padding: 14px 28px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+        transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .worship-cta:hover {
+        background: var(--worship-red-dark);
+        transform: translateY(-3px);
+    }
+
+    .worship-cta.light {
+        background: #ffffff;
+        color: var(--worship-red);
+    }
+
+    .worship-cta.light:hover {
+        background: var(--worship-soft);
+        color: var(--worship-red-dark);
+    }
+
+    .worship-photo-card {
+        min-height: 230px;
+        border-radius: 18px;
+        overflow: hidden;
         position: relative;
+        border: 1px solid var(--worship-border);
+        box-shadow: 0 18px 35px rgba(15, 23, 42, 0.12);
     }
 
-    .stat-circle::before {
-        content: '';
-        position: absolute;
-        width: 60px;
-        height: 60px;
-        background: white;
-        border-radius: 50%;
+    .worship-photo-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s ease;
     }
 
-    .stat-number {
-        position: relative;
-        z-index: 1;
-        font-weight: 800;
-        color: var(--church-red);
-    }
-
-    @media (max-width: 768px) {
-        .worship-timeline::before {
-            left: 30px;
-        }
-
-        .timeline-dot {
-            left: 30px;
-        }
-
-        .timeline-content {
-            width: calc(100% - 60px);
-            margin-left: 60px !important;
-        }
-
-        .ministry-hero {
-            min-height: 80vh;
-        }
+    .worship-photo-card:hover img {
+        transform: scale(1.05);
     }
 </style>
 @endsection
 
 @section('content')
-<!-- Hero Section -->
-<section class="ministry-hero text-white">
-    <div class="worship-orb"></div>
-    <div class="worship-orb"></div>
-    <div class="worship-orb"></div>
-
+<section class="worship-hero text-white py-24 md:py-32">
     <div class="container mx-auto px-4 relative z-10">
-        <div class="text-center max-w-6xl mx-auto">
-            <div class="space-y-8">
-
-
-                <!-- Main Heading -->
-                <div class="space-y-6">
-                    <h1 class="text-6xl md:text-8xl font-black leading-tight">
-                        Lift Your
-                        <span class="block bg-gradient-to-r from-red-200 via-white to-red-200 bg-clip-text text-transparent">
-                            Voice to Heaven
-                        </span>
-                    </h1>
-                    <p class="text-xl md:text-3xl opacity-90 leading-relaxed max-w-4xl mx-auto">
-                        Join a community of passionate worshippers using their gifts to create
-                        <span class="text-red-200 font-semibold">transformational worship experiences</span>
-                        that draw hearts closer to God
-                    </p>
-                </div>
-
-                <!-- Call to Actions -->
-                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
-                    <button class="interactive-button text-lg font-semibold px-8 py-4">
-                        <i class="fas fa-hand-holding-heart mr-3"></i>
-                        Discover Your Calling
-                    </button>
-                </div>
-
-                <!-- Scripture Verse -->
-                <div class="pt-12">
-                    <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20 max-w-4xl mx-auto">
-                        <p class="text-lg md:text-xl italic opacity-95 mb-4 leading-relaxed text-gray-600">
-                            "Sing to the Lord a new song; sing to the Lord, all the earth.
-                            Sing to the Lord, praise his name; proclaim his salvation day after day."
-                        </p>
-                        <div class="flex items-center justify-center space-x-4">
-                            <div class="w-12 h-0.5 bg-gradient-to-r from-transparent via-red-200 to-transparent"></div>
-                            <span class="text-red-200 font-semibold">Psalm 96:1-2</span>
-                            <div class="w-12 h-0.5 bg-gradient-to-r from-transparent via-red-200 to-transparent"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Visual Elements -->
-                <div class="pt-16 flex justify-center space-x-8 opacity-60">
-                    <div class="flex flex-col items-center space-y-2">
-                        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center pulse-icon">
-                            <i class="fas fa-microphone text-xl"></i>
-                        </div>
-                        <span class="text-sm">Vocals</span>
-                    </div>
-                    <div class="flex flex-col items-center space-y-2">
-                        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center pulse-icon" style="animation-delay: 0.5s;">
-                            <i class="fas fa-guitar text-xl"></i>
-                        </div>
-                        <span class="text-sm">Instruments</span>
-                    </div>
-                    <div class="flex flex-col items-center space-y-2">
-                        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center pulse-icon" style="animation-delay: 1s;">
-                            <i class="fas fa-sliders-h text-xl"></i>
-                        </div>
-                        <span class="text-sm">Tech Arts</span>
-                    </div>
-                    <div class="flex flex-col items-center space-y-2">
-                        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center pulse-icon" style="animation-delay: 1.5s;">
-                            <i class="fas fa-handshake text-xl"></i>
-                        </div>
-                        <span class="text-sm">Hospitality</span>
-                    </div>
-                </div>
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="worship-icon mx-auto mb-6 rounded-full">
+                <i class="fas fa-music"></i>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">Worship Ministry</h1>
+            <p class="text-xl md:text-2xl opacity-95 max-w-3xl mx-auto">
+                Leading hearts into God's presence through song, service, prayer, and excellence.
+            </p>
+            <div class="mt-8">
+                <a href="/contact" class="worship-cta light">
+                    <i class="fas fa-envelope"></i>
+                    Join the Team
+                </a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Ministry Paths Section -->
-<section class="py-24 bg-gradient-to-br from-gray-50 to-white">
+<section class="py-16 bg-white">
     <div class="container mx-auto px-4">
-        <div class="text-center mb-20">
-            <h2 class="text-4xl md:text-6xl font-bold mb-6">
-                <span class="gradient-text">Your Ministry Path Awaits</span>
-            </h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Every voice matters, every gift has purpose. Find where your passion meets God's calling.
+        <div class="max-w-4xl mx-auto text-center mb-12">
+            <span class="worship-tag">
+                <i class="fas fa-heart"></i>
+                Serving Through Worship
+            </span>
+            <h2 class="text-4xl font-bold text-gray-800 mt-5 mb-4">Where Your Gift Can Serve</h2>
+            <p class="text-lg text-gray-600">
+                Every voice, instrument, and faithful hand helps create a worship environment that points people to Christ.
             </p>
         </div>
 
-        <div class="space-y-8 max-w-4xl mx-auto">
-            <!-- Vocal Ministry -->
-            <div class="ministry-path p-8">
-                <div class="flex items-center space-x-6">
-                    <div class="w-20 h-20 bg-gradient-to-br from-red-600 to-red-500 rounded-2xl flex items-center justify-center flex-shrink-0">
-                        <i class="fas fa-microphone-alt text-3xl text-white"></i>
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Vocal Ministry</h3>
-                        <p class="text-gray-600 mb-4">Lead congregational worship, join our choir, or share your solo talents to lift hearts to heaven.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Lead Worship</span>
-                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Choir</span>
-                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Solo Ministry</span>
-                        </div>
-                    </div>
-                </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div class="worship-card p-7">
+                <div class="worship-icon mb-5"><i class="fas fa-microphone-alt"></i></div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">Vocals</h3>
+                <p class="text-gray-600">Lead congregational worship, join the choir, or serve through special music.</p>
             </div>
-
-            <!-- Instrumental Ministry -->
-            <div class="ministry-path p-8">
-                <div class="flex items-center space-x-6">
-                    <div class="w-20 h-20 bg-gradient-to-br from-red-500 to-red-500 rounded-2xl flex items-center justify-center flex-shrink-0">
-                        <i class="fas fa-guitar text-3xl text-white"></i>
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Instrumental Ministry</h3>
-                        <p class="text-gray-600 mb-4">Create the soundtrack of worship with guitars, keyboards, drums, and orchestral instruments.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Guitar</span>
-                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Keys</span>
-                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Drums</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Orchestra</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="worship-card p-7">
+                <div class="worship-icon mb-5"><i class="fas fa-guitar"></i></div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">Instruments</h3>
+                <p class="text-gray-600">Serve with guitars, keys, drums, and other instruments that support worship.</p>
             </div>
-
-            <!-- Technical Arts -->
-            <div class="ministry-path p-8">
-                <div class="flex items-center space-x-6">
-                    <div class="w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center flex-shrink-0">
-                        <i class="fas fa-sliders-h text-3xl text-white"></i>
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Technical Arts</h3>
-                        <p class="text-gray-600 mb-4">Bring worship to life through sound engineering, lighting design, and live streaming excellence.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Sound</span>
-                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Lighting</span>
-                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Streaming</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="worship-card p-7">
+                <div class="worship-icon mb-5"><i class="fas fa-sliders-h"></i></div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">Technical Arts</h3>
+                <p class="text-gray-600">Support sound, media, livestreaming, and the technical flow of services.</p>
             </div>
-
-            <!-- Creative Arts -->
-            <div class="ministry-path p-8">
-                <div class="flex items-center space-x-6">
-                    <div class="w-20 h-20 bg-gradient-to-br from-red-600 to-red-500 rounded-2xl flex items-center justify-center flex-shrink-0">
-                        <i class="fas fa-palette text-3xl text-white"></i>
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Creative Arts</h3>
-                        <p class="text-gray-600 mb-4">Express worship through dance, drama, visual arts, and creative storytelling.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Dance</span>
-                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Drama</span>
-                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Visual Arts</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="worship-card p-7">
+                <div class="worship-icon mb-5"><i class="fas fa-palette"></i></div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">Creative Arts</h3>
+                <p class="text-gray-600">Express worship through dance, drama, visual arts, and creative storytelling.</p>
             </div>
-
-            <!-- Prayer Ministry -->
-            <div class="ministry-path p-8">
-                <div class="flex items-center space-x-6">
-                    <div class="w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center flex-shrink-0">
-                        <i class="fas fa-praying-hands text-3xl text-white"></i>
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Prayer Ministry</h3>
-                        <p class="text-gray-600 mb-4">Intercede for our services, support worship teams, and create spiritual covering through prayer.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Intercession</span>
-                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Worship Prayer</span>
-                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Spiritual Warfare</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="worship-card p-7">
+                <div class="worship-icon mb-5"><i class="fas fa-praying-hands"></i></div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">Prayer</h3>
+                <p class="text-gray-600">Cover worship services, teams, and ministry moments in prayer.</p>
             </div>
-
-            <!-- Hospitality & Ushering -->
-            <div class="ministry-path p-8">
-                <div class="flex items-center space-x-6">
-                    <div class="w-20 h-20 bg-gradient-to-br from-red-500 to-red-500 rounded-2xl flex items-center justify-center flex-shrink-0">
-                        <i class="fas fa-handshake text-3xl text-white"></i>
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Hospitality & Ushering</h3>
-                        <p class="text-gray-600 mb-4">Welcome guests with warmth, guide worship flow, and create an atmosphere where everyone feels at home.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Welcome Team</span>
-                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Ushering</span>
-                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Guest Relations</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="worship-card p-7">
+                <div class="worship-icon mb-5"><i class="fas fa-handshake"></i></div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">Hospitality</h3>
+                <p class="text-gray-600">Welcome people warmly and help create order, care, and belonging.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Ministry Impact & Vision -->
-<section class="py-24 bg-white">
+<section class="py-16 worship-section-soft">
     <div class="container mx-auto px-4">
-        <div class="text-center mb-20">
-            <h2 class="text-4xl md:text-6xl font-bold mb-6">
-                <span class="gradient-text">Our Objective </span>
-            </h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Building a culture of excellence in worship that transforms hearts and glorifies God.
-            </p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <!-- Vision Statement -->
-            <div class="space-y-8">
-                <div class="glass-card p-8">
-                    <div class="flex items-start space-x-4 mb-6">
-                        <div class="w-12 h-12 bg-gradient-to-br from-red-600 to-red-500 rounded-full flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-eye text-xl text-white"></i>
-                        </div>
-                        <div>
-                            <p class="text-gray-600 leading-relaxed">
-                                To create an atmosphere where heaven touches earth through authentic worship,
-                                where every heart finds its voice, and where God's presence transforms lives.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass-card p-8">
-                    <div class="flex items-start space-x-4 mb-6">
-                        <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-target text-xl text-white"></i>
-                        </div>
-                        <div>
-                            <p class="text-gray-600 leading-relaxed">
-                                To equip and empower worshippers to serve with excellence, grow in their gifts,
-                                and lead others into genuine encounters with the living God.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass-card p-8">
-                    <div class="flex items-start space-x-4 mb-6">
-                        <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-heart text-xl text-white"></i>
-                        </div>
-                        <div>
-                            <p class="text-gray-600 leading-relaxed">
-                                Excellence without perfection, authenticity over performance,
-                                community above competition, and God's glory as our ultimate goal.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Impact Metrics -->
-            <div class="space-y-8">
-                <div class="text-center mb-8">
-                    <h3 class="text-3xl font-bold gradient-text mb-4">Making a Difference</h3>
-                    <p class="text-gray-600">See how God is using our worship ministry to impact lives</p>
-                </div>
-
-                <div class="grid grid-cols-2 gap-6">
-                    
-
-                    <div class="glass-card p-6 text-center">
-                        <div class="stat-circle mx-auto mb-4">
-                            <div class="stat-number text-2xl">12</div>
-                        </div>
-                        <h4 class="font-semibold text-gray-800 mb-1">Training Sessions</h4>
-                        <p class="text-gray-600 text-sm">Monthly development</p>
-                    </div>
-
-                    <div class="glass-card p-6 text-center">
-                        <div class="stat-circle mx-auto mb-4">
-                            <div class="stat-number text-2xl">100%</div>
-                        </div>
-                        <h4 class="font-semibold text-gray-800 mb-1">Commitment</h4>
-                        <p class="text-gray-600 text-sm">To excellence</p>
-                    </div>
-                </div>
-
-                <!-- Testimonial -->
-                <div class="ministry-quote rounded-2xl p-6">
-                    <p class="text-lg text-gray-800 mb-4 italic">
-                        "Joining the worship ministry has been life-changing. I've not only grown in my musical abilities
-                        but also in my relationship with God and my church family."
-                    </p>
-                    <div class="flex items-center space-x-3">
-                        <div class="w-10 h-10 bg-gradient-to-br from-red-600 to-red-500 rounded-full flex items-center justify-center">
-                            <i class="fas fa-user text-white text-sm"></i>
-                        </div>
-                       <!-- replacw with scriture -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Journey Timeline -->
-<section class="py-24 bg-gradient-to-br from-gray-50 to-white">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-20">
-            <h2 class="text-4xl md:text-6xl font-bold mb-6">
-                <span class="gradient-text">Your Journey Begins</span>
-            </h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                From discovery to deployment, we'll guide you every step of the way.
-            </p>
-        </div>
-
-        <div class="worship-timeline max-w-4xl mx-auto">
-            <!-- Step 1 -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="experience-card p-8">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-red-600 to-red-500 rounded-full flex items-center justify-center flex-shrink-0">
-                                <span class="text-white font-bold">1</span>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-gray-800 mb-2">Discover Your Gift</h3>
-                                <p class="text-gray-600 mb-4">Take our spiritual gifts assessment and meet with our ministry leaders to explore where you fit best.</p>
-                                <div class="flex items-center text-sm text-gray-500">
-                                    <i class="fas fa-clock mr-2"></i>
-                                    <span>Week 1-2</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Step 2 -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="experience-card p-8">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0">
-                                <span class="text-white font-bold">2</span>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-gray-800 mb-2">Training & Development</h3>
-                                <p class="text-gray-600 mb-4">Participate in specialized training sessions, workshops, and mentorship programs tailored to your ministry area.</p>
-                                <div class="flex items-center text-sm text-gray-500">
-                                    <i class="fas fa-clock mr-2"></i>
-                                    <span>Week 3-6</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="experience-card p-8">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center flex-shrink-0">
-                                <span class="text-white font-bold">3</span>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-gray-800 mb-2">Practice</h3>
-                                <p class="text-gray-600 mb-4">Join regular practice sessions with your team, build relationships, and prepare for your first service.</p>
-                                <div class="flex items-center text-sm text-gray-500">
-                                    <i class="fas fa-clock mr-2"></i>
-                                    <span>Week 7-8</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Step 4 -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="experience-card p-8">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-red-600 to-red-500 rounded-full flex items-center justify-center flex-shrink-0">
-                                <span class="text-white font-bold">4</span>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-gray-800 mb-2">Launch Into Ministry</h3>
-                                <p class="text-gray-600 mb-4">Begin serving in worship services with ongoing support, feedback, and opportunities for growth.</p>
-                                <div class="flex items-center text-sm text-gray-500">
-                                    <i class="fas fa-infinity mr-2"></i>
-                                    <span>Ongoing</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Inspirational Quote -->
-<section class="py-20 bg-white">
-    <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto">
-            <div class="ministry-quote rounded-3xl p-12 text-center">
-                <p class="text-2xl md:text-3xl font-light text-gray-800 mb-6 italic leading-relaxed">
-                    "Worship is not about us. It's not about getting our needs met or feeling good.
-                    Worship is about declaring the worth of God and bringing glory to His name."
+        <div class="grid lg:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
+            <div>
+                <span class="worship-tag">
+                    <i class="fas fa-bullseye"></i>
+                    Our Objective
+                </span>
+                <h2 class="text-4xl font-bold text-gray-800 mt-5 mb-5">Worship That Glorifies God</h2>
+                <p class="text-lg text-gray-600 mb-6">
+                    We are building a culture of worship that values excellence without performance, authenticity over show, and God's glory above everything else.
                 </p>
-                <div class="flex items-center justify-center space-x-4">
-                    <div class="w-1 h-16 bg-gradient-to-b from-red-600 to-red-500 rounded-full"></div>
-                    <div>
-                        <p class="font-semibold text-gray-800">Rev. Ann Korir</p>
-                        <p class="text-gray-600">Pastor, TRC AGC Church</p>
+                <div class="space-y-4">
+                    <div class="worship-card p-5 flex gap-4 items-start">
+                        <div class="worship-icon w-12 h-12 text-base"><i class="fas fa-eye"></i></div>
+                        <p class="text-gray-600">Create an atmosphere where hearts are drawn closer to God.</p>
                     </div>
+                    <div class="worship-card p-5 flex gap-4 items-start">
+                        <div class="worship-icon w-12 h-12 text-base"><i class="fas fa-seedling"></i></div>
+                        <p class="text-gray-600">Equip worshippers to grow in their gifts and serve faithfully.</p>
+                    </div>
+                    <div class="worship-card p-5 flex gap-4 items-start">
+                        <div class="worship-icon w-12 h-12 text-base"><i class="fas fa-users"></i></div>
+                        <p class="text-gray-600">Serve as a team with humility, unity, and spiritual maturity.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="worship-card p-8">
+                <p class="text-2xl text-gray-800 italic leading-relaxed mb-6">
+                    "Sing to the Lord a new song; sing to the Lord, all the earth."
+                </p>
+                <p class="font-bold text-church-red">Psalm 96:1</p>
+                <div class="mt-8 grid grid-cols-2 gap-4">
+                    <img src="{{ asset('images/worship1-feature.webp') }}" alt="Worship team ministering" class="w-full h-44 object-cover rounded-xl" loading="lazy" decoding="async">
+                    <img src="{{ asset('images/worship2-feature.webp') }}" alt="Congregation worshipping" class="w-full h-44 object-cover rounded-xl" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="py-24 bg-white">
+<section class="py-16 bg-white">
     <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-6xl font-bold mb-6">
-                <span class="gradient-text">Worship Moments</span>
-            </h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Scenes from our worship ministry in song, service, and fellowship.
+        <div class="max-w-4xl mx-auto text-center mb-12">
+            <span class="worship-tag">
+                <i class="fas fa-route"></i>
+                Your Journey
+            </span>
+            <h2 class="text-4xl font-bold text-gray-800 mt-5 mb-4">How to Start Serving</h2>
+            <p class="text-lg text-gray-600">
+                We help you move from interest to service with care, training, and team support.
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <img src="{{ asset('images/worship1.JPG') }}" alt="Worship ministry team" class="w-full h-80 object-cover rounded-3xl shadow-xl">
-            <img src="{{ asset('images/worship2.JPG') }}" alt="Congregation in worship" class="w-full h-80 object-cover rounded-3xl shadow-xl">
-            <img src="{{ asset('images/worship4.JPG') }}" alt="Worship service moment" class="w-full h-80 object-cover rounded-3xl shadow-xl">
-            <img src="{{ asset('images/GRA_0226.JPG') }}" alt="Worship gathering" class="w-full h-80 object-cover rounded-3xl shadow-xl">
+        <div class="grid md:grid-cols-4 gap-5 max-w-6xl mx-auto">
+            <div class="worship-card p-6 text-center">
+                <div class="worship-icon mx-auto mb-4 rounded-full">1</div>
+                <h3 class="font-bold text-gray-800 mb-2">Connect</h3>
+                <p class="text-gray-600 text-sm">Reach out and tell us where you'd like to serve.</p>
+            </div>
+            <div class="worship-card p-6 text-center">
+                <div class="worship-icon mx-auto mb-4 rounded-full">2</div>
+                <h3 class="font-bold text-gray-800 mb-2">Meet</h3>
+                <p class="text-gray-600 text-sm">Meet ministry leaders and discuss your gifting.</p>
+            </div>
+            <div class="worship-card p-6 text-center">
+                <div class="worship-icon mx-auto mb-4 rounded-full">3</div>
+                <h3 class="font-bold text-gray-800 mb-2">Train</h3>
+                <p class="text-gray-600 text-sm">Join rehearsals, training, and team preparation.</p>
+            </div>
+            <div class="worship-card p-6 text-center">
+                <div class="worship-icon mx-auto mb-4 rounded-full">4</div>
+                <h3 class="font-bold text-gray-800 mb-2">Serve</h3>
+                <p class="text-gray-600 text-sm">Begin serving with ongoing guidance and support.</p>
+            </div>
         </div>
     </div>
 </section>
 
+<section class="py-16 worship-section-soft">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center mb-12">
+            <span class="worship-tag">
+                <i class="fas fa-camera"></i>
+                Worship Moments
+            </span>
+            <h2 class="text-4xl font-bold text-gray-800 mt-5 mb-4">Serving in Song and Fellowship</h2>
+            <p class="text-lg text-gray-600">
+                Scenes from our worship ministry in service, song, and community.
+            </p>
+        </div>
 
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 auto-rows-[230px] gap-5 max-w-6xl mx-auto">
+            <div class="worship-photo-card lg:col-span-3 lg:row-span-2">
+                <img src="{{ asset('images/worship1-feature.webp') }}" alt="Worship ministry team" loading="lazy" decoding="async" width="1600" height="1067">
+            </div>
+            <div class="worship-photo-card lg:col-span-3">
+                <img src="{{ asset('images/worship2-feature.webp') }}" alt="Congregation in worship" loading="lazy" decoding="async" width="1600" height="1067">
+            </div>
+            <div class="worship-photo-card lg:col-span-2">
+                <img src="{{ asset('images/worship4-feature.webp') }}" alt="Worship service moment" loading="lazy" decoding="async" width="1600" height="1067">
+            </div>
+            <div class="worship-photo-card lg:col-span-1">
+                <img src="{{ asset('images/worship-gathering-feature.webp') }}" alt="Worship gathering" loading="lazy" decoding="async" width="1200" height="900">
+            </div>
+            <div class="worship-photo-card lg:col-span-3">
+                <img src="{{ asset('images/worship5.jpeg') }}" alt="Worship fellowship moment" loading="lazy" decoding="async" width="1200" height="800">
+            </div>
+        </div>
+    </div>
+</section>
 
-@endsection
-
-@section('scripts')
-<script>
-    // Smooth scrolling for internal links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-
-    // Intersection Observer for animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0) scale(1)';
-                entry.target.classList.add('animate-in');
-            }
-        });
-    }, observerOptions);
-
-    // Observe elements for animation
-    document.querySelectorAll('.glass-card, .ministry-path, .experience-card, .ministry-quote').forEach(element => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(30px) scale(0.95)';
-        element.style.transition = 'all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1)';
-        observer.observe(element);
-    });
-
-    // Timeline animation
-    const timelineObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                setTimeout(() => {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateX(0)';
-                }, index * 200);
-            }
-        });
-    }, {
-        threshold: 0.2
-    });
-
-    document.querySelectorAll('.timeline-item').forEach((item, index) => {
-        item.style.opacity = '0';
-        item.style.transform = index % 2 === 0 ? 'translateX(-50px)' : 'translateX(50px)';
-        item.style.transition = 'all 0.6s ease';
-        timelineObserver.observe(item);
-    });
-
-    // Interactive buttons
-    document.querySelectorAll('.interactive-button').forEach(button => {
-        button.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-3px) scale(1.05)';
-        });
-
-        button.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
-
-        button.addEventListener('click', function() {
-            // Add ripple effect
-            const ripple = document.createElement('div');
-            ripple.style.position = 'absolute';
-            ripple.style.borderRadius = '50%';
-            ripple.style.background = 'rgba(255, 255, 255, 0.6)';
-            ripple.style.transform = 'scale(0)';
-            ripple.style.animation = 'ripple 0.6s linear';
-            ripple.style.left = '50%';
-            ripple.style.top = '50%';
-            ripple.style.width = '20px';
-            ripple.style.height = '20px';
-            ripple.style.marginLeft = '-10px';
-            ripple.style.marginTop = '-10px';
-
-            this.appendChild(ripple);
-
-            setTimeout(() => {
-                ripple.remove();
-            }, 600);
-        });
-    });
-
-    // Add ripple animation
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes ripple {
-            to {
-                transform: scale(4);
-                opacity: 0;
-            }
-        }
-        
-        .animate-in {
-            animation: slideInUp 0.8s ease-out;
-        }
-        
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px) scale(0.95);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-    `;
-    document.head.appendChild(style);
-
-    // Parallax effect for hero section
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const orbs = document.querySelectorAll('.worship-orb');
-
-        orbs.forEach((orb, index) => {
-            const speed = 0.5 + (index * 0.1);
-            orb.style.transform = `translateY(${scrolled * speed}px)`;
-        });
-    });
-
-    // Stats counter animation
-    const statsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const statNumber = entry.target.querySelector('.stat-number');
-                const finalNumber = statNumber.textContent;
-
-                if (finalNumber !== '∞') {
-                    let current = 0;
-                    const target = parseInt(finalNumber);
-                    const increment = target / 30;
-
-                    const timer = setInterval(() => {
-                        current += increment;
-                        if (current >= target) {
-                            current = target;
-                            clearInterval(timer);
-                        }
-                        statNumber.textContent = Math.floor(current) + (finalNumber.includes('+') ? '+' : '');
-                    }, 50);
-                }
-            }
-        });
-    }, {
-        threshold: 0.5
-    });
-
-    document.querySelectorAll('.ministry-stats').forEach(stat => {
-        statsObserver.observe(stat);
-    });
-</script>
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="max-w-5xl mx-auto worship-card p-10">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Ready to Serve?</h2>
+                    <p class="text-lg text-gray-600">
+                        If you sing, play, pray, operate tech, or simply want to serve with excellence, we'd love to hear from you.
+                    </p>
+                </div>
+                <div class="text-center md:text-right">
+                    <a href="/contact" class="worship-cta">
+                        <i class="fas fa-envelope"></i>
+                        Contact Worship Ministry
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 @endsection
