@@ -223,7 +223,7 @@
                 <p class="font-bold text-church-red">Psalm 96:1</p>
                 <div class="mt-8 grid grid-cols-2 gap-4">
                     <img src="{{ asset('images/worship1-feature.webp') }}" alt="Worship team ministering" class="w-full h-44 object-cover rounded-xl" loading="lazy" decoding="async">
-                    <img src="{{ asset('images/worship2-feature.webp') }}" alt="Congregation worshipping" class="w-full h-44 object-cover rounded-xl" loading="lazy" decoding="async">
+                    <img src="{{ asset('images/worship2-png-feature.webp') }}" alt="Worship ministry team portrait" class="w-full h-44 object-cover rounded-xl" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -291,7 +291,10 @@
             <div class="worship-photo-card lg:col-span-2">
                 <img src="{{ asset('images/worship4-feature.webp') }}" alt="Worship service moment" loading="lazy" decoding="async" width="1600" height="1067">
             </div>
-            <div class="worship-photo-card lg:col-span-1">
+            <div class="worship-photo-card lg:col-span-2">
+                <img src="{{ asset('images/worship2-png-feature.webp') }}" alt="Worship ministry team portrait" loading="lazy" decoding="async" width="1600" height="1067">
+            </div>
+            <div class="worship-photo-card lg:col-span-3">
                 <img src="{{ asset('images/worship-gathering-feature.webp') }}" alt="Worship gathering" loading="lazy" decoding="async" width="1200" height="900">
             </div>
             <div class="worship-photo-card lg:col-span-3">
