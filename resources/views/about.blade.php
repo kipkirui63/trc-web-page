@@ -854,7 +854,7 @@
                         </div>
                         <h3 class="font-bold text-gray-900 text-lg mb-2">Establishing</h3>
                         <p class="text-gray-700 text-sm leading-relaxed">
-                            Congregation worship life, church planting and Construction
+                            Congregation worship life, Church planting and Construction
                         </p>
                     </div>
                 </div>
