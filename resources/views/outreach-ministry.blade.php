@@ -143,7 +143,7 @@
 <section class="py-16 bg-white">
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-8 text-gradient">Our Evangelism & Missions Vision</h2>
+            <h2 class="text-4xl font-bold mb-8 text-gradient">Our Evangelism & Missions </h2>
             <p class="text-lg text-gray-600 leading-relaxed">
                 At TRC AGC Church, we believe in living out the Great Commission by taking the Gospel beyond our church walls.
                 Our Evangelism & Missions Ministry is dedicated to sharing God's love through evangelism, community service, missions,
