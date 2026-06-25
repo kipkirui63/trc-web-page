@@ -181,6 +181,26 @@
         margin-bottom: 1rem;
     }
 
+    .women-gallery-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1.5rem;
+        box-shadow: 0 18px 35px rgba(31, 41, 55, 0.12);
+        border: 1px solid rgba(220, 38, 38, 0.08);
+        background: var(--white);
+    }
+
+    .women-gallery-card img {
+        width: 100%;
+        height: 18rem;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+    }
+
+    .women-gallery-card:hover img {
+        transform: scale(1.06);
+    }
+
     @media (max-width: 768px) {
         .ministry-hero {
             min-height: 80vh;
@@ -193,6 +213,10 @@
 
         .feature-block {
             padding: 2rem 0;
+        }
+
+        .women-gallery-card img {
+            height: 15rem;
         }
     }
 </style>
@@ -400,6 +424,45 @@
 
 <!-- Scripture Reflection Section -->
 
+<!-- Women's Ministry Gallery -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <span class="text-church-red font-semibold tracking-wider uppercase">Photo Gallery</span>
+            <h2 class="section-title">Women’s Ministry Moments</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mt-6">
+                Celebrating fellowship, worship, service, and the community God is building among us.
+            </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            <div class="women-gallery-card">
+                <img src="/images/woman1.png" alt="Women's Ministry gathering">
+            </div>
+            <div class="women-gallery-card">
+                <img src="/images/woman2.png" alt="Women's Ministry fellowship">
+            </div>
+            <div class="women-gallery-card">
+                <img src="/images/woman3.png" alt="Women sharing a ministry moment">
+            </div>
+            <div class="women-gallery-card">
+                <img src="/images/woman4.png" alt="Women's Ministry event">
+            </div>
+            <div class="women-gallery-card">
+                <img src="/images/woman5.png" alt="Women serving together">
+            </div>
+            <div class="women-gallery-card">
+                <img src="/images/woman6.png" alt="Women's Ministry celebration">
+            </div>
+            <div class="women-gallery-card">
+                <img src="/images/woman7.png" alt="Women gathered in fellowship">
+            </div>
+            <div class="women-gallery-card">
+                <img src="/images/woman8.png" alt="Women's Ministry community">
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Ministry Activities - What We Do Regularly -->
 <section class="py-20 bg-white">
