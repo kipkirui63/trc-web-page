@@ -280,12 +280,12 @@
             <div class="lg:w-1/2">
                 <div class="grid grid-cols-2 gap-4">
                     <div class="space-y-4">
-                        <img src="/images/women1.JPG" alt="Women's Ministry" class="rounded-2xl shadow-lg w-full h-48 object-cover">
-                        <img src="/images/women2.JPG" alt="Women's Fellowship" class="rounded-2xl shadow-lg w-full h-64 object-cover">
+                        <img src="/images/woman1.png" alt="Women's Ministry" class="rounded-2xl shadow-lg w-full h-48 object-cover">
+                        <img src="/images/woman2.png" alt="Women's Fellowship" class="rounded-2xl shadow-lg w-full h-64 object-cover">
                     </div>
                     <div class="space-y-4 pt-8">
-                        <img src="/images/womens3.JPG" alt="Women in Prayer" class="rounded-2xl shadow-lg w-full h-64 object-cover">
-                        <img src="/images/women1.JPG" alt="Sisterhood" class="rounded-2xl shadow-lg w-full h-48 object-cover">
+                        <img src="/images/woman3.png" alt="Women in Prayer" class="rounded-2xl shadow-lg w-full h-64 object-cover">
+                        <img src="/images/woman4.png" alt="Sisterhood" class="rounded-2xl shadow-lg w-full h-48 object-cover">
                     </div>
                 </div>
             </div>
@@ -397,7 +397,7 @@
             <div class="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
                 <div class="lg:w-1/2">
                     <div class="feature-image">
-                        <img src="/images/women1.JPG" alt="Community Outreach" class="w-full h-[400px]">
+                        <img src="/images/woman5.png" alt="Community Outreach" class="w-full h-[400px]">
                     </div>
                 </div>
                 <div class="lg:w-1/2">
@@ -435,22 +435,7 @@
             </p>
         </div>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            <div class="women-gallery-card">
-                <img src="/images/woman1.png" alt="Women's Ministry gathering">
-            </div>
-            <div class="women-gallery-card">
-                <img src="/images/woman2.png" alt="Women's Ministry fellowship">
-            </div>
-            <div class="women-gallery-card">
-                <img src="/images/woman3.png" alt="Women sharing a ministry moment">
-            </div>
-            <div class="women-gallery-card">
-                <img src="/images/woman4.png" alt="Women's Ministry event">
-            </div>
-            <div class="women-gallery-card">
-                <img src="/images/woman5.png" alt="Women serving together">
-            </div>
+        <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <div class="women-gallery-card">
                 <img src="/images/woman6.png" alt="Women's Ministry celebration">
             </div>
