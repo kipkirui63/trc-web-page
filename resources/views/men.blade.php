@@ -7,7 +7,7 @@
 <style>
     /* Hero Section with Image - NO OVERLAY */
     .hero-image {
-        background: url('/images/vbs8.webp');
+        background: url('/images/men3.png');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -192,6 +192,46 @@
         border-radius: 1rem;
         backdrop-filter: blur(2px);
     }
+
+    .men-photo-grid img,
+    .men-gallery-card img {
+        width: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .men-photo-grid img {
+        border-radius: 1rem;
+        box-shadow: 0 18px 35px rgba(31, 41, 55, 0.16);
+    }
+
+    .men-gallery-card {
+        overflow: hidden;
+        border-radius: 1rem;
+        box-shadow: 0 18px 35px rgba(31, 41, 55, 0.14);
+        border: 1px solid rgba(220, 38, 38, 0.08);
+        background: white;
+    }
+
+    .men-gallery-card img {
+        height: 18rem;
+        transition: transform 0.6s ease;
+    }
+
+    .men-gallery-card:hover img {
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+        .hero-image {
+            min-height: 80vh;
+            background-attachment: scroll;
+        }
+
+        .men-gallery-card img {
+            height: 15rem;
+        }
+    }
 </style>
 @endsection
 
@@ -233,19 +273,32 @@
 <!-- Mission Section -->
 <section id="about" class="py-20 bg-white">
     <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto text-center mb-16">
-            <h2 class="section-title text-4xl md:text-5xl mb-4">
-                Our <span>Mission</span>
-            </h2>
-            <div class="red-underline"></div>
-            <p class="text-xl text-gray-600 leading-relaxed mt-8">
-                We exist to help men discover their God-given purpose, develop authentic relationships, 
-                and grow in their faith journey. Through intentional community and biblical teaching, 
-                we equip men to lead with integrity in every area of life.
-            </p>
+        <div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mb-16">
+            <div>
+                <h2 class="section-title text-4xl md:text-5xl mb-4">
+                    Our <span>Mission</span>
+                </h2>
+                <div class="red-underline lg:mx-0"></div>
+                <p class="text-xl text-gray-600 leading-relaxed mt-8">
+                    We exist to help men discover their God-given purpose, develop authentic relationships, 
+                    and grow in their faith journey. Through intentional community and biblical teaching, 
+                    we equip men to lead with integrity in every area of life.
+                </p>
+            </div>
+
+            <div class="men-photo-grid grid grid-cols-2 gap-4">
+                <div class="space-y-4">
+                    <img src="/images/men1.png" alt="Men's Ministry group at TRC AGC" class="h-48">
+                    <img src="/images/men2.png" alt="Men's fellowship at TRC AGC" class="h-64">
+                </div>
+                <div class="space-y-4 pt-8">
+                    <img src="/images/men3.png" alt="TRC AGC men's ministry group photo" class="h-64">
+                    <img src="/images/men4.png" alt="Men standing together after fellowship" class="h-48">
+                </div>
+            </div>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <!-- Faith Card -->
             <div class="card-red p-8 text-center">
                 <div class="w-16 h-16 icon-red rounded-lg flex items-center justify-center mx-auto mb-6">
@@ -405,6 +458,36 @@
                 </div>
                 <h3 class="text-xl font-bold text-black mb-3">Service Projects</h3>
                 <p class="text-gray-600">Hands-on opportunities to serve and make a tangible impact in our community.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Men's Ministry Gallery -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="section-title text-4xl md:text-5xl mb-4">
+                Ministry <span>Moments</span>
+            </h2>
+            <div class="red-underline"></div>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mt-8">
+                A glimpse of the fellowship, mentorship, and brotherhood we are building together.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div class="men-gallery-card">
+                <img src="/images/men1.png" alt="Men's Ministry group photo" loading="lazy" decoding="async">
+            </div>
+            <div class="men-gallery-card">
+                <img src="/images/men2.png" alt="Men's Ministry fellowship moment" loading="lazy" decoding="async">
+            </div>
+            <div class="men-gallery-card">
+                <img src="/images/men3.png" alt="Men's Ministry standing together" loading="lazy" decoding="async">
+            </div>
+            <div class="men-gallery-card">
+                <img src="/images/men4.png" alt="Men's Ministry community gathering" loading="lazy" decoding="async">
             </div>
         </div>
     </div>
