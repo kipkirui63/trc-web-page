@@ -113,7 +113,7 @@
 <section class="relative min-h-screen overflow-hidden">
     <!-- Background Image with Overlay -->
     <div class="absolute inset-x-6 top-12 bottom-12 md:inset-x-16 md:top-16 md:bottom-16 lg:inset-x-28">
-        <img src="{{ asset('images/vbs7.webp') }}" 
+        <img src="{{ asset('images/home.png') }}" 
             alt="Church worship"
             class="w-full h-full object-cover rounded-3xl shadow-2xl" />
         <!-- Dark overlay for better text readability -->
@@ -398,7 +398,7 @@
             
             <div class="order-1 lg:order-2">
                 <div class="relative group">
-                    <img src="{{ asset('images/history.webp') }}" alt="Church history" class="w-full h-96 object-cover rounded-3xl shadow-2xl transform group-hover:scale-105 transition-all duration-500" />
+                    <img src="{{ asset('images/home.png') }}" alt="Church history" class="w-full h-96 object-cover rounded-3xl shadow-2xl transform group-hover:scale-105 transition-all duration-500" />
                     <div class="absolute -bottom-8 -right-8 w-28 h-28 bg-gradient-to-r from-church-red to-orange-500 rounded-full flex items-center justify-center text-white text-4xl shadow-2xl animate-pulse">
                         <i class="fas fa-church"></i>
                     </div>
