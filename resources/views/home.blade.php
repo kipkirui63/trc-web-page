@@ -113,7 +113,7 @@
 <section class="relative min-h-screen overflow-hidden">
     <!-- Background Image with Overlay -->
     <div class="absolute inset-x-6 top-12 bottom-12 md:inset-x-16 md:top-16 md:bottom-16 lg:inset-x-28">
-        <img src="{{ asset('images/home.png') }}" 
+        <img src="{{ asset('images/home1.png') }}" 
             alt="Church worship"
             class="w-full h-full object-cover rounded-3xl shadow-2xl" />
         <!-- Dark overlay for better text readability -->
