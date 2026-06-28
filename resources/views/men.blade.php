@@ -11,8 +11,10 @@
 <style>
     /* Hero Section */
     .hero-image {
-        background: #111827;
-        min-height: 100vh;
+        background: #000000;
+        aspect-ratio: 1600 / 1067;
+        min-height: 520px;
+        max-height: 820px;
         position: relative;
     }
 
@@ -20,7 +22,7 @@
         content: '';
         position: absolute;
         inset: 0;
-        background: linear-gradient(90deg, rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.36));
+        background: rgba(0, 0, 0, 0.28);
         z-index: 1;
     }
 
@@ -33,7 +35,7 @@
     .hero-media img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
         object-position: center;
         display: block;
     }
@@ -210,7 +212,7 @@
     .hero-content {
         position: relative;
         z-index: 10;
-        background: rgba(0, 0, 0, 0.35);
+        background: rgba(0, 0, 0, 0.24);
         padding: 2rem;
         border-radius: 1rem;
         backdrop-filter: blur(2px);
@@ -248,6 +250,7 @@
     @media (max-width: 768px) {
         .hero-image {
             min-height: 80vh;
+            aspect-ratio: auto;
         }
 
         .hero-media img {
