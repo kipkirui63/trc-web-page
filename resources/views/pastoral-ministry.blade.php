@@ -16,13 +16,34 @@
     }
 
     .pastoral-hero {
-        background: url('/images/pastoral.webp');
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-color: #111827;
+        background: #000000;
+        aspect-ratio: 1000 / 667;
+        min-height: 500px;
+        max-height: 760px;
         position: relative;
         overflow: hidden;
+    }
+
+    .pastoral-hero::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.28);
+        z-index: 1;
+    }
+
+    .pastoral-hero-media {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+    }
+
+    .pastoral-hero-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
     }
 
     .pastoral-card {
@@ -97,11 +118,22 @@
         border: 4px solid #ffffff;
         box-shadow: 0 12px 28px rgba(237, 28, 36, 0.18);
     }
+
+    @media (max-width: 768px) {
+        .pastoral-hero {
+            min-height: 72vh;
+            aspect-ratio: auto;
+        }
+    }
 </style>
 @endsection
 
 @section('content')
-<section class="pastoral-hero text-white py-24">
+<section class="pastoral-hero text-white flex items-center">
+    <picture class="pastoral-hero-media" aria-hidden="true">
+        <source srcset="{{ asset('images/pastoral.webp') }}" type="image/webp">
+        <img src="{{ asset('images/pastoral.png') }}" alt="" width="1000" height="667" loading="eager" decoding="async" fetchpriority="high">
+    </picture>
     <div class="container mx-auto px-4 relative z-10">
         <div class="max-w-4xl mx-auto text-center">
             <div class="pastoral-icon mx-auto mb-6">
