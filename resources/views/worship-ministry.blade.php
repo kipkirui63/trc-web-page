@@ -3,6 +3,10 @@
 @section('title', 'Worship Ministry')
 @section('description', 'Join our Worship Ministry at TRC AGC Church. Serve through vocals, instruments, technical arts, prayer, and hospitality.')
 
+@section('preloads')
+<link rel="preload" as="image" href="{{ asset('images/worshiphero.webp') }}" type="image/webp" fetchpriority="high">
+@endsection
+
 @section('styles')
 <style>
     :root {
@@ -13,12 +17,34 @@
     }
 
     .worship-hero {
-        background: url('/images/worship-hero.webp');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+        background: #000000;
+        aspect-ratio: 1504 / 1004;
+        min-height: 520px;
+        max-height: 820px;
         position: relative;
         overflow: hidden;
+    }
+
+    .worship-hero::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.28);
+        z-index: 1;
+    }
+
+    .worship-hero-media {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+    }
+
+    .worship-hero-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
     }
 
     .worship-tag {
@@ -113,11 +139,22 @@
     .worship-photo-card:hover img {
         transform: scale(1.05);
     }
+
+    @media (max-width: 768px) {
+        .worship-hero {
+            min-height: 72vh;
+            aspect-ratio: auto;
+        }
+    }
 </style>
 @endsection
 
 @section('content')
-<section class="worship-hero text-white py-24 md:py-32">
+<section class="worship-hero text-white flex items-center">
+    <picture class="worship-hero-media" aria-hidden="true">
+        <source srcset="{{ asset('images/worshiphero.webp') }}" type="image/webp">
+        <img src="{{ asset('images/worshiphero.png') }}" alt="" width="1504" height="1004" loading="eager" decoding="async" fetchpriority="high">
+    </picture>
     <div class="container mx-auto px-4 relative z-10">
         <div class="max-w-4xl mx-auto text-center">
             <div class="worship-icon mx-auto mb-6 rounded-full">
