@@ -3,16 +3,39 @@
 @section('title', "Men's Ministry - TRC AGC Church")
 @section('description', 'A community where men grow in faith, build meaningful relationships, and develop as leaders in their families and communities.')
 
+@section('preloads')
+<link rel="preload" as="image" href="{{ asset('images/men-hero.webp') }}" type="image/webp" fetchpriority="high">
+@endsection
+
 @section('styles')
 <style>
-    /* Hero Section with Image - NO OVERLAY */
+    /* Hero Section */
     .hero-image {
-        background: url('/images/men3.png');
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
+        background: #111827;
         min-height: 100vh;
         position: relative;
+    }
+
+    .hero-image::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.36));
+        z-index: 1;
+    }
+
+    .hero-media {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+    }
+
+    .hero-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        display: block;
     }
 
     /* Card Styles */
@@ -187,7 +210,7 @@
     .hero-content {
         position: relative;
         z-index: 10;
-        background: rgba(0, 0, 0, 0.4); /* Subtle dark overlay only for readability */
+        background: rgba(0, 0, 0, 0.35);
         padding: 2rem;
         border-radius: 1rem;
         backdrop-filter: blur(2px);
@@ -225,7 +248,11 @@
     @media (max-width: 768px) {
         .hero-image {
             min-height: 80vh;
-            background-attachment: scroll;
+        }
+
+        .hero-media img {
+            object-fit: cover;
+            object-position: center;
         }
 
         .men-gallery-card img {
@@ -238,6 +265,10 @@
 @section('content')
 <!-- Hero Section with Image - NO RED OVERLAY -->
 <section class="hero-image flex items-center relative overflow-hidden">
+    <picture class="hero-media" aria-hidden="true">
+        <source srcset="{{ asset('images/men-hero.webp') }}" type="image/webp">
+        <img src="{{ asset('images/men3.png') }}" alt="" width="1600" height="1067" loading="eager" decoding="async" fetchpriority="high">
+    </picture>
     <div class="container mx-auto px-4 py-20">
         <div class="max-w-4xl mx-auto text-center text-white hero-content">
             <div class="fade-in-up">
@@ -288,12 +319,12 @@
 
             <div class="men-photo-grid grid grid-cols-2 gap-4">
                 <div class="space-y-4">
-                    <img src="/images/men1.png" alt="Men's Ministry group at TRC AGC" class="h-48">
-                    <img src="/images/men2.png" alt="Men's fellowship at TRC AGC" class="h-64">
+                    <img src="/images/men1-gallery.webp" alt="Men's Ministry group at TRC AGC" class="h-48" width="900" height="600" loading="lazy" decoding="async">
+                    <img src="/images/men2-gallery.webp" alt="Men's fellowship at TRC AGC" class="h-64" width="900" height="600" loading="lazy" decoding="async">
                 </div>
                 <div class="space-y-4 pt-8">
-                    <img src="/images/men3.png" alt="TRC AGC men's ministry group photo" class="h-64">
-                    <img src="/images/men4.png" alt="Men standing together after fellowship" class="h-48">
+                    <img src="/images/men3-gallery.webp" alt="TRC AGC men's ministry group photo" class="h-64" width="900" height="600" loading="lazy" decoding="async">
+                    <img src="/images/men4-gallery.webp" alt="Men standing together after fellowship" class="h-48" width="900" height="600" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -478,16 +509,16 @@
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <div class="men-gallery-card">
-                <img src="/images/men1.png" alt="Men's Ministry group photo" loading="lazy" decoding="async">
+                <img src="/images/men1-gallery.webp" alt="Men's Ministry group photo" width="900" height="600" loading="lazy" decoding="async">
             </div>
             <div class="men-gallery-card">
-                <img src="/images/men2.png" alt="Men's Ministry fellowship moment" loading="lazy" decoding="async">
+                <img src="/images/men2-gallery.webp" alt="Men's Ministry fellowship moment" width="900" height="600" loading="lazy" decoding="async">
             </div>
             <div class="men-gallery-card">
-                <img src="/images/men3.png" alt="Men's Ministry standing together" loading="lazy" decoding="async">
+                <img src="/images/men3-gallery.webp" alt="Men's Ministry standing together" width="900" height="600" loading="lazy" decoding="async">
             </div>
             <div class="men-gallery-card">
-                <img src="/images/men4.png" alt="Men's Ministry community gathering" loading="lazy" decoding="async">
+                <img src="/images/men4-gallery.webp" alt="Men's Ministry community gathering" width="900" height="600" loading="lazy" decoding="async">
             </div>
         </div>
     </div>
