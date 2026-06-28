@@ -18,9 +18,7 @@
 
     .worship-hero {
         background: #000000;
-        aspect-ratio: 1504 / 1004;
-        min-height: 520px;
-        max-height: 820px;
+        min-height: 100vh;
         position: relative;
         overflow: hidden;
     }
@@ -37,11 +35,17 @@
         position: absolute;
         inset: 0;
         z-index: 0;
+        display: block;
+        overflow: hidden;
     }
 
     .worship-hero-media img {
+        position: absolute;
+        inset: 0;
         width: 100%;
         height: 100%;
+        min-width: 100%;
+        min-height: 100%;
         object-fit: cover;
         object-position: center;
         display: block;
@@ -142,8 +146,7 @@
 
     @media (max-width: 768px) {
         .worship-hero {
-            min-height: 72vh;
-            aspect-ratio: auto;
+            min-height: 100vh;
         }
     }
 </style>
