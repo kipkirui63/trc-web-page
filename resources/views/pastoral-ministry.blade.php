@@ -16,25 +16,17 @@
     }
 
     .pastoral-hero {
-        background: #000000;
-        aspect-ratio: 1000 / 667;
-        min-height: 500px;
-        max-height: 760px;
         position: relative;
+        min-height: 100vh;
         overflow: hidden;
-    }
-
-    .pastoral-hero::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.28);
-        z-index: 1;
     }
 
     .pastoral-hero-media {
         position: absolute;
-        inset: 0;
+        left: 1.5rem;
+        right: 1.5rem;
+        top: 3rem;
+        bottom: 3rem;
         z-index: 0;
     }
 
@@ -44,6 +36,8 @@
         object-fit: cover;
         object-position: center;
         display: block;
+        border-radius: 1.5rem;
+        box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.5);
     }
 
     .pastoral-card {
@@ -121,8 +115,30 @@
 
     @media (max-width: 768px) {
         .pastoral-hero {
-            min-height: 72vh;
-            aspect-ratio: auto;
+            min-height: 100vh;
+        }
+
+        .pastoral-hero-media {
+            left: 1.5rem;
+            right: 1.5rem;
+            top: 3rem;
+            bottom: 3rem;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .pastoral-hero-media {
+            left: 4rem;
+            right: 4rem;
+            top: 4rem;
+            bottom: 4rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .pastoral-hero-media {
+            left: 7rem;
+            right: 7rem;
         }
     }
 </style>
