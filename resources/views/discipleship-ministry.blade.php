@@ -4,6 +4,10 @@
 
 @section('description', 'Join our Discipleship Ministry at TRC AGC Church - Bible Study, Cell Groups, and Catechism Classes to grow in your faith journey.')
 
+@section('preloads')
+<link rel="preload" as="image" href="{{ asset('images/woman2-discipleship.webp') }}" type="image/webp" fetchpriority="high">
+@endsection
+
 @section('styles')
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap');
@@ -87,7 +91,7 @@
     }
 
     .discipleship-hero {
-        background: url('/images/vbs5.webp');
+        background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.35)), url('/images/woman2-discipleship.webp');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
