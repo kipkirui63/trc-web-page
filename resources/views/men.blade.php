@@ -16,12 +16,17 @@
         overflow: hidden;
     }
 
+    .hero-image::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.38);
+        z-index: 1;
+    }
+
     .hero-media {
         position: absolute;
-        left: 1.5rem;
-        right: 1.5rem;
-        top: 3rem;
-        bottom: 3rem;
+        inset: 0;
         z-index: 0;
     }
 
@@ -31,8 +36,6 @@
         object-fit: cover;
         object-position: center;
         display: block;
-        border-radius: 1.5rem;
-        box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.5);
     }
 
     /* Card Styles */
@@ -206,11 +209,8 @@
     /* Ensure content is visible */
     .hero-content {
         position: relative;
-        z-index: 10;
-        background: rgba(0, 0, 0, 0.24);
-        padding: 2rem;
-        border-radius: 1rem;
-        backdrop-filter: blur(2px);
+        z-index: 2;
+        padding: 2rem 0;
     }
 
     .men-photo-grid img,
@@ -248,10 +248,7 @@
         }
 
         .hero-media {
-            left: 1.5rem;
-            right: 1.5rem;
-            top: 3rem;
-            bottom: 3rem;
+            inset: 0;
         }
 
         .hero-media img {
@@ -266,17 +263,13 @@
 
     @media (min-width: 768px) {
         .hero-media {
-            left: 4rem;
-            right: 4rem;
-            top: 4rem;
-            bottom: 4rem;
+            inset: 0;
         }
     }
 
     @media (min-width: 1024px) {
         .hero-media {
-            left: 7rem;
-            right: 7rem;
+            inset: 0;
         }
     }
 </style>
