@@ -259,8 +259,8 @@
                 </p>
                 <p class="font-bold text-church-red">Psalm 96:1</p>
                 <div class="mt-8 grid grid-cols-2 gap-4">
-                    <img src="{{ asset('images/worship6.png') }}" alt="Current worship team ministering" class="w-full h-44 object-cover rounded-xl" loading="lazy" decoding="async">
-                    <img src="{{ asset('images/worship7.png') }}" alt="Current worship ministry team" class="w-full h-44 object-cover rounded-xl" loading="lazy" decoding="async">
+                    <img src="{{ asset('images/worship6-team.webp') }}" alt="Current worship team ministering" class="w-full h-44 object-cover rounded-xl" loading="lazy" decoding="async">
+                    <img src="{{ asset('images/worship7-team.webp') }}" alt="Current worship ministry team" class="w-full h-44 object-cover rounded-xl" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -320,22 +320,22 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 auto-rows-[220px] gap-5 max-w-6xl mx-auto">
             <div class="worship-photo-card tall lg:col-span-3 lg:row-span-2">
-                <img src="{{ asset('images/worship6.png') }}" alt="Current worship ministry team" loading="lazy" decoding="async" width="1600" height="1067">
+                <img src="{{ asset('images/worship6-team.webp') }}" alt="Current worship ministry team" loading="lazy" decoding="async" width="1600" height="1200">
             </div>
             <div class="worship-photo-card lg:col-span-3">
-                <img src="{{ asset('images/worship7.png') }}" alt="Current worship team leading praise" loading="lazy" decoding="async" width="1600" height="1067">
+                <img src="{{ asset('images/worship7-team.webp') }}" alt="Current worship team leading praise" loading="lazy" decoding="async" width="1600" height="1200">
             </div>
             <div class="worship-photo-card lg:col-span-3">
-                <img src="{{ asset('images/worship8.png') }}" alt="Current worship ministry team portrait" loading="lazy" decoding="async" width="1600" height="1067">
+                <img src="{{ asset('images/worship8-team.webp') }}" alt="Current worship ministry team portrait" loading="lazy" decoding="async" width="1600" height="1200">
             </div>
             <div class="worship-photo-card lg:col-span-3">
-                <img src="{{ asset('images/worship9.png') }}" alt="Current worship service moment" loading="lazy" decoding="async" width="1600" height="1067">
+                <img src="{{ asset('images/worship9-team.webp') }}" alt="Current worship service moment" loading="lazy" decoding="async" width="1600" height="1200">
             </div>
             <div class="worship-photo-card lg:col-span-2">
-                <img src="{{ asset('images/worship10.png') }}" alt="Current worship gathering" loading="lazy" decoding="async" width="1200" height="900">
+                <img src="{{ asset('images/worship10-team.webp') }}" alt="Current worship gathering" loading="lazy" decoding="async" width="1400" height="1050">
             </div>
             <div class="worship-photo-card lg:col-span-4">
-                <img src="{{ asset('images/worship11.png') }}" alt="Current worship fellowship moment" loading="lazy" decoding="async" width="1200" height="800">
+                <img src="{{ asset('images/worship11-team.webp') }}" alt="Current worship fellowship moment" loading="lazy" decoding="async" width="1600" height="1200">
             </div>
         </div>
     </div>
