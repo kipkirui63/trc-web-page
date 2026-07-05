@@ -260,7 +260,7 @@
                 <p class="font-bold text-church-red">Psalm 96:1</p>
                 <div class="mt-8 grid grid-cols-2 gap-4">
                     <img src="{{ asset('images/worship5.jpeg') }}" alt="Worship team ministering in song" class="w-full h-44 object-cover rounded-xl" loading="lazy" decoding="async">
-                    <img src="{{ asset('images/worship7-team.webp') }}" alt="Worship gathering moment" class="w-full h-44 object-cover rounded-xl" loading="lazy" decoding="async">
+                    <img src="{{ asset('images/worship9-team.webp') }}" alt="Worship gathering moment" class="w-full h-44 object-cover rounded-xl" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
