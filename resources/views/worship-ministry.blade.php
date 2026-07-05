@@ -3,6 +3,10 @@
 @section('title', 'Worship Ministry')
 @section('description', 'Join our Worship Ministry at TRC AGC Church. Serve through vocals, instruments, technical arts, prayer, and hospitality.')
 
+@section('preloads')
+<link rel="preload" as="image" href="{{ asset('images/worshiphero.webp') }}" type="image/webp" fetchpriority="high">
+@endsection
+
 @section('styles')
 <style>
     :root {
@@ -255,8 +259,8 @@
                 </p>
                 <p class="font-bold text-church-red">Psalm 96:1</p>
                 <div class="mt-8 grid grid-cols-2 gap-4">
-                    <img src="{{ asset('images/worship2-feature.webp') }}" alt="Worship team ministering in song" class="w-full h-44 object-cover rounded-xl" loading="lazy" decoding="async">
-                    <img src="{{ asset('images/worship-gathering-feature.webp') }}" alt="Worship gathering moment" class="w-full h-44 object-cover rounded-xl" loading="lazy" decoding="async">
+                    <img src="{{ asset('images/worship5.jpeg') }}" alt="Worship team ministering in song" class="w-full h-44 object-cover rounded-xl" loading="lazy" decoding="async">
+                    <img src="{{ asset('images/worship7-team.webp') }}" alt="Worship gathering moment" class="w-full h-44 object-cover rounded-xl" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -319,19 +323,19 @@
                 <img src="{{ asset('images/worship6-team.webp') }}" alt="Current worship ministry team" loading="lazy" decoding="async" width="1600" height="1200">
             </div>
             <div class="worship-photo-card lg:col-span-3">
-                <img src="{{ asset('images/worship8-team.webp') }}" alt="Current worship team leading praise" loading="lazy" decoding="async" width="1600" height="1200">
+                <img src="{{ asset('images/worship5.jpeg') }}" alt="Current worship team leading praise" loading="lazy" decoding="async" width="1600" height="1200">
             </div>
             <div class="worship-photo-card lg:col-span-3">
-                <img src="{{ asset('images/worship9-team.webp') }}" alt="Current worship ministry team portrait" loading="lazy" decoding="async" width="1600" height="1200">
+                <img src="{{ asset('images/worship8-team.webp') }}" alt="Current worship ministry team portrait" loading="lazy" decoding="async" width="1600" height="1200">
             </div>
             <div class="worship-photo-card lg:col-span-3">
-                <img src="{{ asset('images/worship10-team.webp') }}" alt="Current worship service moment" loading="lazy" decoding="async" width="1600" height="1200">
+                <img src="{{ asset('images/worship9-team.webp') }}" alt="Current worship service moment" loading="lazy" decoding="async" width="1600" height="1200">
             </div>
             <div class="worship-photo-card lg:col-span-2">
-                <img src="{{ asset('images/worship1-feature.webp') }}" alt="Current worship gathering" loading="lazy" decoding="async" width="1400" height="1050">
+                <img src="{{ asset('images/worship10-team.webp') }}" alt="Current worship gathering" loading="lazy" decoding="async" width="1400" height="1050">
             </div>
             <div class="worship-photo-card lg:col-span-4">
-                <img src="{{ asset('images/worship4-feature.webp') }}" alt="Current worship fellowship moment" loading="lazy" decoding="async" width="1600" height="1200">
+                <img src="{{ asset('images/worship11-team.webp') }}" alt="Current worship fellowship moment" loading="lazy" decoding="async" width="1600" height="1200">
             </div>
         </div>
     </div>
