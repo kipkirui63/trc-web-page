@@ -309,7 +309,7 @@
             <div class="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
                 <div class="lg:w-1/2">
                     <div class="feature-image">
-                        <img src="/images/women2.JPG" alt="Morning Breakfast Fellowship" class="w-full h-[400px]">
+                        <img src="/images/women9.png" alt="Morning Breakfast Fellowship" class="w-full h-[400px]">
                     </div>
                 </div>
                 <div class="lg:w-1/2">
